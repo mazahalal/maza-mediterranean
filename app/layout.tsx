@@ -15,11 +15,11 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Maza Mediterranean Cuisine | Chandler, AZ",
+  title: "Maza Halal Food | Chandler, AZ",
   description: "Authentic Mediterranean cuisine in Chandler, Arizona. Fresh ingredients, traditional recipes, family atmosphere. Open daily 10am–6pm.",
-  keywords: ["Mediterranean restaurant Chandler AZ", "Mediterranean food Chandler", "Halal food Chandler AZ", "Maza Mediterranean Cuisine"],
+  keywords: ["Mediterranean restaurant Chandler AZ", "Mediterranean food Chandler", "Halal food Chandler AZ", "Maza Halal Food"],
   openGraph: {
-    title: "Maza Mediterranean Cuisine | Chandler, AZ",
+    title: "Maza Halal Food | Chandler, AZ",
     description: "Authentic Mediterranean cuisine in Chandler, Arizona. Open daily 10am–6pm.",
     type: "restaurant",
   },
@@ -33,7 +33,7 @@ export default function RootLayout({
   const schema = {
     "@context": "https://schema.org",
     "@type": "Restaurant",
-    "name": "Maza Mediterranean Cuisine",
+    "name": "Maza Halal Food",
     "image": "",
     "address": {
       "@type": "PostalAddress",
@@ -57,7 +57,7 @@ export default function RootLayout({
       "latitude": "33.3098",
       "longitude": "-111.8954",
     },
-    "url": "https://mazamediterraneancuisine.com",
+    "url": "https://mazahalalfood.com",
   };
 
   return (

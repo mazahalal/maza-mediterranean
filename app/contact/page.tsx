@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Contact | Maza Mediterranean Cuisine",
-  description: "Get in touch with Maza Mediterranean Cuisine — find our location, hours, phone number, and send us a message.",
+  title: "Contact | Maza Halal Food",
+  description: "Get in touch with Maza Halal Food — find our location, hours, phone number, and send us a message.",
 };
 
 export default function ContactPage() {

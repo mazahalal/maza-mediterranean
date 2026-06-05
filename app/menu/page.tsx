@@ -1,7 +1,7 @@
 import { menuData } from "@/data/menu";
 
 export const metadata = {
-  title: "Menu | Maza Mediterranean Cuisine",
+  title: "Menu | Maza Halal Food",
   description: "Explore our authentic Mediterranean menu — appetizers, mains, sides, desserts, and drinks.",
 };
 
