@@ -20,10 +20,13 @@ export default function GalleryPage() {
     <div className="py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="font-serif text-4xl md:text-5xl font-bold text-[#8B4513] mb-4">
+          <h1 
+            className="font-serif text-4xl md:text-5xl font-bold mb-4"
+            style={{ background: 'linear-gradient(135deg, #F5E6C8 0%, #D4AF37 40%, #8B6914 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}
+          >
             Gallery
           </h1>
-          <p className="text-[#2C1810] text-lg max-w-2xl mx-auto">
+          <p className="text-[#8A8A8A] text-lg max-w-2xl mx-auto">
             A visual journey through our kitchen, dishes, and the warm atmosphere that makes Maza a Chandler favorite.
           </p>
         </div>
@@ -32,15 +35,15 @@ export default function GalleryPage() {
           {galleryImages.map((image, index) => (
             <div
               key={index}
-              className="relative overflow-hidden rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-200 group"
+              className="relative overflow-hidden rounded-xl border border-[#2A2A2A] hover:border-[#D4AF37]/50 transition-colors duration-200 group"
             >
               <img
                 src={image.src}
                 alt={image.alt}
                 className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
               />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
-                <p className="text-white text-sm font-medium">{image.alt}</p>
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                <p className="text-[#F5E6C8] text-sm font-medium">{image.alt}</p>
               </div>
             </div>
           ))}
