@@ -15,11 +15,19 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 bg-[#FDF5E6]/95 backdrop-blur-md border-b border-[#D4A017]/20">
+    <nav className="sticky top-0 z-50 bg-[#0A0A0A]/95 backdrop-blur-md border-b border-[#2A2A2A]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center gap-2">
-            <span className="text-2xl font-serif font-bold text-[#8B4513]">Maza</span>
+          <Link href="/" className="flex flex-col items-start">
+            <span 
+              className="text-2xl font-serif font-bold text-gold-gradient"
+              style={{ background: 'linear-gradient(135deg, #F5E6C8 0%, #D4AF37 40%, #8B6914 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}
+            >
+              MAZA
+            </span>
+            <span className="text-[10px] tracking-[0.3em] text-[#8A8A8A] uppercase mt-[-2px]">
+              Mediterranean Cuisine
+            </span>
           </Link>
 
           {/* Desktop Nav */}
@@ -28,7 +36,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-[#2C1810] hover:text-[#8B4513] font-medium transition-colors duration-200"
+                className="text-[#8A8A8A] hover:text-[#D4AF37] font-medium transition-colors duration-200"
               >
                 {link.label}
               </Link>
@@ -38,7 +46,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-[#2C1810]"
+            className="md:hidden p-2 text-[#8A8A8A]"
             aria-label="Toggle menu"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -53,13 +61,13 @@ export default function Navbar() {
 
         {/* Mobile Nav */}
         {isOpen && (
-          <div className="md:hidden pb-4">
+          <div className="md:hidden pb-4 bg-[#141414]">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="block py-2 text-[#2C1810] hover:text-[#8B4513] font-medium transition-colors"
+                className="block py-2 text-[#8A8A8A] hover:text-[#D4AF37] font-medium transition-colors"
               >
                 {link.label}
               </Link>

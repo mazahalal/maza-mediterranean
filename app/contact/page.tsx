@@ -42,10 +42,13 @@ export default function ContactPage() {
     <div className="py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="font-serif text-4xl md:text-5xl font-bold text-[#8B4513] mb-4">
+          <h1 
+            className="font-serif text-4xl md:text-5xl font-bold mb-4"
+            style={{ background: 'linear-gradient(135deg, #F5E6C8 0%, #D4AF37 40%, #8B6914 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}
+          >
             Contact Us
           </h1>
-          <p className="text-[#2C1810] text-lg max-w-2xl mx-auto">
+          <p className="text-[#8A8A8A] text-lg max-w-2xl mx-auto">
             We&apos;d love to hear from you. Reach out with questions, reservations, or just to say hello.
           </p>
         </div>
@@ -53,37 +56,37 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Info Column */}
           <div className="space-y-8">
-            <div className="bg-white p-8 rounded-xl shadow-sm">
-              <h2 className="font-serif text-2xl font-bold text-[#8B4513] mb-6">Visit Us</h2>
+            <div className="bg-[#141414] p-8 rounded-xl border border-[#2A2A2A]">
+              <h2 className="font-serif text-2xl font-bold text-[#D4AF37] mb-6">Visit Us</h2>
               <div className="space-y-4">
                 <div>
-                  <h3 className="font-semibold text-[#2C1810] mb-1">Address</h3>
-                  <p className="text-[#2C1810]/70">3491 W Frye Rd, Ste 2<br />Chandler, AZ 85226</p>
+                  <h3 className="font-semibold text-[#F5E6C8] mb-1">Address</h3>
+                  <p className="text-[#8A8A8A]">3491 W Frye Rd, Ste 2<br />Chandler, AZ 85226</p>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-[#2C1810] mb-1">Phone</h3>
-                  <p className="text-[#2C1810]/70">(480) 534-6550</p>
+                  <h3 className="font-semibold text-[#F5E6C8] mb-1">Phone</h3>
+                  <p className="text-[#8A8A8A]">(480) 534-6550</p>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-[#2C1810] mb-1">Hours</h3>
-                  <p className="text-[#2C1810]/70">Open Daily: 10am – 6pm</p>
+                  <h3 className="font-semibold text-[#F5E6C8] mb-1">Hours</h3>
+                  <p className="text-[#8A8A8A]">Open Daily: 10am – 6pm</p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Contact Form Column */}
-          <div className="bg-white p-8 rounded-xl shadow-sm">
-            <h2 className="font-serif text-2xl font-bold text-[#8B4513] mb-6">Send Us a Message</h2>
+          <div className="bg-[#141414] p-8 rounded-xl border border-[#2A2A2A]">
+            <h2 className="font-serif text-2xl font-bold text-[#D4AF37] mb-6">Send Us a Message</h2>
 
             {formState === 'success' ? (
               <div className="text-center py-12">
-                <div className="text-5xl mb-4">✓</div>
-                <h3 className="font-serif text-2xl font-bold text-[#8B4513] mb-2">Message Sent!</h3>
-                <p className="text-[#2C1810]/70">We&apos;ll get back to you soon.</p>
+                <div className="text-5xl mb-4 text-[#D4AF37]">✓</div>
+                <h3 className="font-serif text-2xl font-bold text-[#D4AF37] mb-2">Message Sent!</h3>
+                <p className="text-[#8A8A8A]">We&apos;ll get back to you soon.</p>
                 <button
                   onClick={() => setFormState('idle')}
-                  className="mt-6 text-[#8B4513] underline hover:text-[#6B3410]"
+                  className="mt-6 text-[#D4AF37] underline hover:text-[#F5E6C8]"
                 >
                   Send another message
                 </button>
@@ -91,7 +94,7 @@ export default function ContactPage() {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-[#2C1810] mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-[#F5E6C8] mb-2">
                     Your Name
                   </label>
                   <input
@@ -100,12 +103,12 @@ export default function ContactPage() {
                     name="name"
                     required
                     disabled={formState === 'submitting'}
-                    className="w-full px-4 py-3 rounded-lg border border-[#D4A017]/30 focus:ring-2 focus:ring-[#D4A017] focus:border-transparent outline-none transition-all bg-[#FDF5E6] disabled:opacity-50"
+                    className="w-full px-4 py-3 rounded-lg border border-[#2A2A2A] focus:ring-2 focus:ring-[#D4AF37] focus:border-[#D4AF37] outline-none transition-all bg-[#0A0A0A] text-[#F5E6C8] placeholder-[#8A8A8A] disabled:opacity-50"
                     placeholder="Maria Kefi"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-[#2C1810] mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-[#F5E6C8] mb-2">
                     Email Address
                   </label>
                   <input
@@ -114,12 +117,12 @@ export default function ContactPage() {
                     name="email"
                     required
                     disabled={formState === 'submitting'}
-                    className="w-full px-4 py-3 rounded-lg border border-[#D4A017]/30 focus:ring-2 focus:ring-[#D4A017] focus:border-transparent outline-none transition-all bg-[#FDF5E6] disabled:opacity-50"
+                    className="w-full px-4 py-3 rounded-lg border border-[#2A2A2A] focus:ring-2 focus:ring-[#D4AF37] focus:border-[#D4AF37] outline-none transition-all bg-[#0A0A0A] text-[#F5E6C8] placeholder-[#8A8A8A] disabled:opacity-50"
                     placeholder="maria@example.com"
                   />
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-[#2C1810] mb-2">
+                  <label htmlFor="message" className="block text-sm font-medium text-[#F5E6C8] mb-2">
                     Message
                   </label>
                   <textarea
@@ -128,19 +131,19 @@ export default function ContactPage() {
                     rows={5}
                     required
                     disabled={formState === 'submitting'}
-                    className="w-full px-4 py-3 rounded-lg border border-[#D4A017]/30 focus:ring-2 focus:ring-[#D4A017] focus:border-transparent outline-none transition-all bg-[#FDF5E6] resize-none disabled:opacity-50"
+                    className="w-full px-4 py-3 rounded-lg border border-[#2A2A2A] focus:ring-2 focus:ring-[#D4AF37] focus:border-[#D4AF37] outline-none transition-all bg-[#0A0A0A] text-[#F5E6C8] placeholder-[#8A8A8A] resize-none disabled:opacity-50"
                     placeholder="How can we help you today?"
                   />
                 </div>
 
                 {formState === 'error' && (
-                  <p className="text-red-600 text-sm">{errorMsg || 'Failed to send. Please try again.'}</p>
+                  <p className="text-red-400 text-sm">{errorMsg || 'Failed to send. Please try again.'}</p>
                 )}
 
                 <button
                   type="submit"
                   disabled={formState === 'submitting'}
-                  className="w-full bg-[#8B4513] hover:bg-[#6B3410] disabled:bg-[#8B4513]/50 text-white font-semibold py-4 rounded-lg transition-colors duration-200"
+                  className="w-full bg-[#D4AF37] hover:bg-[#F5E6C8] disabled:bg-[#D4AF37]/50 disabled:text-[#0A0A0A] text-[#0A0A0A] font-semibold py-4 rounded-lg transition-colors duration-200"
                 >
                   {formState === 'submitting' ? 'Sending...' : 'Send Message'}
                 </button>
