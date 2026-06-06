@@ -11,7 +11,7 @@ const galleryImages = [
 ];
 
 export const metadata = {
-  title: "Gallery | Maza Halal Food",
+  title: "Gallery | Maza Mediterranean Cuisine",
   description: "Explore photos of our authentic Mediterranean dishes, restaurant atmosphere, and dining experience.",
 };
 

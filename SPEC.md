@@ -1,8 +1,8 @@
-# Maza Halal Food — Project Specification
+# Maza Mediterranean Cuisine — Project Specification
 
-## 1. Concept & Vision
+Maza Mediterranean Cuisine is an authentic Mediterranean restaurant located in Chandler, AZ.
 
-Maza Halal Food is an authentic Mediterranean restaurant located in Chandler, AZ. The site conveys warmth, hospitality, and culinary tradition — a digital extension of the Mediterranean dining experience with rich earthy tones, generous imagery, and straightforward navigation.
+Maza Mediterranean Cuisine is an authentic Mediterranean restaurant located in Chandler, AZ. The site conveys warmth, hospitality, and culinary tradition — a digital extension of the Mediterranean dining experience with rich earthy tones, generous imagery, and straightforward navigation.
 
 ## 2. Design Language
 
@@ -59,7 +59,7 @@ Maza Halal Food is an authentic Mediterranean restaurant located in Chandler, AZ
 
 | Field | Value |
 |-------|-------|
-| Name | Maza Halal Food |
+| Name | Maza Mediterranean Cuisine |
 | Address | 3491 W Frye Rd, Ste 2, Chandler, AZ 85226 |
 | Phone | (480) 534-6550 |
 | Hours | Open Daily: 10am – 6pm |

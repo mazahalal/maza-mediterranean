@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "About | Maza Halal Food",
-  description: "Learn about Maza Halal Food — our story, our passion for authentic Mediterranean food, and our Chandler roots.",
+  title: "About | Maza Mediterranean Cuisine",
+  description: "Learn about Maza Mediterranean Cuisine — our story, our passion for authentic Mediterranean food, and our Chandler roots.",
 };
 
 export default function AboutPage() {

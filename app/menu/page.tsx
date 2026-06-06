@@ -1,8 +1,8 @@
 import { menuData } from "@/data/menu";
 
 export const metadata = {
-  title: "Menu | Maza Halal Food",
-  description: "Explore our authentic Mediterranean menu — appetizers, mains, sides, desserts, and drinks.",
+  title: "Menu | Maza Mediterranean Cuisine",
+  description: "Authentic Mediterranean wraps, plates, burgers, and sides in Chandler, AZ.",
 };
 
 export default function MenuPage() {
@@ -14,16 +14,21 @@ export default function MenuPage() {
             Our Menu
           </h1>
           <p className="text-[#2C1810] text-lg max-w-2xl mx-auto">
-            From the Mediterranean shores to your table — dishes crafted with authentic recipes, fresh ingredients, and generations of tradition.
+            Authentic Mediterranean wraps, plates, and burgers — halal-certified, made fresh daily.
           </p>
         </div>
 
         <div className="space-y-16">
           {menuData.map((section) => (
             <div key={section.category}>
-              <h2 className="font-serif text-2xl md:text-3xl font-bold text-[#D4A017] mb-8 pb-3 border-b-2 border-[#D4A017]/30">
-                {section.category}
-              </h2>
+              <div className="mb-6">
+                <h2 className="font-serif text-2xl md:text-3xl font-bold text-[#D4A017] pb-3 border-b-2 border-[#D4A017]/30">
+                  {section.category}
+                </h2>
+                {section.subtitle && (
+                  <p className="text-[#2C1810]/60 text-sm mt-2 italic">{section.subtitle}</p>
+                )}
+              </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {section.items.map((item) => (
                   <div
@@ -34,7 +39,12 @@ export default function MenuPage() {
                       <h3 className="font-semibold text-lg text-[#2C1810]">{item.name}</h3>
                       <span className="text-[#8B4513] font-bold text-lg">{item.price}</span>
                     </div>
-                    <p className="text-[#2C1810]/70 text-sm leading-relaxed">{item.description}</p>
+                    {item.note && (
+                      <p className="text-[#2C1810]/60 text-sm italic">{item.note}</p>
+                    )}
+                    {item.notes && item.notes.map((note, i) => (
+                      <p key={i} className="text-[#2C1810]/60 text-sm">{note}</p>
+                    ))}
                   </div>
                 ))}
               </div>
@@ -44,7 +54,7 @@ export default function MenuPage() {
 
         <div className="mt-16 bg-[#F5E6D3] p-8 rounded-xl text-center">
           <p className="text-[#2C1810]">
-            <strong>Please note:</strong> Our menu rotates seasonally to feature the freshest ingredients available. Contact us for today's seasonal specials!
+            <strong>Note:</strong> All plates come with 2 kebabs unless otherwise noted, rice, salad, hummus + tahini. Please inform us of any allergies.
           </p>
         </div>
       </div>
