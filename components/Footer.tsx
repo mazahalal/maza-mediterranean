@@ -5,7 +5,10 @@ export default function Footer() {
     <footer className="bg-[#000000] border-t border-[rgba(212,175,55,0.3)]">
       <div className="max-w-7xl mx-auto px-6 py-12">
         <div className="flex flex-col items-center gap-6 text-center">
-          <img src="/logo.png" alt="Maza Mediterranean Cuisine logo" className="h-8 w-auto opacity-80" />
+          <Link href="/" className="logo-lockup">
+            <span className="logo-wordmark">MAZA</span>
+            <span className="logo-subtitle">Mediterranean Cuisine</span>
+          </Link>
           <p className="text-sm text-[#a0a0a0] max-w-lg">
             Authentic Mediterranean cuisine. Family-owned. Wide menu for lunch and dinner.
           </p>
