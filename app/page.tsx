@@ -1,96 +1,51 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <div>
-      {/* Hero Section - Full dark luxury */}
-      <section className="relative bg-[#0A0A0A] text-[#F5E6C8] py-32 px-4 min-h-[80vh] flex flex-col justify-center items-center">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 
-            className="font-serif font-bold mb-4"
-            style={{ 
-              fontSize: 'clamp(4rem, 15vw, 12rem)', 
-              background: 'linear-gradient(135deg, #F5E6C8 0%, #D4AF37 40%, #8B6914 100%)', 
-              WebkitBackgroundClip: 'text', 
-              WebkitTextFillColor: 'transparent', 
-              backgroundClip: 'text',
-              lineHeight: 1.1
-            }}
-          >
-            MAZA
-          </h1>
-          <p className="text-[#8A8A8A] tracking-[0.4em] uppercase text-sm md:text-base mb-12">
-            Mediterranean Cuisine
+      <section className="relative bg-[#000000] flex items-center justify-center">
+        <div className="max-w-5xl mx-auto px-6 py-28 text-center">
+          <Image src="/logo.png" alt="Maza Mediterranean Cuisine logo" width={520} height={180} className="mx-auto mb-10" priority />
+          <p className="text-sm tracking-[0.35em] uppercase text-[#d4af37] mb-6">
+            Mediterranean Cuisine · Since 2011
           </p>
-          <Link
-            href="/menu"
-            className="inline-block border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#0A0A0A] font-semibold px-10 py-4 transition-all duration-300 text-lg tracking-wide"
-          >
-            View Our Menu
-          </Link>
-        </div>
-      </section>
-
-      {/* About Section - Dark card */}
-      <section className="py-20 px-4 bg-[#141414]">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#D4AF37] mb-6">
-            Welcome to Maza
-          </h2>
-          <p className="text-[#F5E6C8] text-lg leading-relaxed">
-            Since opening our doors, Maza has been a gathering place for families, friends, and food lovers who share a passion for Mediterranean cuisine. We bring together time-honored recipes passed down through generations, fresh ingredients sourced daily, and the warm hospitality that defines the Mediterranean table.
+          <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">
+            Authentic recipes, warm hospitality, and generous portions. Family-owned in Chandler, AZ.
           </p>
-        </div>
-      </section>
-
-      {/* Highlights Section - 3 column grid on dark bg */}
-      <section className="py-20 px-4 bg-[#0A0A0A]">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-[#141414] p-8 rounded-xl border border-[#2A2A2A] text-center">
-              <div className="text-4xl mb-4 text-[#D4AF37]">✦</div>
-              <h3 className="font-serif text-xl font-bold text-[#D4AF37] mb-3">Authentic Recipes</h3>
-              <p className="text-[#F5E6C8]">
-                Traditional dishes from Greece, Turkey, Lebanon, and beyond, prepared the way they were meant to be.
-              </p>
-            </div>
-            <div className="bg-[#141414] p-8 rounded-xl border border-[#2A2A2A] text-center">
-              <div className="text-4xl mb-4 text-[#D4AF37]">✦</div>
-              <h3 className="font-serif text-xl font-bold text-[#D4AF37] mb-3">Fresh Ingredients</h3>
-              <p className="text-[#F5E6C8]">
-                We source the finest olive oil, spices, and produce daily to ensure every dish is bursting with flavor.
-              </p>
-            </div>
-            <div className="bg-[#141414] p-8 rounded-xl border border-[#2A2A2A] text-center">
-              <div className="text-4xl mb-4 text-[#D4AF37]">✦</div>
-              <h3 className="font-serif text-xl font-bold text-[#D4AF37] mb-3">Family Atmosphere</h3>
-              <p className="text-[#F5E6C8]">
-                A warm, welcoming space where every guest feels like part of the family from the moment they walk in.
-              </p>
-            </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/menu"
+              className="inline-block bg-[#d4af37] text-[#000000] px-8 py-3 text-sm font-semibold tracking-wide hover:bg-white transition-colors"
+            >
+              View full menu
+            </Link>
+            <Link
+              href="/about"
+              className="inline-block border border-[rgba(212,175,55,0.5)] text-[#d4af37] px-8 py-3 text-sm tracking-wide hover:border-[#d4af37] transition-colors"
+            >
+              Our story
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 bg-[#141414]">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#D4AF37] mb-6">
-            Ready to Experience Maza?
-          </h2>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/menu"
-              className="bg-[#D4AF37] hover:bg-[#F5E6C8] text-[#0A0A0A] font-semibold px-8 py-4 transition-colors duration-200 text-lg"
-            >
-              Explore Menu
-            </Link>
-            <Link
-              href="/contact"
-              className="bg-transparent hover:bg-[#D4AF37]/10 text-[#D4AF37] font-semibold px-8 py-4 border border-[#D4AF37] transition-colors duration-200 text-lg"
-            >
-              Find Us
-            </Link>
+      <section className="bg-[#102a3a] border-y border-[rgba(212,175,55,0.2)]">
+        <div className="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-3 gap-10 text-center">
+          <div>
+            <p className="text-xs tracking-[0.3em] uppercase text-[#d4af37] mb-3">Est. 2011</p>
+            <p className="text-white font-semibold">Family owned & operated</p>
+            <p className="text-sm text-[#a0a0a0] mt-2">14 years of authentic Mediterranean cooking in Chandler</p>
+          </div>
+          <div>
+            <p className="text-xs tracking-[0.3em] uppercase text-[#d4af37] mb-3">In-house kitchen</p>
+            <p className="text-white font-semibold">Made fresh daily</p>
+            <p className="text-sm text-[#a0a0a0] mt-2">No pre-processed mixes — real prep, real flavor</p>
+          </div>
+          <div>
+            <p className="text-xs tracking-[0.3em] uppercase text-[#d4af37] mb-3">Open daily</p>
+            <p className="text-white font-semibold">10am – 8pm</p>
+            <p className="text-sm text-[#a0a0a0] mt-2">Lunch and dinner · Dine-in or takeout</p>
           </div>
         </div>
       </section>
