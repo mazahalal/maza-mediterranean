@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   title: "Maza Mediterranean Cuisine | Chandler, AZ",
   description: "Big portions. Real ingredients. Honest prices. Family-owned Mediterranean restaurant in Chandler, AZ. Open daily 10am–8pm.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/maza_ornate_logo.webp",
   },
 };
 
