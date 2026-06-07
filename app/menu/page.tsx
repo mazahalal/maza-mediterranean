@@ -3,8 +3,38 @@ import MenuLightbox from "./components/MenuLightbox";
 
 export { metadata };
 
+// MAZ-32: Menu schema (Menu + MenuSection + MenuItem) for agent + local SEO
+const menuJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Menu",
+  name: "Maza Mediterranean Cuisine Menu",
+  description: "Authentic Mediterranean wraps, plates, burgers, sides, and desserts. Halal-certified. Big portions, real ingredients, honest prices.",
+  url: "https://mazahalalfood.com/menu",
+  hasMenuSection: menuData.map((section) => ({
+    "@type": "MenuSection",
+    name: section.category,
+    hasMenuItem: section.items.map((item) => ({
+      "@type": "MenuItem",
+      name: item.name,
+      description: item.description || item.note || item.notes?.join(" ") || "",
+      offers: {
+        "@type": "Offer",
+        price: parseFloat(item.price.replace("$", "")),
+        priceCurrency: "USD"
+      }
+    }))
+  }))
+};
+
 export default function MenuPage() {
   return (
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(menuJsonLd) }}
+      />
+
     <div className="py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
