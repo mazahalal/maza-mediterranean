@@ -10,42 +10,67 @@ const galleryImages = [
   { src: "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=600&h=400&fit=crop", alt: "Mediterranean platter" },
 ];
 
+const imageObjects = galleryImages.map((img, index) => ({
+  "@type": "ImageObject",
+  "@id": `${img.src}#image-${index}`,
+  "url": img.src,
+  "name": img.alt,
+  "description": img.alt,
+  "width": 600,
+  "height": 400,
+  "encodingFormat": "image/jpeg",
+}));
+
 export const metadata = {
   title: "Gallery | Maza Mediterranean Cuisine",
   description: "Real food, real portions. See what we're serving at Maza.",
 };
 
 export default function GalleryPage() {
-  return (
-    <div className="py-16 px-4">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <h1 className="font-display text-4xl md:text-5xl font-bold text-gold-gradient mb-4 tracking-wider">
-            Gallery
-          </h1>
-          <p className="text-[#B8B8B8] text-lg max-w-2xl mx-auto">
-            Real food, real ingredients, real portions. These are the dishes we serve every day.
-          </p>
-        </div>
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    "name": "Maza Mediterranean Cuisine Gallery",
+    "description": "Real food, real ingredients, real portions. These are the dishes we serve every day.",
+    "image": imageObjects,
+  };
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {galleryImages.map((image, index) => (
-            <div
-              key={index}
-              className="relative overflow-hidden rounded-lg border border-[rgba(211,171,94,0.15)] hover:border-[rgba(211,171,94,0.4)] transition-colors duration-200 group"
-            >
-              <img
-                src={image.src}
-                alt={image.alt}
-                className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                <p className="text-[#F5F1E8] text-sm">{image.alt}</p>
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <div className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h1 className="font-display text-4xl md:text-5xl font-bold text-gold-gradient mb-4 tracking-wider">
+              Gallery
+            </h1>
+            <p className="text-[#B8B8B8] text-lg max-w-2xl mx-auto">
+              Real food, real ingredients, real portions. These are the dishes we serve every day.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {galleryImages.map((image, index) => (
+              <div
+                key={index}
+                className="relative overflow-hidden rounded-lg border border-[rgba(211,171,94,0.15)] hover:border-[rgba(211,171,94,0.4)] transition-colors duration-200 group"
+              >
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                  <p className="text-[#F5F1E8] text-sm">{image.alt}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
