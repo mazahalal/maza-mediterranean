@@ -55,11 +55,31 @@ export default function RootLayout({
               telephone: "(480) 534-6550",
               openingHours: "Mo-Su 10:00-20:00",
               url: "https://mazahalalfood.com",
+              image: "https://mazahalalfood.com/maza_ornate_logo.webp",
+              priceRange: "$$",
+              servesCuisine: ["Mediterranean", "Middle Eastern", "Halal"],
+              hasMenu: "https://mazahalalfood.com/menu",
               sameAs: [
-                `https://www.google.com/maps/place/?q=place_id:11571299155872425967`,
+                "https://www.google.com/maps/place/?q=place_id:11571299155872425967",
+              ],
+              areaServed: {
+                "@type": "GeoCircle",
+                geoMidpoint: {
+                  "@type": "GeoCoordinates",
+                  latitude: 33.3062,
+                  longitude: -111.8413,
+                },
+                geoRadius: "25000",
+              },
+              knowsAbout: [
+                "Mediterranean cuisine",
+                "Halal-certified meals",
+                "Family-style platters",
+                "Catering for events",
+                "East Valley dining",
               ],
               description:
-                "Big portions. Real ingredients. Honest prices. Family-owned Mediterranean restaurant in Chandler, AZ.",
+                "Big portions. Real ingredients. Honest prices. Family-owned Mediterranean restaurant in Chandler, AZ. Open daily 10am–8pm.",
             }),
           }}
         />
