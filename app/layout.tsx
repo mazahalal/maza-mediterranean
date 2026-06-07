@@ -87,3 +87,47 @@ export default function RootLayout({
     </html>
   );
 }
+        {/* MAZ-33: FAQPage schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: [
+                {
+                  "@type": "Question",
+                  name: "What are your hours?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "We are open daily from 10:00 AM to 8:00 PM."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  name: "Is Maza Mediterranean Cuisine halal?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Yes, all our meat is halal-certified."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  name: "Do you offer catering?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Yes, we provide catering for events and large orders. Contact us for details."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  name: "Is there parking available?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Free parking is available in the plaza lot at 3491 W Frye Rd."
+                  }
+                }
+              ]
+            })
+          }}
+        />
