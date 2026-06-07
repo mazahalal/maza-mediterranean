@@ -21,6 +21,9 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "Maza Mediterranean Cuisine | Chandler, AZ",
   description: "Big portions. Real ingredients. Honest prices. Family-owned Mediterranean restaurant in Chandler, AZ. Open daily 10am–8pm.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -34,6 +37,32 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Restaurant",
+              name: "Maza Mediterranean Cuisine",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "3491 W Frye Rd, Suite 2",
+                addressLocality: "Chandler",
+                addressRegion: "AZ",
+                postalCode: "85226",
+                addressCountry: "US",
+              },
+              telephone: "(480) 534-6550",
+              openingHours: "Mo-Su 10:00-20:00",
+              url: "https://mazahalalfood.com",
+              sameAs: [
+                `https://www.google.com/maps/place/?q=place_id:11571299155872425967`,
+              ],
+              description:
+                "Big portions. Real ingredients. Honest prices. Family-owned Mediterranean restaurant in Chandler, AZ.",
+            }),
+          }}
+        />
       </body>
     </html>
   );
