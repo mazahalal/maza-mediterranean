@@ -1,25 +1,29 @@
 import type { Metadata } from "next";
-import { Inter, Cinzel } from "next/font/google";
+import { Cinzel, Montserrat } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const inter = Inter({
+const cinzel = Cinzel({
+  variable: "--font-cinzel",
   subsets: ["latin"],
-  variable: "--font-body",
+  weight: ["500", "700"],
   display: "swap",
 });
 
-const cinzel = Cinzel({
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
-  variable: "--font-display",
+  weight: ["300", "400", "500", "600"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Maza Mediterranean Cuisine",
-  description:
-    "Authentic Mediterranean cuisine in Chandler, Arizona. Family-owned since 2011. Wide menu for lunch and dinner.",
+  title: "Maza Mediterranean Cuisine | Chandler, AZ",
+  description: "Big portions. Real ingredients. Honest prices. Family-owned Mediterranean restaurant in Chandler, AZ. Open daily 10am–8pm.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -28,11 +32,37 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${cinzel.variable}`}>
-      <body className="min-h-screen flex flex-col bg-[#102a3a] text-white">
+    <html lang="en" className={`${cinzel.variable} ${montserrat.variable}`}>
+      <body className="min-h-screen flex flex-col bg-[#0A1F1E] text-[#F5F1E8]">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Restaurant",
+              name: "Maza Mediterranean Cuisine",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "3491 W Frye Rd, Suite 2",
+                addressLocality: "Chandler",
+                addressRegion: "AZ",
+                postalCode: "85226",
+                addressCountry: "US",
+              },
+              telephone: "(480) 534-6550",
+              openingHours: "Mo-Su 10:00-20:00",
+              url: "https://mazahalalfood.com",
+              sameAs: [
+                `https://www.google.com/maps/place/?q=place_id:11571299155872425967`,
+              ],
+              description:
+                "Big portions. Real ingredients. Honest prices. Family-owned Mediterranean restaurant in Chandler, AZ.",
+            }),
+          }}
+        />
       </body>
     </html>
   );
