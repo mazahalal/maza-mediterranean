@@ -3,18 +3,15 @@
 import { useState } from "react";
 import { menuData, MenuItem } from "@/data/menu";
 
-type MenuItemWithImage = MenuItem & { image: string };
-
 export default function MenuLightbox() {
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const itemsWithImages: MenuItemWithImage[] = menuData
-    .flatMap(section => section.items)
-    .filter((item): item is MenuItemWithImage => !!item.image);
+  // All menu items for lightbox navigation
+  const allItems: MenuItem[] = menuData.flatMap(section => section.items);
 
   const openLightbox = (clickedItem: MenuItem) => {
-    const index = itemsWithImages.findIndex(item => item.name === clickedItem.name);
+    const index = allItems.findIndex(item => item.name === clickedItem.name);
     if (index !== -1) {
       setCurrentIndex(index);
       setIsOpen(true);
@@ -24,14 +21,14 @@ export default function MenuLightbox() {
   const closeLightbox = () => setIsOpen(false);
 
   const goToPrevious = () => {
-    setCurrentIndex((prev) => (prev === 0 ? itemsWithImages.length - 1 : prev - 1));
+    setCurrentIndex((prev) => (prev === 0 ? allItems.length - 1 : prev - 1));
   };
 
   const goToNext = () => {
-    setCurrentIndex((prev) => (prev === itemsWithImages.length - 1 ? 0 : prev + 1));
+    setCurrentIndex((prev) => (prev === allItems.length - 1 ? 0 : prev + 1));
   };
 
-  const currentItem = itemsWithImages[currentIndex];
+  const currentItem = allItems[currentIndex];
 
   if (typeof window !== "undefined") {
     window.onkeydown = (e) => {
@@ -97,6 +94,7 @@ export default function MenuLightbox() {
         ))}
       </div>
 
+      {/* Lightbox Modal */}
       {isOpen && currentItem && (
         <div 
           className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
@@ -113,23 +111,31 @@ export default function MenuLightbox() {
               ✕
             </button>
 
-            <div className="relative bg-[#0E0E0E] rounded-xl overflow-hidden border border-[#D3AB5E]/20">
-              <img 
-                src={currentItem.image} 
-                alt={currentItem.name}
-                className="w-full max-h-[75vh] object-contain"
-              />
-            </div>
+            {/* Image (only if exists) */}
+            {currentItem.image && (
+              <div className="relative bg-[#0E0E0E] rounded-xl overflow-hidden border border-[#D3AB5E]/20 mb-4">
+                <img 
+                  src={currentItem.image} 
+                  alt={currentItem.name}
+                  className="w-full max-h-[70vh] object-contain"
+                />
+              </div>
+            )}
 
-            <div className="mt-4 text-center">
+            {/* Info */}
+            <div className="text-center">
               <h3 className="font-display text-2xl text-[#F5F1E8] mb-1">{currentItem.name}</h3>
               <p className="text-[#D3AB5E] text-xl font-bold mb-2">{currentItem.price}</p>
               {currentItem.description && (
                 <p className="text-[#B8B8B8] max-w-2xl mx-auto">{currentItem.description}</p>
               )}
+              {currentItem.note && (
+                <p className="text-[#B8B8B8] text-sm italic mt-2">{currentItem.note}</p>
+              )}
             </div>
 
-            {itemsWithImages.length > 1 && (
+            {/* Navigation Arrows */}
+            {allItems.length > 1 && (
               <>
                 <button
                   onClick={goToPrevious}
@@ -146,8 +152,9 @@ export default function MenuLightbox() {
               </>
             )}
 
+            {/* Counter */}
             <div className="text-center mt-4 text-[#B8B8B8] text-sm">
-              {currentIndex + 1} / {itemsWithImages.length}
+              {currentIndex + 1} / {allItems.length}
             </div>
           </div>
         </div>
