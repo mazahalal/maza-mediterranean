@@ -45,6 +45,9 @@ export default function MenuPage() {
                     <div className="flex justify-between items-start mb-2">
                       <h3 className="font-display text-lg text-[#F5F1E8] tracking-wide">{item.name}</h3>
                       <span className="text-[#D3AB5E] font-bold text-lg ml-4">{item.price}</span>
+                    {item.description && (
+                      <p className="text-[#B8B8B8] text-sm mt-1 mb-2">{item.description}</p>
+                    )}
                     </div>
                     {item.note && (
                       <p className="text-[#B8B8B8] text-sm italic">{item.note}</p>
