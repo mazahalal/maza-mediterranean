@@ -15,6 +15,9 @@ export default function MenuPage() {
           </h1>
           <p className="text-[#B8B8B8] text-lg max-w-2xl mx-auto">
             Big portions. Real ingredients. Honest prices. Made fresh, in-house, every day.
+          <div className="mt-8 mb-4">
+            <img src="/images/maza/menu/opt-PXL_20260607_180708446.jpg" alt="Mixed grill platter - Maza Special" className="w-full max-w-4xl mx-auto rounded-xl shadow-xl border border-[#D3AB5E]/20" />
+          </div>
           </p>
         </div>
 
