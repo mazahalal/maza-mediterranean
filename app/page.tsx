@@ -6,7 +6,7 @@ export default function Home() {
       {/* Hero Section */}
       <section 
         className="relative h-[70vh] flex items-center justify-center bg-[#0A1F1E] bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/maza/PXL_20260607_012014666.jpg')" }}
+        style={{ backgroundImage: "url('/images/maza/hero-brand-1920.jpg')" }}
       >
         <div className="absolute inset-0 bg-[#0A1F1E]/70"></div>
         <div className="relative text-center px-6">
