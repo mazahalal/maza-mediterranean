@@ -1,13 +1,13 @@
 const galleryImages = [
-  { src: "/images/maza/menu/opt-PXL_20260607_180708446.jpg", alt: "Mixed grill platter with kofta, chicken, and saffron rice" },
-  { src: "/images/maza/menu/opt-PXL_20260601_224012118.jpg", alt: "Mediterranean plate with hummus, falafel, tabbouleh, and Israeli salad" },
-  { src: "/images/maza/menu/opt-Jun_6_2026_5_29_23.jpg", alt: "Mixed grill platter with chicken, Merguez, and beef chunks" },
-  { src: "/images/maza/menu/opt-PXL_20260606_223538010.jpg", alt: "Burger with crinkle-cut fries" },
-  { src: "/images/maza/opt-PXL_20260607_012014666.jpg", alt: "MAZA restaurant interior with vertical sign" },
-  { src: "/images/maza/opt-PXL_20260607_012032976.jpg", alt: "Bright dining area with open kitchen and mural" },
-  { src: "/images/maza/opt-PXL_20260601_232702080.jpg", alt: "Commercial kitchen with vertical broilers" },
+  { src: "/images/maza/menu/opt-PXL_20260607_180708446.jpg", alt: "MAZA Special" },
+  { src: "/images/maza/menu/opt-PXL_20260601_224012118.jpg", alt: "Falafel Plate with Tabbouleh" },
+  { src: "/images/maza/menu/opt-Jun_6_2026_5_29_23.jpg", alt: "MAZA Grill Plate" },
+  { src: "/images/maza/menu/opt-PXL_20260606_223538010.jpg", alt: "Burger Combo" },
+  { src: "/images/maza/PXL_20260607_012014666.jpg", alt: "MAZA restaurant interior with vertical sign" },
+  { src: "/images/maza/PXL_20260607_012032976.jpg", alt: "Bright dining area with open kitchen and mural" },
+  { src: "/images/maza/opt-PXL_20260601_232702080.jpg", alt: "Fresh Shawarma Daily" },
   { src: "/images/maza/opt-PXL_20260605_212253975.jpg", alt: "Shawarma rotisserie in action" },
-  { src: "/images/maza/opt-PXL_20260607_180609260.jpg", alt: "Kofta and chicken skewer prep in hotel pan" },
+  { src: "/images/maza/opt-PXL_20260607_180609260.jpg", alt: "Fresh, Halal Protein" },
 ];
 
 const imageObjects = galleryImages.map((img, index) => ({
