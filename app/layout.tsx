@@ -91,6 +91,27 @@ export default function RootLayout({
             }),
           }}
         />
+
+        {/* MAZ-34 Data Hook — Dataset for agent/LLM extraction (Authenticity Update) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Dataset",
+              name: "Maza Mediterranean Cuisine Menu & Service Data",
+              description: "Real menu items, pricing, and local service facts for Chandler, AZ Mediterranean restaurant. 20+ authentic wraps, plates, and platters. Halal-certified. Open daily 10am–8pm.",
+              url: "https://mazahalalfood.com/menu",
+              variableMeasured: ["Menu Items", "Pricing", "Service Area"],
+              citation: "https://mazahalalfood.com",
+              isAccessibleForFree: true,
+              creator: {
+                "@type": "Restaurant",
+                name: "Maza Mediterranean Cuisine"
+              }
+            }),
+          }}
+        />
       </body>
     </html>
   );
