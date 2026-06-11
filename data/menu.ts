@@ -46,9 +46,9 @@ export const menuData: MenuCategory[] = [
       { name: "Lamb Tikka Plate", price: "$18.71", notes: ["2 Lamb Tikka, rice, salad & hummus + tahini"] },
       { name: "Ribeye Tikka Plate", price: "$22.87", notes: ["2 Ribeye Tikka, rice, salad & hummus + tahini"] },
       { name: "Mix Kebab", price: "$18.71", notes: ["1 Chicken Shish Kebab and 1 Beef Shish Kebab, rice, salad & hummus + tahini"] },
-      { name: "Falafel", price: "$14.55", notes: ["Falafel, rice, salad & hummus + tahini"] },
+      { name: "Falafel", price: "$14.55", image: "/images/maza/menu/opt-PXL_20260601_224012118.jpg", notes: ["Falafel, rice, salad & hummus + tahini"] },
       { name: "Appetizer Plate", price: "$13.51", notes: ["Hummus + Tahini, Dolma, Falafel, Baba Ghanoush and Salad"] },
-      { name: "Maza Grill", price: "$25.99", notes: ["1 Chicken Tikka, 1 Beef Shish Kebab, 1 Chicken Shish Kebab, rice, salad & hummus + tahini"] },
+      { name: "Maza Grill", price: "$25.99", image: "/images/maza/menu/opt-Jun_6_2026_5_29_23.jpg", notes: ["1 Chicken Tikka, 1 Beef Shish Kebab, 1 Chicken Shish Kebab, rice, salad & hummus + tahini"] },
     ],
   },
   {
@@ -70,7 +70,7 @@ export const menuData: MenuCategory[] = [
     category: "Burgers",
     subtitle: "Handmade in House, never frozen",
     items: [
-      { name: "Beef Burger", price: "$12.47" },
+      { name: "Beef Burger", price: "$12.47", image: "/images/maza/menu/opt-PXL_20260606_223538010.jpg" },
       { name: "Grilled Chicken", price: "$12.47" },
       { name: "Crispy Chicken Sandwich", price: "$12.47", note: "Comes with fries" },
     ],
