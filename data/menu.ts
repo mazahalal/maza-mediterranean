@@ -33,7 +33,7 @@ export const menuData: MenuCategory[] = [
     category: "Wrap Upgrades",
     subtitle: "Upgrades apply to wraps only",
     items: [
-      { name: "Combo Upgrade", price: "$5.19", note: "Includes Fries + Drink" },
+      { name: "Combo Upgrade", price: "$4.99", note: "Includes Fries + Drink" },
     ],
   },
   {
