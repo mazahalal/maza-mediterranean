@@ -24,7 +24,7 @@ export const menuData: MenuCategory[] = [
       { name: "Chicken Shawarma Wrap", price: "$12.47" },
       { name: "Chicken Shish Kebab Wrap", price: "$12.99" },
       { name: "Chicken Tikka Wrap", price: "$11.43" },
-      { name: "Crispy Chicken Wrap", price: "$11.43" },
+      { name: "Crispy Chicken Wrap", price: "$14.55" },
       { name: "Falafel Wrap", price: "$9.35" },
       { name: "Lamb Tikka Wrap", price: "$13.51" },
       { name: "Mix Shawarma Wrap", price: "$12.99" },
