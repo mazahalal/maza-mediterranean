@@ -16,6 +16,7 @@ export interface MenuCategory {
 export const menuData: MenuCategory[] = [
   {
     category: "Wraps",
+    subtitle: "Wrapped with hummus, tomato, onion, lettuce, pickle, and garlic sauce",
     items: [
       { name: "Beef Gyro", price: "$10.91", notes: ["Served on pita or wrap (saj)"] },
       { name: "Beef Shawarma Wrap", price: "$12.99" },
@@ -23,6 +24,7 @@ export const menuData: MenuCategory[] = [
       { name: "Chicken Shawarma Wrap", price: "$12.47" },
       { name: "Chicken Shish Kebab Wrap", price: "$12.99" },
       { name: "Chicken Tikka Wrap", price: "$11.43" },
+      { name: "Crispy Chicken Wrap", price: "$11.43" },
       { name: "Falafel Wrap", price: "$9.35" },
       { name: "Lamb Tikka Wrap", price: "$13.51" },
       { name: "Mix Shawarma Wrap", price: "$12.99" },
@@ -38,17 +40,16 @@ export const menuData: MenuCategory[] = [
   },
   {
     category: "Plates",
-    subtitle: "All come with 2 kebabs unless otherwise noted, rice, salad, hummus + tahini",
     items: [
-      { name: "Beef Shish Kebab", price: "$18.19", notes: ["2 Beef Shish Kebab, rice, salad & hummus + tahini"] },
-      { name: "Chicken Shish Kebab", price: "$17.67", notes: ["2 Chicken Shish Kebab, rice, salad & hummus + tahini"] },
-      { name: "Chicken Tikka Plate", price: "$17.67", notes: ["2 Chicken Tikka, rice, salad & hummus + tahini"] },
-      { name: "Lamb Tikka Plate", price: "$18.71", notes: ["2 Lamb Tikka, rice, salad & hummus + tahini"] },
-      { name: "Ribeye Tikka Plate", price: "$22.87", notes: ["2 Ribeye Tikka, rice, salad & hummus + tahini"] },
-      { name: "Mix Kebab", price: "$18.71", notes: ["1 Chicken Shish Kebab and 1 Beef Shish Kebab, rice, salad & hummus + tahini"] },
-      { name: "Falafel", price: "$14.55", image: "/images/maza/menu/opt-PXL_20260601_224012118.jpg", notes: ["Falafel, rice, salad & hummus + tahini"] },
-      { name: "Appetizer Plate", price: "$13.51", notes: ["Hummus + Tahini, Dolma, Falafel, Baba Ghanoush and Salad"] },
-      { name: "Maza Grill", price: "$25.99", image: "/images/maza/menu/opt-Jun_6_2026_5_29_23.jpg", notes: ["1 Chicken Tikka, 1 Beef Shish Kebab, 1 Chicken Shish Kebab, rice, salad & hummus + tahini"] },
+      { name: "Beef Shish Kebab", price: "$20.19", notes: ["2 Beef Shish Kebab, rice, salad & hummus + tahini"] },
+      { name: "Chicken Shish Kebab", price: "$19.67", notes: ["2 Chicken Shish Kebab, rice, salad & hummus + tahini"] },
+      { name: "Chicken Tikka Plate", price: "$19.67", notes: ["2 Chicken Tikka, rice, salad & hummus + tahini"] },
+      { name: "Lamb Tikka Plate", price: "$20.71", notes: ["2 Lamb Tikka, rice, salad & hummus + tahini"] },
+      { name: "Ribeye Tikka Plate", price: "$24.87", notes: ["2 Ribeye Tikka, rice, salad & hummus + tahini"] },
+      { name: "Mix Kebab", price: "$20.71", notes: ["1 Chicken Shish Kebab and 1 Beef Shish Kebab, rice, salad & hummus + tahini"] },
+      { name: "Falafel", price: "$16.55", image: "/images/maza/menu/opt-PXL_20260601_224012118.jpg", notes: ["Falafel, rice, salad & hummus + tahini"] },
+      { name: "Appetizer Plate", price: "$15.51", notes: ["Hummus + Tahini, Dolma, Falafel, Baba Ghanoush and Salad"] },
+      { name: "Maza Grill", price: "$27.99", image: "/images/maza/menu/opt-Jun_6_2026_5_29_23.jpg", notes: ["1 Chicken Tikka, 1 Beef Shish Kebab, 1 Chicken Shish Kebab, rice, salad & hummus + tahini"] },
     ],
   },
   {
@@ -93,10 +94,11 @@ export const menuData: MenuCategory[] = [
   {
     category: "Desserts & Drinks",
     items: [
-      { name: "Baklava (2pc)", price: "$4.99" },
       { name: "Ayran", price: "$2.49" },
+      { name: "Baklava (2pc)", price: "$4.99" },
       { name: "Bottled Water", price: "$1.99" },
       { name: "Fountain Drink", price: "$2.49" },
+      { name: "Middle Eastern Black Tea", price: "$2.99" },
     ],
   },
 ];
