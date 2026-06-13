@@ -95,7 +95,7 @@ export const menuData: MenuCategory[] = [
     category: "Desserts & Drinks",
     items: [
       { name: "Ayran", price: "$2.49" },
-      { name: "Baklava (2pc)", price: "$4.99" },
+      { name: "Baklava (2pc)", price: "$5.99" },
       { name: "Bottled Water", price: "$1.99" },
       { name: "Fountain Drink", price: "$2.49" },
       { name: "Middle Eastern Black Tea", price: "$2.99" },
