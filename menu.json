@@ -189,10 +189,6 @@
           "price": "$5.99"
         },
         {
-          "name": "Loaded Shawarma Fries",
-          "price": "$14.99"
-        },
-        {
           "name": "Pita",
           "price": "Free"
         },
@@ -217,17 +213,14 @@
     {
       "name": "Desserts & Drinks",
       "items": [
+
         {
-          "name": "Ayran",
-          "price": "$2.49"
-        },
-        {
-          "name": "Baklava (2pc)",
-          "price": "$5.99"
+          "name": "Baklava",
+          "price": "$2.99"
         },
         {
           "name": "Bottled Water",
-          "price": "$1.99"
+          "price": "$1.49"
         },
         {
           "name": "Fountain Drink",
