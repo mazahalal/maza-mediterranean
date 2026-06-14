@@ -81,7 +81,7 @@ export const menuData: MenuCategory[] = [
     items: [
       { name: "Dolma", price: "$5.99" },
       { name: "Fries", price: "$3.49" },
-      { name: "Falafel (4pc)", price: "$3.99" },
+      { name: "Falafel (4pc)", price: "$5.99" },
       { name: "Hummus with tahini and pita", price: "$5.99" },
       { name: "Pita", price: "Free" },
       { name: "Rice", price: "$3.99" },
