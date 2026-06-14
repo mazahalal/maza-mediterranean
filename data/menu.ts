@@ -88,6 +88,7 @@ export const menuData: MenuCategory[] = [
       { name: "Tzatziki", price: "$1.99" },
       { name: "Samosa (Regular or Veggie)", price: "$5.99" },
       { name: "Tabouleh", price: "$4.99" },
+      { name: "Side Salad", price: "$3.99" },
     ],
   },
   {
