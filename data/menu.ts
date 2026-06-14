@@ -83,7 +83,6 @@ export const menuData: MenuCategory[] = [
       { name: "Fries", price: "$3.49" },
       { name: "Falafel (4pc)", price: "$3.99" },
       { name: "Hummus with tahini and pita", price: "$5.99" },
-      { name: "Loaded Shawarma Fries", price: "$14.99" },
       { name: "Pita", price: "Free" },
       { name: "Rice", price: "$3.99" },
       { name: "Tzatziki", price: "$1.99" },
@@ -94,9 +93,8 @@ export const menuData: MenuCategory[] = [
   {
     category: "Desserts & Drinks",
     items: [
-      { name: "Ayran", price: "$2.49" },
-      { name: "Baklava (2pc)", price: "$5.99" },
-      { name: "Bottled Water", price: "$1.99" },
+      { name: "Baklava", price: "$2.99" },
+      { name: "Bottled Water", price: "$1.49" },
       { name: "Fountain Drink", price: "$2.49" },
       { name: "Middle Eastern Black Tea", price: "$2.99" },
     ],
