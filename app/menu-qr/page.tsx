@@ -73,9 +73,7 @@ export default function MenuQRPage() {
             <a href="https://www.yelp.com/writeareview/biz/Zzyi0SdgrDdFZ0xxHIBZ0w?review_origin=mobile-site-biz-details-action-button&return_url=https://m.yelp.com/biz/maza-mediterranean-cuisine-chandler" target="_blank" rel="noopener noreferrer">
               <div className="flex items-center justify-center gap-3 w-full py-5 px-6 rounded-full border border-[#D3AB5E]/40 bg-[#0A1F1E] hover:bg-[#D3AB5E] hover:text-[#0A1F1E] active:scale-[0.985] transition-all text-lg font-medium tracking-wide">
                 <span className="text-xl flex items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 24 24" fill="#FF1A1A">
-                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-                  </svg>
+                  <img src="/yelp_logo_white.svg" alt="Yelp" className="h-6 w-auto" />
                 </span>
                 <span>Yelp Reviews</span>
               </div>
