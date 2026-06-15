@@ -87,23 +87,10 @@ const links = [
 
 export default function MenuQRPage() {
   return (
-    <div className="min-h-[100dvh] bg-[#0A1F1E] text-[#F5F1E8] flex flex-col items-center px-6 py-12">
+    <div className="min-h-[100dvh] bg-[#0A1F1E] text-[#F5F1E8] flex flex-col items-center px-6 py-16">
       <div className="w-full max-w-md">
-        {/* Header */}
-        <div className="text-center mb-10">
-          <img
-            src="/MAZA_logo_trans.webp"
-            alt="Maza Mediterranean Cuisine"
-            className="h-20 mx-auto mb-6"
-          />
-          <h1 className="font-display text-3xl tracking-[3px] text-[#D3AB5E] mb-2">
-            MAZA
-          </h1>
-          <p className="text-[#B8B8B8] text-sm">Big portions. Real ingredients. Honest prices.</p>
-        </div>
-
         {/* Link Buttons */}
-        <div className="space-y-4">
+        <div className="space-y-5">
           {links.map((link, index) => {
             const ButtonContent = (
               <div className="flex items-center justify-center gap-3 w-full py-4 px-6 rounded-full border border-[#D3AB5E]/40 bg-[#0A1F1E] hover:bg-[#D3AB5E] hover:text-[#0A1F1E] active:scale-[0.985] transition-all text-lg font-medium tracking-wide">
