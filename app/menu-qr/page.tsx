@@ -87,40 +87,42 @@ const links = [
 
 export default function MenuQRPage() {
   return (
-    <div className="min-h-[100dvh] bg-[#0A1F1E] text-[#F5F1E8] flex flex-col items-center px-6 py-16">
-      <div className="w-full max-w-md">
-        {/* Link Buttons */}
-        <div className="space-y-5">
-          {links.map((link, index) => {
-            const ButtonContent = (
-              <div className="flex items-center justify-center gap-3 w-full py-4 px-6 rounded-full border border-[#D3AB5E]/40 bg-[#0A1F1E] hover:bg-[#D3AB5E] hover:text-[#0A1F1E] active:scale-[0.985] transition-all text-lg font-medium tracking-wide">
-                <span className="text-xl flex items-center">{link.icon}</span>
-                <span>{link.label}</span>
-              </div>
-            );
+    <div className="min-h-[100dvh] bg-[#0A1F1E] text-[#F5F1E8] flex flex-col items-center px-6 py-12">
+      <div className="w-full max-w-md text-center mb-10">
+        <h1 className="font-display text-3xl tracking-[2px] text-[#D3AB5E] mb-1">
+          Maza Mediterranean Cuisine
+        </h1>
+        <p className="text-[#B8B8B8] text-sm">
+          3491 W Frye Rd, Ste 2 • Chandler, AZ 85226<br />
+          (480) 534-6550
+        </p>
+      </div>
 
-            return link.internal ? (
-              <Link key={index} href={link.href}>
-                {ButtonContent}
-              </Link>
-            ) : (
-              <a
-                key={index}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {ButtonContent}
-              </a>
-            );
-          })}
-        </div>
+      {/* Link Buttons */}
+      <div className="w-full max-w-md space-y-5">
+        {links.map((link, index) => {
+          const ButtonContent = (
+            <div className="flex items-center justify-center gap-3 w-full py-4 px-6 rounded-full border border-[#D3AB5E]/40 bg-[#0A1F1E] hover:bg-[#D3AB5E] hover:text-[#0A1F1E] active:scale-[0.985] transition-all text-lg font-medium tracking-wide">
+              <span className="text-xl flex items-center">{link.icon}</span>
+              <span>{link.label}</span>
+            </div>
+          );
 
-        {/* Footer info */}
-        <div className="mt-12 text-center text-xs text-[#B8B8B8] space-y-1">
-          <p>3491 W Frye Rd, Ste 2 • Chandler, AZ 85226</p>
-          <p>(480) 534-6550 • Open daily 10am–8pm</p>
-        </div>
+          return link.internal ? (
+            <Link key={index} href={link.href}>
+              {ButtonContent}
+            </Link>
+          ) : (
+            <a
+              key={index}
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {ButtonContent}
+            </a>
+          );
+        })}
       </div>
     </div>
   );
