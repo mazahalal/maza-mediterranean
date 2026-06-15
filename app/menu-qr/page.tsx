@@ -22,7 +22,7 @@ const links = [
   },
   {
     label: "Google Reviews",
-    href: "https://maps.app.goo.gl/a5wwA2sxf2vj4ijY9",
+    href: "https://g.page/r/CWsguNCtl7azEBM/review",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
         <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.51h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.34z" />
@@ -45,7 +45,7 @@ const links = [
   },
   {
     label: "Yelp Reviews",
-    href: "https://www.yelp.com/biz/maza-mediterranean-cuisine-chandler",
+    href: "https://www.yelp.com/writeareview/biz/Zzyi0SdgrDdFZ0xxHIBZ0w?review_origin=mobile-site-biz-details-action-button&return_url=https://m.yelp.com/biz/maza-mediterranean-cuisine-chandler",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 24 24" fill="#FF1A1A">
         <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
@@ -75,7 +75,7 @@ const links = [
   },
   {
     label: "Facebook",
-    href: "https://facebook.com/maza.halal",
+    href: "https://www.facebook.com/profile.php?id=61590423133133",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
         <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
