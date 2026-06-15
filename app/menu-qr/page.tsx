@@ -98,8 +98,8 @@ export default function MenuQRPage() {
         </p>
       </div>
 
-      {/* Link Buttons - very generous spacing */}
-      <div className="w-full max-w-md space-y-10">
+      {/* Link Buttons - explicit margins for reliable spacing */}
+      <div className="w-full max-w-md">
         {links.map((link, index) => {
           const ButtonContent = (
             <div className="flex items-center justify-center gap-3 w-full py-5 px-6 rounded-full border border-[#D3AB5E]/40 bg-[#0A1F1E] hover:bg-[#D3AB5E] hover:text-[#0A1F1E] active:scale-[0.985] transition-all text-lg font-medium tracking-wide">
@@ -108,19 +108,16 @@ export default function MenuQRPage() {
             </div>
           );
 
-          return link.internal ? (
-            <Link key={index} href={link.href}>
-              {ButtonContent}
-            </Link>
-          ) : (
-            <a
-              key={index}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {ButtonContent}
-            </a>
+          return (
+            <div key={index} className="mb-8 last:mb-0">
+              {link.internal ? (
+                <Link href={link.href}>{ButtonContent}</Link>
+              ) : (
+                <a href={link.href} target="_blank" rel="noopener noreferrer">
+                  {ButtonContent}
+                </a>
+              )}
+            </div>
           );
         })}
       </div>
