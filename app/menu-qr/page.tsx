@@ -98,11 +98,11 @@ export default function MenuQRPage() {
         </p>
       </div>
 
-      {/* Link Buttons */}
-      <div className="w-full max-w-md space-y-5">
+      {/* Link Buttons - much larger spacing */}
+      <div className="w-full max-w-md space-y-8">
         {links.map((link, index) => {
           const ButtonContent = (
-            <div className="flex items-center justify-center gap-3 w-full py-4 px-6 rounded-full border border-[#D3AB5E]/40 bg-[#0A1F1E] hover:bg-[#D3AB5E] hover:text-[#0A1F1E] active:scale-[0.985] transition-all text-lg font-medium tracking-wide">
+            <div className="flex items-center justify-center gap-3 w-full py-5 px-6 rounded-full border border-[#D3AB5E]/40 bg-[#0A1F1E] hover:bg-[#D3AB5E] hover:text-[#0A1F1E] active:scale-[0.985] transition-all text-lg font-medium tracking-wide">
               <span className="text-xl flex items-center">{link.icon}</span>
               <span>{link.label}</span>
             </div>
