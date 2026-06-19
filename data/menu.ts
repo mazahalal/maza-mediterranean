@@ -50,6 +50,7 @@ export const menuData: MenuCategory[] = [
       { name: "Falafel", price: "$16.55", image: "/images/maza/menu/opt-PXL_20260601_224012118.jpg", notes: ["Falafel, rice, salad & hummus + tahini"] },
       { name: "Appetizer Plate", price: "$15.51", notes: ["Hummus + Tahini, Dolma, Falafel, Baba Ghanoush and Salad"] },
       { name: "Maza Grill", price: "$27.99", image: "/images/maza/menu/opt-Jun_6_2026_5_29_23.jpg", notes: ["1 Chicken Tikka, 1 Beef + Lamb Shish Kebab, 1 Chicken Shish Kebab, rice, salad & hummus + tahini"] },
+      { name: "Grilled Chicken Teriyaki Plate", price: "$28.99", notes: ["2 Grilled Teriyaki Chicken Cutlets, rice, salad, baba ghanoush & hummus + tahini"] },
     ],
   },
   {
@@ -95,6 +96,7 @@ export const menuData: MenuCategory[] = [
   {
     category: "Desserts & Drinks",
     items: [
+      { name: "Cake / Cheesecake", price: "$7.99", notes: ["Flavors: Dubai Chocolate, New York Cheesecake, Red Velvet Cake, Chocolate Mousse Cake, or Nutella Cheesecake"] },
       { name: "Baklava", price: "$2.99" },
       { name: "Bottled Water", price: "$1.49" },
       { name: "Fountain Drink", price: "$2.49" },
