@@ -91,6 +91,7 @@ export const menuData: MenuCategory[] = [
       { name: "Samosa (Regular or Veggie)", price: "$5.99" },
       { name: "Tabouleh", price: "$4.99" },
       { name: "Side Salad", price: "$3.99" },
+      { name: "Kibbeh", price: "$11.99", notes: ["Beef and lamb kibbeh, 3 pieces. Comes with sauce on the side: choose tahini, garlic sauce, hot sauce, or mango sauce"] },
       { name: "Shawarma Hummus", price: "$13.99", note: "Comes with 2 pita. Choose from: Beef Shawarma, Chicken Shawarma, or Gyro" },
     ],
   },
