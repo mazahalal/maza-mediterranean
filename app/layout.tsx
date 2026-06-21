@@ -54,12 +54,61 @@ export default function RootLayout({
               },
               telephone: "(480) 534-6550",
               openingHours: "Mo-Su 10:00-20:00",
+              openingHoursSpecification: [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                  opens: "10:00",
+                  closes: "20:00",
+                },
+              ],
               url: "https://mazahalalfood.com",
+              image: "https://mazahalalfood.com/maza_ornate_logo.webp",
+              priceRange: "$$",
+              servesCuisine: ["Mediterranean", "Middle Eastern", "Halal"],
+              hasMenu: "https://mazahalalfood.com/menu",
               sameAs: [
-                `https://www.google.com/maps/place/?q=place_id:11571299155872425967`,
+                "https://www.google.com/maps/place/?q=place_id:11571299155872425967",
+              ],
+              areaServed: {
+                "@type": "GeoCircle",
+                geoMidpoint: {
+                  "@type": "GeoCoordinates",
+                  latitude: 33.3062,
+                  longitude: -111.8413,
+                },
+                geoRadius: "25000",
+              },
+              knowsAbout: [
+                "Mediterranean cuisine",
+                "Halal-certified meals",
+                "Family-style platters",
+                "Catering for events",
+                "East Valley dining",
               ],
               description:
-                "Big portions. Real ingredients. Honest prices. Family-owned Mediterranean restaurant in Chandler, AZ.",
+                "Big portions. Real ingredients. Honest prices. Family-owned Mediterranean restaurant in Chandler, AZ. Open daily 10am–8pm.",
+            }),
+          }}
+        />
+
+        {/* MAZ-34 Data Hook — Dataset for agent/LLM extraction (Authenticity Update) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Dataset",
+              name: "Maza Mediterranean Cuisine Menu & Service Data",
+              description: "Real menu items, pricing, and local service facts for Chandler, AZ Mediterranean restaurant. 20+ authentic wraps, plates, and platters. Halal-certified. Open daily 10am–8pm.",
+              url: "https://mazahalalfood.com/menu",
+              variableMeasured: ["Menu Items", "Pricing", "Service Area"],
+              citation: "https://mazahalalfood.com",
+              isAccessibleForFree: true,
+              creator: {
+                "@type": "Restaurant",
+                name: "Maza Mediterranean Cuisine"
+              }
             }),
           }}
         />
@@ -67,3 +116,47 @@ export default function RootLayout({
     </html>
   );
 }
+        {/* MAZ-33: FAQPage schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: [
+                {
+                  "@type": "Question",
+                  name: "What are your hours?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "We are open daily 10am–8pm (Fri & Sat until 10pm)."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  name: "Is Maza Mediterranean Cuisine halal?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Yes, all our meat is halal-certified."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  name: "Do you offer catering?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Yes, we provide catering for events and large orders. Contact us for details."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  name: "Is there parking available?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Free parking is available in the plaza lot at 3491 W Frye Rd."
+                  }
+                }
+              ]
+            })
+          }}
+        />
