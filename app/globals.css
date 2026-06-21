@@ -67,3 +67,9 @@ h1, h2, h3, h4 {
 .card:hover {
   border-color: var(--gold);
 }
+/* Logo image */
+.logo-image {
+  width: 180px;
+  height: auto;
+  display: block;
+}

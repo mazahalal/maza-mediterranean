@@ -10,8 +10,6 @@ export default function LogoLockup() {
         width={180}
         height={60}
       />
-      <span className="logo-wordmark">MAZA</span>
-      <span className="logo-subtitle">Mediterranean Cuisine</span>
     </Link>
   );
 }
