@@ -15,7 +15,7 @@ export default function Footer() {
           <div className="text-sm text-[#B8B8B8] space-y-1">
             <p>3491 W Frye Rd, Suite 2 · Chandler, AZ 85226</p>
             <p>(480) 534-6550</p>
-            <p className="pt-2">Open daily 10am–8pm (Fri & Sat until 10pm)</p>
+            <p className="pt-2">Open daily 10am–8pm</p>
           </div>
         </div>
       </div>
