@@ -47,6 +47,13 @@
           "price": "$12.99"
         },
         {
+          "name": "Arayes Lahm",
+          "price": "$15.55",
+          "notes": [
+            "Flat grilled sandwich with beef, lamb and cheese. Served with salad."
+          ]
+        },
+        {
           "name": "Ribeye Tikka Wrap",
           "price": "$14.55"
         }
@@ -107,6 +114,20 @@
           "price": "$20.71",
           "notes": [
             "1 Chicken Shish Kebab and 1 Beef Shish Kebab, rice, salad & hummus + tahini"
+          ]
+        },
+        {
+          "name": "Chicken Shawarma Plate",
+          "price": "$22.22",
+          "notes": [
+            "Chicken Shawarma, rice, salad, baba ghanoush & hummus + tahini"
+          ]
+        },
+        {
+          "name": "Beef + Lamb Shawarma Plate",
+          "price": "$22.22",
+          "notes": [
+            "Beef + Lamb Shawarma, rice, salad, baba ghanoush & hummus + tahini"
           ]
         },
         {
@@ -213,7 +234,6 @@
     {
       "name": "Desserts & Drinks",
       "items": [
-
         {
           "name": "Baklava",
           "price": "$2.99"

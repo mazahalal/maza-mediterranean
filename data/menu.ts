@@ -29,7 +29,7 @@ export const menuData: MenuCategory[] = [
       { name: "Lamb Tikka Wrap", price: "$13.51" },
       { name: "Mix Shawarma Wrap", price: "$12.99" },
       { name: "Ribeye Tikka Wrap", price: "$14.55" },
-      { name: "Arayes Lahm", price: "$15.55", notes: ["Flat grilled sandwich with beef, lamb and cheese. Comes with choice of side: salad, hummus, baba ghanoush, tzatziki, and sauce: tahini, garlic, hot"] },
+      { name: "Arayes Lahm", price: "$15.55", notes: ["Flat grilled sandwich with beef, lamb and cheese. Served with salad."] },
     ],
   },
   {
