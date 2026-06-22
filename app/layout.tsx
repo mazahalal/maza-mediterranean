@@ -113,10 +113,7 @@ export default function RootLayout({
             }),
           }}
         />
-      </body>
-    </html>
-  );
-}
+
         {/* MAZ-33: FAQPage schema */}
         <script
           type="application/ld+json"
