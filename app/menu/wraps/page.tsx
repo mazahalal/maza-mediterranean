@@ -1,5 +1,7 @@
 import { menuData } from "@/data/menu"
 
+import CategoryTracker from "@/components/CategoryTracker";
+
 export const metadata = {
   title: "Wraps | Maza Mediterranean Cuisine",
   description: "Fresh wraps — beef gyro, shawarma, shish kebab, chicken tikka. Made in-house daily. Chandler Mediterranean food done right.",
@@ -10,6 +12,7 @@ const wraps = menuData.find(c => c.category === "Wraps")
 export default function WrapsPage() {
   return (
     <div className="py-16 px-4">
+      <CategoryTracker category="Wraps" />
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="font-display text-4xl md:text-5xl font-bold text-[#D3AB5E] mb-4 tracking-wider">

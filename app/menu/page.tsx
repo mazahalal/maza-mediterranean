@@ -1,5 +1,6 @@
 import { metadata } from "./metadata";
 import MenuLightbox from "./components/MenuLightbox";
+import MenuTracker from "@/components/MenuTracker";
 import { menuData } from "@/data/menu";
 
 export { metadata };
@@ -35,6 +36,7 @@ export default function MenuPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(menuJsonLd) }}
       />
       <div className="py-16 px-4">
+      <MenuTracker />
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h1 className="font-display text-4xl md:text-5xl font-bold text-gold-gradient mb-4 tracking-wider">
