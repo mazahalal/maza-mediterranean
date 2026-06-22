@@ -107,9 +107,10 @@ export default function RootLayout({
               citation: "https://mazahalalfood.com",
               isAccessibleForFree: true,
               creator: {
-                "@type": "Restaurant",
+                "@type": "Organization",
                 name: "Maza Mediterranean Cuisine"
-              }
+              },
+              license: "https://creativecommons.org/licenses/by/4.0/"
             }),
           }}
         />

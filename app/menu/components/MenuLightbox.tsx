@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { menuData, MenuItem } from "@/data/menu";
+import { trackMeta } from "@/lib/meta-pixel";
 
 export default function MenuLightbox() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,6 +16,16 @@ export default function MenuLightbox() {
     if (index !== -1) {
       setCurrentIndex(index);
       setIsOpen(true);
+
+      // Meta Pixel: ViewContent per item with value when lightbox opens
+      const priceStr = clickedItem.price || "";
+      const value = parseFloat(priceStr.replace(/[^0-9.]/g, "")) || 0;
+      trackMeta("ViewContent", {
+        content_name: clickedItem.name,
+        content_category: "Menu Item",
+        value: value,
+        currency: "USD",
+      });
     }
   };
 
