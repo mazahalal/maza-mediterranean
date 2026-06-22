@@ -1,5 +1,8 @@
 "use client";
 
+import { trackContact } from "@/lib/meta-pixel";
+import PhoneLink from "@/components/PhoneLink";
+
 import { useState } from "react";
 
 export default function ContactPage() {
@@ -31,6 +34,7 @@ export default function ContactPage() {
       }
 
       setFormState("success");
+      trackContact();
       form.reset();
     } catch (err) {
       setFormState("error");
@@ -64,7 +68,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-[#F5F1E8] mb-1">Phone</h3>
-                  <p className="text-[#B8B8B8]">(480) 534-6550</p>
+                  <PhoneLink className="text-[#B8B8B8] hover:text-[#D3AB5E] transition-colors">(480) 534-6550</PhoneLink>
                 </div>
                 <div>
                   <h3 className="font-semibold text-[#F5F1E8] mb-1">Hours</h3>

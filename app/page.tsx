@@ -1,4 +1,6 @@
-import Link from 'next/link'
+import Link from "next/link";
+import PhoneLink from "@/components/PhoneLink";
+
 
 export default function Home() {
   return (
@@ -69,12 +71,11 @@ export default function Home() {
             >
               See the Full Menu
             </Link>
-            <a 
-              href="tel:4805346550" 
+            <PhoneLink 
               className="inline-block border border-[#D3AB5E] text-[#D3AB5E] font-semibold px-10 py-4 rounded text-lg tracking-wide hover:bg-[#D3AB5E] hover:text-[#0A1F1E] transition-colors"
             >
               Call to Order
-            </a>
+            </PhoneLink>
           </div>
         </div>
       </section>

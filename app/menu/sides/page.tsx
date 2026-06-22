@@ -1,3 +1,4 @@
+import CategoryTracker from "@/components/CategoryTracker";
 import { menuData } from "@/data/menu"
 
 export const metadata = {
@@ -10,6 +11,7 @@ const sides = menuData.find(c => c.category === "Sides")
 export default function SidesPage() {
   return (
     <div className="py-16 px-4">
+      <CategoryTracker category="sides" />
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="font-display text-4xl md:text-5xl font-bold text-[#D3AB5E] mb-4 tracking-wider">
