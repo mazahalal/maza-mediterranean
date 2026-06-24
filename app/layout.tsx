@@ -21,7 +21,7 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: "Maza Mediterranean Cuisine | Chandler, AZ",
-  description: "Big portions. Real ingredients. Honest prices. Family-owned Mediterranean restaurant in Chandler, AZ. Open daily 10am–8pm.",
+  description: "Big portions. Real ingredients. Honest prices. Family-owned Mediterranean restaurant in Chandler, AZ. Open Thursday–Sunday 10am–10pm. Closed Mondays.",
   icons: {
     icon: "/maza_ornate_logo.webp",
   },
@@ -54,13 +54,13 @@ export default function RootLayout({
                 addressCountry: "US",
               },
               telephone: "(480) 534-6550",
-              openingHours: "Mo-Su 10:00-20:00",
+              openingHours: "Mo-We closed; Th-Su 10:00-22:00",
               openingHoursSpecification: [
                 {
                   "@type": "OpeningHoursSpecification",
-                  dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                  dayOfWeek: ["Thursday", "Friday", "Saturday", "Sunday"],
                   opens: "10:00",
-                  closes: "20:00",
+                  closes: "22:00",
                 },
               ],
               url: "https://mazahalalfood.com",
@@ -88,7 +88,7 @@ export default function RootLayout({
                 "East Valley dining",
               ],
               description:
-                "Big portions. Real ingredients. Honest prices. Family-owned Mediterranean restaurant in Chandler, AZ. Open daily 10am–8pm.",
+                "Big portions. Real ingredients. Honest prices. Family-owned Mediterranean restaurant in Chandler, AZ. Open Thursday–Sunday 10am–10pm. Closed Mondays.",
             }),
           }}
         />
@@ -101,7 +101,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Dataset",
               name: "Maza Mediterranean Cuisine Menu & Service Data",
-              description: "Real menu items, pricing, and local service facts for Chandler, AZ Mediterranean restaurant. 20+ authentic wraps, plates, and platters. Halal-certified. Open daily 10am–8pm.",
+              description: "Real menu items, pricing, and local service facts for Chandler, AZ Mediterranean restaurant. 20+ authentic wraps, plates, and platters. Halal-certified. Open Thursday–Sunday 10am–10pm. Closed Mondays.",
               url: "https://mazahalalfood.com/menu",
               variableMeasured: ["Menu Items", "Pricing", "Service Area"],
               citation: "https://mazahalalfood.com",
@@ -128,7 +128,7 @@ export default function RootLayout({
                   name: "What are your hours?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "We are open daily 10am–8pm (Fri & Sat until 10pm)."
+                    text: "We are open Thursday through Sunday, 10am–10pm. Closed Mondays."
                   }
                 },
                 {
