@@ -2,6 +2,11 @@ import Link from "next/link";
 import PhoneLink from "@/components/PhoneLink";
 import MapEmbed from "@/components/MapEmbed";
 
+export const metadata = {
+  title: "Maza Mediterranean Cuisine | Chandler AZ | Mediterranean Food Chandler",
+  description: "Maza Mediterranean Cuisine Chandler AZ. Authentic Mediterranean food near Chandler Mall, Tempe & East Valley. Big portions, real ingredients, honest prices. Halal Mediterranean restaurant. Open Tue-Sun.",
+};
+
 export default function Home() {
   return (
     <div>
@@ -17,7 +22,7 @@ export default function Home() {
           </div>
           <div className="font-display text-2xl md:text-4xl tracking-[0.3em] text-[#F5F1E8] mb-6">MEDITERRANEAN CUISINE</div>
           <p className="text-xl md:text-2xl text-[#F5F1E8]/90 mb-8">
-            Big portions. Real ingredients.<br />Honest prices.
+            Big portions. Real ingredients.<br />Honest prices.<br />Mediterranean food Chandler AZ — halal Mediterranean near Chandler Mall and Tempe.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
@@ -51,6 +56,16 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Local SEO block targeting GSC queries: "mediterranean food near me", "maza near me", "best new restaurants tempe", "best restaurants near chandler mall", "recently opened restaurants near me" */}
+      <section className="py-10 px-6 bg-[#0F2A28] border-t border-[#D3AB5E]/20">
+        <div className="max-w-5xl mx-auto text-center">
+          <p className="text-[#F5F1E8]/90 text-lg md:text-xl">
+            New to the area? Looking for <strong>Mediterranean food near me</strong> or the best restaurants near Chandler Mall? 
+            Maza is a recently opened, family-owned spot bringing authentic halal Mediterranean cuisine to Chandler, AZ and the East Valley (including Tempe).
+          </p>
         </div>
       </section>
 
