@@ -1,6 +1,6 @@
 import Link from "next/link";
 import PhoneLink from "@/components/PhoneLink";
-
+import MapEmbed from "@/components/MapEmbed";
 
 export default function Home() {
   return (
@@ -50,6 +50,29 @@ export default function Home() {
                 <p className="text-[#F5F1E8]/80">{item.text}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Find Us Teaser (homepage map for local SEO + quick location) */}
+      <section className="py-16 px-6 bg-[#0F2A28] border-t border-[#D3AB5E]/20">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            <div>
+              <h2 className="font-display text-3xl text-[#D3AB5E] tracking-wide mb-4">Find Us</h2>
+              <div className="space-y-1 text-[#F5F1E8]/80 mb-3">
+                <p>3491 W Frye Rd, Suite 2</p>
+                <p>Chandler, AZ 85226</p>
+              </div>
+              <p className="text-[#B8B8B8] mb-6">Tue–Wed 10am–8pm • Thu–Sun 10am–10pm • Closed Mondays</p>
+              <Link 
+                href="/contact" 
+                className="inline-block text-[#D3AB5E] hover:text-[#F5F1E8] transition-colors font-medium"
+              >
+                Full contact details &amp; message form →
+              </Link>
+            </div>
+            <MapEmbed />
           </div>
         </div>
       </section>
