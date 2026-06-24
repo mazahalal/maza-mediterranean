@@ -10,6 +10,8 @@ export const metadata: Metadata = {
 };
 
 export default function MenuQRPage() {
+  const uberEatsUrl = "https://www.ubereats.com/store/maza-mediterranean/JQ-mO6GTVFamzBuDxlCOEQ?utm_source=maza-website&utm_medium=referral&utm_campaign=website-delivery";
+
   return (
     <div className="min-h-[100dvh] bg-[#0A1F1E] text-[#F5F1E8] flex flex-col items-center px-6 py-12">
       <div className="w-full max-w-md text-center mb-10">
@@ -41,7 +43,7 @@ export default function MenuQRPage() {
         <div className="text-[#D3AB5E] text-sm tracking-widest mb-4 px-1">ORDER ONLINE</div>
         <div>
           <div className="mb-4">
-            <a href="https://www.ubereats.com/store/maza-mediterranean/JQ-mO6GTVFamzBuDxlCOEQ?ps=1&utm_source=maza-website&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+            <a href={uberEatsUrl} target="_blank" rel="noopener noreferrer">
               <div className="flex items-center justify-center gap-3 w-full py-5 px-6 rounded-full border border-[#D3AB5E]/40 bg-[#0A1F1E] hover:bg-[#D3AB5E] hover:text-[#0A1F1E] active:scale-[0.985] transition-all text-lg font-medium tracking-wide">
                 <span className="text-xl flex items-center">🛵</span>
                 <span>Uber Eats</span>
