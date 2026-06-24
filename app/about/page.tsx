@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "About | Maza Mediterranean Cuisine",
-  description: "Made fresh, in-house, every day. Maza is Chandler's spot for big portions, real ingredients, and honest Mediterranean food.",
+  title: "About Maza Mediterranean | Chandler AZ Mediterranean Restaurant",
+  description: "Family-owned Mediterranean restaurant in Chandler AZ. Recently opened to bring authentic halal Mediterranean food, big portions and real ingredients to neighbors near Chandler Mall and the East Valley.",
 };
 
 export default function AboutPage() {
@@ -22,7 +22,7 @@ export default function AboutPage() {
               Our Story
             </h2>
             <p className="text-[#F5F1E8] leading-relaxed">
-              Maza started with a simple idea: Mediterranean food should be accessible to everyone. Not fancy, not pretentious — just good food made with real ingredients, generous portions, and honest prices. We opened in Chandler because this is where we live, and we wanted a spot our neighbors could count on for a solid lunch or a family dinner.
+              Maza started with a simple idea: Mediterranean food should be accessible to everyone. Not fancy, not pretentious — just good food made with real ingredients, generous portions, and honest prices. We recently opened in Chandler because this is where we live, and we wanted a spot our neighbors could count on for solid Mediterranean food near Chandler Mall, Tempe and the East Valley.
             </p>
           </div>
 
