@@ -56,14 +56,14 @@ export default function Home() {
 
       {/* Hours */}
       <section className="py-16 px-6 text-center border-t border-[#D3AB5E]/20">
-        <h2 className="font-display text-4xl text-[#D3AB5E] tracking-wide mb-4">Open Daily, 10am–8pm</h2>
-        <p className="text-[#F5F1E8]/80 text-lg">Dine in or grab it to go. We’re here every day.</p>
+        <h2 className="font-display text-4xl text-[#D3AB5E] tracking-wide mb-4">Open Tue–Sun, 10am–8pm (Thu–Sun until 10pm)</h2>
+        <p className="text-[#F5F1E8]/80 text-lg">Dine in or grab it to go. Closed Mondays.</p>
       </section>
 
       {/* Final CTA */}
       <section className="bg-[#0A1F1E] py-20 px-6 text-center">
         <div className="max-w-xl mx-auto">
-          <p className="text-[#F5F1E8]/80 mb-8 text-lg">Dine in or grab it to go. We’re here every day.</p>
+          <p className="text-[#F5F1E8]/80 mb-8 text-lg">Dine in or grab it to go. Closed Mondays.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/menu"
