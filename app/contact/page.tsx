@@ -2,6 +2,7 @@
 
 import { trackContact } from "@/lib/meta-pixel";
 import PhoneLink from "@/components/PhoneLink";
+import MapEmbed from "@/components/MapEmbed";
 
 import { useState } from "react";
 
@@ -73,6 +74,18 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-semibold text-[#F5F1E8] mb-1">Hours</h3>
                   <p className="text-[#B8B8B8]">Tuesday–Wednesday: 10am–8pm<br />Thursday–Sunday: 10am–10pm<br />Closed Mondays</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-[#F5F1E8] mb-2">Map</h3>
+                  <MapEmbed />
+                  <a 
+                    href="https://www.google.com/maps/place/?q=place_id:11571299155872425967"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-2 inline-block text-sm text-[#D3AB5E] hover:text-[#F5F1E8] transition-colors"
+                  >
+                    Get Directions on Google Maps →
+                  </a>
                 </div>
               </div>
             </div>
