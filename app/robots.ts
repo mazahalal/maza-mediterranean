@@ -15,6 +15,10 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: 'OAI-SearchBot',
         allow: '/',
       },
+      {
+        userAgent: 'Google-Extended',
+        allow: '/',
+      },
     ],
     sitemap: 'https://mazahalalfood.com/sitemap.xml',
   }
