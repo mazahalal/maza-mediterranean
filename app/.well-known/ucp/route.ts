@@ -28,6 +28,7 @@ export async function GET() {
     supportedProtocols: ["UCP/1.0", "AP2"],
     lastUpdated: new Date().toISOString(),
     menuEndpoint: "https://mazahalalfood.com/menu",
+    specsEndpoint: "https://mazahalalfood.com/api/specs",
     contactEndpoint: "https://mazahalalfood.com/contact"
   };
 
