@@ -158,7 +158,7 @@
       "items": [
         {
           "name": "Maza Special",
-          "price": "$41.59",
+          "price": "$48.45",
           "notes": [
             "1x Chicken Tikka, 1x Ribeye Tikka, 1x Beef Shish Kebab, 1x Chicken Shish Kebab (4 total), +2 Pita, Rice, Salad, Hummus + Tahini, Baba Ghanoush, Tabbouleh"
           ]
@@ -186,7 +186,13 @@
         },
         {
           "name": "Crispy Chicken Sandwich",
-          "price": "$12.47"
+          "price": "$11.85",
+          "note": "Kids Meal — Comes with Fries"
+        },
+        {
+          "name": "All Beef Burger",
+          "price": "$11.85",
+          "note": "Kids Meal — Comes with Fries"
         }
       ]
     },
