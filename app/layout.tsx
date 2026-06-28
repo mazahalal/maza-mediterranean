@@ -95,6 +95,11 @@ export default function RootLayout({
               ],
               description:
                 "Big portions. Real ingredients. Honest prices. Family-owned Mediterranean restaurant in Chandler, AZ. Open Tuesday–Sunday. Tue–Wed until 8pm, Thu–Sun until 10pm. Closed Mondays.",
+              potentialAction: {
+                "@type": "ReserveAction",
+                "target": "https://mazahalalfood.com/contact",
+                "name": "Make a reservation or catering inquiry"
+              }
             }),
           }}
         />
