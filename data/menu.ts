@@ -20,7 +20,7 @@ export const menuData: MenuCategory[] = [
     items: [
       { name: "Beef Gyro", price: "$10.91", notes: ["Served on pita or wrap (saj)"] },
       { name: "Beef Shawarma Wrap", price: "$12.99" },
-      { name: "Beef + Lamb Shish Kebab Wrap", price: "$12.99" },
+      { name: "Beef Shish Kebab Wrap", price: "$12.99" },
       { name: "Chicken Shawarma Wrap", price: "$12.47" },
       { name: "Chicken Shish Kebab Wrap", price: "$12.99" },
       { name: "Chicken Tikka Wrap", price: "$11.43" },
@@ -28,45 +28,38 @@ export const menuData: MenuCategory[] = [
       { name: "Falafel Wrap", price: "$9.35" },
       { name: "Lamb Tikka Wrap", price: "$13.51" },
       { name: "Mix Shawarma Wrap", price: "$12.99" },
-      { name: "Ribeye Tikka Wrap", price: "$14.55" },
       { name: "Arayes Lahm", price: "$15.55", notes: ["Flat grilled sandwich with beef, lamb and cheese. Served with salad."] },
+      { name: "Ribeye Tikka Wrap", price: "$14.55" }
     ],
   },
   {
     category: "Wrap Upgrades",
     subtitle: "Upgrades apply to wraps only",
     items: [
-      { name: "Combo Upgrade", price: "$4.99", note: "Includes Fries + Drink" },
+      { name: "Combo Upgrade", price: "$4.99", note: "Includes Fries + Drink" }
     ],
   },
   {
     category: "Plates",
     items: [
-      { name: "Beef + Lamb Shish Kebab", price: "$20.19", notes: ["2 Beef + Lamb Shish Kebab, rice, salad & hummus + tahini"] },
+      { name: "Beef Shish Kebab", price: "$20.19", notes: ["2 Beef Shish Kebab, rice, salad & hummus + tahini"] },
       { name: "Chicken Shish Kebab", price: "$19.67", notes: ["2 Chicken Shish Kebab, rice, salad & hummus + tahini"] },
       { name: "Chicken Tikka Plate", price: "$19.67", notes: ["2 Chicken Tikka, rice, salad & hummus + tahini"] },
       { name: "Lamb Tikka Plate", price: "$20.71", notes: ["2 Lamb Tikka, rice, salad & hummus + tahini"] },
       { name: "Ribeye Tikka Plate", price: "$24.87", notes: ["2 Ribeye Tikka, rice, salad & hummus + tahini"] },
-      { name: "Mix Kebab", price: "$20.71", notes: ["1 Chicken Shish Kebab and 1 Beef + Lamb Shish Kebab, rice, salad & hummus + tahini"] },
+      { name: "Mix Kebab", price: "$20.71", notes: ["1 Chicken Shish Kebab and 1 Beef Shish Kebab, rice, salad & hummus + tahini"] },
+      { name: "Chicken Shawarma Plate", price: "$22.22", notes: ["Chicken Shawarma, rice, salad, baba ghanoush & hummus + tahini"] },
+      { name: "Beef + Lamb Shawarma Plate", price: "$22.22", notes: ["Beef + Lamb Shawarma, rice, salad, baba ghanoush & hummus + tahini"] },
       { name: "Falafel", price: "$16.55", image: "/images/maza/menu/opt-PXL_20260601_224012118.jpg", notes: ["Falafel, rice, salad & hummus + tahini"] },
       { name: "Appetizer Plate", price: "$15.51", notes: ["Hummus + Tahini, Dolma, Falafel, Baba Ghanoush and Salad"] },
-      { name: "Maza Grill", price: "$27.99", image: "/images/maza/menu/opt-Jun_6_2026_5_29_23.jpg", notes: ["1 Chicken Tikka, 1 Beef + Lamb Shish Kebab, 1 Chicken Shish Kebab, rice, salad & hummus + tahini"] },
-      { name: "Grilled Chicken Teriyaki Plate", price: "$28.99", notes: ["2 Grilled Teriyaki Chicken Cutlets, rice, salad, baba ghanoush & hummus + tahini"] },
+      { name: "Maza Grill", price: "$27.99", image: "/images/maza/menu/opt-Jun_6_2026_5_29_23.jpg", notes: ["1 Chicken Tikka, 1 Beef Shish Kebab, 1 Chicken Shish Kebab, rice, salad & hummus + tahini"] }
     ],
   },
   {
     category: "Specials",
     items: [
-      {
-        name: "Maza Special",
-        price: "$48.45",
-        notes: ["1x Chicken Tikka, 1x Ribeye Tikka, 1x Beef + Lamb Shish Kebab, 1x Chicken Shish Kebab (4 total), +2 Pita, Rice, Salad, Hummus + Tahini, Baba Ghanoush, Tabbouleh"],
-      },
-      {
-        name: "Family Meal",
-        price: "$87.49",
-        notes: ["2x Beef + Lamb Shish Kebab, 2x Chicken Shish Kebab, 2x Chicken Tikka, 2x Lamb Tikka, 2x Ribeye Tikka (10 total), +4 Pita, Rice, Salad, Hummus + Tahini, Baba Ghanoush, Tabbouleh"],
-      },
+      { name: "Maza Special", price: "$48.45", notes: ["1x Chicken Tikka, 1x Ribeye Tikka, 1x Beef Shish Kebab, 1x Chicken Shish Kebab (4 total), +2 Pita, Rice, Salad, Hummus + Tahini, Baba Ghanoush, Tabbouleh"] },
+      { name: "Family Meal", price: "$87.49", notes: ["2x Beef Shish Kebab, 2x Chicken Shish Kebab, 2x Chicken Tikka, 2x Lamb Tikka, 2x Ribeye Tikka (10 total), +4 Pita, Rice, Salad, Hummus + Tahini, Baba Ghanoush, Tabbouleh"] }
     ],
   },
   {
@@ -76,7 +69,7 @@ export const menuData: MenuCategory[] = [
       { name: "Beef Burger", price: "$12.47", image: "/images/maza/menu/opt-PXL_20260606_223538010.jpg" },
       { name: "Grilled Chicken", price: "$12.47" },
       { name: "Crispy Chicken Sandwich", price: "$11.85", note: "Kids Meal — Comes with Fries" },
-      { name: "All Beef Burger", price: "$11.85", note: "Kids Meal — Comes with Fries" },
+      { name: "All Beef Burger", price: "$11.85", note: "Kids Meal — Comes with Fries" }
     ],
   },
   {
@@ -84,26 +77,22 @@ export const menuData: MenuCategory[] = [
     items: [
       { name: "Dolma", price: "$5.99" },
       { name: "Fries", price: "$3.49" },
-      { name: "Falafel (4pc)", price: "$5.99" },
+      { name: "Falafel (4pc)", price: "$3.99" },
       { name: "Hummus with tahini and pita", price: "$5.99" },
       { name: "Pita", price: "Free" },
       { name: "Rice", price: "$3.99" },
       { name: "Tzatziki", price: "$1.99" },
       { name: "Samosa (Regular or Veggie)", price: "$5.99" },
-      { name: "Tabouleh", price: "$4.99" },
-      { name: "Side Salad", price: "$3.99" },
-      { name: "Kibbeh", price: "$11.99", notes: ["Beef and lamb kibbeh, 3 pieces. Comes with sauce on the side: choose tahini, garlic sauce, hot sauce, or mango sauce"] },
-      { name: "Shawarma Hummus", price: "$13.99", note: "Comes with 2 pita. Choose from: Beef Shawarma, Chicken Shawarma, or Gyro" },
+      { name: "Tabouleh", price: "$4.99" }
     ],
   },
   {
     category: "Desserts & Drinks",
     items: [
-      { name: "Cake / Cheesecake", price: "$7.99", notes: ["Flavors: Dubai Chocolate, New York Cheesecake, Red Velvet Cake, Chocolate Mousse Cake, or Nutella Cheesecake"] },
       { name: "Baklava", price: "$2.99" },
       { name: "Bottled Water", price: "$1.49" },
       { name: "Fountain Drink", price: "$2.49" },
-      { name: "Middle Eastern Black Tea", price: "$2.99" },
+      { name: "Middle Eastern Black Tea", price: "$2.99" }
     ],
   },
 ];
