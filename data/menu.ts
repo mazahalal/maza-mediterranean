@@ -59,7 +59,7 @@ export const menuData: MenuCategory[] = [
     items: [
       {
         name: "Maza Special",
-        price: "$41.59",
+        price: "$48.45",
         notes: ["1x Chicken Tikka, 1x Ribeye Tikka, 1x Beef + Lamb Shish Kebab, 1x Chicken Shish Kebab (4 total), +2 Pita, Rice, Salad, Hummus + Tahini, Baba Ghanoush, Tabbouleh"],
       },
       {
@@ -75,7 +75,8 @@ export const menuData: MenuCategory[] = [
     items: [
       { name: "Beef Burger", price: "$12.47", image: "/images/maza/menu/opt-PXL_20260606_223538010.jpg" },
       { name: "Grilled Chicken", price: "$12.47" },
-      { name: "Crispy Chicken Sandwich", price: "$12.47", note: "Comes with fries" },
+      { name: "Crispy Chicken Sandwich", price: "$11.85", note: "Kids Meal — Comes with Fries" },
+      { name: "All Beef Burger", price: "$11.85", note: "Kids Meal — Comes with Fries" },
     ],
   },
   {
