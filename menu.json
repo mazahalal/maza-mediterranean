@@ -15,7 +15,7 @@
           "price": "$12.99"
         },
         {
-          "name": "Beef Shish Kebab Wrap",
+          "name": "Beef + Lamb Shish Kebab Wrap",
           "price": "$12.99"
         },
         {
@@ -75,10 +75,10 @@
       "name": "Plates",
       "items": [
         {
-          "name": "Beef Shish Kebab",
+          "name": "Beef + Lamb Shish Kebab",
           "price": "$20.19",
           "notes": [
-            "2 Beef Shish Kebab, rice, salad & hummus + tahini"
+            "2 Beef + Lamb Shish Kebab, rice, salad & hummus + tahini"
           ]
         },
         {
@@ -113,7 +113,7 @@
           "name": "Mix Kebab",
           "price": "$20.71",
           "notes": [
-            "1 Chicken Shish Kebab and 1 Beef Shish Kebab, rice, salad & hummus + tahini"
+            "1 Chicken Shish Kebab and 1 Beef + Lamb Shish Kebab, rice, salad & hummus + tahini"
           ]
         },
         {
@@ -148,7 +148,14 @@
           "name": "Maza Grill",
           "price": "$27.99",
           "notes": [
-            "1 Chicken Tikka, 1 Beef Shish Kebab, 1 Chicken Shish Kebab, rice, salad & hummus + tahini"
+            "1 Chicken Tikka, 1 Beef + Lamb Shish Kebab, 1 Chicken Shish Kebab, rice, salad & hummus + tahini"
+          ]
+        },
+        {
+          "name": "Grilled Chicken Teriyaki Plate",
+          "price": "$28.99",
+          "notes": [
+            "2 Grilled Teriyaki Chicken Cutlets, rice, salad, baba ghanoush & hummus + tahini"
           ]
         }
       ]
@@ -160,14 +167,14 @@
           "name": "Maza Special",
           "price": "$48.45",
           "notes": [
-            "1x Chicken Tikka, 1x Ribeye Tikka, 1x Beef Shish Kebab, 1x Chicken Shish Kebab (4 total), +2 Pita, Rice, Salad, Hummus + Tahini, Baba Ghanoush, Tabbouleh"
+            "1x Chicken Tikka, 1x Ribeye Tikka, 1x Beef + Lamb Shish Kebab, 1x Chicken Shish Kebab (4 total), +2 Pita, Rice, Salad, Hummus + Tahini, Baba Ghanoush, Tabbouleh"
           ]
         },
         {
           "name": "Family Meal",
           "price": "$87.49",
           "notes": [
-            "2x Beef Shish Kebab, 2x Chicken Shish Kebab, 2x Chicken Tikka, 2x Lamb Tikka, 2x Ribeye Tikka (10 total), +4 Pita, Rice, Salad, Hummus + Tahini, Baba Ghanoush, Tabbouleh"
+            "2x Beef + Lamb Shish Kebab, 2x Chicken Shish Kebab, 2x Chicken Tikka, 2x Lamb Tikka, 2x Ribeye Tikka (10 total), +4 Pita, Rice, Salad, Hummus + Tahini, Baba Ghanoush, Tabbouleh"
           ]
         }
       ]
@@ -183,7 +190,13 @@
         {
           "name": "Grilled Chicken",
           "price": "$12.47"
-        },
+        }
+      ]
+    },
+    {
+      "name": "Kids Meals",
+      "subtitle": "Comes with Fries",
+      "items": [
         {
           "name": "Crispy Chicken Sandwich",
           "price": "$11.85",
@@ -234,12 +247,35 @@
         {
           "name": "Tabouleh",
           "price": "$4.99"
+        },
+        {
+          "name": "Side Salad",
+          "price": "$3.99"
+        },
+        {
+          "name": "Kibbeh",
+          "price": "$11.99",
+          "notes": [
+            "Beef and lamb kibbeh, 3 pieces. Comes with sauce on the side: choose tahini, garlic sauce, hot sauce, or mango sauce"
+          ]
+        },
+        {
+          "name": "Shawarma Hummus",
+          "price": "$13.99",
+          "note": "Comes with 2 pita. Choose from: Beef Shawarma, Chicken Shawarma, or Gyro"
         }
       ]
     },
     {
       "name": "Desserts & Drinks",
       "items": [
+        {
+          "name": "Cake / Cheesecake",
+          "price": "$7.99",
+          "notes": [
+            "Flavors: Dubai Chocolate, New York Cheesecake, Red Velvet Cake, Chocolate Mousse Cake, or Nutella Cheesecake"
+          ]
+        },
         {
           "name": "Baklava",
           "price": "$2.99"
