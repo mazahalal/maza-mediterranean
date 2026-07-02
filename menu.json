@@ -277,8 +277,12 @@
           ]
         },
         {
-          "name": "Baklava",
-          "price": "$2.99"
+          "name": "Baklava (Small)",
+          "price": "$2.49"
+        },
+        {
+          "name": "Baklava (Large)",
+          "price": "$3.99"
         },
         {
           "name": "Bottled Water",

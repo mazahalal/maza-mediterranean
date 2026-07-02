@@ -100,7 +100,8 @@ export const menuData: MenuCategory[] = [
     category: "Desserts & Drinks",
     items: [
       { name: "Cake / Cheesecake", price: "$7.99", notes: ["Flavors: Dubai Chocolate, New York Cheesecake, Red Velvet Cake, Chocolate Mousse Cake, or Nutella Cheesecake"] },
-      { name: "Baklava", price: "$2.99" },
+      { name: "Baklava (Small)", price: "$2.49" },
+      { name: "Baklava (Large)", price: "$3.99" },
       { name: "Bottled Water", price: "$1.49" },
       { name: "Fountain Drink", price: "$2.49" },
       { name: "Middle Eastern Black Tea", price: "$2.99" }
