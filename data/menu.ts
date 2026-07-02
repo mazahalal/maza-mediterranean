@@ -29,7 +29,9 @@ export const menuData: MenuCategory[] = [
       { name: "Lamb Tikka Wrap", price: "$13.51" },
       { name: "Mix Shawarma Wrap", price: "$12.99" },
       { name: "Arayes Lahm", price: "$15.55", notes: ["Flat grilled sandwich with beef, lamb and cheese. Served with salad."] },
-      { name: "Ribeye Tikka Wrap", price: "$14.55" }
+      { name: "Ribeye Tikka Wrap", price: "$14.55" },
+      { name: "Shredded Chicken Wrap", price: "$12.49" },
+      { name: "Shredded Steak Wrap", price: "$14.89" }
     ],
   },
   {
@@ -53,7 +55,23 @@ export const menuData: MenuCategory[] = [
       { name: "Falafel", price: "$16.55", image: "/images/maza/menu/opt-PXL_20260601_224012118.jpg", notes: ["Falafel, rice, salad & hummus + tahini"] },
       { name: "Appetizer Plate", price: "$15.51", notes: ["Hummus + Tahini, Dolma, Falafel, Baba Ghanoush and Salad"] },
       { name: "Maza Grill", price: "$27.99", image: "/images/maza/menu/opt-Jun_6_2026_5_29_23.jpg", notes: ["1 Chicken Tikka, 1 Beef + Lamb Shish Kebab, 1 Chicken Shish Kebab, rice, salad & hummus + tahini"] },
-      { name: "Grilled Chicken Teriyaki Plate", price: "$28.99", notes: ["2 Grilled Teriyaki Chicken Cutlets, rice, salad, baba ghanoush & hummus + tahini"] }
+      { name: "Grilled Chicken Teriyaki Plate", price: "$28.99", notes: ["2 Grilled Teriyaki Chicken Cutlets, rice, salad, baba ghanoush & hummus + tahini"] },
+      { name: "Shredded Chicken Plate", price: "$18.49" },
+      { name: "Shredded Steak Plate", price: "$19.99" }
+    ],
+  },
+  {
+    category: "Loaded Fries",
+    items: [
+      { name: "Shredded Chicken Loaded Fries", price: "$11.49" },
+      { name: "Shredded Steak Loaded Fries", price: "$12.89" }
+    ],
+  },
+  {
+    category: "Loaded Hummus",
+    items: [
+      { name: "Shredded Chicken Loaded Hummus", price: "$11.49" },
+      { name: "Shredded Steak Loaded Hummus", price: "$12.89" }
     ],
   },
   {
