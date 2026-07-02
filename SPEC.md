@@ -64,7 +64,7 @@ Maza Mediterranean Cuisine is an authentic Mediterranean restaurant located in C
 | Phone | (480) 534-6550 |
 | Hours | Open Daily: 10am – 6pm |
 | Domain | mazahalalfood.com |
-| POS | Shift4 (future online ordering) |
+| POS | Shift4 — online ordering live at https://online.skytab.com/s/maza |
 | Delivery | DoorDash/UberEats (future) |
 
 ## 7. Local SEO

@@ -30,6 +30,14 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
+          <a
+            href="https://online.skytab.com/s/maza"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-4 bg-[#D3AB5E] hover:bg-[#C49A4D] text-[#0A1F1E] font-semibold px-5 py-2 rounded text-sm transition-colors"
+          >
+            Order Online
+          </a>
         </div>
 
         <button
@@ -59,6 +67,15 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
+          <a
+            href="https://online.skytab.com/s/maza"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setIsOpen(false)}
+            className="block w-full mt-3 bg-[#D3AB5E] hover:bg-[#C49A4D] text-[#0A1F1E] font-semibold px-5 py-3 rounded text-center text-sm transition-colors"
+          >
+            Order Online
+          </a>
         </div>
       )}
     </nav>

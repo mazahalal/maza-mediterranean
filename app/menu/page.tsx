@@ -52,7 +52,21 @@ export default function MenuPage() {
 
           <MenuLightbox />
 
-          <div className="mt-16 bg-[#0E0E0E] p-8 rounded-lg border border-[rgba(211,171,94,0.15)] text-center">
+          <div className="mt-12 text-center">
+            <a
+              href="https://online.skytab.com/s/maza"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-[#D3AB5E] hover:bg-[#C49A4D] text-[#0A1F1E] font-semibold px-10 py-4 rounded text-lg tracking-wide transition-colors"
+            >
+              Order Online for Pickup
+            </a>
+            <p className="mt-4 text-[#B8B8B8] text-sm">
+              Order ahead and skip the wait — online orders go directly to our kitchen.
+            </p>
+          </div>
+
+          <div className="mt-8 bg-[#0E0E0E] p-8 rounded-lg border border-[rgba(211,171,94,0.15)] text-center">
             <p className="text-[#F5F1E8]">
               <strong className="text-[#D3AB5E]">Note:</strong> All plates come with 2 kebabs unless otherwise noted, rice, salad, hummus + tahini. Please inform us of any allergies.
             </p>
