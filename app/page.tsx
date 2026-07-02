@@ -31,6 +31,14 @@ export default function Home() {
             >
               View the Menu
             </Link>
+            <a
+              href="https://online.skytab.com/s/maza"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block border border-[#D3AB5E] text-[#D3AB5E] font-semibold px-10 py-4 rounded text-lg tracking-wide hover:bg-[#D3AB5E] hover:text-[#0A1F1E] transition-colors"
+            >
+              Order Online
+            </a>
             <Link 
               href="/contact" 
               className="inline-block border border-[#D3AB5E] text-[#D3AB5E] font-semibold px-10 py-4 rounded text-lg tracking-wide hover:bg-[#D3AB5E] hover:text-[#0A1F1E] transition-colors"
@@ -109,6 +117,14 @@ export default function Home() {
             >
               See the Full Menu
             </Link>
+            <a
+              href="https://online.skytab.com/s/maza"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-[#D3AB5E] hover:bg-[#C49A4D] text-[#0A1F1E] font-semibold px-10 py-4 rounded text-lg tracking-wide transition-colors"
+            >
+              Order Online
+            </a>
             <PhoneLink 
               className="inline-block border border-[#D3AB5E] text-[#D3AB5E] font-semibold px-10 py-4 rounded text-lg tracking-wide hover:bg-[#D3AB5E] hover:text-[#0A1F1E] transition-colors"
             >
