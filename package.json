@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "generate-menu": "node references/linked-files/generate-menu-ts.mjs",
+    "prebuild": "npm run generate-menu",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
