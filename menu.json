@@ -56,6 +56,14 @@
         {
           "name": "Ribeye Tikka Wrap",
           "price": "$14.55"
+        },
+        {
+          "name": "Shredded Chicken Wrap",
+          "price": "$12.49"
+        },
+        {
+          "name": "Shredded Steak Wrap",
+          "price": "$14.89"
         }
       ],
       "subtitle": "Wrapped with hummus, tomato, onion, lettuce, pickle, and garlic sauce"
@@ -157,6 +165,40 @@
           "notes": [
             "2 Grilled Teriyaki Chicken Cutlets, rice, salad, baba ghanoush & hummus + tahini"
           ]
+        },
+        {
+          "name": "Shredded Chicken Plate",
+          "price": "$18.49"
+        },
+        {
+          "name": "Shredded Steak Plate",
+          "price": "$19.99"
+        }
+      ]
+    },
+    {
+      "name": "Loaded Fries",
+      "items": [
+        {
+          "name": "Shredded Chicken Loaded Fries",
+          "price": "$11.49"
+        },
+        {
+          "name": "Shredded Steak Loaded Fries",
+          "price": "$12.89"
+        }
+      ]
+    },
+    {
+      "name": "Loaded Hummus",
+      "items": [
+        {
+          "name": "Shredded Chicken Loaded Hummus",
+          "price": "$11.49"
+        },
+        {
+          "name": "Shredded Steak Loaded Hummus",
+          "price": "$12.89"
         }
       ]
     },
