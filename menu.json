@@ -70,7 +70,7 @@
     },
     {
       "name": "Wrap Upgrades",
-      "subtitle": "Upgrades apply to wraps only",
+      "subtitle": "Upgrade any meal to a combo",
       "items": [
         {
           "name": "Combo Upgrade",
@@ -168,11 +168,17 @@
         },
         {
           "name": "Shredded Chicken Plate",
-          "price": "$18.49"
+          "price": "$18.49",
+          "notes": [
+            "Maza in-house shredded chicken over a bed of rice, salad, baba ghanoush and hummus + tahini"
+          ]
         },
         {
           "name": "Shredded Steak Plate",
-          "price": "$19.99"
+          "price": "$19.99",
+          "notes": [
+            "Maza in-house shredded steak over a bed of rice, salad, baba ghanoush and hummus + tahini"
+          ]
         }
       ]
     },
@@ -180,12 +186,24 @@
       "name": "Loaded Fries",
       "items": [
         {
-          "name": "Shredded Chicken Loaded Fries",
+          "name": "Shredded Chicken",
           "price": "$11.49"
         },
         {
-          "name": "Shredded Steak Loaded Fries",
+          "name": "Shredded Steak",
           "price": "$12.89"
+        },
+        {
+          "name": "Gyro",
+          "price": "$12.89"
+        },
+        {
+          "name": "Beef Shawarma",
+          "price": "$13.49"
+        },
+        {
+          "name": "Chicken Shawarma",
+          "price": "$13.49"
         }
       ]
     },
@@ -193,12 +211,24 @@
       "name": "Loaded Hummus",
       "items": [
         {
-          "name": "Shredded Chicken Loaded Hummus",
+          "name": "Shredded Chicken",
           "price": "$11.49"
         },
         {
-          "name": "Shredded Steak Loaded Hummus",
+          "name": "Shredded Steak",
           "price": "$12.89"
+        },
+        {
+          "name": "Gyro",
+          "price": "$12.89"
+        },
+        {
+          "name": "Beef Shawarma",
+          "price": "$13.49"
+        },
+        {
+          "name": "Chicken Shawarma",
+          "price": "$13.49"
         }
       ]
     },
@@ -209,14 +239,14 @@
           "name": "Maza Special",
           "price": "$48.45",
           "notes": [
-            "1x Chicken Tikka, 1x Ribeye Tikka, 1x Beef + Lamb Shish Kebab, 1x Chicken Shish Kebab (4 total), +2 Pita, Rice, Salad, Hummus + Tahini, Baba Ghanoush, Tabbouleh"
+            "1x Chicken Tikka, 1x Ribeye Tikka, 1x Beef + Lamb Shish Kebab, 1x Chicken Shish Kebab (4 total), +2 Pita, Rice, Salad, Hummus + Tahini, Baba Ghanoush"
           ]
         },
         {
           "name": "Family Meal",
           "price": "$87.49",
           "notes": [
-            "2x Beef + Lamb Shish Kebab, 2x Chicken Shish Kebab, 2x Chicken Tikka, 2x Lamb Tikka, 2x Ribeye Tikka (10 total), +4 Pita, Rice, Salad, Hummus + Tahini, Baba Ghanoush, Tabbouleh"
+            "2x Beef + Lamb Shish Kebab, 2x Chicken Shish Kebab, 2x Chicken Tikka, 2x Lamb Tikka, 2x Ribeye Tikka (10 total), +4 Pita, Rice, Salad, Hummus + Tahini, Baba Ghanoush"
           ]
         }
       ]
@@ -280,7 +310,11 @@
         },
         {
           "name": "Tzatziki",
-          "price": "$1.99"
+          "price": "SM $1.99 | LG $4.99"
+        },
+        {
+          "name": "Muhammara",
+          "price": "SM $1.99 | LG $4.99"
         },
         {
           "name": "Samosa (Regular or Veggie)",
@@ -295,16 +329,13 @@
           "price": "$3.99"
         },
         {
-          "name": "Kibbeh",
-          "price": "$11.99",
-          "notes": [
-            "Beef and lamb kibbeh, 3 pieces. Comes with sauce on the side: choose tahini, garlic sauce, hot sauce, or mango sauce"
-          ]
+          "name": "Kibbeh (3pc)",
+          "price": "$11.99"
         },
         {
-          "name": "Shawarma Hummus",
+          "name": "Maza Salad",
           "price": "$13.99",
-          "note": "Comes with 2 pita. Choose from: Beef Shawarma, Chicken Shawarma, or Gyro"
+          "note": "Choose from: Chicken or Lamb"
         }
       ]
     },
@@ -312,19 +343,19 @@
       "name": "Desserts & Drinks",
       "items": [
         {
-          "name": "Cake / Cheesecake",
-          "price": "$7.99",
-          "notes": [
-            "Flavors: Dubai Chocolate, New York Cheesecake, Red Velvet Cake, Chocolate Mousse Cake, or Nutella Cheesecake"
-          ]
-        },
-        {
           "name": "Baklava (Small)",
           "price": "$2.49"
         },
         {
           "name": "Baklava (Large)",
           "price": "$3.99"
+        },
+        {
+          "name": "Cake / Cheesecake",
+          "price": "$7.99",
+          "notes": [
+            "Flavors: Dubai Chocolate, New York Cheesecake, Red Velvet Cake, Chocolate Mousse Cake, or Nutella Cheesecake"
+          ]
         },
         {
           "name": "Bottled Water",
