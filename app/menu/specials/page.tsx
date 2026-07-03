@@ -2,6 +2,7 @@ import CategoryTracker from "@/components/CategoryTracker";
 import { menuData } from "@/data/menu"
 
 export const metadata = {
+  alternates: { canonical: "https://mazahalalfood.com/menu/specials" },
   title: "Specials | Maza Mediterranean Cuisine",
   description: "Maza Special — our signature family platter. Big portions for sharing. Call to order.",
 }

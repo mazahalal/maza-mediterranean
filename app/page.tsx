@@ -3,6 +3,7 @@ import PhoneLink from "@/components/PhoneLink";
 import MapEmbed from "@/components/MapEmbed";
 
 export const metadata = {
+  alternates: { canonical: "https://mazahalalfood.com" },
   title: "Maza Mediterranean Cuisine | Chandler AZ | Mediterranean Food Chandler",
   description: "Maza Mediterranean Cuisine Chandler AZ. Authentic Mediterranean food near Chandler Mall, Tempe & East Valley. Big portions, real ingredients, honest prices. Halal Mediterranean restaurant. Open Tue-Sun.",
 };

@@ -1,4 +1,5 @@
 export const metadata = {
+  alternates: { canonical: "https://mazahalalfood.com/terms" },
   title: "Terms & Conditions | Maza Mediterranean Cuisine",
   description: "Terms and conditions for Maza Mediterranean Cuisine SMS messaging program and website usage.",
 };

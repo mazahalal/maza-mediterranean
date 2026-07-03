@@ -18,6 +18,7 @@ import { Fragment } from 'react';
 import SmsSubscribeForm from '@/components/SmsSubscribeForm';
 
 export const metadata = {
+  alternates: { canonical: "https://mazahalalfood.com/sms-join" },
   title: 'Join Our SMS List | Maza Mediterranean Cuisine | 15% Off',
   description:
     'Join the Maza Mediterranean SMS list and get 15% off your next visit. Exclusive deals, specials, and updates. Text JOIN or sign up online.',

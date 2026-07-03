@@ -2,6 +2,7 @@ import CategoryTracker from "@/components/CategoryTracker";
 import { menuData } from "@/data/menu"
 
 export const metadata = {
+  alternates: { canonical: "https://mazahalalfood.com/menu/desserts-drinks" },
   title: "Desserts & Drinks | Maza Mediterranean Cuisine",
   description: "Baklava, ayran, fountain drinks. The perfect finish to any meal.",
 }

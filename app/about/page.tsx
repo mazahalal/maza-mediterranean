@@ -1,4 +1,5 @@
 export const metadata = {
+  alternates: { canonical: "https://mazahalalfood.com/about" },
   title: "About Maza Mediterranean | Chandler AZ Mediterranean Restaurant",
   description: "Family-owned Mediterranean restaurant in Chandler AZ. Recently opened to bring authentic halal Mediterranean food, big portions and real ingredients to neighbors near Chandler Mall and the East Valley.",
 };

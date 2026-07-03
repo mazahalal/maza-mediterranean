@@ -1,4 +1,5 @@
 export const metadata = {
+  alternates: { canonical: "https://mazahalalfood.com/privacy" },
   title: "Privacy Policy | Maza Mediterranean Cuisine",
   description: "Privacy policy for Maza Mediterranean Cuisine — how we collect, use, and protect your personal information including mobile numbers.",
 };

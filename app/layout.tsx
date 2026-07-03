@@ -20,6 +20,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://mazahalalfood.com"),
   title: "Maza Mediterranean Cuisine | Chandler, AZ",
   description: "Big portions. Real ingredients. Honest prices. Family-owned Mediterranean restaurant in Chandler, AZ. Open Tuesday–Sunday. Tue–Wed until 8pm, Thu–Sun until 10pm. Closed Mondays.",
   icons: {

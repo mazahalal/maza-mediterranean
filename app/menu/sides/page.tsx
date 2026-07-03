@@ -2,6 +2,7 @@ import CategoryTracker from "@/components/CategoryTracker";
 import { menuData } from "@/data/menu"
 
 export const metadata = {
+  alternates: { canonical: "https://mazahalalfood.com/menu/sides" },
   title: "Sides | Maza Mediterranean Cuisine",
   description: "Fresh sides — hummus, rice, dolma, fries, tabouleh, samosa. Perfect additions to any plate or wrap.",
 }

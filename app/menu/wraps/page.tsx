@@ -3,6 +3,7 @@ import { menuData } from "@/data/menu"
 import CategoryTracker from "@/components/CategoryTracker";
 
 export const metadata = {
+  alternates: { canonical: "https://mazahalalfood.com/menu/wraps" },
   title: "Wraps | Maza Mediterranean Cuisine",
   description: "Fresh wraps — beef gyro, shawarma, shish kebab, chicken tikka. Made in-house daily. Chandler Mediterranean food done right.",
 }

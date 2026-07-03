@@ -2,6 +2,7 @@ import CategoryTracker from "@/components/CategoryTracker";
 import { menuData } from "@/data/menu"
 
 export const metadata = {
+  alternates: { canonical: "https://mazahalalfood.com/menu/burgers" },
   title: "Burgers | Maza Mediterranean Cuisine",
   description: "Handmade in-house burgers — never frozen. Beef or grilled chicken. Call to order.",
 }

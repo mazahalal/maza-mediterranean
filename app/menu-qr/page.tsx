@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://mazahalalfood.com/menu-qr" },
   title: "Quick Links | Maza Mediterranean Cuisine",
   description: "Menu, reviews, and socials for Maza Mediterranean Cuisine in Chandler, AZ.",
   icons: {

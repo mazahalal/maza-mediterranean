@@ -22,6 +22,7 @@ const imageObjects = galleryImages.map((img, index) => ({
 }));
 
 export const metadata = {
+  alternates: { canonical: "https://mazahalalfood.com/gallery" },
   title: "Gallery | Maza Mediterranean Cuisine",
   description: "Real food, real portions. See what we're serving at Maza.",
 };

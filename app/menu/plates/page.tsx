@@ -2,6 +2,7 @@ import CategoryTracker from "@/components/CategoryTracker";
 import { menuData } from "@/data/menu"
 
 export const metadata = {
+  alternates: { canonical: "https://mazahalalfood.com/menu/plates" },
   title: "Plates | Maza Mediterranean Cuisine",
   description: "Generous plates with two kebabs, rice, salad, hummus + tahini. Chandler's best Mediterranean plates — real ingredients, big portions.",
 }
