@@ -86,98 +86,98 @@
           "name": "Beef + Lamb Shish Kebab",
           "price": "$20.19",
           "notes": [
-            "2 Beef + Lamb Shish Kebab, rice, salad & hummus + tahini"
+            "2 Beef + Lamb Shish Kebab, 1 Pita, rice, salad & hummus + tahini"
           ]
         },
         {
           "name": "Chicken Shish Kebab",
           "price": "$19.67",
           "notes": [
-            "2 Chicken Shish Kebab, rice, salad & hummus + tahini"
+            "2 Chicken Shish Kebab, 1 Pita, rice, salad & hummus + tahini"
           ]
         },
         {
           "name": "Chicken Tikka Plate",
           "price": "$19.67",
           "notes": [
-            "2 Chicken Tikka, rice, salad & hummus + tahini"
+            "2 Chicken Tikka, 1 Pita, rice, salad & hummus + tahini"
           ]
         },
         {
           "name": "Lamb Tikka Plate",
           "price": "$20.71",
           "notes": [
-            "2 Lamb Tikka, rice, salad & hummus + tahini"
+            "2 Lamb Tikka, 1 Pita, rice, salad & hummus + tahini"
           ]
         },
         {
           "name": "Ribeye Tikka Plate",
           "price": "$24.87",
           "notes": [
-            "2 Ribeye Tikka, rice, salad & hummus + tahini"
+            "2 Ribeye Tikka, 1 Pita, rice, salad & hummus + tahini"
           ]
         },
         {
           "name": "Mix Kebab",
           "price": "$20.71",
           "notes": [
-            "1 Chicken Shish Kebab and 1 Beef + Lamb Shish Kebab, rice, salad & hummus + tahini"
+            "1 Chicken Shish Kebab and 1 Beef + Lamb Shish Kebab, 1 Pita, rice, salad & hummus + tahini"
           ]
         },
         {
           "name": "Chicken Shawarma Plate",
           "price": "$22.22",
           "notes": [
-            "Chicken Shawarma, rice, salad, baba ghanoush & hummus + tahini"
+            "Chicken Shawarma, 1 Pita, rice, salad, baba ghanoush & hummus + tahini"
           ]
         },
         {
           "name": "Beef + Lamb Shawarma Plate",
           "price": "$22.22",
           "notes": [
-            "Beef + Lamb Shawarma, rice, salad, baba ghanoush & hummus + tahini"
+            "Beef + Lamb Shawarma, 1 Pita, rice, salad, baba ghanoush & hummus + tahini"
           ]
         },
         {
           "name": "Falafel",
           "price": "$16.55",
           "notes": [
-            "Falafel, rice, salad & hummus + tahini"
+            "Falafel, 1 Pita, rice, salad & hummus + tahini"
           ]
         },
         {
           "name": "Appetizer Plate",
           "price": "$15.51",
           "notes": [
-            "Hummus + Tahini, Dolma, Falafel, Baba Ghanoush and Salad"
+            "Hummus + Tahini, Dolma, Falafel, Baba Ghanoush, 1 Pita and Salad"
           ]
         },
         {
           "name": "Maza Grill",
           "price": "$27.99",
           "notes": [
-            "1 Chicken Tikka, 1 Beef + Lamb Shish Kebab, 1 Chicken Shish Kebab, rice, salad & hummus + tahini"
+            "1 Chicken Tikka, 1 Beef + Lamb Shish Kebab, 1 Chicken Shish Kebab, 1 Pita, rice, salad & hummus + tahini"
           ]
         },
         {
           "name": "Grilled Chicken Teriyaki Plate",
           "price": "$28.99",
           "notes": [
-            "2 Grilled Teriyaki Chicken Cutlets, rice, salad, baba ghanoush & hummus + tahini"
+            "2 Grilled Teriyaki Chicken Cutlets, 1 Pita, rice, salad, baba ghanoush & hummus + tahini"
           ]
         },
         {
           "name": "Shredded Chicken Plate",
           "price": "$18.49",
           "notes": [
-            "Maza in-house shredded chicken over a bed of rice, salad, baba ghanoush and hummus + tahini"
+            "Maza in-house shredded chicken over a bed of rice, 1 Pita, salad, baba ghanoush and hummus + tahini"
           ]
         },
         {
           "name": "Shredded Steak Plate",
           "price": "$19.99",
           "notes": [
-            "Maza in-house shredded steak over a bed of rice, salad, baba ghanoush and hummus + tahini"
+            "Maza in-house shredded steak over a bed of rice, 1 Pita, salad, baba ghanoush and hummus + tahini"
           ]
         }
       ]
@@ -239,7 +239,7 @@
           "name": "Maza Special",
           "price": "$48.45",
           "notes": [
-            "1x Chicken Tikka, 1x Ribeye Tikka, 1x Beef + Lamb Shish Kebab, 1x Chicken Shish Kebab (4 total), +2 Pita, Rice, Salad, Hummus + Tahini, Baba Ghanoush"
+            "1x Chicken Tikka, 1x Ribeye Tikka, 1x Beef + Lamb Shish Kebab, 1x Chicken Shish Kebab (4 total), +4 Pita, Rice, Salad, Hummus + Tahini, Baba Ghanoush"
           ]
         },
         {
@@ -302,7 +302,7 @@
         },
         {
           "name": "Pita",
-          "price": "Free"
+          "price": "$1.25"
         },
         {
           "name": "Rice",
