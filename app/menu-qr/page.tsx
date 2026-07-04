@@ -36,14 +36,12 @@ export default function MenuQRPage() {
         </Link>
       </div>
 
-      {/* Order Online for Pickup - Prominent */}
+      {/* Order Online for Pickup - Prominent Gold */}
       <div className="w-full max-w-md mb-12">
         <a href="https://online.skytab.com/s/maza" target="_blank" rel="noopener noreferrer">
           <div className="flex items-center justify-center gap-3 w-full py-5 px-6 rounded-full bg-[#D3AB5E] text-[#0A1F1E] hover:bg-[#c9a24f] active:scale-[0.985] transition-all text-lg font-medium tracking-wide shadow-lg">
             <span className="text-xl flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z" />
-              </svg>
+              <img src="/halal_dark.svg" alt="Halal" className="h-6 w-auto" />
             </span>
             <span>Order Online for Pickup</span>
           </div>
@@ -58,9 +56,7 @@ export default function MenuQRPage() {
             <a href="https://www.ubereats.com/store/maza-mediterranean-cuisine/yoX-jsvQQFSioTBP37vQnQ" target="_blank" rel="noopener noreferrer">
               <div className="flex items-center justify-center gap-3 w-full py-5 px-6 rounded-full border border-[#D3AB5E]/40 bg-[#0A1F1E] hover:bg-[#D3AB5E] hover:text-[#0A1F1E] active:scale-[0.985] transition-all text-lg font-medium tracking-wide">
                 <span className="text-xl flex items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M13.5 1.5a9 9 0 00-9 9c0 5.8 9 12 9 12s9-6.2 9-12a9 9 0 00-9-9zm0 12.75a3.75 3.75 0 110-7.5 3.75 3.75 0 010 7.5z" />
-                  </svg>
+                  <img src="/uber_eats.svg" alt="Uber Eats" className="h-6 w-auto" />
                 </span>
                 <span>Uber Eats</span>
               </div>
@@ -71,9 +67,7 @@ export default function MenuQRPage() {
             <a href="https://www.doordash.com/store/maza-mediterranean-cuisine-chandler-28050089/" target="_blank" rel="noopener noreferrer">
               <div className="flex items-center justify-center gap-3 w-full py-5 px-6 rounded-full border border-[#D3AB5E]/40 bg-[#0A1F1E] hover:bg-[#D3AB5E] hover:text-[#0A1F1E] active:scale-[0.985] transition-all text-lg font-medium tracking-wide">
                 <span className="text-xl flex items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
-                  </svg>
+                  <img src="/doordash.svg" alt="DoorDash" className="h-6 w-auto" />
                 </span>
                 <span>DoorDash</span>
               </div>
@@ -84,9 +78,7 @@ export default function MenuQRPage() {
             <a href="https://www.grubhub.com/restaurant/maza-mediterranean-cuisine-3491-w-frye-rd-ste-2-chandler/3327854" target="_blank" rel="noopener noreferrer">
               <div className="flex items-center justify-center gap-3 w-full py-5 px-6 rounded-full border border-[#D3AB5E]/40 bg-[#0A1F1E] hover:bg-[#D3AB5E] hover:text-[#0A1F1E] active:scale-[0.985] transition-all text-lg font-medium tracking-wide">
                 <span className="text-xl flex items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-                  </svg>
+                  <img src="/grubhub_icon.svg" alt="GrubHub" className="h-6 w-auto" />
                 </span>
                 <span>GrubHub</span>
               </div>
