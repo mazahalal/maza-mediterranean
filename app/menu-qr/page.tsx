@@ -41,7 +41,7 @@ export default function MenuQRPage() {
         <a href="https://online.skytab.com/s/maza" target="_blank" rel="noopener noreferrer">
           <div className="flex items-center justify-center gap-3 w-full py-5 px-6 rounded-full bg-[#D3AB5E] text-[#0A1F1E] hover:bg-[#c9a24f] active:scale-[0.985] transition-all text-lg font-medium tracking-wide shadow-lg">
             <span className="text-xl flex items-center">
-              <img src="/halal_dark.svg" alt="Halal" className="h-6 w-auto" />
+              <img src="/halal_arabic.svg" alt="" className="h-6 w-auto" />
             </span>
             <span>Order Online for Pickup</span>
           </div>
@@ -56,7 +56,7 @@ export default function MenuQRPage() {
             <a href="https://www.ubereats.com/store/maza-mediterranean-cuisine/yoX-jsvQQFSioTBP37vQnQ" target="_blank" rel="noopener noreferrer">
               <div className="flex items-center justify-center gap-3 w-full py-5 px-6 rounded-full border border-[#D3AB5E]/40 bg-[#0A1F1E] hover:bg-[#D3AB5E] hover:text-[#0A1F1E] active:scale-[0.985] transition-all text-lg font-medium tracking-wide">
                 <span className="text-xl flex items-center">
-                  <img src="/uber_eats.svg" alt="Uber Eats" className="h-6 w-auto" />
+                  <img src="/uber_eats.svg" alt="" className="h-6 w-auto" />
                 </span>
                 <span>Uber Eats</span>
               </div>
@@ -64,10 +64,10 @@ export default function MenuQRPage() {
           </div>
 
           <div className="mb-8">
-            <a href="https://www.doordash.com/store/maza-mediterranean-cuisine-chandler-28050089/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.doordash.com/store/46422584" target="_blank" rel="noopener noreferrer">
               <div className="flex items-center justify-center gap-3 w-full py-5 px-6 rounded-full border border-[#D3AB5E]/40 bg-[#0A1F1E] hover:bg-[#D3AB5E] hover:text-[#0A1F1E] active:scale-[0.985] transition-all text-lg font-medium tracking-wide">
                 <span className="text-xl flex items-center">
-                  <img src="/doordash.svg" alt="DoorDash" className="h-6 w-auto" />
+                  <img src="/doordash.svg" alt="" className="h-6 w-auto" />
                 </span>
                 <span>DoorDash</span>
               </div>
@@ -75,10 +75,10 @@ export default function MenuQRPage() {
           </div>
 
           <div className="mb-8">
-            <a href="https://www.grubhub.com/restaurant/maza-mediterranean-cuisine-3491-w-frye-rd-ste-2-chandler/3327854" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.grubhub.com/restaurant/maza-mediterranean-cuisine-3419-w-frye-rd-suite-2-chandler/14875480" target="_blank" rel="noopener noreferrer">
               <div className="flex items-center justify-center gap-3 w-full py-5 px-6 rounded-full border border-[#D3AB5E]/40 bg-[#0A1F1E] hover:bg-[#D3AB5E] hover:text-[#0A1F1E] active:scale-[0.985] transition-all text-lg font-medium tracking-wide">
                 <span className="text-xl flex items-center">
-                  <img src="/grubhub_icon.svg" alt="GrubHub" className="h-6 w-auto" />
+                  <img src="/grubhub_icon.svg" alt="" className="h-6 w-auto" />
                 </span>
                 <span>GrubHub</span>
               </div>
@@ -124,7 +124,7 @@ export default function MenuQRPage() {
             <a href="https://www.yelp.com/writeareview/biz/Zzyi0SdgrDdFZ0xxHIBZ0w?review_origin=mobile-site-biz-details-action-button&return_url=https://m.yelp.com/biz/maza-mediterranean-cuisine-chandler" target="_blank" rel="noopener noreferrer">
               <div className="flex items-center justify-center gap-3 w-full py-5 px-6 rounded-full border border-[#D3AB5E]/40 bg-[#0A1F1E] hover:bg-[#D3AB5E] hover:text-[#0A1F1E] active:scale-[0.985] transition-all text-lg font-medium tracking-wide">
                 <span className="text-xl flex items-center">
-                  <img src="/yelp_burst_white.svg" alt="Yelp" className="h-6 w-auto" />
+                  <img src="/yelp_burst_white.svg" alt="" className="h-6 w-auto" />
                 </span>
                 <span>Yelp Reviews</span>
               </div>
