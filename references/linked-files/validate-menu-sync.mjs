@@ -8,13 +8,17 @@
  * website runtime data/menu.ts. Any mismatch is an error.
  * Returns exit code 0 if in sync, 1 if drift detected.
  * Use as a pre-commit hook, CI check, or manual health check.
+ *
+ * Duplicate names are allowed across DIFFERENT sections (e.g. "Beef Shawarma"
+ * can appear in both "Loaded Fries" and "Loaded Hummus"). Duplicates within
+ * the SAME section are flagged as errors.
  */
 
 import fs from 'fs';
 
 const RED = '\x1b[31m', GREEN = '\x1b[32m', YELLOW = '\x1b[33m', RESET = '\x1b[0m';
 
-// Parse menu.json
+// ─── Parse menu.json ────────────────────────────────────────────────
 const menuJson = JSON.parse(fs.readFileSync('menu.json', 'utf8'));
 const jsonItems = [];
 for (const section of menuJson.sections) {
@@ -23,44 +27,75 @@ for (const section of menuJson.sections) {
   }
 }
 
-// Parse data/menu.ts
+// ─── Parse data/menu.ts (per-category) ──────────────────────────────
 const tsContent = fs.readFileSync('data/menu.ts', 'utf8');
 const tsItems = [];
-const itemRegex = /name:\s*"([^"]+)",\s*price:\s*"([^"]+)"/g;
-let match;
-while ((match = itemRegex.exec(tsContent)) !== null) {
-  tsItems.push({ name: match[1], price: match[2] });
-}
 
-// Check duplicates
-const tsNames = tsItems.map(i => i.name);
-const tsDupes = tsNames.filter((n, i) => tsNames.indexOf(n) !== i);
-const jsonNames = jsonItems.map(i => i.name);
-const jsonDupes = jsonNames.filter((n, i) => jsonNames.indexOf(n) !== i);
+// Find category boundaries
+const catPositions = [...tsContent.matchAll(/category:\s*"([^"]+)"/g)]
+  .map(m => ({ name: m[1], pos: m.index }));
 
-// Diff
-const jsonNameSet = new Set(jsonItems.map(i => i.name));
-const tsNameSet = new Set(tsItems.map(i => i.name));
-const inJsonNotTs = jsonItems.filter(i => !tsNameSet.has(i.name));
-const inTsNotJson = tsItems.filter(i => !jsonNameSet.has(i.name));
+for (let i = 0; i < catPositions.length; i++) {
+  const start = catPositions[i].pos;
+  const end = i + 1 < catPositions.length ? catPositions[i + 1].pos : tsContent.length;
+  const block = tsContent.slice(start, end);
 
-// Price mismatches
-const priceMismatches = [];
-for (const ji of jsonItems) {
-  const ti = tsItems.find(t => t.name === ji.name);
-  if (ti && ti.price !== ji.price) {
-    priceMismatches.push({ name: ji.name, json: ji.price, ts: ti.price });
+  for (const m of block.matchAll(/name:\s*"([^"]+)",\s*price:\s*"([^"]+)"/g)) {
+    tsItems.push({ category: catPositions[i].name, name: m[1], price: m[2] });
   }
 }
 
+// ─── Check duplicates (per section / per category) ──────────────────
+
+function findDupes(items, groupKey, labelKey) {
+  const groups = {};
+  for (const item of items) {
+    const g = item[groupKey];
+    if (!groups[g]) groups[g] = [];
+    groups[g].push(item.name);
+  }
+  const dupes = [];
+  for (const [group, names] of Object.entries(groups)) {
+    const seen = new Set();
+    for (const name of names) {
+      if (seen.has(name)) dupes.push(`${group}: ${name}`);
+      seen.add(name);
+    }
+  }
+  return dupes;
+}
+
+const jsonDupes = findDupes(jsonItems, 'section');
+const tsDupes = findDupes(tsItems, 'category');
+
+// ─── Diff (keyed by section|name) ───────────────────────────────────
+
+const jsonKeySet = new Set(jsonItems.map(i => `${i.section}|${i.name}`));
+const tsKeySet = new Set(tsItems.map(i => `${i.category}|${i.name}`));
+
+const inJsonNotTs = jsonItems.filter(i => !tsKeySet.has(`${i.section}|${i.name}`));
+const inTsNotJson = tsItems.filter(i => !jsonKeySet.has(`${i.category}|${i.name}`));
+
+// ─── Price mismatches (match by section + name) ─────────────────────
+
+const priceMismatches = [];
+for (const ji of jsonItems) {
+  const ti = tsItems.find(t => t.category === ji.section && t.name === ji.name);
+  if (ti && ti.price !== ji.price) {
+    priceMismatches.push({ section: ji.section, name: ji.name, json: ji.price, ts: ti.price });
+  }
+}
+
+// ─── Report ─────────────────────────────────────────────────────────
+
 let errors = 0;
 
-if (tsDupes.length > 0) {
-  console.error(`${RED}❌ DUPLICATES in data/menu.ts:${RESET}`, tsDupes);
+if (jsonDupes.length > 0) {
+  console.error(`${RED}❌ DUPLICATES in menu.json (same section):${RESET}`, jsonDupes);
   errors++;
 }
-if (jsonDupes.length > 0) {
-  console.error(`${RED}❌ DUPLICATES in menu.json:${RESET}`, jsonDupes);
+if (tsDupes.length > 0) {
+  console.error(`${RED}❌ DUPLICATES in data/menu.ts (same category):${RESET}`, tsDupes);
   errors++;
 }
 if (inJsonNotTs.length > 0) {
@@ -70,13 +105,13 @@ if (inJsonNotTs.length > 0) {
 }
 if (inTsNotJson.length > 0) {
   console.error(`${RED}❌ In data/menu.ts but MISSING from menu.json:${RESET}`);
-  inTsNotJson.forEach(i => console.error(`   ${i.name} (${i.price})`));
+  inTsNotJson.forEach(i => console.error(`   ${i.category}: ${i.name} (${i.price})`));
   errors++;
 }
 if (priceMismatches.length > 0) {
   console.error(`${YELLOW}⚠️  Price mismatches:${RESET}`);
-  priceMismatches.forEach(m => 
-    console.error(`   ${m.name}: menu.json=${m.json}  data/menu.ts=${m.ts}`)
+  priceMismatches.forEach(m =>
+    console.error(`   [${m.section}] ${m.name}: menu.json=${m.json}  data/menu.ts=${m.ts}`)
   );
   errors++;
 }
