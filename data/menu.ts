@@ -118,7 +118,7 @@ export const menuData: MenuCategory[] = [
       { name: "Tabouleh", price: "$4.99" },
       { name: "Side Salad", price: "$3.99" },
       { name: "Kibbeh (3pc)", price: "$11.99" },
-      { name: "Maza Salad", price: "$13.99", note: "Choose from: Chicken or Lamb" }
+      { name: "Maza Salad", price: "$13.99", note: "Choose from: Chicken or Steak" }
     ],
   },
   {
