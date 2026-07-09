@@ -40,14 +40,17 @@ export async function POST(req: NextRequest) {
 
   // Validate Twilio signature (security)
   const signature = req.headers.get('X-Twilio-Signature') || '';
-  const url = req.url;
+  // Twilio signs the public webhook URL, not Vercel's internal req.url
+  const publicWebhookUrl =
+    process.env.TWILIO_WEBHOOK_URL ||
+    'https://mazahalalfood.com/api/twilio/inbound';
 
   // Skip validation in local dev (no auth token set or ngrok)
   const isLocalDev = process.env.NODE_ENV === 'development' || !TAT;
   if (!isLocalDev) {
-    const valid = validateTwilioSignature(signature, url, params, TAT);
+    const valid = validateTwilioSignature(signature, publicWebhookUrl, params, TAT);
     if (!valid) {
-      console.error('Twilio signature validation failed', { from, url });
+      console.error('Twilio signature validation failed', { from, url: publicWebhookUrl });
       return new NextResponse('<Response></Response>', {
         status: 403,
         headers: { 'Content-Type': 'text/xml' },

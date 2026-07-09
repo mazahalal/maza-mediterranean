@@ -170,7 +170,7 @@ export async function getAllSubscribers(): Promise<string[]> {
 
 /**
  * Validate Twilio webhook signature for security.
- * Twilio sends X-Twilio-Signature header = HMAC-SHA256 of URL + POST params.
+ * Twilio X-Twilio-Signature = Base64(HMAC-SHA1(authToken, url + sorted POST params)).
  */
 export function validateTwilioSignature(
   signature: string,
@@ -180,14 +180,23 @@ export function validateTwilioSignature(
 ): boolean {
   const crypto = require('crypto');
 
-  // Sort params alphabetically by key
   const sortedKeys = Object.keys(params).sort();
   const data = url + sortedKeys.map(k => k + params[k]).join('');
 
   const computed = crypto
-    .createHmac('sha256', authToken)
+    .createHmac('sha1', authToken)
     .update(Buffer.from(data, 'utf-8'))
     .digest('base64');
 
-  return computed === signature;
+  if (!signature || computed.length !== signature.length) {
+    return false;
+  }
+  try {
+    return crypto.timingSafeEqual(
+      Buffer.from(computed, 'utf-8'),
+      Buffer.from(signature, 'utf-8')
+    );
+  } catch {
+    return false;
+  }
 }
