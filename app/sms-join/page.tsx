@@ -110,7 +110,7 @@ export default function SmsJoinPage() {
         <div className="text-center text-xs text-[#B8B8B8]/60 space-y-2">
           <p>
             By joining, you agree to receive SMS messages from Maza Mediterranean.
-            Message and data rates may apply. Up to 8 messages per month.
+            Message and data rates may apply. Up to 4 messages per month.
           </p>
           <p>
             Reply STOP to unsubscribe · Reply HELP for help · Contact: 480-534-6550

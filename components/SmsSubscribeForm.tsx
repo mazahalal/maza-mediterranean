@@ -10,12 +10,18 @@ import { useState } from 'react';
 
 export default function SmsSubscribeForm({ source = 'web' }: { source?: string }) {
   const [phone, setPhone] = useState('');
+  const [consent, setConsent] = useState(false);
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [message, setMessage] = useState('');
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!phone.trim()) return;
+    if (!consent) {
+      setStatus('error');
+      setMessage('Please check the box to agree to receive SMS messages.');
+      return;
+    }
 
     setStatus('loading');
     setMessage('');
@@ -81,7 +87,11 @@ export default function SmsSubscribeForm({ source = 'web' }: { source?: string }
             />
             <button
               type="submit"
-              disabled={status === 'loading' || phone.replace(/\D/g, '').length < 10}
+              disabled={
+                status === 'loading' ||
+                phone.replace(/\D/g, '').length < 10 ||
+                !consent
+              }
               className="px-6 py-3 rounded bg-[#D3AB5E] text-[#0A1F1E] font-semibold hover:bg-[#C49A4D] disabled:opacity-50 disabled:cursor-not-allowed transition-colors whitespace-nowrap"
             >
               {status === 'loading' ? '...' : 'Join List'}
@@ -89,17 +99,36 @@ export default function SmsSubscribeForm({ source = 'web' }: { source?: string }
           </div>
         </div>
 
+        <label className="flex gap-3 items-start cursor-pointer text-left">
+          <input
+            type="checkbox"
+            checked={consent}
+            onChange={(e) => setConsent(e.target.checked)}
+            className="mt-1 h-4 w-4 shrink-0 accent-[#D3AB5E]"
+            disabled={status === 'loading'}
+            required
+          />
+          <span className="text-xs text-[#B8B8B8] leading-relaxed">
+            Yes, I&apos;d like to receive exclusive offers and updates from MAZA Mediterranean via
+            text. Up to 4 msgs/month. Msg &amp; data rates may apply. Reply STOP to opt out. Reply
+            HELP for help.{' '}
+            <a href="/terms" className="text-[#D3AB5E] underline">
+              Terms
+            </a>{' '}
+            ·{' '}
+            <a href="/privacy" className="text-[#D3AB5E] underline">
+              Privacy
+            </a>
+            . Consent is not required to purchase.
+          </span>
+        </label>
+
         {status === 'success' && (
           <p className="text-sm text-green-400 font-medium">{message}</p>
         )}
         {status === 'error' && (
           <p className="text-sm text-red-400 font-medium">{message}</p>
         )}
-
-        <p className="text-xs text-[#B8B8B8]/70">
-          By subscribing, you agree to receive SMS messages from MAZA Mediterranean.
-          Message and data rates may apply. Reply STOP to unsubscribe. Reply HELP for help.
-        </p>
       </form>
     </div>
   );
