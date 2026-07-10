@@ -23,14 +23,14 @@ export default function TermsPage() {
               Maza SMS Messaging Program
             </h2>
             <p className="text-[#F5F1E8] leading-relaxed mb-4">
-              By subscribing to the Maza Mediterranean Cuisine (&quot;Maza,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) SMS messaging program, you agree to receive recurring automated marketing and informational text messages from Maza at the phone number you provided.
+              By subscribing to the Maza Mediterranean Cuisine (&quot;Maza,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) SMS messaging program, you agree to receive recurring automated promotional text messages (specials, offers, and restaurant updates) from Maza at the phone number you provided.
             </p>
 
             <h3 className="font-display text-xl font-bold text-[#D3AB5E] mt-6 mb-3 tracking-wide">
               Message Frequency
             </h3>
             <p className="text-[#F5F1E8] leading-relaxed mb-4">
-              Up to 4 messages per month. Message frequency may vary based on promotions, seasonal offers, and order-related communications.
+              Up to 4 promotional messages per month. Message frequency may vary based on specials and seasonal offers.
             </p>
 
             <h3 className="font-display text-xl font-bold text-[#D3AB5E] mt-6 mb-3 tracking-wide">
@@ -47,7 +47,11 @@ export default function TermsPage() {
               <strong>To opt out, text STOP to any message from Maza.</strong> You will receive a confirmation text confirming your unsubscribe request. After unsubscribing, you will no longer receive SMS messages from Maza unless you re-subscribe.
             </p>
             <p className="text-[#F5F1E8] leading-relaxed">
-              To re-subscribe, text MAZA to (928) XXX-5742 or submit your phone number via our website at mazahalalfood.com.
+              To re-subscribe, text JOIN or MAZA to (928) 264-4111 or complete the form at{' '}
+              <a href="https://mazahalalfood.com/sms-join" className="text-[#D3AB5E] hover:underline">
+                mazahalalfood.com/sms-join
+              </a>
+              .
             </p>
 
             <h3 className="font-display text-xl font-bold text-[#D3AB5E] mt-6 mb-3 tracking-wide">

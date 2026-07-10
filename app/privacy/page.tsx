@@ -41,7 +41,7 @@ export default function PrivacyPage() {
               We use the information we collect to:
             </p>
             <ul className="list-disc list-inside text-[#F5F1E8] leading-relaxed space-y-2 ml-4">
-              <li>Send promotional offers, order confirmations, and customer engagement messages via SMS (for opted-in subscribers only)</li>
+              <li>Send promotional offers and restaurant updates via SMS (for opted-in subscribers only)</li>
               <li>Process orders and provide customer support</li>
               <li>Improve our website and services</li>
               <li>Comply with legal obligations</li>

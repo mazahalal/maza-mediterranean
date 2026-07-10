@@ -24,18 +24,23 @@ export const metadata = {
     'Join the Maza Mediterranean SMS list and get 15% off your next visit. Exclusive deals, specials, and updates. Text JOIN or sign up online.',
 };
 
-// NOTE: Phone number is intentionally read from env so Twilio purchase
-// later doesn't require code changes. For now (pre-purchase), we show
-// the form-only UI. When TWILIO_PHONE_NUMBER env is set, the QR code
-// + SMS link become active.
-export default function SmsJoinPage() {
-  const twilioPhone = process.env.TWILIO_PHONE_NUMBER || '';
-  const hasTwilioNumber = !!twilioPhone;
+/** A2P reviewers must see keyword + number on every request (not build-time static). */
+export const dynamic = 'force-dynamic';
 
-  // Generate the sms: deep link that the QR code encodes
-  const smsLink = twilioPhone ? `sms:${twilioPhone}?&body=JOIN` : '';
+/** Public SMS opt-in line (matches Twilio Messaging Service / campaign). */
+const SMS_OPT_IN_E164 = '+19282644111';
+const SMS_OPT_IN_DISPLAY = '(928) 264-4111';
+
+export default function SmsJoinPage() {
+  const twilioPhone = process.env.TWILIO_PHONE_NUMBER || SMS_OPT_IN_E164;
+  const displayPhone =
+    twilioPhone === SMS_OPT_IN_E164 || twilioPhone.includes('9282644111')
+      ? SMS_OPT_IN_DISPLAY
+      : twilioPhone;
+
+  const smsLink = `sms:${twilioPhone}?&body=JOIN`;
   // QR code via free API (generated on client side)
-  const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=${encodeURIComponent(smsLink || 'https://mazahalalfood.com/sms-join')}`;
+  const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=${encodeURIComponent(smsLink)}`;
 
   return (
     <div className="min-h-[80vh] bg-[#0A1F1E] py-16 px-6">
@@ -57,8 +62,7 @@ export default function SmsJoinPage() {
         </div>
 
         {/* Method 1: QR Code (primary — from master plan) */}
-        {hasTwilioNumber && (
-          <div className="bg-[#0A1F1E] border border-[#D3AB5E]/30 rounded-lg p-8 mb-8 text-center">
+        <div className="bg-[#0A1F1E] border border-[#D3AB5E]/30 rounded-lg p-8 mb-8 text-center">
             <h2 className="text-xl font-display text-[#F5F1E8] mb-4">Scan to Join</h2>
             <div className="inline-block bg-white p-4 rounded-lg mb-4">
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -77,18 +81,15 @@ export default function SmsJoinPage() {
               Your messaging app will open with "JOIN" pre-typed. Just hit send!
             </p>
           </div>
-        )}
 
         {/* Method 2: Text JOIN manually */}
-        {hasTwilioNumber && (
-          <div className="bg-[#0A1F1E] border border-[#D3AB5E]/30 rounded-lg p-8 mb-8 text-center">
+        <div className="bg-[#0A1F1E] border border-[#D3AB5E]/30 rounded-lg p-8 mb-8 text-center">
             <h2 className="text-xl font-display text-[#F5F1E8] mb-4">Or Text Us</h2>
             <p className="text-lg text-[#B8B8B8] mb-4">
-              Send the word <span className="text-[#D3AB5E] font-bold">JOIN</span> to
+              Send <span className="text-[#D3AB5E] font-bold">JOIN</span> or{' '}
+              <span className="text-[#D3AB5E] font-bold">MAZA</span> to
             </p>
-            <p className="text-3xl font-display text-[#D3AB5E] mb-4">
-              {twilioPhone}
-            </p>
+            <p className="text-3xl font-display text-[#D3AB5E] mb-4">{displayPhone}</p>
             <a
               href={`sms:${twilioPhone}?&body=JOIN`}
               className="inline-block bg-[#D3AB5E] text-[#0A1F1E] font-semibold px-8 py-3 rounded hover:bg-[#C49A4D] transition-colors"
@@ -96,12 +97,11 @@ export default function SmsJoinPage() {
               Open Messages App
             </a>
           </div>
-        )}
 
         {/* Method 3: Web form fallback */}
         <div className="bg-[#0A1F1E] border border-[#D3AB5E]/30 rounded-lg p-8 mb-8">
           <h2 className="text-xl font-display text-[#F5F1E8] mb-4 text-center">
-            {hasTwilioNumber ? 'Or Sign Up Online' : 'Sign Up Below'}
+            Or Sign Up Online
           </h2>
           <SmsSubscribeForm source="web" />
         </div>
@@ -118,9 +118,8 @@ export default function SmsJoinPage() {
         </div>
 
         {/* Printable QR section for Frank/cashier — separated for printing */}
-        {hasTwilioNumber && (
-          <Fragment>
-            <div className="mt-16 pt-8 border-t border-[#D3AB5E]/20 text-center">
+        <Fragment>
+          <div className="mt-16 pt-8 border-t border-[#D3AB5E]/20 text-center">
               <h3 className="text-sm font-medium text-[#D3AB5E] mb-4">
                 🖨️ Print this for the register:
               </h3>
@@ -136,21 +135,13 @@ export default function SmsJoinPage() {
                 <p className="text-black text-lg font-bold mt-2">
                   🧆 Get 15% Off — Scan & Text JOIN
                 </p>
-                <p className="text-black text-sm mt-1">Maza Mediterranean Cuisine</p>
-              </div>
+              <p className="text-black text-sm mt-1">
+                Text JOIN or MAZA to {displayPhone}
+              </p>
+              <p className="text-black text-sm mt-1">Maza Mediterranean Cuisine</p>
             </div>
-          </Fragment>
-        )}
-
-        {/* Pre-purchase notice (visible only when TWILIO_PHONE_NUMBER not set) */}
-        {!hasTwilioNumber && (
-          <div className="mt-8 p-4 rounded-lg bg-[#0A1F1E] border border-[D3AB5E]/20 text-center">
-            <p className="text-sm text-[#B8B8B8]/60">
-              SMS opt-in via text is coming soon. For now, sign up using the form above —
-              we&apos;ll text you when our SMS line is active.
-            </p>
           </div>
-        )}
+        </Fragment>
       </div>
     </div>
   );
