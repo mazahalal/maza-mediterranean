@@ -3,6 +3,7 @@
 import { trackContact } from "@/lib/meta-pixel";
 import PhoneLink from "@/components/PhoneLink";
 import MapEmbed from "@/components/MapEmbed";
+import { MAZA_GOOGLE_MAPS_URL } from "@/lib/maza-maps";
 
 import { useState } from "react";
 
@@ -79,7 +80,7 @@ export default function ContactPage() {
                   <h3 className="font-semibold text-[#F5F1E8] mb-2">Map</h3>
                   <MapEmbed />
                   <a 
-                    href="https://www.google.com/maps/place/?q=place_id:11571299155872425967"
+                    href={MAZA_GOOGLE_MAPS_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-2 inline-block text-sm text-[#D3AB5E] hover:text-[#F5F1E8] transition-colors"

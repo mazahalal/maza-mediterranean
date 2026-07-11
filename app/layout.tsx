@@ -4,6 +4,7 @@ import { Cinzel, Montserrat } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { MAZA_GOOGLE_MAPS_URL, MAZA_GEO } from "@/lib/maza-maps";
 
 const cinzel = Cinzel({
   variable: "--font-cinzel",
@@ -75,15 +76,18 @@ export default function RootLayout({
               priceRange: "$$",
               servesCuisine: ["Mediterranean", "Middle Eastern", "Halal"],
               hasMenu: "https://mazahalalfood.com/menu",
-              sameAs: [
-                "https://www.google.com/maps/place/?q=place_id:11571299155872425967",
-              ],
+              sameAs: [MAZA_GOOGLE_MAPS_URL],
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: MAZA_GEO.latitude,
+                longitude: MAZA_GEO.longitude,
+              },
               areaServed: {
                 "@type": "GeoCircle",
                 geoMidpoint: {
                   "@type": "GeoCoordinates",
-                  latitude: 33.3062,
-                  longitude: -111.8413,
+                  latitude: MAZA_GEO.latitude,
+                  longitude: MAZA_GEO.longitude,
                 },
                 geoRadius: "25000",
               },
