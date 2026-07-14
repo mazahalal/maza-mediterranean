@@ -83,7 +83,7 @@ export const menuData: MenuCategory[] = [
   {
     category: "Specials",
     items: [
-      { name: "Maza Special", price: "$48.45", notes: ["1x Chicken Tikka, 1x Ribeye Tikka, 1x Beef + Lamb Shish Kebab, 1x Chicken Shish Kebab (4 total), +2 Pita, Rice, Salad, Hummus + Tahini, Baba Ghanoush"] },
+      { name: "Maza Special", price: "$48.45", notes: ["1x Chicken Tikka, 1x Lamb Tikka, 1x Beef + Lamb Shish Kebab, 1x Chicken Shish Kebab (4 total), +2 Pita, Rice, Salad, Hummus + Tahini, Baba Ghanoush"] },
       { name: "Family Meal", price: "$87.49", notes: ["2x Beef + Lamb Shish Kebab, 2x Chicken Shish Kebab, 2x Chicken Tikka, 2x Lamb Tikka, 2x Ribeye Tikka (10 total), +4 Pita, Rice, Salad, Hummus + Tahini, Baba Ghanoush"] }
     ],
   },
