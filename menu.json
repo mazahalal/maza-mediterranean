@@ -347,11 +347,11 @@
       "name": "Desserts & Drinks",
       "items": [
         {
-          "name": "Baklava (Small)",
-          "price": "$2.49"
+          "name": "Baklava (Large)",
+          "price": "$3.99"
         },
         {
-          "name": "Baklava (Large)",
+          "name": "Baklava (Large) — Dubai Chocolate",
           "price": "$3.99"
         },
         {
