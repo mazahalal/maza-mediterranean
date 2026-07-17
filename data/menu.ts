@@ -19,15 +19,12 @@ export const menuData: MenuCategory[] = [
     subtitle: "Wrapped with hummus, tomato, onion, lettuce, pickle, and garlic sauce",
     items: [
       { name: "Beef Gyro", price: "$10.91", notes: ["Served on pita or wrap (saj)"] },
-      { name: "Beef Shawarma Wrap", price: "$12.99" },
       { name: "Beef + Lamb Shish Kebab Wrap", price: "$12.99" },
-      { name: "Chicken Shawarma Wrap", price: "$12.47" },
       { name: "Chicken Shish Kebab Wrap", price: "$12.99" },
       { name: "Chicken Tikka Wrap", price: "$11.43" },
       { name: "Crispy Chicken Wrap", price: "$14.55" },
       { name: "Falafel Wrap", price: "$9.35" },
       { name: "Lamb Tikka Wrap", price: "$13.51" },
-      { name: "Mix Shawarma Wrap", price: "$12.99" },
       { name: "Arayes Lahm", price: "$15.55", notes: ["Flat grilled sandwich with beef, lamb and cheese. Served with salad."] },
       { name: "Ribeye Tikka Wrap", price: "$14.55" },
       { name: "Shredded Chicken Wrap", price: "$12.49" },
@@ -50,8 +47,6 @@ export const menuData: MenuCategory[] = [
       { name: "Lamb Tikka Plate", price: "$20.71", notes: ["2 Lamb Tikka, 1 Pita, rice, salad & hummus + tahini"] },
       { name: "Ribeye Tikka Plate", price: "$24.87", notes: ["2 Ribeye Tikka, 1 Pita, rice, salad & hummus + tahini"] },
       { name: "Mix Kebab", price: "$20.71", notes: ["1 Chicken Shish Kebab and 1 Beef + Lamb Shish Kebab, 1 Pita, rice, salad & hummus + tahini"] },
-      { name: "Chicken Shawarma Plate", price: "$22.22", notes: ["Chicken Shawarma, 1 Pita, rice, salad, baba ghanoush & hummus + tahini"] },
-      { name: "Beef + Lamb Shawarma Plate", price: "$22.22", notes: ["Beef + Lamb Shawarma, 1 Pita, rice, salad, baba ghanoush & hummus + tahini"] },
       { name: "Falafel", price: "$16.55", image: "/images/maza/menu/opt-PXL_20260601_224012118.jpg", notes: ["Falafel, 1 Pita, rice, salad & hummus + tahini"] },
       { name: "Appetizer Plate", price: "$15.51", notes: ["Hummus + Tahini, Dolma, Falafel, Baba Ghanoush, 1 Pita and Salad"] },
       { name: "Maza Grill", price: "$27.99", image: "/images/maza/menu/opt-Jun_6_2026_5_29_23.jpg", notes: ["1 Chicken Tikka, 1 Beef + Lamb Shish Kebab, 1 Chicken Shish Kebab, 1 Pita, rice, salad & hummus + tahini"] },
@@ -65,9 +60,7 @@ export const menuData: MenuCategory[] = [
     items: [
       { name: "Shredded Chicken", price: "$11.49" },
       { name: "Shredded Steak", price: "$12.89" },
-      { name: "Gyro", price: "$12.89" },
-      { name: "Beef Shawarma", price: "$13.49" },
-      { name: "Chicken Shawarma", price: "$13.49" }
+      { name: "Gyro", price: "$12.89" }
     ],
   },
   {
@@ -75,9 +68,7 @@ export const menuData: MenuCategory[] = [
     items: [
       { name: "Shredded Chicken", price: "$11.49" },
       { name: "Shredded Steak", price: "$12.89" },
-      { name: "Gyro", price: "$12.89" },
-      { name: "Beef Shawarma", price: "$13.49" },
-      { name: "Chicken Shawarma", price: "$13.49" }
+      { name: "Gyro", price: "$12.89" }
     ],
   },
   {
