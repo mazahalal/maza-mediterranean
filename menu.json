@@ -11,16 +11,8 @@
           ]
         },
         {
-          "name": "Beef Shawarma Wrap",
-          "price": "$12.99"
-        },
-        {
           "name": "Beef + Lamb Shish Kebab Wrap",
           "price": "$12.99"
-        },
-        {
-          "name": "Chicken Shawarma Wrap",
-          "price": "$12.47"
         },
         {
           "name": "Chicken Shish Kebab Wrap",
@@ -41,10 +33,6 @@
         {
           "name": "Lamb Tikka Wrap",
           "price": "$13.51"
-        },
-        {
-          "name": "Mix Shawarma Wrap",
-          "price": "$12.99"
         },
         {
           "name": "Arayes Lahm",
@@ -125,20 +113,6 @@
           ]
         },
         {
-          "name": "Chicken Shawarma Plate",
-          "price": "$22.22",
-          "notes": [
-            "Chicken Shawarma, 1 Pita, rice, salad, baba ghanoush & hummus + tahini"
-          ]
-        },
-        {
-          "name": "Beef + Lamb Shawarma Plate",
-          "price": "$22.22",
-          "notes": [
-            "Beef + Lamb Shawarma, 1 Pita, rice, salad, baba ghanoush & hummus + tahini"
-          ]
-        },
-        {
           "name": "Falafel",
           "price": "$16.55",
           "notes": [
@@ -196,14 +170,6 @@
         {
           "name": "Gyro",
           "price": "$12.89"
-        },
-        {
-          "name": "Beef Shawarma",
-          "price": "$13.49"
-        },
-        {
-          "name": "Chicken Shawarma",
-          "price": "$13.49"
         }
       ]
     },
@@ -221,14 +187,6 @@
         {
           "name": "Gyro",
           "price": "$12.89"
-        },
-        {
-          "name": "Beef Shawarma",
-          "price": "$13.49"
-        },
-        {
-          "name": "Chicken Shawarma",
-          "price": "$13.49"
         }
       ]
     },
