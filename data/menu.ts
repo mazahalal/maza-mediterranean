@@ -58,16 +58,16 @@ export const menuData: MenuCategory[] = [
   {
     category: "Loaded Fries",
     items: [
-      { name: "Shredded Chicken", price: "$11.49" },
-      { name: "Shredded Steak", price: "$12.89" },
+      { name: "Shredded Chicken", price: "$11.49", notes: ["Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Maza Special Sauce. Sauce on the side available."] },
+      { name: "Shredded Steak", price: "$12.89", notes: ["Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Maza Special Sauce. Sauce on the side available."] },
       { name: "Gyro", price: "$12.89" }
     ],
   },
   {
     category: "Loaded Hummus",
     items: [
-      { name: "Shredded Chicken", price: "$11.49" },
-      { name: "Shredded Steak", price: "$12.89" },
+      { name: "Shredded Chicken", price: "$11.49", notes: ["Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Maza Special Sauce. Sauce on the side available."] },
+      { name: "Shredded Steak", price: "$12.89", notes: ["Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Maza Special Sauce. Sauce on the side available."] },
       { name: "Gyro", price: "$12.89" }
     ],
   },
