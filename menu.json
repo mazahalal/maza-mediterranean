@@ -144,14 +144,16 @@
           "name": "Shredded Chicken Plate",
           "price": "$18.49",
           "notes": [
-            "Maza in-house shredded chicken over a bed of rice, 1 Pita, salad, baba ghanoush and hummus + tahini"
+            "Maza in-house shredded chicken over a bed of rice, 1 Pita, salad, baba ghanoush and hummus + tahini",
+            "Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Maza Special Sauce"
           ]
         },
         {
           "name": "Shredded Steak Plate",
           "price": "$19.99",
           "notes": [
-            "Maza in-house shredded steak over a bed of rice, 1 Pita, salad, baba ghanoush and hummus + tahini"
+            "Maza in-house shredded steak over a bed of rice, 1 Pita, salad, baba ghanoush and hummus + tahini",
+            "Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Maza Special Sauce"
           ]
         }
       ]
@@ -230,12 +232,12 @@
         {
           "name": "Crispy Chicken Sandwich",
           "price": "$11.85",
-          "note": "Kids Meal — Comes with Fries"
+          "note": "Kids Meal \u2014 Comes with Fries"
         },
         {
           "name": "All Beef Burger",
           "price": "$11.85",
-          "note": "Kids Meal — Comes with Fries"
+          "note": "Kids Meal \u2014 Comes with Fries"
         }
       ]
     },
