@@ -354,12 +354,12 @@
     },
     {
       "name": "Sharbat",
-      "subtitle": "House-made \u00b7 24oz \u00b7 no refill",
+      "subtitle": "House-made \u00b7 no refill",
       "items": [
         {
           "name": "Karkadeh",
-          "price": "$3.99",
-          "note": "Hibiscus"
+          "price": "SM $1.99 | LG $3.99",
+          "note": "Hibiscus \u00b7 SM 12oz \u00b7 LG 24oz"
         }
       ]
     }
