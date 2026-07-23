@@ -114,13 +114,25 @@ export const menuData: MenuCategory[] = [
     ],
   },
   {
-    category: "Desserts & Drinks",
+    category: "Desserts",
     items: [
       { name: "Baklava (Large)", price: "$3.99", notes: ["Pistachio or Walnut"] },
-      { name: "Cake / Cheesecake", price: "$7.99", notes: ["Flavors: Dubai Chocolate, New York Cheesecake, Red Velvet Cake, Chocolate Mousse Cake, or Nutella Cheesecake"] },
+      { name: "Cake / Cheesecake", price: "$7.99", notes: ["Flavors: Dubai Chocolate, New York Cheesecake, Red Velvet Cake, Chocolate Mousse Cake, or Nutella Cheesecake"] }
+    ],
+  },
+  {
+    category: "Drinks",
+    items: [
       { name: "Bottled Water", price: "$1.49" },
-      { name: "Fountain Drink", price: "$2.49" },
+      { name: "Fountain Drink", price: "$2.49", note: "20oz, refillable" },
       { name: "Middle Eastern Black Tea", price: "$2.99" }
+    ],
+  },
+  {
+    category: "Sharbat",
+    subtitle: "House-made · 24oz · no refill",
+    items: [
+      { name: "Karkadeh", price: "$3.99", note: "Hibiscus" }
     ],
   }
 ];
