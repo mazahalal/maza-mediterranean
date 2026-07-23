@@ -18,7 +18,7 @@ export const menuData: MenuCategory[] = [
     category: "Wraps",
     subtitle: "Wrapped with hummus, tomato, onion, lettuce, pickle, and garlic sauce",
     items: [
-      { name: "Beef Gyro", price: "$10.91", notes: ["Served on pita or wrap (saj)"] },
+      { name: "Beef Gyro", price: "$10.91", notes: ["Served on pita or as a wrap"] },
       { name: "Beef + Lamb Shish Kebab Wrap", price: "$12.99" },
       { name: "Chicken Shish Kebab Wrap", price: "$12.99" },
       { name: "Chicken Tikka Wrap", price: "$11.43" },
