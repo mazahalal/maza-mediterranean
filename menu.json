@@ -316,7 +316,7 @@
       ]
     },
     {
-      "name": "Desserts & Drinks",
+      "name": "Desserts",
       "items": [
         {
           "name": "Baklava (Large)",
@@ -331,18 +331,35 @@
           "notes": [
             "Flavors: Dubai Chocolate, New York Cheesecake, Red Velvet Cake, Chocolate Mousse Cake, or Nutella Cheesecake"
           ]
-        },
+        }
+      ]
+    },
+    {
+      "name": "Drinks",
+      "items": [
         {
           "name": "Bottled Water",
           "price": "$1.49"
         },
         {
           "name": "Fountain Drink",
-          "price": "$2.49"
+          "price": "$2.49",
+          "note": "20oz, refillable"
         },
         {
           "name": "Middle Eastern Black Tea",
           "price": "$2.99"
+        }
+      ]
+    },
+    {
+      "name": "Sharbat",
+      "subtitle": "House-made \u00b7 24oz \u00b7 no refill",
+      "items": [
+        {
+          "name": "Karkadeh",
+          "price": "$3.99",
+          "note": "Hibiscus"
         }
       ]
     }
