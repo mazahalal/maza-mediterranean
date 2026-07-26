@@ -57,17 +57,19 @@ export const menuData: MenuCategory[] = [
   },
   {
     category: "Loaded Fries",
+    subtitle: "Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Maza Special Sauce, Pomegranate Molasses. Sauce on the side available.",
     items: [
-      { name: "Shredded Chicken", price: "$11.49", notes: ["Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Maza Special Sauce, Pomegranate Molasses. Sauce on the side available."] },
-      { name: "Shredded Steak", price: "$12.89", notes: ["Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Maza Special Sauce, Pomegranate Molasses. Sauce on the side available."] },
+      { name: "Shredded Chicken", price: "$11.49" },
+      { name: "Shredded Steak", price: "$12.89" },
       { name: "Gyro", price: "$12.89" }
     ],
   },
   {
     category: "Loaded Hummus",
+    subtitle: "Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Maza Special Sauce, Pomegranate Molasses. Sauce on the side available.",
     items: [
-      { name: "Shredded Chicken", price: "$11.49", notes: ["Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Maza Special Sauce, Pomegranate Molasses. Sauce on the side available."] },
-      { name: "Shredded Steak", price: "$12.89", notes: ["Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Maza Special Sauce, Pomegranate Molasses. Sauce on the side available."] },
+      { name: "Shredded Chicken", price: "$11.49" },
+      { name: "Shredded Steak", price: "$12.89" },
       { name: "Gyro", price: "$12.89" }
     ],
   },
@@ -117,8 +119,7 @@ export const menuData: MenuCategory[] = [
   {
     category: "Desserts",
     items: [
-      { name: "Baklava (Large)", price: "$3.99", notes: ["Pistachio or Walnut"] },
-      { name: "Cake / Cheesecake", price: "$7.99", notes: ["Flavors: Dubai Chocolate, New York Cheesecake, Red Velvet Cake, Chocolate Mousse Cake, or Nutella Cheesecake"] }
+      { name: "Baklava (Large)", price: "$3.99", notes: ["Pistachio or Walnut"] }
     ],
   },
   {
@@ -126,7 +127,12 @@ export const menuData: MenuCategory[] = [
     items: [
       { name: "Bottled Water", price: "$1.49" },
       { name: "Fountain Drink", price: "$2.49", note: "20oz, refillable" },
-      { name: "Middle Eastern Black Tea", price: "$2.99" }
+      { name: "Middle Eastern Black Tea", price: "$2.99" },
+      { name: "Peace Tea Raspberry", price: "$2.25", note: "16oz can" },
+      { name: "Minute Maid Apple Juice", price: "$2.75", note: "10oz" },
+      { name: "Minute Maid Orange Juice", price: "$2.75", note: "10oz" },
+      { name: "Mexican Coke", price: "$3.99", note: "355ml glass" },
+      { name: "Mexican Fanta Grape", price: "$3.99", note: "355ml glass" }
     ],
   },
   {
