@@ -155,6 +155,14 @@
             "Maza in-house shredded steak over a bed of rice, 1 Pita, salad, baba ghanoush and hummus + tahini",
             "Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Maza Special Sauce, Pomegranate Molasses. Sauce on the side available."
           ]
+        },
+        {
+          "name": "Samak Tandoor",
+          "price": "$38.97",
+          "notes": [
+            "Comes with rice and salad",
+            "Takes an hour to prepare"
+          ]
         }
       ]
     },
