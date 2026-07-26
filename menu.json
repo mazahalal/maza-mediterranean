@@ -215,9 +215,8 @@
           "name": "Samak Tandoor",
           "price": "$38.97",
           "notes": [
-            "One whole large fish",
-            "Comes with rice and salad",
-            "Takes an hour to prepare"
+            "Whole large fish with rice and salad",
+            "Please allow 1 hour to prepare"
           ]
         }
       ]
@@ -315,14 +314,11 @@
       ]
     },
     {
-      "name": "Desserts",
+      "name": "Baklava",
       "items": [
         {
-          "name": "Baklava (Large)",
-          "price": "$3.99",
-          "notes": [
-            "Pistachio or Walnut"
-          ]
+          "name": "Walnut or Pistachio",
+          "price": "$3.99"
         }
       ]
     },
