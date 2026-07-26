@@ -78,7 +78,7 @@ export const menuData: MenuCategory[] = [
     items: [
       { name: "Maza Special", price: "$48.45", notes: ["1x Chicken Tikka, 1x Lamb Tikka, 1x Beef + Lamb Shish Kebab, 1x Chicken Shish Kebab (4 total), +2 Pita, Rice, Salad, Hummus + Tahini, Baba Ghanoush"] },
       { name: "Family Meal", price: "$87.49", notes: ["2x Beef + Lamb Shish Kebab, 2x Chicken Shish Kebab, 2x Chicken Tikka, 2x Lamb Tikka, 2x Ribeye Tikka (10 total), +4 Pita, Rice, Salad, Hummus + Tahini, Baba Ghanoush"] },
-      { name: "Samak Tandoor", price: "$38.97", notes: ["Comes with rice and salad", "Takes an hour to prepare"] }
+      { name: "Samak Tandoor", price: "$38.97", notes: ["One whole large fish", "Comes with rice and salad", "Takes an hour to prepare"] }
     ],
   },
   {
