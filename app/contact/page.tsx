@@ -74,7 +74,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-[#F5F1E8] mb-1">Hours</h3>
-                  <p className="text-[#B8B8B8]">Tuesday–Wednesday: 10am–8pm<br />Thursday–Sunday: 10am–10pm<br />Closed Mondays</p>
+                  <p className="text-[#B8B8B8]">Tuesday–Sunday: 10am–10pm<br />Closed Mondays</p>
                 </div>
                 <div>
                   <h3 className="font-semibold text-[#F5F1E8] mb-2">Map</h3>
