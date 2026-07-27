@@ -121,12 +121,5 @@ export const menuData: MenuCategory[] = [
     items: [
       { name: "Walnut or Pistachio", price: "$3.99" }
     ],
-  },
-  {
-    category: "Sharbat",
-    subtitle: "House-made · no refill",
-    items: [
-      { name: "Karkadeh (Hibiscus)", price: "SM $1.99 | LG $3.99" }
-    ],
   }
 ];
