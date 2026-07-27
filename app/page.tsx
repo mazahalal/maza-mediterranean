@@ -5,7 +5,7 @@ import MapEmbed from "@/components/MapEmbed";
 export const metadata = {
   alternates: { canonical: "https://mazahalalfood.com" },
   title: "Maza Mediterranean Cuisine | Chandler AZ | Mediterranean Food Chandler",
-  description: "Maza Mediterranean Cuisine Chandler AZ. Authentic Mediterranean food near Chandler Mall, Tempe & East Valley. Big portions, real ingredients, honest prices. Halal Mediterranean restaurant. Open Tue-Sun.",
+  description: "Maza Mediterranean Cuisine Chandler AZ. Authentic Mediterranean food near Chandler Mall, Tempe & East Valley. Big portions, real ingredients, honest prices. Halal Mediterranean restaurant. Open Tuesday–Sunday 10am–10pm. Closed Mondays.",
 };
 
 export default function Home() {
@@ -88,7 +88,7 @@ export default function Home() {
                 <p>3491 W Frye Rd, Suite 2</p>
                 <p>Chandler, AZ 85226</p>
               </div>
-              <p className="text-[#B8B8B8] mb-6">Tue–Wed 10am–8pm • Thu–Sun 10am–10pm • Closed Mondays</p>
+              <p className="text-[#B8B8B8] mb-6">Tue–Sun 10am–10pm • Closed Mondays</p>
               <Link 
                 href="/contact" 
                 className="inline-block text-[#D3AB5E] hover:text-[#F5F1E8] transition-colors font-medium"
@@ -103,7 +103,7 @@ export default function Home() {
 
       {/* Hours */}
       <section className="py-16 px-6 text-center border-t border-[#D3AB5E]/20">
-        <h2 className="font-display text-4xl text-[#D3AB5E] tracking-wide mb-4">Open Tue–Sun, 10am–8pm (Thu–Sun until 10pm)</h2>
+        <h2 className="font-display text-4xl text-[#D3AB5E] tracking-wide mb-4">Open Tue–Sun, 10am–10pm</h2>
         <p className="text-[#F5F1E8]/80 text-lg">Dine in or grab it to go. Closed Mondays.</p>
       </section>
 
