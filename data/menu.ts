@@ -139,7 +139,7 @@ export const menuData: MenuCategory[] = [
     category: "Sharbat",
     subtitle: "House-made · no refill",
     items: [
-      { name: "Karkadeh", price: "SM $1.99 | LG $3.99", note: "Hibiscus · SM 12oz · LG 24oz" }
+      { name: "Karkadeh (Hibiscus)", price: "SM $1.99 | LG $3.99" }
     ],
   }
 ];
