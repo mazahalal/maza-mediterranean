@@ -1,7 +1,6 @@
 import Link from "next/link";
 import PhoneLink from "@/components/PhoneLink";
 import MapEmbed from "@/components/MapEmbed";
-import { TAKEOUT_URL, deliveryUrl } from "@/lib/ordering";
 
 export const metadata = {
   alternates: { canonical: "https://mazahalalfood.com" },
@@ -9,36 +8,11 @@ export const metadata = {
   description: "Maza Mediterranean Cuisine Chandler AZ. Authentic Mediterranean food near Chandler Mall, Tempe & East Valley. Big portions, real ingredients, honest prices. Halal Mediterranean restaurant. Open Tuesday–Sunday 10am–10pm. Closed Mondays.",
 };
 
-function DeliveryIcon({ className = "w-5 h-5" }: { className?: string }) {
-  return (
-    <svg
-      className={className}
-      fill="none"
-      stroke="currentColor"
-      viewBox="0 0 24 24"
-      aria-hidden="true"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={2}
-        d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"
-      />
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={2}
-        d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10h2m8 0h2m-2 0h-4m6 0h4a1 1 0 001-1v-3.586a1 1 0 00-.293-.707l-2.414-2.414A1 1 0 0016.586 8H15"
-      />
-    </svg>
-  );
-}
-
 export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section
+      <section 
         className="relative h-[70vh] flex items-center justify-center bg-[#0A1F1E] bg-cover bg-center"
         style={{ backgroundImage: "url('/images/maza/hero-brand-1920.jpg')" }}
       >
@@ -51,32 +25,23 @@ export default function Home() {
           <p className="text-xl md:text-2xl text-[#F5F1E8]/90 mb-8">
             Big portions. Real ingredients.<br />Honest prices.<br />Mediterranean food Chandler AZ — halal Mediterranean near Chandler Mall and Tempe.
           </p>
-          <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
-            <Link
-              href="/menu"
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              href="/menu" 
               className="inline-block bg-[#D3AB5E] hover:bg-[#C49A4D] text-[#0A1F1E] font-semibold px-10 py-4 rounded text-lg tracking-wide transition-colors"
             >
               View the Menu
             </Link>
             <a
-              href={TAKEOUT_URL}
+              href="https://online.skytab.com/s/maza"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-[#D3AB5E] hover:bg-[#C49A4D] text-[#0A1F1E] font-semibold px-10 py-4 rounded text-lg tracking-wide transition-colors"
+              className="inline-block border border-[#D3AB5E] text-[#D3AB5E] font-semibold px-10 py-4 rounded text-lg tracking-wide hover:bg-[#D3AB5E] hover:text-[#0A1F1E] transition-colors"
             >
-              Order Takeout
+              Order Online
             </a>
-            <a
-              href={deliveryUrl("home_hero")}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 border border-[#D3AB5E] text-[#D3AB5E] font-semibold px-10 py-4 rounded text-lg tracking-wide hover:bg-[#D3AB5E] hover:text-[#0A1F1E] transition-colors"
-            >
-              <DeliveryIcon />
-              Delivery
-            </a>
-            <Link
-              href="/contact"
+            <Link 
+              href="/contact" 
               className="inline-block border border-[#D3AB5E] text-[#D3AB5E] font-semibold px-10 py-4 rounded text-lg tracking-wide hover:bg-[#D3AB5E] hover:text-[#0A1F1E] transition-colors"
             >
               Find Us
@@ -107,7 +72,7 @@ export default function Home() {
       <section className="py-10 px-6 bg-[#0F2A28] border-t border-[#D3AB5E]/20">
         <div className="max-w-5xl mx-auto text-center">
           <p className="text-[#F5F1E8]/90 text-lg md:text-xl">
-            New to the area? Looking for <strong>Mediterranean food near me</strong> or the best restaurants near Chandler Mall?
+            New to the area? Looking for <strong>Mediterranean food near me</strong> or the best restaurants near Chandler Mall? 
             Maza is a recently opened, family-owned spot bringing authentic halal Mediterranean cuisine to Chandler, AZ and the East Valley (including Tempe).
           </p>
         </div>
@@ -124,8 +89,8 @@ export default function Home() {
                 <p>Chandler, AZ 85226</p>
               </div>
               <p className="text-[#B8B8B8] mb-6">Tue–Sun 10am–10pm • Closed Mondays</p>
-              <Link
-                href="/contact"
+              <Link 
+                href="/contact" 
                 className="inline-block text-[#D3AB5E] hover:text-[#F5F1E8] transition-colors font-medium"
               >
                 Full contact details &amp; message form →
@@ -144,9 +109,9 @@ export default function Home() {
 
       {/* Final CTA */}
       <section className="bg-[#0A1F1E] py-20 px-6 text-center">
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-xl mx-auto">
           <p className="text-[#F5F1E8]/80 mb-8 text-lg">Dine in or grab it to go. Closed Mondays.</p>
-          <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/menu"
               className="inline-block bg-[#D3AB5E] hover:bg-[#A87C3D] text-[#0A1F1E] font-semibold px-10 py-4 rounded text-lg tracking-wide"
@@ -154,23 +119,14 @@ export default function Home() {
               See the Full Menu
             </Link>
             <a
-              href={TAKEOUT_URL}
+              href="https://online.skytab.com/s/maza"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-[#D3AB5E] hover:bg-[#C49A4D] text-[#0A1F1E] font-semibold px-10 py-4 rounded text-lg tracking-wide transition-colors"
             >
-              Order Takeout
+              Order Online
             </a>
-            <a
-              href={deliveryUrl("home_final")}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 border border-[#D3AB5E] text-[#D3AB5E] font-semibold px-10 py-4 rounded text-lg tracking-wide hover:bg-[#D3AB5E] hover:text-[#0A1F1E] transition-colors"
-            >
-              <DeliveryIcon />
-              Delivery
-            </a>
-            <PhoneLink
+            <PhoneLink 
               className="inline-block border border-[#D3AB5E] text-[#D3AB5E] font-semibold px-10 py-4 rounded text-lg tracking-wide hover:bg-[#D3AB5E] hover:text-[#0A1F1E] transition-colors"
             >
               Call to Order
