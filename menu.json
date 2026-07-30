@@ -373,6 +373,11 @@
           "name": "Karkadeh",
           "price": "SM $1.99 | LG $3.99",
           "note": "Hibiscus \u00b7 SM 12oz \u00b7 LG 24oz"
+        },
+        {
+          "name": "Iced Chai",
+          "price": "SM $1.99 | LG $3.99",
+          "note": "Ceylon black tea \u00b7 SM 12oz \u00b7 LG 24oz"
         }
       ]
     }
