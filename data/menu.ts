@@ -26,6 +26,7 @@ export const menuData: MenuCategory[] = [
       { name: "Falafel Wrap", price: "$9.35" },
       { name: "Lamb Tikka Wrap", price: "$13.51" },
       { name: "Arayes Lahm", price: "$15.55", notes: ["Flat grilled sandwich with beef, lamb and cheese. Served with salad."] },
+      { name: "Arayes Dajaj", price: "$15.55", notes: ["Flat grilled sandwich with chicken and cheese. Served with salad."] },
       { name: "Ribeye Tikka Wrap", price: "$14.55" },
       { name: "Shredded Chicken Wrap", price: "$12.49" },
       { name: "Shredded Steak Wrap", price: "$14.89" }
