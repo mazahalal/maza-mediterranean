@@ -42,6 +42,13 @@
           ]
         },
         {
+          "name": "Arayes Dajaj",
+          "price": "$15.55",
+          "notes": [
+            "Flat grilled sandwich with chicken and cheese. Served with salad."
+          ]
+        },
+        {
           "name": "Ribeye Tikka Wrap",
           "price": "$14.55"
         },
