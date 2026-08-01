@@ -37,6 +37,15 @@ export default function Footer() {
               >
                 Order Delivery →
               </a>
+              <span className="text-[#D3AB5E]/40 hidden sm:inline" aria-hidden="true">
+                |
+              </span>
+              <a
+                href="/careers"
+                className="text-[#D3AB5E] hover:text-[#F5F1E8] transition-colors font-medium"
+              >
+                We&apos;re Hiring →
+              </a>
             </p>
           </div>
         </div>
