@@ -35,17 +35,10 @@
           "price": "$13.51"
         },
         {
-          "name": "Arayes Lahm",
+          "name": "Arayes Lahm or Dajaj",
           "price": "$15.55",
           "notes": [
-            "Flat grilled sandwich with beef, lamb and cheese. Served with salad."
-          ]
-        },
-        {
-          "name": "Arayes Dajaj",
-          "price": "$15.55",
-          "notes": [
-            "Flat grilled sandwich with chicken and cheese. Served with salad."
+            "Flat grilled sandwich with cheese. Choose beef + lamb or chicken. Served with salad."
           ]
         },
         {
