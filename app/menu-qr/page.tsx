@@ -49,7 +49,7 @@ export default function MenuQRPage() {
       </div>
 
       {/* Delivery Section */}
-      <div className="w-full max-w-md mb-12">
+      <div id="delivery" className="w-full max-w-md mb-12 scroll-mt-24">
         <div className="text-[#D3AB5E] text-sm tracking-widest mb-4 px-1">DELIVERY</div>
         <div>
           <div className="mb-8">
