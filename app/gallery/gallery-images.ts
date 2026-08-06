@@ -6,10 +6,7 @@ export interface GalleryImage {
 // Ambiance + hero shots
 const ambiance: GalleryImage[] = [
   { src: "/images/maza/menu/opt-PXL_20260607_180708446.jpg", alt: "Maza Special — mixed grill platter" },
-  { src: "/images/maza/PXL_20260607_012014666.jpg", alt: "Maza restaurant interior with vertical sign" },
-  { src: "/images/maza/PXL_20260607_012032976.jpg", alt: "Bright dining area with open kitchen and mural" },
-  { src: "/images/maza/opt-PXL_20260601_232702080.jpg", alt: "Fresh shawarma, made daily" },
-  { src: "/images/maza/opt-PXL_20260605_212253975.jpg", alt: "Shawarma rotisserie in action" },
+  { src: "/images/maza/PXL_20260607_012014666.jpg", alt: "Maza dining room — mosaic mural and arched niches" },
   { src: "/images/maza/opt-PXL_20260607_180609260.jpg", alt: "Fresh halal protein on the grill" },
 ];
 
@@ -35,6 +32,7 @@ const dishes: GalleryImage[] = [
   { src: "/images/maza/menu/opt-loaded-hummus-steak.jpg", alt: "Loaded Hummus with shredded steak" },
   { src: "/images/maza/menu/opt-maza-special.jpg", alt: "Maza Special" },
   { src: "/images/maza/menu/opt-PXL_20260606_223538010.jpg", alt: "Beef Burger combo" },
+  { src: "/images/maza/menu/opt-PXL_20260606_223540324.jpg", alt: "Beef Burger with seasoned fries" },
   { src: "/images/maza/menu/opt-grilled-chicken-burger.jpg", alt: "Grilled Chicken burger" },
   { src: "/images/maza/menu/opt-kids-crispy-chicken.jpg", alt: "Kids Crispy Chicken sandwich" },
   { src: "/images/maza/menu/opt-falafel-side.jpg", alt: "Falafel (4pc)" },
