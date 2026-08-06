@@ -14,10 +14,47 @@ import fs from 'fs';
 const json = JSON.parse(fs.readFileSync('menu.json', 'utf8'));
 
 // Known image paths — add new items here when photography is available
+// Sources (Frank yea A+B+C 2026-08-05):
+//   A = approved menu/ deliverables (existing live + maza-special)
+//   B = studio digital/product/
+//   C = plated-only menu_items/ (no grill-process / raw / action)
 const images = {
+  // Existing live (Tier A)
   'Falafel|Plates': '/images/maza/menu/opt-PXL_20260601_224012118.jpg',
   'Maza Grill|Plates': '/images/maza/menu/opt-Jun_6_2026_5_29_23.jpg',
   'Beef Burger|Burgers': '/images/maza/menu/opt-PXL_20260606_223538010.jpg',
+
+  // Tier A — newly wired
+  'Maza Special|Specials': '/images/maza/menu/opt-maza-special.jpg',
+
+  // Tier B — studio digital/product
+  'Grilled Chicken|Burgers': '/images/maza/menu/opt-grilled-chicken-burger.jpg',
+  'Beef + Lamb Shish Kebab|Plates': '/images/maza/menu/opt-beef-shish-plate.jpg',
+  'Chicken Shish Kebab|Plates': '/images/maza/menu/opt-chicken-shish-plate.jpg',
+  'Beef Gyro|Wraps': '/images/maza/menu/opt-beef-gyro.jpg',
+  'Crispy Chicken Wrap|Wraps': '/images/maza/menu/opt-crispy-chicken-wrap.jpg',
+  'Beef + Lamb Shish Kebab Wrap|Wraps': '/images/maza/menu/opt-beef-lamb-shish-wrap.jpg',
+
+  // Tier C — plated menu_items
+  'Mix Kebab|Plates': '/images/maza/menu/opt-mix-kebab-plate.jpg',
+  'Chicken Tikka Plate|Plates': '/images/maza/menu/opt-chicken-tikka-plate.jpg',
+  'Lamb Tikka Plate|Plates': '/images/maza/menu/opt-lamb-tikka-plate.jpg',
+  'Appetizer Plate|Plates': '/images/maza/menu/opt-appetizer-plate.jpg',
+  'Grilled Chicken Teriyaki Plate|Plates': '/images/maza/menu/opt-chicken-teriyaki-plate.jpg',
+  'Shredded Chicken Plate|Plates': '/images/maza/menu/opt-shredded-chicken-plate.jpg',
+  'Shredded Steak Plate|Plates': '/images/maza/menu/opt-shredded-steak-plate.jpg',
+  'Shredded Steak|Loaded Fries': '/images/maza/menu/opt-loaded-fries-steak.jpg',
+  'Gyro|Loaded Fries': '/images/maza/menu/opt-loaded-fries-gyro.jpg',
+  'Shredded Chicken|Loaded Hummus': '/images/maza/menu/opt-loaded-hummus-chicken.jpg',
+  'Shredded Steak|Loaded Hummus': '/images/maza/menu/opt-loaded-hummus-steak.jpg',
+  'Crispy Chicken Sandwich|Kids Meals': '/images/maza/menu/opt-kids-crispy-chicken.jpg',
+  'Hummus with tahini and pita|Sides': '/images/maza/menu/opt-hummus-pita.jpg',
+  'Sambusah (2pc)|Sides': '/images/maza/menu/opt-sambusah.jpg',
+  'Tabouleh|Sides': '/images/maza/menu/opt-tabouleh.jpg',
+  'Kibbeh (3pc)|Sides': '/images/maza/menu/opt-kibbeh.jpg',
+  'Side Salad|Sides': '/images/maza/menu/opt-side-salad.jpg',
+  'Falafel (4pc)|Sides': '/images/maza/menu/opt-falafel-side.jpg',
+  'Walnut or Pistachio|Baklava': '/images/maza/menu/opt-baklava.jpg',
 };
 
 function esc(s) {
