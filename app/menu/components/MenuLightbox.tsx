@@ -1,28 +1,39 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { menuData, MenuItem } from "@/data/menu";
 import { trackMeta } from "@/lib/meta-pixel";
+
+function menuAlt(item: MenuItem, section?: string): string {
+  const cat = section ? ` (${section})` : "";
+  return `${item.name}${cat} — Maza Mediterranean Cuisine, Chandler AZ`;
+}
 
 export default function MenuLightbox() {
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // All menu items for lightbox navigation
-  const allItems: MenuItem[] = menuData.flatMap(section => section.items);
+  // Prefer section+name so Loaded Fries vs Loaded Hummus don't collide
+  const allItems: (MenuItem & { _section: string })[] = menuData.flatMap(
+    (section) =>
+      section.items.map((item) => ({ ...item, _section: section.category }))
+  );
 
-  const openLightbox = (clickedItem: MenuItem) => {
-    const index = allItems.findIndex(item => item.name === clickedItem.name);
+  const openLightbox = (clickedItem: MenuItem, sectionCategory: string) => {
+    const index = allItems.findIndex(
+      (item) =>
+        item.name === clickedItem.name && item._section === sectionCategory
+    );
     if (index !== -1) {
       setCurrentIndex(index);
       setIsOpen(true);
 
-      // Meta Pixel: ViewContent per item with value when lightbox opens
       const priceStr = clickedItem.price || "";
       const value = parseFloat(priceStr.replace(/[^0-9.]/g, "")) || 0;
       trackMeta("ViewContent", {
         content_name: clickedItem.name,
-        content_category: "Menu Item",
+        content_category: sectionCategory || "Menu Item",
         value: value,
         currency: "USD",
       });
@@ -36,7 +47,9 @@ export default function MenuLightbox() {
   };
 
   const goToNext = () => {
-    setCurrentIndex((prev) => (prev === allItems.length - 1 ? 0 : prev + 1));
+    setCurrentIndex((prev) =>
+      prev === allItems.length - 1 ? 0 : prev + 1
+    );
   };
 
   const currentItem = allItems[currentIndex];
@@ -64,39 +77,55 @@ export default function MenuLightbox() {
                 <div className="h-px flex-1 bg-[rgba(211,171,94,0.3)]"></div>
               </div>
               {section.subtitle && (
-                <p className="text-[#B8B8B8] text-sm mt-2 text-center">{section.subtitle}</p>
+                <p className="text-[#B8B8B8] text-sm mt-2 text-center">
+                  {section.subtitle}
+                </p>
               )}
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {section.items.map((item) => (
                 <div
-                  key={item.name}
-                  onClick={() => openLightbox(item)}
+                  key={`${section.category}::${item.name}`}
+                  onClick={() => openLightbox(item, section.category)}
                   className="bg-[#0E0E0E] rounded-lg border border-[rgba(211,171,94,0.15)] hover:border-[rgba(211,171,94,0.35)] transition-all duration-200 overflow-hidden cursor-pointer group"
                 >
                   {item.image && (
-                    <div className="relative">
-                      <img 
-                        src={item.image} 
-                        alt={item.name} 
-                        className="w-full h-48 object-contain bg-\[\#111\] group-hover:scale-105 transition-transform duration-300" 
+                    <div className="relative w-full h-48 bg-[#111]">
+                      <Image
+                        src={item.image}
+                        alt={menuAlt(item, section.category)}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        className="object-contain group-hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
                       />
                     </div>
                   )}
                   <div className="p-6">
                     <div className="flex justify-between items-start mb-2">
-                      <h3 className="font-display text-lg text-[#F5F1E8] tracking-wide">{item.name}</h3>
-                      <span className="text-[#D3AB5E] font-bold text-lg ml-4">{item.price}</span>
+                      <h3 className="font-display text-lg text-[#F5F1E8] tracking-wide">
+                        {item.name}
+                      </h3>
+                      <span className="text-[#D3AB5E] font-bold text-lg ml-4">
+                        {item.price}
+                      </span>
                     </div>
                     {item.description && (
-                      <p className="text-[#B8B8B8] text-sm mb-3">{item.description}</p>
+                      <p className="text-[#B8B8B8] text-sm mb-3">
+                        {item.description}
+                      </p>
                     )}
                     {item.note && (
-                      <p className="text-[#B8B8B8] text-sm italic">{item.note}</p>
+                      <p className="text-[#B8B8B8] text-sm italic">
+                        {item.note}
+                      </p>
                     )}
-                    {item.notes && item.notes.map((note, i) => (
-                      <p key={i} className="text-[#B8B8B8] text-sm">{note}</p>
-                    ))}
+                    {item.notes &&
+                      item.notes.map((note, i) => (
+                        <p key={i} className="text-[#B8B8B8] text-sm">
+                          {note}
+                        </p>
+                      ))}
                   </div>
                 </div>
               ))}
@@ -105,15 +134,14 @@ export default function MenuLightbox() {
         ))}
       </div>
 
-      {/* Lightbox Modal */}
       {isOpen && currentItem && (
-        <div 
+        <div
           className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
           onClick={closeLightbox}
         >
-          <div 
+          <div
             className="relative max-w-5xl w-full"
-            onClick={e => e.stopPropagation()}
+            onClick={(e) => e.stopPropagation()}
           >
             <button
               onClick={closeLightbox}
@@ -122,30 +150,38 @@ export default function MenuLightbox() {
               ✕
             </button>
 
-            {/* Image (only if exists) */}
             {currentItem.image && (
-              <div className="relative bg-[#0E0E0E] rounded-xl overflow-hidden border border-[#D3AB5E]/20 mb-4">
-                <img 
-                  src={currentItem.image} 
-                  alt={currentItem.name}
-                  className="w-full max-h-[70vh] object-contain"
+              <div className="relative w-full h-[min(70vh,640px)] bg-[#0E0E0E] rounded-xl overflow-hidden border border-[#D3AB5E]/20 mb-4">
+                <Image
+                  src={currentItem.image}
+                  alt={menuAlt(currentItem, currentItem._section)}
+                  fill
+                  sizes="(max-width: 1280px) 100vw, 1024px"
+                  className="object-contain"
+                  priority
                 />
               </div>
             )}
 
-            {/* Info */}
             <div className="text-center">
-              <h3 className="font-display text-2xl text-[#F5F1E8] mb-1">{currentItem.name}</h3>
-              <p className="text-[#D3AB5E] text-xl font-bold mb-2">{currentItem.price}</p>
+              <h3 className="font-display text-2xl text-[#F5F1E8] mb-1">
+                {currentItem.name}
+              </h3>
+              <p className="text-[#D3AB5E] text-xl font-bold mb-2">
+                {currentItem.price}
+              </p>
               {currentItem.description && (
-                <p className="text-[#B8B8B8] max-w-2xl mx-auto">{currentItem.description}</p>
+                <p className="text-[#B8B8B8] max-w-2xl mx-auto">
+                  {currentItem.description}
+                </p>
               )}
               {currentItem.note && (
-                <p className="text-[#B8B8B8] text-sm italic mt-2">{currentItem.note}</p>
+                <p className="text-[#B8B8B8] text-sm italic mt-2">
+                  {currentItem.note}
+                </p>
               )}
             </div>
 
-            {/* Navigation Arrows */}
             {allItems.length > 1 && (
               <>
                 <button
@@ -163,7 +199,6 @@ export default function MenuLightbox() {
               </>
             )}
 
-            {/* Counter */}
             <div className="text-center mt-4 text-[#B8B8B8] text-sm">
               {currentIndex + 1} / {allItems.length}
             </div>
