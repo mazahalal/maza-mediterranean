@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { menuData, MenuItem } from "@/data/menu";
 import { trackMeta } from "@/lib/meta-pixel";
+import { categorySlug } from "./MenuCategoryNav";
 
 function menuAlt(item: MenuItem, section?: string): string {
   const cat = section ? ` (${section})` : "";
@@ -67,7 +68,11 @@ export default function MenuLightbox() {
     <>
       <div className="space-y-16">
         {menuData.map((section) => (
-          <div key={section.category}>
+          <div
+            key={section.category}
+            id={`menu-cat-${categorySlug(section.category)}`}
+            className="scroll-mt-36"
+          >
             <div className="mb-6">
               <div className="flex items-center gap-4 mb-2">
                 <div className="h-px flex-1 bg-[rgba(211,171,94,0.3)]"></div>

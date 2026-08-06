@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { metadata } from "./metadata";
 import MenuLightbox from "./components/MenuLightbox";
+import MenuCategoryNav from "./components/MenuCategoryNav";
 import MenuTracker from "@/components/MenuTracker";
 import { menuData } from "@/data/menu";
 import { TAKEOUT_URL } from "@/lib/ordering";
@@ -69,7 +70,14 @@ export default function MenuPage() {
             </div>
           </div>
 
-          <MenuLightbox />
+        </div>
+
+        <MenuCategoryNav />
+
+        <div className="max-w-6xl mx-auto">
+          <div className="mt-10">
+            <MenuLightbox />
+          </div>
 
           <div className="mt-12 text-center">
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 justify-center items-center">
