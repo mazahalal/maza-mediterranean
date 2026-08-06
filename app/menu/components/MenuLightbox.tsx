@@ -82,7 +82,7 @@ export default function MenuLightbox() {
                 </p>
               )}
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {section.items.map((item) => (
                 <div
                   key={`${section.category}::${item.name}`}
@@ -90,13 +90,13 @@ export default function MenuLightbox() {
                   className="bg-[#0E0E0E] rounded-lg border border-[rgba(211,171,94,0.15)] hover:border-[rgba(211,171,94,0.35)] transition-all duration-200 overflow-hidden cursor-pointer group"
                 >
                   {item.image && (
-                    <div className="relative w-full h-48 bg-[#111]">
+                    <div className="relative w-full h-[62vh] sm:h-auto sm:aspect-[3/4] bg-[#111]">
                       <Image
                         src={item.image}
                         alt={menuAlt(item, section.category)}
                         fill
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                        className="object-contain group-hover:scale-105 transition-transform duration-300"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-cover group-hover:scale-105 transition-transform duration-300"
                         loading="lazy"
                       />
                     </div>
