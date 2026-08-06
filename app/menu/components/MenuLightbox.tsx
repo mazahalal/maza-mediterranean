@@ -71,7 +71,7 @@ export default function MenuLightbox() {
           <div
             key={section.category}
             id={`menu-cat-${categorySlug(section.category)}`}
-            className="scroll-mt-36"
+            className="scroll-mt-44"
           >
             <div className="mb-6">
               <div className="flex items-center gap-4 mb-2">

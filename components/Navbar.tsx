@@ -24,7 +24,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 bg-[#0A1F1E]/95 backdrop-blur-md border-b border-[rgba(211,171,94,0.2)]">
+    <nav id="site-navbar" className="sticky top-0 z-50 bg-[#0A1F1E]/95 backdrop-blur-md border-b border-[rgba(211,171,94,0.2)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-5 flex items-center justify-between gap-3">
         <LogoLockup />
 

@@ -9,8 +9,16 @@ export function categorySlug(category: string): string {
 
 export default function MenuCategoryNav() {
   const [active, setActive] = useState<string>("");
+  const [navOffset, setNavOffset] = useState(80);
 
   useEffect(() => {
+    const navbar = document.getElementById("site-navbar");
+    const measure = () => {
+      if (navbar) setNavOffset(Math.round(navbar.getBoundingClientRect().height));
+    };
+    measure();
+    window.addEventListener("resize", measure);
+
     const sections = menuData
       .map((s) => document.getElementById(`menu-cat-${categorySlug(s.category)}`))
       .filter((el): el is HTMLElement => el !== null);
@@ -24,13 +32,17 @@ export default function MenuCategoryNav() {
       { rootMargin: "-30% 0px -60% 0px" }
     );
     sections.forEach((s) => observer.observe(s));
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("resize", measure);
+    };
   }, []);
 
   return (
     <nav
       aria-label="Menu categories"
-      className="sticky top-[72px] sm:top-[80px] z-40 bg-[#0A1F1E]/95 backdrop-blur-md border-y border-[rgba(211,171,94,0.2)] -mx-4 px-4"
+      style={{ top: navOffset }}
+      className="sticky z-40 bg-[#0A1F1E]/95 backdrop-blur-md border-y border-[rgba(211,171,94,0.2)] -mx-4 px-4"
     >
       <div className="max-w-6xl mx-auto flex gap-2 overflow-x-auto py-3 scrollbar-none [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         {menuData.map((section) => {
