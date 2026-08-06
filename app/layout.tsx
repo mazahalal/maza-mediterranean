@@ -4,6 +4,7 @@ import { Cinzel, Montserrat } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import FloatingOrderButton from "@/components/FloatingOrderButton";
 import { MAZA_GOOGLE_MAPS_URL, MAZA_GEO } from "@/lib/maza-maps";
 
 const cinzel = Cinzel({
@@ -40,6 +41,7 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+        <FloatingOrderButton />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
