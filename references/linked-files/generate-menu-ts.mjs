@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 /**
  * generate-menu-ts.mjs — Rebuild data/menu.ts from canonical menu.json
- * 
+ *
  * Run:  node references/linked-files/generate-menu-ts.mjs
- * 
+ *
  * This is the ONE AND ONLY way data/menu.ts should be updated.
  * Never hand-edit data/menu.ts directly — run this script instead.
  * Both menu.json and data/menu.ts must be committed together.
@@ -14,46 +14,63 @@ import fs from 'fs';
 const json = JSON.parse(fs.readFileSync('menu.json', 'utf8'));
 
 // Known image paths — add new items here when photography is available
-// Sources (Frank yea A+B+C 2026-08-05):
-//   A = approved menu/ deliverables (existing live + maza-special)
+// Prefer true vertical (9:16) assets named *-vertical when available.
+// Sources:
+//   A = approved menu/ deliverables
 //   B = studio digital/product/
-//   C = plated-only menu_items/ (no grill-process / raw / action)
+//   C = plated menu_items/
+//   V = owner vertical stills (menu_items/*-vertical.jpg, Aug 2026)
 const images = {
-  // Existing live (Tier A)
+  // --- Burgers ---
+  'Beef Burger|Burgers': '/images/maza/menu/opt-PXL_20260606_223538010.jpg',
+  'Grilled Chicken|Burgers': '/images/maza/menu/opt-grilled-chicken-burger.jpg',
+
+  // --- Plates ---
   'Falafel|Plates': '/images/maza/menu/opt-PXL_20260601_224012118.jpg',
   'Maza Grill|Plates': '/images/maza/menu/opt-Jun_6_2026_5_29_23.jpg',
-  'Beef Burger|Burgers': '/images/maza/menu/opt-PXL_20260606_223538010.jpg',
-
-  // Tier A — newly wired
-  'Maza Special|Specials': '/images/maza/menu/opt-maza-special.jpg',
-
-  // Tier B — studio digital/product
-  'Grilled Chicken|Burgers': '/images/maza/menu/opt-grilled-chicken-burger.jpg',
   'Beef + Lamb Shish Kebab|Plates': '/images/maza/menu/opt-beef-shish-plate.jpg',
   'Chicken Shish Kebab|Plates': '/images/maza/menu/opt-chicken-shish-plate.jpg',
-  'Beef Gyro|Wraps': '/images/maza/menu/opt-beef-gyro.jpg',
-  'Crispy Chicken Wrap|Wraps': '/images/maza/menu/opt-crispy-chicken-wrap.jpg',
-  'Beef + Lamb Shish Kebab Wrap|Wraps': '/images/maza/menu/opt-beef-lamb-shish-wrap.jpg',
-
-  // Tier C — plated menu_items
   'Mix Kebab|Plates': '/images/maza/menu/opt-mix-kebab-plate.jpg',
   'Chicken Tikka Plate|Plates': '/images/maza/menu/opt-chicken-tikka-plate.jpg',
   'Lamb Tikka Plate|Plates': '/images/maza/menu/opt-lamb-tikka-plate.jpg',
   'Appetizer Plate|Plates': '/images/maza/menu/opt-appetizer-plate.jpg',
   'Grilled Chicken Teriyaki Plate|Plates': '/images/maza/menu/opt-chicken-teriyaki-plate.jpg',
-  'Shredded Chicken Plate|Plates': '/images/maza/menu/opt-shredded-chicken-plate.jpg',
+  // V — shredded chicken plate vertical
+  'Shredded Chicken Plate|Plates': '/images/maza/menu/opt-shredded-chicken-plate-vertical.jpg',
   'Shredded Steak Plate|Plates': '/images/maza/menu/opt-shredded-steak-plate.jpg',
+
+  // --- Wraps (prefer verticals) ---
+  'Beef Gyro|Wraps': '/images/maza/menu/opt-beef-gyro-vertical.jpg',
+  'Crispy Chicken Wrap|Wraps': '/images/maza/menu/opt-crispy-chicken-wrap.jpg',
+  'Beef + Lamb Shish Kebab Wrap|Wraps': '/images/maza/menu/opt-beef-shish-kebab-wrap-vertical.jpg',
+  'Chicken Shish Kebab Wrap|Wraps': '/images/maza/menu/opt-chicken-shish-kebab-wrap-vertical.jpg',
+  'Falafel Wrap|Wraps': '/images/maza/menu/opt-falafel-wrap-vertical.jpg',
+  'Arayes Lahm or Dajaj|Wraps': '/images/maza/menu/opt-arayes-lahm-vertical.jpg',
+  'Ribeye Tikka Wrap|Wraps': '/images/maza/menu/opt-ribeye-tikka-wrap-vertical.jpg',
+
+  // --- Loaded ---
   'Shredded Steak|Loaded Fries': '/images/maza/menu/opt-loaded-fries-steak.jpg',
   'Gyro|Loaded Fries': '/images/maza/menu/opt-loaded-fries-gyro.jpg',
   'Shredded Chicken|Loaded Hummus': '/images/maza/menu/opt-loaded-hummus-chicken.jpg',
   'Shredded Steak|Loaded Hummus': '/images/maza/menu/opt-loaded-hummus-steak.jpg',
+
+  // --- Specials ---
+  'Maza Special|Specials': '/images/maza/menu/opt-maza-special-vertical.jpg',
+  'Samak Tandoor|Specials': '/images/maza/menu/opt-samak-promo.jpg',
+
+  // --- Kids ---
   'Crispy Chicken Sandwich|Kids Meals': '/images/maza/menu/opt-kids-crispy-chicken.jpg',
+
+  // --- Sides ---
   'Hummus with tahini and pita|Sides': '/images/maza/menu/opt-hummus-pita.jpg',
-  'Sambusah (2pc)|Sides': '/images/maza/menu/opt-sambusah.jpg',
+  'Sambusah (2pc)|Sides': '/images/maza/menu/opt-sambusah-vertical.jpg',
   'Tabouleh|Sides': '/images/maza/menu/opt-tabouleh.jpg',
   'Kibbeh (3pc)|Sides': '/images/maza/menu/opt-kibbeh.jpg',
-  'Side Salad|Sides': '/images/maza/menu/opt-side-salad.jpg',
+  'Side Salad|Sides': '/images/maza/menu/opt-side-salad-vertical.jpg',
   'Falafel (4pc)|Sides': '/images/maza/menu/opt-falafel-side.jpg',
+  'Fries|Sides': '/images/maza/menu/opt-side-fries-vertical.jpg',
+
+  // --- Baklava ---
   'Walnut or Pistachio|Baklava': '/images/maza/menu/opt-baklava.jpg',
 };
 
@@ -112,3 +129,4 @@ out += '\n];\n';
 fs.writeFileSync('data/menu.ts', out);
 console.log(`✅ data/menu.ts regenerated from menu.json (${out.length} chars, ${out.split('\n').length} lines)`);
 console.log(`   ${json.sections.length} sections, ${json.sections.reduce((sum, s) => sum + s.items.length, 0)} items`);
+console.log(`   ${Object.keys(images).length} image mappings`);
