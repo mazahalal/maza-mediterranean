@@ -1,11 +1,60 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { sendEmploymentApplicationEmail } from '@/lib/email';
+import { createHash } from 'crypto';
+import type { EmploymentApplicationPayload } from '@/lib/email';
+import {
+  listApplications,
+  markApplicationsPulled,
+  saveApplication,
+} from '@/lib/applications';
 
 const REQUIRED = ['fullName', 'phone', 'email', 'employmentType', 'over18', 'workAuthorized'] as const;
+
+function authorized(req: NextRequest): boolean {
+  const secret = process.env.APPLICATIONS_PULL_SECRET;
+  if (!secret) return false;
+  const header = req.headers.get('authorization') || '';
+  const bearer = header.startsWith('Bearer ') ? header.slice(7).trim() : '';
+  const alt = req.headers.get('x-applications-secret') || '';
+  return bearer === secret || alt === secret;
+}
+
+function hashIp(ip: string | null): string | undefined {
+  if (!ip) return undefined;
+  return createHash('sha256').update(ip).digest('hex').slice(0, 16);
+}
+
+/** Pull applications (protected). Default: only unpulled/new. */
+export async function GET(req: NextRequest) {
+  if (!authorized(req)) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  }
+
+  const { searchParams } = new URL(req.url);
+  const scope = searchParams.get('status') === 'all' ? 'all' : 'new';
+  const mark = searchParams.get('mark') === '1' || searchParams.get('mark') === 'true';
+
+  const applications = await listApplications(scope);
+
+  if (mark && applications.length > 0) {
+    await markApplicationsPulled(applications.map((a) => a.id));
+  }
+
+  return NextResponse.json({
+    count: applications.length,
+    scope,
+    markedPulled: mark,
+    applications,
+  });
+}
 
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
+
+    // Honeypot — bots fill hidden fields
+    if (body.company || body.website) {
+      return NextResponse.json({ success: true });
+    }
 
     for (const key of REQUIRED) {
       if (!body[key] || String(body[key]).trim() === '') {
@@ -46,7 +95,7 @@ export async function POST(req: NextRequest) {
       ? body.availabilityDays.map(String).filter(Boolean)
       : [];
 
-    await sendEmploymentApplicationEmail({
+    const payload: EmploymentApplicationPayload = {
       fullName: String(body.fullName).trim(),
       phone: String(body.phone).trim(),
       email,
@@ -70,9 +119,17 @@ export async function POST(req: NextRequest) {
       emergencyName: String(body.emergencyName || '').trim() || undefined,
       emergencyPhone: String(body.emergencyPhone || '').trim() || undefined,
       certification: Boolean(body.certification),
+    };
+
+    const forwarded = req.headers.get('x-forwarded-for');
+    const ip = forwarded?.split(',')[0]?.trim() || null;
+
+    const saved = await saveApplication(payload, {
+      userAgent: req.headers.get('user-agent') || undefined,
+      ipHash: hashIp(ip),
     });
 
-    return NextResponse.json({ success: true });
+    return NextResponse.json({ success: true, id: saved.id });
   } catch (error) {
     console.error('Employment application error:', error);
     return NextResponse.json(
