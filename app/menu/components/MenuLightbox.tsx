@@ -11,11 +11,6 @@ function menuAlt(item: MenuItem, section?: string): string {
   return `${item.name}${cat} — Maza Mediterranean Cuisine, Chandler AZ`;
 }
 
-/** True portrait assets (path includes -vertical) fill the frame; landscape leftovers letterbox. */
-function isVerticalAsset(src?: string): boolean {
-  return !!src && src.includes("-vertical");
-}
-
 export default function MenuLightbox() {
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -95,64 +90,58 @@ export default function MenuLightbox() {
 
             {/* Mobile: 1-col vertical feed. Desktop: 2–3 col portrait cards. */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
-              {section.items.map((item) => {
-                const vertical = isVerticalAsset(item.image);
-                return (
-                  <div
-                    key={`${section.category}::${item.name}`}
-                    onClick={() => openLightbox(item, section.category)}
-                    className="bg-[#0E0E0E] rounded-xl border border-[rgba(211,171,94,0.15)] hover:border-[rgba(211,171,94,0.35)] transition-all duration-200 overflow-hidden cursor-pointer group flex flex-col"
-                  >
-                    {item.image && (
-                      <div
-                        className={
-                          /* Near full-phone portrait on mobile; 3:4 cards from sm up */
-                          "relative w-full bg-[#0A0A0A] " +
-                          "aspect-[9/16] max-h-[78vh] sm:max-h-none sm:aspect-[3/4]"
-                        }
-                      >
-                        <Image
-                          src={item.image}
-                          alt={menuAlt(item, section.category)}
-                          fill
-                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                          className={
-                            (vertical ? "object-cover" : "object-contain") +
-                            " group-hover:scale-[1.03] transition-transform duration-300"
-                          }
-                          loading="lazy"
-                        />
-                      </div>
-                    )}
-                    <div className="p-4 sm:p-5 flex-1 flex flex-col">
-                      <div className="flex justify-between items-start gap-3 mb-1.5">
-                        <h3 className="font-display text-lg sm:text-xl text-[#F5F1E8] tracking-wide leading-snug">
-                          {item.name}
-                        </h3>
-                        <span className="text-[#D3AB5E] font-bold text-lg sm:text-xl shrink-0">
-                          {item.price}
-                        </span>
-                      </div>
-                      {item.description && (
-                        <p className="text-[#B8B8B8] text-sm leading-relaxed">
-                          {item.description}
-                        </p>
-                      )}
-                      {item.note && (
-                        <p className="text-[#B8B8B8] text-sm italic mt-1">
-                          {item.note}
-                        </p>
-                      )}
-                      {item.notes &&
-                        item.notes.map((note, i) => (
-                          <p key={i} className="text-[#B8B8B8] text-sm mt-0.5">
-                            {note}
-                          </p>
-                        ))}
+              {section.items.map((item) => (
+                <div
+                  key={`${section.category}::${item.name}`}
+                  onClick={() => openLightbox(item, section.category)}
+                  className="bg-[#0E0E0E] rounded-xl border border-[rgba(211,171,94,0.15)] hover:border-[rgba(211,171,94,0.35)] transition-all duration-200 overflow-hidden cursor-pointer group flex flex-col"
+                >
+                  {item.image && (
+                    <div
+                      className={
+                        /* All menu stills are 9:16. Near full-phone on mobile; 3:4 cards from sm up */
+                        "relative w-full bg-[#0A0A0A] " +
+                        "aspect-[9/16] max-h-[78vh] sm:max-h-none sm:aspect-[3/4]"
+                      }
+                    >
+                      <Image
+                        src={item.image}
+                        alt={menuAlt(item, section.category)}
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-cover group-hover:scale-[1.03] transition-transform duration-300"
+                        loading="lazy"
+                      />
                     </div>
+                  )}
+                  <div className="p-4 sm:p-5 flex-1 flex flex-col">
+                    <div className="flex justify-between items-start gap-3 mb-1.5">
+                      <h3 className="font-display text-lg sm:text-xl text-[#F5F1E8] tracking-wide leading-snug">
+                        {item.name}
+                      </h3>
+                      <span className="text-[#D3AB5E] font-bold text-lg sm:text-xl shrink-0">
+                        {item.price}
+                      </span>
+                    </div>
+                    {item.description && (
+                      <p className="text-[#B8B8B8] text-sm leading-relaxed">
+                        {item.description}
+                      </p>
+                    )}
+                    {item.note && (
+                      <p className="text-[#B8B8B8] text-sm italic mt-1">
+                        {item.note}
+                      </p>
+                    )}
+                    {item.notes &&
+                      item.notes.map((note, i) => (
+                        <p key={i} className="text-[#B8B8B8] text-sm mt-0.5">
+                          {note}
+                        </p>
+                      ))}
                   </div>
-                );
-              })}
+                </div>
+              ))}
             </div>
           </div>
         ))}
@@ -176,24 +165,13 @@ export default function MenuLightbox() {
             </button>
 
             {currentItem.image && (
-              <div
-                className={
-                  "relative w-full bg-black " +
-                  (isVerticalAsset(currentItem.image)
-                    ? "aspect-[9/16] max-h-[78dvh]"
-                    : "aspect-[4/3] max-h-[55dvh]")
-                }
-              >
+              <div className="relative w-full bg-black aspect-[9/16] max-h-[78dvh]">
                 <Image
                   src={currentItem.image}
                   alt={menuAlt(currentItem, currentItem._section)}
                   fill
                   sizes="(max-width: 640px) 100vw, 512px"
-                  className={
-                    isVerticalAsset(currentItem.image)
-                      ? "object-cover"
-                      : "object-contain"
-                  }
+                  className="object-cover"
                   priority
                 />
               </div>
