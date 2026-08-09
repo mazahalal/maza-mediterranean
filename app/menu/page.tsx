@@ -58,13 +58,13 @@ export default function MenuPage() {
               &amp; more. Big portions, real ingredients, honest prices.
               Mediterranean food Chandler AZ.
             </p>
-            <div className="mt-8 mb-4 relative w-full max-w-4xl mx-auto aspect-[16/10] rounded-xl overflow-hidden shadow-xl border border-[#D3AB5E]/20">
+            <div className="mt-8 mb-4 relative w-full max-w-sm sm:max-w-md mx-auto aspect-[9/16] max-h-[70vh] rounded-xl overflow-hidden shadow-xl border border-[#D3AB5E]/20">
               <Image
-                src="/images/maza/menu/opt-PXL_20260607_180708446.jpg"
+                src="/images/maza/menu/opt-maza-special-vertical.jpg"
                 alt="Mixed grill platter — Maza Special, Maza Mediterranean Cuisine Chandler AZ"
                 fill
                 priority
-                sizes="(max-width: 896px) 100vw, 896px"
+                sizes="(max-width: 640px) 100vw, 448px"
                 className="object-cover"
               />
             </div>
