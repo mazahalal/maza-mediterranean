@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createHash } from 'crypto';
-import type { EmploymentApplicationPayload } from '@/lib/email';
+import {
+  sendEmploymentApplicationEmail,
+  type EmploymentApplicationPayload,
+} from '@/lib/email';
 import {
   listApplications,
   markApplicationsPulled,
@@ -128,6 +131,13 @@ export async function POST(req: NextRequest) {
       userAgent: req.headers.get('user-agent') || undefined,
       ipHash: hashIp(ip),
     });
+
+    try {
+      await sendEmploymentApplicationEmail(payload);
+    } catch (emailError) {
+      // KV record is the source of truth — log but don't fail the submission.
+      console.error('Application email notification failed:', emailError);
+    }
 
     return NextResponse.json({ success: true, id: saved.id });
   } catch (error) {
