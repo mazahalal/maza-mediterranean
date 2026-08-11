@@ -143,7 +143,8 @@ export const menuData: MenuCategory[] = [
     subtitle: "House-made · no refill",
     items: [
       { name: "Karkadeh", price: "SM $1.99 | LG $3.99", note: "Hibiscus · SM 12oz · LG 24oz" },
-      { name: "Iced Chai", price: "SM $1.99 | LG $3.99", note: "Ceylon black tea · SM 12oz · LG 24oz" }
+      { name: "Iced Chai", price: "SM $1.99 | LG $3.99", note: "Ceylon black tea · SM 12oz · LG 24oz" },
+      { name: "Fresh Squeezed Orange Juice", price: "SM $1.99 | LG $3.99", note: "Fresh squeezed · SM 12oz · LG 24oz" }
     ],
   }
 ];
