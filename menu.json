@@ -242,12 +242,12 @@
         {
           "name": "Crispy Chicken Sandwich",
           "price": "$11.85",
-          "note": "Kids Meal \u2014 Comes with Fries"
+          "note": "Kids Meal — Comes with Fries"
         },
         {
           "name": "All Beef Burger",
           "price": "$11.85",
-          "note": "Kids Meal \u2014 Comes with Fries"
+          "note": "Kids Meal — Comes with Fries"
         }
       ]
     },
@@ -362,22 +362,37 @@
           "name": "Mexican Fanta Grape",
           "price": "$3.99",
           "note": "355ml glass"
+        },
+        {
+          "name": "Al Reef Pomegranate Juice",
+          "price": "$2.49",
+          "note": "Arabic juice"
+        },
+        {
+          "name": "Al Reef Mango Juice",
+          "price": "$2.49",
+          "note": "Arabic juice"
+        },
+        {
+          "name": "Al Reef Orange Juice",
+          "price": "$2.49",
+          "note": "Arabic juice"
         }
       ]
     },
     {
       "name": "Sharbat",
-      "subtitle": "House-made \u00b7 no refill",
+      "subtitle": "House-made · no refill",
       "items": [
         {
           "name": "Karkadeh",
           "price": "SM $1.99 | LG $3.99",
-          "note": "Hibiscus \u00b7 SM 12oz \u00b7 LG 24oz"
+          "note": "Hibiscus · SM 12oz · LG 24oz"
         },
         {
           "name": "Iced Chai",
           "price": "SM $1.99 | LG $3.99",
-          "note": "Ceylon black tea \u00b7 SM 12oz \u00b7 LG 24oz"
+          "note": "Ceylon black tea · SM 12oz · LG 24oz"
         }
       ]
     }
