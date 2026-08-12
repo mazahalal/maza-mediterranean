@@ -2,8 +2,14 @@
  * Resend inbound email webhook.
  *
  * Receives `email.received` events from Resend for mail addressed to
- * *@mazahalalfood.com and forwards the original message (headers/body
- * intact, passthrough mode) to RESEND_FORWARD_TO.
+ * *@mazahalalfood.com and:
+ *   1. forwards the original message (headers/body intact, passthrough mode)
+ *      to RESEND_FORWARD_TO
+ *   2. stores the full received email in Vercel KV (lib/inbound-emails.ts)
+ *      so Mazabot can poll it via GET /api/email/inbound
+ *
+ * Forwarding is the primary action — a KV store failure is logged but never
+ * fails the webhook.
  *
  * Required env vars (Vercel):
  *   RESEND_API_KEY          — Maza workspace key
@@ -12,6 +18,7 @@
  */
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
+import { saveInboundEmail } from '@/lib/inbound-emails';
 
 function getResend() {
   if (!process.env.RESEND_API_KEY) {
@@ -67,6 +74,20 @@ export async function POST(req: NextRequest) {
   } catch (err) {
     console.error('Inbound forward failed:', err);
     return NextResponse.json({ error: 'Forward failed' }, { status: 500 });
+  }
+
+  // Store for Mazabot polling (GET /api/email/inbound). Never fail the
+  // webhook over this — the forward above is the primary action.
+  try {
+    const { data: received, error } = await getResend().emails.receiving.get(emailId);
+    if (error) {
+      throw new Error(`receiving.get failed: ${error.message}`);
+    }
+    if (received) {
+      await saveInboundEmail(received);
+    }
+  } catch (err) {
+    console.error('Inbound email KV store failed:', err);
   }
 
   return NextResponse.json({ success: true });
