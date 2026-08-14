@@ -1,0 +1,111 @@
+name: Deploy TV menu boards
+
+# When menu text/layout sources change, rebuild static TV boards and publish
+# to Vercel project maza-tv-boards (tv.mazahalalfood.com).
+# Requires repo secret VERCEL_TOKEN (maza-s-projects scoped deploy token).
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'menu.json'
+      - 'html-menus/**'
+  workflow_dispatch:
+
+jobs:
+  deploy-tv:
+    runs-on: ubuntu-latest
+    # Needs repo secret VERCEL_TOKEN (maza-s-projects). Skip manually if unset.
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install build deps
+        run: pip install jinja2
+
+      - name: Build TV HTML
+        working-directory: html-menus
+        run: python3 build.py --tv-only
+
+      - name: Stage static site
+        run: |
+          mkdir -p /tmp/maza-tv/photos
+          cp html-menus/out/screen1-wraps.html  /tmp/maza-tv/screen1.html
+          cp html-menus/out/screen2-plates.html /tmp/maza-tv/screen2.html
+          cp html-menus/out/screen3-loaded.html /tmp/maza-tv/screen3.html
+          cp html-menus/tv-theme.css /tmp/maza-tv/
+          cp html-menus/photos/*.jpg /tmp/maza-tv/photos/ 2>/dev/null || true
+          for f in /tmp/maza-tv/screen1.html /tmp/maza-tv/screen2.html /tmp/maza-tv/screen3.html; do
+            sed -i 's|href="../tv-theme.css"|href="/tv-theme.css"|g' "$f"
+            sed -i 's|src="../photos/|src="/photos/|g' "$f"
+            grep -q 'http-equiv="Cache-Control"' "$f" || sed -i 's|<meta charset="utf-8">|<meta charset="utf-8">\n<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">\n<meta http-equiv="Pragma" content="no-cache">|' "$f"
+          done
+          HASH=$(sha256sum menu.json html-menus/tv-screens.json html-menus/photo-map.json | sha256sum | awk '{print $1}')
+          printf '{"version":"%s","builtAt":"%s","source":"github-actions"}\n' "$HASH" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > /tmp/maza-tv/version.json
+          cat > /tmp/maza-tv/vercel.json <<'JSON'
+          {
+            "cleanUrls": false,
+            "trailingSlash": false,
+            "headers": [
+              { "source": "/(.*).html", "headers": [{ "key": "Cache-Control", "value": "no-cache, must-revalidate" }] },
+              { "source": "/version.json", "headers": [{ "key": "Cache-Control", "value": "no-cache, must-revalidate" }] },
+              { "source": "/tv-theme.css", "headers": [{ "key": "Cache-Control", "value": "no-cache, must-revalidate" }] },
+              { "source": "/photos/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=3600, stale-while-revalidate=86400" }] }
+            ]
+          }
+          JSON
+
+      - name: Deploy to Vercel (REST)
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_TEAM_ID: team_2S5HVa4xM6Aww4Rm0FO8WIZZ
+          VERCEL_PROJECT_ID: prj_wlwIhKKNG8NQxFJQj0J3x8EPaItc
+        run: |
+          python3 <<'PY'
+          import hashlib, json, os, time, urllib.request, urllib.error
+          TOKEN=os.environ["VERCEL_TOKEN"]; TEAM=os.environ["VERCEL_TEAM_ID"]; PROJECT=os.environ["VERCEL_PROJECT_ID"]
+          ROOT="/tmp/maza-tv"
+          files=[]
+          for base,_,names in os.walk(ROOT):
+            for n in names:
+              p=os.path.join(base,n); rel=os.path.relpath(p,ROOT)
+              blob=open(p,"rb").read()
+              files.append({"file":rel,"sha":hashlib.sha1(blob).hexdigest(),"size":len(blob),"path":p,"mode":0o100644})
+          def req(method,url,data=None,raw=None,headers=None):
+            h={"Authorization":f"Bearer {TOKEN}"}
+            if headers: h.update(headers)
+            body=raw if raw is not None else (json.dumps(data).encode() if data is not None else None)
+            if data is not None: h["Content-Type"]="application/json"
+            r=urllib.request.Request(url,data=body,headers=h,method=method)
+            try:
+              with urllib.request.urlopen(r) as resp: return json.loads(resp.read() or b"{}")
+            except urllib.error.HTTPError as e:
+              b=e.read().decode(); err=json.loads(b)
+              if err.get("error",{}).get("code")=="missing_files":
+                return {"_missing":err["error"]["missing"]}
+              raise SystemExit(f"HTTP {e.code} {b[:800]}")
+          payload={"name":"maza-tv-boards","project":PROJECT,"target":"production",
+                   "files":[{"file":f["file"],"sha":f["sha"],"size":f["size"],"mode":f["mode"]} for f in files],
+                   "projectSettings":{"framework":None}}
+          dep=req("POST",f"https://api.vercel.com/v13/deployments?teamId={TEAM}&skipAutoDetectionConfirmation=1",payload)
+          missing=set(dep.pop("_missing",[]) or [])
+          for f in files:
+            if f["sha"] in missing:
+              blob=open(f["path"],"rb").read()
+              req("POST",f"https://api.vercel.com/v2/files?teamId={TEAM}",raw=blob,
+                  headers={"Content-Type":"application/octet-stream","x-vercel-digest":f["sha"],"Content-Length":str(len(blob))})
+          if missing:
+            dep=req("POST",f"https://api.vercel.com/v13/deployments?teamId={TEAM}",payload)
+          did=dep["id"]
+          for _ in range(60):
+            s=req("GET",f"https://api.vercel.com/v13/deployments/{did}?teamId={TEAM}")
+            st=s.get("readyState") or s.get("status")
+            if st in ("READY","ERROR","CANCELED"):
+              print(st, s.get("url"), s.get("errorMessage") or "")
+              if st!="READY": raise SystemExit(1)
+              break
+            time.sleep(5)
+          PY

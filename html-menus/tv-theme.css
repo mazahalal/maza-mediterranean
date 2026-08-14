@@ -1,0 +1,253 @@
+/* ============================================================
+   MAZA TV Board Theme — 1920x1080 screens
+   Black surface, gold accents (mocks the user approved).
+   Tokens still come from brand.json via CSS vars.
+   ============================================================ */
+
+:root {
+  --gold:        #D3AB5E;
+  --gold-light:  #E9C87B;
+  --gold-dark:   #A87C3D;
+  --white:       #FFFFFF;
+  --off-white:   #F5F1E8;
+  --black:       #000000;
+  --font-display: 'Cinzel', 'Times New Roman', serif;
+  --font-body:    'Montserrat', 'Futura', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* Viewport fills the TV; design canvas stays 1920x1080 and is scaled to fit */
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: var(--black);
+  overflow: hidden;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: var(--black);
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--white);
+  position: relative;
+}
+
+.board {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1920px;
+  height: 1080px;
+  padding: 34px 44px;
+  display: flex;
+  flex-direction: column;
+  transform-origin: 0 0;
+}
+/* double gold frame */
+.board::before {
+  content: "";
+  position: absolute; inset: 14px;
+  border: 2px solid var(--gold);
+  pointer-events: none;
+}
+.board::after {
+  content: "";
+  position: absolute; inset: 22px;
+  border: 1px solid rgba(211,171,94,.45);
+  pointer-events: none;
+}
+
+/* ---------- shared bits ---------- */
+.orn { color: var(--gold); font-size: .8em; padding: 0 .35em; }
+
+.screen-kicker {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 17px;
+  letter-spacing: .42em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  text-align: center;
+}
+
+.screen-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 58px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-align: center;
+  line-height: 1.1;
+}
+.screen-title .rule {
+  display: inline-block;
+  width: 90px; height: 2px;
+  background: var(--gold);
+  vertical-align: middle;
+  margin: 0 18px 8px;
+}
+
+.screen-subtitle {
+  text-align: center;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 19px;
+  color: var(--gold-light);
+  margin-top: 8px;
+}
+
+.group-title {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 19px;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-align: center;
+  margin: 18px 0 10px;
+  white-space: nowrap;
+}
+.group-title .dash { color: var(--gold-dark); font-weight: 300; }
+
+/* item rows: name .... price — bottom-align multi-line names with dots + price */
+.tv-item { display: flex; align-items: flex-end; gap: 10px; margin: 7px 0; }
+.tv-item .name {
+  font-weight: 400;
+  font-size: 21px;
+  letter-spacing: .03em;
+  color: var(--white);
+  white-space: nowrap;
+}
+.tv-item .dots {
+  flex: 1;
+  border-bottom: 2px dotted rgba(211,171,94,.55);
+  /* sit on the bottom edge with the last line of name + price */
+  transform: none;
+  min-width: 20px;
+  margin-bottom: 0.28em;
+  align-self: flex-end;
+}
+.tv-item .price {
+  font-weight: 600;
+  font-size: 21px;
+  color: var(--white);
+  white-space: nowrap;
+  align-self: flex-end;
+}
+.tv-item .price::before { content: ""; }
+.tv-note {
+  font-style: italic;
+  font-weight: 300;
+  font-size: 15px;
+  color: var(--gold-light);
+  opacity: .9;
+  margin: -3px 0 6px;
+}
+
+/* vertical gold divider with diamond tips */
+.v-divider {
+  width: 0;
+  border-left: 2px solid var(--gold);
+  position: relative;
+  margin: 6px 0;
+}
+.v-divider::before, .v-divider::after {
+  content: "❖";
+  position: absolute; left: -11px;
+  color: var(--gold);
+  font-size: 18px;
+  background: var(--black);
+  padding: 2px 0;
+}
+.v-divider::before { top: -6px; }
+.v-divider::after { bottom: -6px; }
+
+/* photo card: rounded gold-bordered photo */
+.photo-card img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 2px solid var(--gold);
+  display: block;
+}
+.photo-caption {
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-top: 8px;
+}
+
+/* product frame — gold outer trim + name ❖ price under photo (screen1 style) */
+.product-frame {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--gold);
+  border-radius: 14px;
+  overflow: hidden;
+  min-height: 0;
+  background: #0a0a0a;
+}
+.product-frame .photo-card {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+}
+.product-frame .photo-card img {
+  border: none;
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.product-frame .card-detail {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 8px;
+  padding: 7px 10px 8px;
+  border-top: 1px solid rgba(211,171,94,.5);
+  flex-shrink: 0;
+  text-align: center;
+}
+.product-frame .card-name {
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: .03em;
+  color: var(--white);
+  line-height: 1.15;
+  text-align: center;
+}
+.product-frame .card-sep {
+  color: var(--gold);
+  font-size: 11px;
+  flex-shrink: 0;
+}
+.product-frame .card-price {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--gold);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* horizontal gold rule with diamonds */
+.h-rule {
+  border: none;
+  border-top: 2px solid rgba(211,171,94,.8);
+  position: relative;
+  margin: 0;
+}
