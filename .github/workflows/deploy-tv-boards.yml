@@ -24,7 +24,7 @@ jobs:
           python-version: '3.12'
 
       - name: Install build deps
-        run: pip install jinja2
+        run: pip install jinja2 pillow
 
       - name: Build TV HTML
         working-directory: html-menus
