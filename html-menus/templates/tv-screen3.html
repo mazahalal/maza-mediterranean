@@ -167,248 +167,229 @@
     object-position: center 45%;
   }
 
-  /* ROW 2 — burgers | kids | sides, aligned photo stacks */
+  /* ROW 2 — 4 equal columns; text top; ONE photo bottom of each col */
   .s3-row2 {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: auto 1fr;
     align-items: stretch;
-    gap: 14px;
-    padding: 8px 0;
+    column-gap: 14px;
+    row-gap: 6px;
+    padding: 6px 0;
+    margin: 0;
+    width: 100%;
     flex: 1 1 auto;
     min-height: 0;
+    box-sizing: border-box;
   }
-  .s3-row2 .mini-block {
+
+  .s3-row2 > .band-title.burgers-title {
+    grid-column: 1;
+    grid-row: 1;
+    margin: 0;
+    text-align: center;
+  }
+  .s3-row2 > .band-title.sides-title {
+    grid-column: 2 / 5;
+    grid-row: 1;
+    margin: 0;
+    text-align: center;
+  }
+
+  .s3-row2 .row2-delim {
+    grid-column: 2;
+    grid-row: 1 / -1;
+    width: 0;
+    margin-left: -7px;
+    border-left: 2px solid rgba(211,171,94,.65);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* each column: text block + photo pinned bottom */
+  .s3-row2 .r2-col {
+    grid-row: 2;
+    min-width: 0;
+    min-height: 0;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 4px;
-    flex: 0 0 auto;
-    width: 168px;
+    align-self: stretch;
   }
-  /* breathing room between Kids Meals text and its photo stack */
-  .s3-row2 .mini-block + .s3-photo-stack {
-    margin-left: 12px;
+  .s3-row2 .r2-col.burgers { grid-column: 1; padding-right: 4px; }
+  .s3-row2 .r2-col.dips { grid-column: 2; padding-left: 8px; }
+  .s3-row2 .r2-col.classic { grid-column: 3; border-left: 1px solid rgba(211,171,94,.3); padding-left: 10px; }
+  .s3-row2 .r2-col.premium { grid-column: 4; border-left: 1px solid rgba(211,171,94,.3); padding-left: 10px; }
+
+  .s3-row2 .r2-col .col-text {
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
   }
-  .s3-row2 .s3-photo-stack + .s3-sides {
-    margin-left: 4px;
+  .s3-row2 .group-block { flex: 0 0 auto; }
+  .s3-row2 .group-title {
+    font-size: 14px;
+    letter-spacing: .14em;
+    margin: 0 0 5px;
+    min-height: 1.2em;
+    line-height: 1.2em;
+    text-align: center;
+    text-transform: uppercase;
   }
-  .s3-row2 .mini-block .tv-item {
+  .s3-row2 .r2-col.burgers .group-title { text-align: left; }
+  .s3-row2 .band-sub {
+    font-size: 11px;
+    margin: -2px 0 3px;
+    text-align: left;
+  }
+  .s3-row2 .tv-item {
+    margin: 2px 0;
+    width: 100%;
+    display: flex;
     align-items: flex-end;
+    gap: 5px;
   }
-  .s3-row2 .mini-block .tv-item .name,
-  .s3-row2 .mini-block .tv-item .price { font-size: 18px; white-space: normal; }
-  .s3-row2 .mini-block .tv-item .dots {
+  .s3-row2 .tv-item .name {
+    font-size: 14px;
+    white-space: normal;
+    flex: 0 1 auto;
+    min-width: 0;
+    max-width: 64%;
+  }
+  .s3-row2 .tv-item .dots {
+    flex: 1 1 auto;
+    min-width: 12px;
+    border-bottom: 2px dotted rgba(211,171,94,.55);
     transform: none;
     margin-bottom: 0.22em;
     align-self: flex-end;
   }
-  .s3-row2 .mini-block .tv-item .price { align-self: flex-end; }
-  .s3-row2 .mini-block .tv-note { font-size: 13px; }
-  .s3-row2 .mini-block .band-title { font-size: 24px; letter-spacing: .12em; }
-  .s3-row2 .mini-block .band-sub { font-size: 13px; margin-bottom: 4px; }
-
-  /* shared vertical photo card */
-  .s3-vcard {
+  .s3-row2 .tv-item .price {
+    font-size: 14px;
+    text-align: right;
     flex: 0 0 auto;
-    width: 168px;
-    display: flex;
-    flex-direction: column;
-    min-height: 0;
-    align-self: stretch;
+    min-width: 3.5em;
+    white-space: nowrap;
+    align-self: flex-end;
   }
-  .s3-vcard .photo-card {
-    flex: 1 1 auto;
-    width: 100%;
-    min-height: 0;
-    height: auto;
-    overflow: hidden;
-  }
-  .s3-vcard .photo-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
-  }
+  .s3-row2 .tv-note { font-size: 11px; margin: -1px 0 1px; }
+  .s3-row2 .r2-col.dips .tv-item .name { max-width: 54%; }
+  .s3-row2 .r2-col.dips .tv-item .price { min-width: 4.8em; }
 
-  /* burger combo ad — landscape full plate + combo bar (marketing footer) */
-  .s3-combo-fig {
-    width: 300px !important;
-    flex: 0 0 300px;
+  /* bottom photo — equal height across all 4 cols */
+  .s3-row2 .r2-col .col-photo {
+    flex: 0 0 auto;
+    width: 100%;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
-    align-self: stretch;
-    position: relative;
+    min-height: 0;
+    /* fixed band so all four match */
+    height: clamp(150px, 22vh, 220px);
+  }
+  .s3-row2 .r2-col .col-photo .product-frame,
+  .s3-row2 .r2-col .col-photo .s3-combo-fig {
+    flex: 1 1 auto;
+    width: 100% !important;
+    height: 100%;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
     border: 2px solid var(--gold);
-    border-radius: 14px;
+    border-radius: 12px;
     background: #0a0a0a;
-    min-height: 0;
+    margin: 0;
   }
-  .s3-combo-fig .photo-card {
-    width: 100%;
+  .s3-row2 .r2-col .col-photo .photo-card {
     flex: 1 1 auto;
-    min-height: 160px;
+    width: 100%;
+    min-height: 0;
     height: auto !important;
     overflow: hidden;
     border-radius: 0;
   }
-  .s3-combo-fig .photo-card img {
-    object-fit: cover;
-    /* hair left of center pan */
-    object-position: 55% 45%;
+  .s3-row2 .r2-col .col-photo .photo-card img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    object-position: center center;
     border: none;
     border-radius: 0;
   }
-  /* full-width bottom combo strip */
-  .combo-bar {
+  .s3-row2 .r2-col .col-photo .sambusah .photo-card img,
+  .s3-row2 .r2-col .col-photo .product-frame.sambusah .photo-card img {
+    object-position: center 28%;
+  }
+  .s3-row2 .r2-col .col-photo .card-detail,
+  .s3-row2 .r2-col .col-photo .combo-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 8px;
+    gap: 4px;
     width: 100%;
-    padding: 8px 10px 9px;
+    padding: 4px 6px 5px;
     background: linear-gradient(180deg, #1a1410 0%, #0c0a08 100%);
     border-top: 1px solid var(--gold);
     box-sizing: border-box;
     flex: 0 0 auto;
   }
-  .combo-bar .cb-left {
+  .s3-row2 .r2-col .col-photo .card-detail {
+    justify-content: center;
+    gap: 5px;
+  }
+  .s3-row2 .r2-col .col-photo .card-name { font-size: 11px; letter-spacing: .02em; }
+  .s3-row2 .r2-col .col-photo .card-sep { font-size: 9px; }
+  .s3-row2 .r2-col .col-photo .card-price { font-size: 12px; }
+  .s3-row2 .r2-col .col-photo .combo-bar .cb-left {
     display: flex;
     flex-direction: column;
     min-width: 0;
-    line-height: 1.1;
+    line-height: 1.05;
   }
-  .combo-bar .cb-kicker {
-    font-size: 10px;
+  .s3-row2 .r2-col .col-photo .combo-bar .cb-kicker {
+    font-size: 8px;
     font-weight: 600;
-    letter-spacing: .18em;
+    letter-spacing: .14em;
     text-transform: uppercase;
     color: var(--gold-light);
   }
-  .combo-bar .cb-title {
+  .s3-row2 .r2-col .col-photo .combo-bar .cb-title {
     font-family: var(--font-display);
-    font-size: 13px;
+    font-size: 11px;
     font-weight: 700;
-    letter-spacing: .04em;
+    letter-spacing: .03em;
     text-transform: uppercase;
     color: var(--gold);
     white-space: nowrap;
   }
-  .combo-bar .cb-inc {
-    font-size: 10.5px;
+  .s3-row2 .r2-col .col-photo .combo-bar .cb-inc {
+    font-size: 9px;
     font-style: italic;
     color: rgba(245,230,200,.75);
     white-space: nowrap;
   }
-  .combo-bar .cb-price {
+  .s3-row2 .r2-col .col-photo .combo-bar .cb-price {
     font-family: var(--font-display);
-    font-size: 22px;
+    font-size: 15px;
     font-weight: 700;
     color: var(--gold);
     line-height: 1;
     white-space: nowrap;
     flex-shrink: 0;
   }
+  .s3-row2 .r2-col .col-photo .s3-combo-fig .photo-card img {
+    object-position: 50% 40%;
+  }
 
-  /* dual photo stack (kids + sides) — product frames */
-  .s3-photo-stack {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    flex: 0 0 148px;
-    width: 148px;
-    align-self: stretch;
-    min-height: 0;
-  }
-  .s3-photo-stack .product-frame {
-    flex: 1 1 0;
-    min-height: 0;
-    width: 100%;
-  }
-  .s3-photo-stack .product-frame .photo-card {
-    flex: 1 1 auto;
-    min-height: 0;
-    overflow: hidden;
-  }
-  .s3-photo-stack .product-frame .photo-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
-  }
-  /* sides stack only: sambusah is 2nd — keep vertical seat, slight zoom-out */
-  .s3-row2 > .s3-photo-stack:last-child .product-frame:nth-child(2) .photo-card img {
-    object-position: center 28%;
-    transform: scale(1.02) translateY(12%);
-    transform-origin: center center;
-  }
-  .s3-photo-stack .product-frame .card-detail {
-    padding: 4px 6px 5px;
-    gap: 5px;
-  }
-  .s3-photo-stack .product-frame .card-name {
-    font-size: 11px;
-    letter-spacing: .02em;
-  }
-  .s3-photo-stack .product-frame .card-sep { font-size: 9px; }
-  .s3-photo-stack .product-frame .card-price { font-size: 12px; }
-
-  .s3-sides { flex: 1 1 auto; display: flex; flex-direction: column; min-width: 0; }
-  .s3-sides > .band-title { flex: 0 0 auto; }
-  .s3-sides-cols { flex: 1 1 auto; display: flex; gap: 14px; margin-top: 6px; min-height: 0; }
-  .s3-sides-col { min-width: 0; display: flex; flex-direction: column; justify-content: space-evenly; }
-  .s3-sides-col.dips { flex: 1.35; }
-  .s3-sides-col.classic { flex: .85; }
-  .s3-sides-col.premium { flex: 1; }
-  .s3-sides-col + .s3-sides-col { border-left: 1px solid rgba(211,171,94,.4); padding-left: 14px; }
-  .s3-sides-col .group-title { font-size: 16px; letter-spacing: .16em; margin: 0 0 6px; text-align: center; }
-  .s3-sides-col .tv-item { margin: 5px 0; width: 100%; display: flex; align-items: flex-end; gap: 8px; }
-  .s3-sides-col .tv-item .name {
-    font-size: 16px;
-    white-space: normal;
-    flex: 0 1 auto;
-    min-width: 0;
-    max-width: 70%;
-  }
-  .s3-sides-col .tv-item .dots {
-    flex: 1 1 auto;
-    min-width: 24px;
-    border-bottom: 2px dotted rgba(211,171,94,.55);
-    transform: none;
-    margin-bottom: 0.22em;
-    align-self: flex-end;
-  }
-  .s3-sides-col .tv-item .price {
-    font-size: 16px;
-    text-align: right;
-    margin-left: 0;
-    flex: 0 0 auto;
-    min-width: 4.2em;
-    white-space: nowrap;
-    align-self: flex-end;
-  }
-  .s3-sides-col .tv-note { font-size: 12.5px; margin: -2px 0 2px; }
-  /* Dips & Spreads — name wraps, dots fill, price bottom-right with last line */
-  .s3-sides-col.dips .tv-item { display: flex; align-items: flex-end; gap: 8px; width: 100%; }
-  .s3-sides-col.dips .tv-item .name {
-    flex: 0 1 auto;
-    max-width: 62%;
-    white-space: normal;
-  }
-  .s3-sides-col.dips .tv-item .dots {
-    flex: 1 1 auto;
-    min-width: 28px;
-    transform: none;
-    margin-bottom: 0.22em;
-  }
-  .s3-sides-col.dips .tv-item .price {
-    flex: 0 0 auto;
-    text-align: right;
-    white-space: nowrap;
-    min-width: 5.5em;
-    align-self: flex-end;
-  }
+  /* legacy off */
+  .s3-sides-alt, .s3-pic-stack, .handhelds-zone, .col-sides-text, .s3-sides-cols,
+  .col-handhelds, .col-burger, .col-burgers, .col-kids, .burgers-zone,
+  .text-stack, .col-sides-grid, .s3-sides-grid { display: contents; }
+  .s3-vcard, .grid-title-spacer { display: none; }
 
   /* ROW 3 — fixed height (do not expand); packshot + full-height lists inside */
   .s3-row3 {
@@ -470,17 +451,17 @@
   .s3-drinks {
     flex: 1 1 auto;
     display: grid;
-    /* every spacer is the same width */
+    /* OUTER air on text rails · packshot hugged to lists */
     grid-template-columns:
-      12px   /* left rail */
-      12px   /* gap */
-      minmax(150px, 1fr)  /* soft drinks list */
-      0      /* gap before image */
-      minmax(300px, 2.4fr) /* packshot */
-      0      /* gap after image */
-      minmax(150px, 1fr)  /* juice list */
-      12px   /* gap */
-      12px;  /* right rail */
+      28px   /* outer left of soft-drinks */
+      4px
+      minmax(150px, 0.95fr)  /* soft drinks */
+      0px    /* snug to packshot */
+      minmax(340px, 2.5fr)   /* packshot fills middle */
+      0px    /* snug to packshot */
+      minmax(150px, 0.95fr)  /* juice */
+      4px
+      28px;  /* outer right of juice */
     grid-template-rows: auto minmax(0, 1fr);
     column-gap: 0;
     row-gap: 0;
@@ -515,9 +496,9 @@
     gap: 0;
   }
   /* Soft drinks list */
-  .s3-drinks-col:first-of-type { grid-column: 3; }
+  .s3-drinks-col:first-of-type { grid-column: 3; padding-left: 4px; }
   /* Juice list */
-  .s3-drinks-col:last-of-type { grid-column: 7; }
+  .s3-drinks-col:last-of-type { grid-column: 7; padding-right: 4px; }
   .s3-drinks-col .group-title {
     font-size: 14px;
     letter-spacing: .12em;
@@ -566,26 +547,30 @@
     min-width: 0;
     min-height: 0;
     height: 100%;
+    width: 100%;
     align-self: stretch;
     display: flex;
-    align-items: stretch;
+    align-items: center;
     justify-content: center;
     pointer-events: none;
     z-index: 1;
-    overflow: hidden;
+    overflow: visible; /* never clip bottle edges */
+    padding: 0;
+    margin: 0 -2px; /* slight bleed toward lists */
+    box-sizing: border-box;
   }
   .s3-drinks-ad img {
     display: block;
-    width: 100%;
-    height: 100%;
-    max-width: none;
-    max-height: none;
+    /* fit inside cell by the tighter dimension — never crop */
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
     object-fit: contain;
     object-position: center center;
     background: transparent;
     border: none;
-    transform: scale(1.14);
-    transform-origin: center center;
+    transform: none;
     filter: drop-shadow(0 8px 14px rgba(0,0,0,.55));
   }
 
@@ -844,82 +829,80 @@
 
   <hr class="h-rule">
 
-  <!-- ROW 2: BURGERS | combo photo | KIDS | kids photos | SIDES | sides photos -->
+  <!-- ROW 2: 4 cols — text top, one photo bottom each -->
   <div class="s3-row2">
-    <div class="mini-block">
-      <h2 class="band-title">{{ s.row2.burgers.name }}</h2>
-      {% if s.row2.burgers.subtitle %}<p class="band-sub">{{ s.row2.burgers.subtitle }}</p>{% endif %}
-      {% for item in s.row2.burgers["items"] %}
-      <div class="tv-item"><span class="name">{{ item.name }}</span><span class="dots"></span><span class="price">{{ item.price }}</span></div>
-      {% endfor %}
-    </div>
-    <figure class="s3-combo-fig">
-      {% set bphoto = s.row2.burgers_card.photo if s.row2.burgers_card.photo is defined else s.row2.burgers_card.ref.photo %}
-      <div class="photo-card"><img src="../photos/{{ bphoto }}" alt="Burger & Fries"></div>
-      <div class="combo-bar">
-        <div class="cb-left">
-          <span class="cb-kicker">Add-on</span>
-          <span class="cb-title">Make It a Combo</span>
-          <span class="cb-inc">Fries + Drink</span>
+    <h2 class="band-title burgers-title"><span class="rule"></span>Burgers &amp; Kids<span class="rule"></span></h2>
+    <h2 class="band-title sides-title"><span class="rule"></span>{{ s.row2.sides_title }}<span class="rule"></span></h2>
+    <div class="row2-delim" aria-hidden="true"></div>
+
+    {# COL1 Burgers + Kids #}
+    <div class="r2-col burgers">
+      <div class="col-text">
+        <div class="group-block">
+          <h4 class="group-title">{{ s.row2.burgers.name }}</h4>
+          {% if s.row2.burgers.subtitle %}<p class="band-sub">{{ s.row2.burgers.subtitle }}</p>{% endif %}
+          {% for item in s.row2.burgers["items"] %}
+          <div class="tv-item"><span class="name">{{ item.name }}</span><span class="dots"></span><span class="price">{{ item.price }}</span></div>
+          {% endfor %}
         </div>
-        <span class="cb-price">4.99</span>
-      </div>
-    </figure>
-    <div class="mini-block">
-      <h2 class="band-title">{{ s.row2.kids.name }}</h2>
-      {% if s.row2.kids.subtitle %}<p class="band-sub">{{ s.row2.kids.subtitle }}</p>{% endif %}
-      {% for item in s.row2.kids["items"] %}
-      <div class="tv-item"><span class="name">{{ item.name }}</span><span class="dots"></span><span class="price">{{ item.price }}</span></div>
-      {% endfor %}
-    </div>
-    {% if s.row2.kids_photos is defined %}
-    <div class="s3-photo-stack">
-      {% for p in s.row2.kids_photos %}
-      {% set r = p.ref if p.ref is defined else p %}
-      {% set photo = p.photo if p.photo is defined and p.photo else r.photo %}
-      {% set cname = p.caption if p.caption else r.name %}
-      {% set cprice = r.price if r.price is defined else '' %}
-      <div class="product-frame">
-        <div class="photo-card"><img src="../photos/{{ photo }}" alt="{{ cname }}"></div>
-        <div class="card-detail">
-          <span class="card-name">{{ cname }}</span>
-          {% if cprice %}<span class="card-sep">❖</span><span class="card-price">{{ cprice }}</span>{% endif %}
+        <div class="group-block">
+          <h4 class="group-title">{{ s.row2.kids.name }}</h4>
+          {% if s.row2.kids.subtitle %}<p class="band-sub">{{ s.row2.kids.subtitle }}</p>{% endif %}
+          {% for item in s.row2.kids["items"] %}
+          <div class="tv-item"><span class="name">{{ item.name }}</span><span class="dots"></span><span class="price">{{ item.price }}</span></div>
+          {% endfor %}
         </div>
       </div>
-      {% endfor %}
+      {% if s.row2.burgers_card is defined %}
+      <div class="col-photo">
+        <figure class="s3-combo-fig">
+          {% set bphoto = s.row2.burgers_card.photo if s.row2.burgers_card.photo is defined else s.row2.burgers_card.ref.photo %}
+          <div class="photo-card"><img src="../photos/{{ bphoto }}" alt="Burger & Fries"></div>
+          <div class="combo-bar">
+            <div class="cb-left">
+              <span class="cb-kicker">Add-on</span>
+              <span class="cb-title">Make It a Combo</span>
+              <span class="cb-inc">Fries + Drink</span>
+            </div>
+            <span class="cb-price">4.99</span>
+          </div>
+        </figure>
+      </div>
+      {% endif %}
     </div>
-    {% endif %}
-    <div class="s3-sides">
-      <h2 class="band-title"><span class="rule"></span>{{ s.row2.sides_title }}<span class="rule"></span></h2>
-      <div class="s3-sides-cols">
-        {% for g in s.row2.sides_groups %}
-        <div class="s3-sides-col {{ ['dips','classic','premium'][loop.index0] }}">
+
+    {# COLS 2–4 sides groups + bottom photo #}
+    {% set gclass = ['dips', 'classic', 'premium'] %}
+    {% for g in s.row2.sides_groups %}
+    <div class="r2-col {{ gclass[loop.index0] if loop.index0 < gclass|length else '' }}">
+      <div class="col-text">
+        <div class="group-block">
           <h4 class="group-title">{{ g.name }}</h4>
           {% for item in g["items"] %}
           <div class="tv-item"><span class="name">{{ item.name }}</span><span class="dots"></span><span class="price">{{ item.price }}</span></div>
           {% if item.first_note %}<p class="tv-note">{{ item.first_note }}</p>{% endif %}
           {% endfor %}
         </div>
-        {% endfor %}
       </div>
-    </div>
-    {% if s.row2.sides_photos is defined %}
-    <div class="s3-photo-stack">
-      {% for p in s.row2.sides_photos %}
+      {% if g.photo is defined %}
+      {% set p = g.photo %}
       {% set r = p.ref if p.ref is defined else p %}
       {% set photo = p.photo if p.photo is defined and p.photo else r.photo %}
       {% set cname = p.caption if p.caption else r.name %}
       {% set cprice = r.price if r.price is defined else '' %}
-      <div class="product-frame">
-        <div class="photo-card"><img src="../photos/{{ photo }}" alt="{{ cname }}"></div>
-        <div class="card-detail">
-          <span class="card-name">{{ cname }}</span>
-          {% if cprice %}<span class="card-sep">❖</span><span class="card-price">{{ cprice }}</span>{% endif %}
+      {% set slug = (cname or '')|lower|replace(' ', '-') %}
+      <div class="col-photo">
+        <div class="product-frame {{ slug }}">
+          <div class="photo-card"><img src="../photos/{{ photo }}" alt="{{ cname }}"></div>
+          <div class="card-detail">
+            <span class="card-name">{{ cname }}</span>
+            {% if cprice %}<span class="card-sep">❖</span><span class="card-price">{{ cprice }}</span>{% endif %}
+          </div>
         </div>
       </div>
-      {% endfor %}
+      {% endif %}
     </div>
-    {% endif %}
+    {% endfor %}
   </div>
 
   <hr class="h-rule">
