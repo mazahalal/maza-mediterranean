@@ -119,7 +119,7 @@ export const menuData: MenuCategory[] = [
   {
     category: "Baklava",
     items: [
-      { name: "Walnut or Pistachio", price: "$3.99", image: "/images/maza/menu/opt-baklava.jpg" }
+      { name: "Cashew or Pistachio", price: "$3.99" }
     ],
   },
   {
@@ -142,9 +142,7 @@ export const menuData: MenuCategory[] = [
     category: "Sharbat",
     subtitle: "House-made · no refill",
     items: [
-      { name: "Karkadeh", price: "SM $1.99 | LG $3.99", note: "Hibiscus · SM 12oz · LG 24oz" },
-      { name: "Iced Chai", price: "SM $1.99 | LG $3.99", note: "Ceylon black tea · SM 12oz · LG 24oz" },
-      { name: "Fresh Squeezed Orange Juice", price: "SM $1.99 | LG $3.99", note: "Fresh squeezed · SM 12oz · LG 24oz" }
+      { name: "Daily Selection", price: "SM $1.99 | LG $3.99", note: "SM 12oz · LG 24oz" }
     ],
   }
 ];
