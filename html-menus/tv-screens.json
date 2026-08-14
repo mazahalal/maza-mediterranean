@@ -1,5 +1,5 @@
 {
-  "_comment": "TV screen definitions. Item refs are [Section, Item] pairs resolved from menu.json at build time — prices/notes always come from menu.json, never hardcoded here. Edit groupings/cards freely; text data stays in menu.json.",
+  "_comment": "TV screen definitions. Item refs are [Section, Item] pairs resolved from menu.json at build time \u2014 prices/notes always come from menu.json, never hardcoded here. Edit groupings/cards freely; text data stays in menu.json.",
   "screens": [
     {
       "id": "screen1-wraps",
@@ -7,16 +7,96 @@
       "title": "Wraps",
       "subtitle": "Wrapped with hummus, tomato, onion, lettuce, pickle, and garlic sauce",
       "groups": [
-        { "name": "Shredded Wraps", "items": [["Wraps", "Shredded Chicken Wrap"], ["Wraps", "Shredded Steak Wrap"]] },
-        { "name": "Shish Kebab Wraps", "items": [["Wraps", "Beef + Lamb Shish Kebab Wrap"], ["Wraps", "Chicken Shish Kebab Wrap"]] },
-        { "name": "Tikka Wraps", "items": [["Wraps", "Chicken Tikka Wrap"], ["Wraps", "Lamb Tikka Wrap"], ["Wraps", "Ribeye Tikka Wrap"]] },
-        { "name": "Maza Specialty Wraps", "items": [["Wraps", "Beef Gyro"], ["Wraps", "Crispy Chicken Wrap"], ["Wraps", "Falafel Wrap"], ["Wraps", "Arayes Lahm or Dajaj"]] }
+        {
+          "name": "Shredded Wraps",
+          "items": [
+            [
+              "Wraps",
+              "Shredded Chicken Wrap"
+            ],
+            [
+              "Wraps",
+              "Shredded Steak Wrap"
+            ]
+          ]
+        },
+        {
+          "name": "Shish Kebab Wraps",
+          "items": [
+            [
+              "Wraps",
+              "Beef + Lamb Shish Kebab Wrap"
+            ],
+            [
+              "Wraps",
+              "Chicken Shish Kebab Wrap"
+            ]
+          ]
+        },
+        {
+          "name": "Tikka Wraps",
+          "items": [
+            [
+              "Wraps",
+              "Chicken Tikka Wrap"
+            ],
+            [
+              "Wraps",
+              "Lamb Tikka Wrap"
+            ],
+            [
+              "Wraps",
+              "Ribeye Tikka Wrap"
+            ]
+          ]
+        },
+        {
+          "name": "Maza Specialty Wraps",
+          "items": [
+            [
+              "Wraps",
+              "Beef Gyro"
+            ],
+            [
+              "Wraps",
+              "Crispy Chicken Wrap"
+            ],
+            [
+              "Wraps",
+              "Falafel Wrap"
+            ],
+            [
+              "Wraps",
+              "Arayes Lahm or Dajaj"
+            ]
+          ]
+        }
       ],
-      "cards": [["Wraps", "Beef Gyro"], ["Wraps", "Beef + Lamb Shish Kebab Wrap"], ["Wraps", "Ribeye Tikka Wrap"], ["Wraps", "Arayes Lahm or Dajaj"]],
+      "cards": [
+        [
+          "Wraps",
+          "Beef Gyro"
+        ],
+        [
+          "Wraps",
+          "Beef + Lamb Shish Kebab Wrap"
+        ],
+        [
+          "Wraps",
+          "Chicken Shish Kebab Wrap"
+        ],
+        [
+          "Wraps",
+          "Arayes Lahm or Dajaj"
+        ]
+      ],
       "banner": {
         "title": "Make It a Combo",
         "subtitle": "Upgrade any meal to a combo",
-        "item": ["Wrap Upgrades", "Combo Upgrade"]
+        "item": [
+          "Wrap Upgrades",
+          "Combo Upgrade"
+        ]
       }
     },
     {
@@ -25,20 +105,125 @@
       "title": "Plates",
       "columns": [
         [
-          { "name": "Chicken", "items": [["Plates", "Chicken Shish Kebab"], ["Plates", "Chicken Tikka Plate"], ["Plates", "Grilled Chicken Teriyaki Plate"], ["Plates", "Shredded Chicken Plate"]] },
-          { "name": "Lamb", "items": [["Plates", "Lamb Tikka Plate"]] },
-          { "name": "Plant Based", "items": [["Plates", "Falafel"]] }
+          {
+            "name": "Chicken",
+            "items": [
+              [
+                "Plates",
+                "Chicken Shish Kebab"
+              ],
+              [
+                "Plates",
+                "Chicken Tikka Plate"
+              ],
+              [
+                "Plates",
+                "Grilled Chicken Teriyaki Plate"
+              ],
+              [
+                "Plates",
+                "Shredded Chicken Plate"
+              ]
+            ]
+          },
+          {
+            "name": "Lamb",
+            "items": [
+              [
+                "Plates",
+                "Lamb Tikka Plate"
+              ]
+            ]
+          },
+          {
+            "name": "Plant Based",
+            "items": [
+              [
+                "Plates",
+                "Falafel"
+              ]
+            ]
+          }
         ],
         [
-          { "name": "Beef", "items": [["Plates", "Beef + Lamb Shish Kebab"], ["Plates", "Ribeye Tikka Plate"], ["Plates", "Shredded Steak Plate"]] },
-          { "name": "Mixed", "items": [["Plates", "Mix Kebab"], ["Plates", "Maza Grill"], ["Plates", "Appetizer Plate"]] }
+          {
+            "name": "Beef",
+            "items": [
+              [
+                "Plates",
+                "Beef + Lamb Shish Kebab"
+              ],
+              [
+                "Plates",
+                "Ribeye Tikka Plate"
+              ],
+              [
+                "Plates",
+                "Shredded Steak Plate"
+              ]
+            ]
+          },
+          {
+            "name": "Mixed",
+            "items": [
+              [
+                "Plates",
+                "Mix Kebab"
+              ],
+              [
+                "Plates",
+                "Maza Grill"
+              ],
+              [
+                "Plates",
+                "Appetizer Plate"
+              ]
+            ]
+          }
         ]
       ],
-      "gallery": [["Plates", "Chicken Tikka Plate"], ["Plates", "Beef + Lamb Shish Kebab"], ["Plates", "Maza Grill"], ["Plates", "Shredded Chicken Plate"], ["Plates", "Shredded Steak Plate"]],
+      "gallery": [
+        [
+          "Plates",
+          "Beef + Lamb Shish Kebab"
+        ],
+        [
+          "Plates",
+          "Maza Grill"
+        ],
+        [
+          "Plates",
+          "Chicken Tikka Plate"
+        ],
+        [
+          "Plates",
+          "Mix Kebab"
+        ],
+        [
+          "Plates",
+          "Grilled Chicken Teriyaki Plate"
+        ]
+      ],
       "specials": {
         "title": "Specials",
-        "hero": ["Specials", "Maza Special"],
-        "items": [["Specials", "Maza Special"], ["Specials", "Family Meal"], ["Specials", "Samak Tandoor"]]
+        "hero": [
+          "Specials",
+          "Maza Special"
+        ],
+        "items": [
+          [
+            "Specials",
+            "Maza Special"
+          ],
+          [
+            "Specials",
+            "Family Meal"
+          ],
+          [
+            "Specials",
+            "Samak Tandoor"
+          ]
+        ]
       }
     },
     {
@@ -46,82 +231,250 @@
       "template": "tv-screen3.html",
       "halal_badge": true,
       "row1": {
-        "left": { "section": "Loaded Fries" },
-        "left_card": { "ref": ["Loaded Fries", "Shredded Steak"], "caption": "Loaded Steak Fries" },
-        "right": { "section": "Loaded Hummus" },
-        "right_card": { "ref": ["Loaded Hummus", "Shredded Chicken"], "caption": "Loaded Chicken Hummus" }
+        "left": {
+          "section": "Loaded Fries"
+        },
+        "left_card": {
+          "ref": [
+            "Loaded Fries",
+            "Shredded Steak"
+          ],
+          "caption": "Loaded Steak Fries"
+        },
+        "right": {
+          "section": "Loaded Hummus"
+        },
+        "right_card": {
+          "ref": [
+            "Loaded Hummus",
+            "Shredded Chicken"
+          ],
+          "caption": "Loaded Chicken Hummus"
+        }
       },
       "row2": {
-        "burgers": { "section": "Burgers" },
-        "burgers_card": {
-          "photo": "burger-fries-combo.jpg",
-          "caption": "",
-          "_note": "landscape burger+fries product (full plate, no vertical crop cutoff)"
+        "_layout_note": "4 equal cols; text top; one photo bottom each: burger | hummus | sambusah | kibbeh. tabouleh unused in grid.",
+        "burgers": {
+          "section": "Burgers"
         },
-        "kids": { "section": "Kids Meals" },
-        "kids_photos": [
-          {
-            "ref": ["Kids Meals", "Crispy Chicken Sandwich"],
-            "photo": "kids-meals-crispy-chicken-sandwich.jpg",
-            "caption": "Crispy Chicken"
-          },
-          {
-            "ref": ["Kids Meals", "All Beef Burger"],
-            "photo": "kids-meals-all-beef-burger.jpg",
-            "caption": "All Beef Burger"
-          }
-        ],
+        "kids": {
+          "section": "Kids Meals"
+        },
         "sides_title": "Sides",
         "sides_groups": [
-          { "name": "Dips & Spreads", "items": [["Sides", "Hummus with tahini and pita"], ["Sides", "Tzatziki"], ["Sides", "Baba Ghanoush"], ["Sides", "Tabouleh"]] },
-          { "name": "Classic Sides", "items": [["Sides", "Fries"], ["Sides", "Rice"], ["Sides", "Pita"], ["Sides", "Side Salad"]] },
-          { "name": "Premium Sides", "items": [["Sides", "Dolma"], ["Sides", "Falafel (4pc)"], ["Sides", "Sambusah (2pc)"], ["Sides", "Kibbeh (3pc)"], ["Sides", "Maza Salad"]] }
+          {
+            "name": "Dips & Spreads",
+            "items": [
+              [
+                "Sides",
+                "Hummus with tahini and pita"
+              ],
+              [
+                "Sides",
+                "Tzatziki"
+              ],
+              [
+                "Sides",
+                "Baba Ghanoush"
+              ],
+              [
+                "Sides",
+                "Tabouleh"
+              ]
+            ],
+            "photo": {
+              "ref": [
+                "Sides",
+                "Hummus with tahini and pita"
+              ],
+              "photo": "sides-hummus-with-tahini-and-pita.jpg",
+              "caption": "Hummus"
+            }
+          },
+          {
+            "name": "Classic Sides",
+            "items": [
+              [
+                "Sides",
+                "Fries"
+              ],
+              [
+                "Sides",
+                "Rice"
+              ],
+              [
+                "Sides",
+                "Pita"
+              ],
+              [
+                "Sides",
+                "Side Salad"
+              ]
+            ],
+            "photo": {
+              "ref": [
+                "Sides",
+                "Sambusah (2pc)"
+              ],
+              "photo": "sides-sambusah-2pc.jpg",
+              "caption": "Sambusah"
+            }
+          },
+          {
+            "name": "Premium Sides",
+            "items": [
+              [
+                "Sides",
+                "Dolma"
+              ],
+              [
+                "Sides",
+                "Falafel (4pc)"
+              ],
+              [
+                "Sides",
+                "Sambusah (2pc)"
+              ],
+              [
+                "Sides",
+                "Kibbeh (3pc)"
+              ],
+              [
+                "Sides",
+                "Maza Salad"
+              ]
+            ],
+            "photo": {
+              "ref": [
+                "Sides",
+                "Kibbeh (3pc)"
+              ],
+              "photo": "sides-kibbeh-3pc.jpg",
+              "caption": "Kibbeh"
+            }
+          }
         ],
         "sides_photos": [
           {
-            "ref": ["Sides", "Kibbeh (3pc)"],
+            "ref": [
+              "Sides",
+              "Hummus with tahini and pita"
+            ],
+            "photo": "sides-hummus-with-tahini-and-pita.jpg",
+            "caption": "Hummus"
+          },
+          {
+            "ref": [
+              "Sides",
+              "Sambusah (2pc)"
+            ],
+            "photo": "sides-sambusah-2pc.jpg",
+            "caption": "Sambusah"
+          },
+          {
+            "ref": [
+              "Sides",
+              "Kibbeh (3pc)"
+            ],
             "photo": "sides-kibbeh-3pc.jpg",
             "caption": "Kibbeh"
           },
           {
-            "ref": ["Sides", "Sambusah (2pc)"],
-            "photo": "sides-sambusah-2pc.jpg",
-            "caption": "Sambusah"
+            "ref": [
+              "Sides",
+              "Tabouleh"
+            ],
+            "photo": "sides-tabouleh.jpg",
+            "caption": "Tabouleh"
           }
-        ]
+        ],
+        "burgers_card": {
+          "photo": "burger-fries-combo.jpg",
+          "caption": "Burger & Fries",
+          "_note": "bottom of burgers/kids column"
+        }
       },
       "row3": {
-        "desserts_card": { "ref": ["Baklava", "Cashew or Pistachio"], "caption": "" },
-        "desserts": { "title": "Desserts", "items": [["Baklava", "Cashew or Pistachio"]] },
+        "desserts_card": {
+          "ref": [
+            "Baklava",
+            "Cashew or Pistachio"
+          ],
+          "caption": ""
+        },
+        "desserts": {
+          "title": "Desserts",
+          "items": [
+            [
+              "Baklava",
+              "Cashew or Pistachio"
+            ]
+          ]
+        },
         "drinks": {
           "name": "Drinks",
           "groups": [
             {
               "name": "Soft Drinks",
               "items": [
-                ["Drinks", "Bottled Water"],
-                ["Drinks", "Fountain Drink"],
-                ["Drinks", "Middle Eastern Black Tea"],
-                ["Drinks", "Peace Tea Raspberry"],
-                ["Drinks", "Mexican Coke"],
-                ["Drinks", "Mexican Fanta Grape"]
+                [
+                  "Drinks",
+                  "Bottled Water"
+                ],
+                [
+                  "Drinks",
+                  "Fountain Drink"
+                ],
+                [
+                  "Drinks",
+                  "Middle Eastern Black Tea"
+                ],
+                [
+                  "Drinks",
+                  "Peace Tea Raspberry"
+                ],
+                [
+                  "Drinks",
+                  "Mexican Coke"
+                ],
+                [
+                  "Drinks",
+                  "Mexican Fanta Grape"
+                ]
               ]
             },
             {
               "name": "Juice",
               "items": [
-                ["Drinks", "Minute Maid Apple Juice"],
-                ["Drinks", "Minute Maid Orange Juice 100%"],
-                ["Drinks", "Al Reef Pomegranate Juice"],
-                ["Drinks", "Al Reef Mango Juice"],
-                ["Drinks", "Al Reef Orange Juice"]
+                [
+                  "Drinks",
+                  "Minute Maid Apple Juice"
+                ],
+                [
+                  "Drinks",
+                  "Minute Maid Orange Juice 100%"
+                ],
+                [
+                  "Drinks",
+                  "Al Reef Pomegranate Juice"
+                ],
+                [
+                  "Drinks",
+                  "Al Reef Mango Juice"
+                ],
+                [
+                  "Drinks",
+                  "Al Reef Orange Juice"
+                ]
               ]
             }
           ],
           "ad_photo": "drinks-packshot-flyingv-nobg.png",
           "_ad_note": "Single packshot hero (flying-V lineup, transparent). Lists above image."
         },
-        "sharbat": { "section": "Sharbat" },
+        "sharbat": {
+          "section": "Sharbat"
+        },
         "sharbat_card": {
           "photo": "sharbat-three-cups-nobg.png",
           "caption": "Sharbat",

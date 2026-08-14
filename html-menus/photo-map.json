@@ -1,5 +1,5 @@
 {
-  "_comment": "Item -> real photo mapping. Keys are 'Section > Item' (exact names from menu.json). Photos are copied from PHOTO_LIB into photos/ on build. Add/adjust freely — no image generation, user content only.",
+  "_comment": "Item -> real photo mapping. Keys are 'Section > Item' (exact names from menu.json). Photos are copied from PHOTO_LIB into photos/ on build. Add/adjust freely \u2014 no image generation, user content only.",
   "photo_lib": "/srv/storage/onedrive/Sulemon/Customer Files/maza/Video folder",
   "map": {
     "Wraps > Beef Gyro": "menu_items/gyro/gyro-on-pita.jpg",
@@ -11,7 +11,6 @@
     "Wraps > Arayes Lahm or Dajaj": "menu_items/wraps/arayes-lahm-vertical.jpg",
     "Wraps > Ribeye Tikka Wrap": "menu_items/wraps/ribeye-tikka-wrap-vertical.jpg",
     "Wraps > Shredded Chicken Wrap": "menu_items/wraps/geneic-wrap-photo.jpg",
-
     "Plates > Beef + Lamb Shish Kebab": "menu_items/beef-shish-kebab/beef-lamb-shish-kebab-plate-angle.jpg",
     "Plates > Chicken Shish Kebab": "menu_items/shish-kebab-grill/well-done-shish-kebabs-off-the-grill.jpg",
     "Plates > Chicken Tikka Plate": "menu_items/chicken-tikka/chicken-tikka-plate-close.jpg",
@@ -24,23 +23,17 @@
     "Plates > Grilled Chicken Teriyaki Plate": "menu_items/burgers/grilled-chicken-teriyaki.jpg",
     "Plates > Shredded Chicken Plate": "menu_items/shredded-plates/shredded-chicken-plate.jpg",
     "Plates > Shredded Steak Plate": "menu_items/shredded-plates/shredded-steak-plate-no-sides.jpg",
-
     "Loaded Fries > Shredded Steak": "menu_items/loaded-fries/loaded-fries-steak.jpg",
     "Loaded Fries > Gyro": "menu_items/gyro/loaded-fries-gyro.jpg",
-
     "Loaded Hummus > Shredded Chicken": "menu_items/loaded-hummus/loaded-hummus-chicken-close.jpg",
     "Loaded Hummus > Shredded Steak": "menu_items/loaded-hummus/loaded-hummus-steak.jpg",
-
     "Specials > Maza Special": "menu_items/maza-special/maza-special-top.jpg",
     "Specials > Family Meal": "menu_items/sides/all-the-sides.jpg",
     "Specials > Samak Tandoor": "menu_items/samak/samak-promo.jpg",
-
     "Burgers > Beef Burger": "menu/og/burger-fries-combo.jpg",
     "Burgers > Grilled Chicken": "menu_items/burgers/grilled-chicken-burger-with-fries.jpg",
-
     "Kids Meals > Crispy Chicken Sandwich": "menu_items/burgers/crispy-chicken-sandwich.jpg",
     "Kids Meals > All Beef Burger": "menu/og/burger-fries-combo.jpg",
-
     "Sides > Sambusah (2pc)": "menu_items/appetizers/sambusah.jpg",
     "Sides > Kibbeh (3pc)": "menu_items/appetizers/kibbeh.jpg",
     "Sides > Hummus with tahini and pita": "menu_items/appetizers/hummus-plate-with-pita.jpg",
@@ -48,7 +41,6 @@
     "Sides > Side Salad": "menu_items/sides/side-sald-closeup.jpg",
     "Sides > Maza Salad": "menu_items/sides/maza-salad-old-version.jpg",
     "Sides > Fries": "menu_items/sides/side-fries-vertical.jpg",
-
     "Baklava > Cashew or Pistachio": "assets/baklava-vertical-web.jpg"
   }
 }
