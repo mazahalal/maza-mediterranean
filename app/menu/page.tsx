@@ -4,7 +4,8 @@ import MenuLightbox from "./components/MenuLightbox";
 import MenuCategoryNav from "./components/MenuCategoryNav";
 import MenuTracker from "@/components/MenuTracker";
 import { menuData } from "@/data/menu";
-import { TAKEOUT_URL } from "@/lib/ordering";
+import DeliveryIcon from "@/components/DeliveryIcon";
+import { TAKEOUT_URL, deliveryUrl } from "@/lib/ordering";
 
 export { metadata };
 
@@ -88,6 +89,15 @@ export default function MenuPage() {
                 className="inline-block bg-[#D3AB5E] hover:bg-[#C49A4D] text-[#0A1F1E] font-semibold px-10 py-4 rounded text-lg tracking-wide transition-colors"
               >
                 Order Takeout
+              </a>
+              <a
+                href={deliveryUrl("menu_page")}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 border border-[#D3AB5E] text-[#D3AB5E] font-semibold px-10 py-4 rounded text-lg tracking-wide hover:bg-[#D3AB5E] hover:text-[#0A1F1E] transition-colors"
+              >
+                <DeliveryIcon className="w-5 h-5" />
+                Delivery
               </a>
             </div>
             <p className="mt-4 text-[#B8B8B8] text-sm">

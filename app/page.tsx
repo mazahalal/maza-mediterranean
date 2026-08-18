@@ -1,7 +1,8 @@
 import Link from "next/link";
 import PhoneLink from "@/components/PhoneLink";
 import MapEmbed from "@/components/MapEmbed";
-import { TAKEOUT_URL } from "@/lib/ordering";
+import DeliveryIcon from "@/components/DeliveryIcon";
+import { TAKEOUT_URL, deliveryUrl } from "@/lib/ordering";
 
 export const metadata = {
   alternates: { canonical: "https://mazahalalfood.com" },
@@ -40,6 +41,15 @@ export default function Home() {
               className="inline-block bg-[#D3AB5E] hover:bg-[#C49A4D] text-[#0A1F1E] font-semibold px-10 py-4 rounded text-lg tracking-wide transition-colors"
             >
               Order Takeout
+            </a>
+            <a
+              href={deliveryUrl("home_hero")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 border border-[#D3AB5E] text-[#D3AB5E] font-semibold px-10 py-4 rounded text-lg tracking-wide hover:bg-[#D3AB5E] hover:text-[#0A1F1E] transition-colors"
+            >
+              <DeliveryIcon className="w-5 h-5" />
+              Delivery
             </a>
             <Link
               href="/contact"
@@ -126,6 +136,15 @@ export default function Home() {
               className="inline-block bg-[#D3AB5E] hover:bg-[#C49A4D] text-[#0A1F1E] font-semibold px-10 py-4 rounded text-lg tracking-wide transition-colors"
             >
               Order Takeout
+            </a>
+            <a
+              href={deliveryUrl("home_final")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 border border-[#D3AB5E] text-[#D3AB5E] font-semibold px-10 py-4 rounded text-lg tracking-wide hover:bg-[#D3AB5E] hover:text-[#0A1F1E] transition-colors"
+            >
+              <DeliveryIcon className="w-5 h-5" />
+              Delivery
             </a>
             <PhoneLink
               className="inline-block border border-[#D3AB5E] text-[#D3AB5E] font-semibold px-10 py-4 rounded text-lg tracking-wide hover:bg-[#D3AB5E] hover:text-[#0A1F1E] transition-colors"
