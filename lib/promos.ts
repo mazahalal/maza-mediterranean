@@ -31,8 +31,8 @@ export const SAMAK_WEEKEND_SPECIAL: ActivePromo = {
   waitNote: "45 minutes to 1 hour prep time",
   orderAheadNote: "Order ahead — please don’t walk in cold for this one.",
   whenLabel: "Saturday & Sunday only",
-  imageSrc: "/images/maza/promos/samak-weekend-special.jpg",
-  imageAlt: "Samak Tandoor — whole large fish weekend special at Maza Mediterranean",
+  imageSrc: "/images/maza/promos/samak-plate.jpg",
+  imageAlt: "Samak Tandoor whole grilled fish plate with lemon tomato and onion at Maza Mediterranean Cuisine Chandler AZ",
   // Fri Aug 21 2026 00:00 Phoenix → Sun Aug 23 2026 22:00 Phoenix
   startsAt: Date.parse("2026-08-21T07:00:00.000Z"),
   endsAt: Date.parse("2026-08-24T05:00:00.000Z"),
