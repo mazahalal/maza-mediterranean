@@ -15,14 +15,14 @@ function BannerInner({ promo }: { promo: ActivePromo }) {
     >
       <div className="mx-auto grid max-w-6xl gap-0 md:grid-cols-2 md:items-stretch">
         {/* Visible plate photo */}
-        <div className="relative min-h-[240px] w-full aspect-[4/3] md:aspect-auto md:min-h-[320px]">
+        <div className="relative min-h-[200px] w-full aspect-[16/10] md:aspect-auto md:min-h-[320px]">
           <Image
             src="/images/maza/promos/samak-plate.jpg"
             alt={promo.imageAlt}
             fill
             priority
             sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-cover object-center"
+            className="object-cover object-[center_40%]"
           />
         </div>
 
