@@ -33,9 +33,9 @@ export const SAMAK_WEEKEND_SPECIAL: ActivePromo = {
   whenLabel: "Saturday & Sunday only",
   imageSrc: "/images/maza/promos/samak-plate.jpg",
   imageAlt: "Samak Tandoor whole grilled fish plate with lemon tomato and onion at Maza Mediterranean Cuisine Chandler AZ",
-  // Fri Aug 21 2026 00:00 Phoenix → Sun Aug 23 2026 22:00 Phoenix
+  // Ended — weekend of Aug 22–23 2026 (walked back Mon week of Aug 25)
   startsAt: Date.parse("2026-08-21T07:00:00.000Z"),
-  endsAt: Date.parse("2026-08-24T05:00:00.000Z"),
+  endsAt: Date.parse("2026-08-24T05:00:00.000Z"), // past — leave inactive
 };
 
 export function isPromoActive(
@@ -49,6 +49,9 @@ export function isPromoActive(
 export function getActiveHomepagePromo(
   now: Date | number = Date.now(),
 ): ActivePromo | null {
-  if (isPromoActive(SAMAK_WEEKEND_SPECIAL, now)) return SAMAK_WEEKEND_SPECIAL;
+  // No active homepage promos (Samak weekend special ended).
+  void now;
+  void SAMAK_WEEKEND_SPECIAL;
+  void isPromoActive;
   return null;
 }

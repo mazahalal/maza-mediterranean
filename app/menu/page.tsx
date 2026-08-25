@@ -3,8 +3,6 @@ import { metadata } from "./metadata";
 import MenuLightbox from "./components/MenuLightbox";
 import MenuCategoryNav from "./components/MenuCategoryNav";
 import MenuTracker from "@/components/MenuTracker";
-import SamakWeekendBanner from "@/components/SamakWeekendBanner";
-import SamakWeekendPopup from "@/components/SamakWeekendPopup";
 import { menuData } from "@/data/menu";
 import DeliveryIcon from "@/components/DeliveryIcon";
 import { TAKEOUT_URL, deliveryUrl } from "@/lib/ordering";
@@ -49,8 +47,6 @@ export default function MenuPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(menuJsonLd) }}
       />
-      <SamakWeekendPopup />
-      <SamakWeekendBanner />
       <div className="py-16 px-4">
         <MenuTracker />
         <div className="max-w-6xl mx-auto">
