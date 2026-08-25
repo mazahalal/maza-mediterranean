@@ -2,7 +2,6 @@ import Link from "next/link";
 import PhoneLink from "@/components/PhoneLink";
 import MapEmbed from "@/components/MapEmbed";
 import DeliveryIcon from "@/components/DeliveryIcon";
-import SamakWeekendBanner from "@/components/SamakWeekendBanner";
 import { TAKEOUT_URL, deliveryUrl } from "@/lib/ordering";
 
 export const metadata = {
@@ -14,7 +13,6 @@ export const metadata = {
 export default function Home() {
   return (
     <div>
-      <SamakWeekendBanner />
       {/* Hero Section */}
       <section
         className="relative h-[70vh] flex items-center justify-center bg-[#0A1F1E] bg-cover bg-center"
