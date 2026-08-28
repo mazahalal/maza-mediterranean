@@ -201,7 +201,7 @@
         ],
         [
           "Plates",
-          "Grilled Chicken Teriyaki Plate"
+          "Shredded Chicken Plate"
         ]
       ],
       "specials": {
@@ -213,11 +213,11 @@
         "items": [
           [
             "Specials",
-            "Maza Special"
+            "Family Meal"
           ],
           [
             "Specials",
-            "Family Meal"
+            "Maza Special"
           ],
           [
             "Specials",
@@ -432,10 +432,6 @@
                 [
                   "Drinks",
                   "Peace Tea Raspberry"
-                ],
-                [
-                  "Drinks",
-                  "Mexican Coke"
                 ],
                 [
                   "Drinks",

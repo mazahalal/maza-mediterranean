@@ -46,11 +46,26 @@
   .specials-box .screen-title { font-size: 38px; }
   .specials-box .screen-title .rule { width: 60px; }
   .specials-inner { flex: 1; display: flex; gap: 30px; align-items: stretch; margin-top: 8px; min-height: 0; }
-  .specials-hero { width: 42%; }
-  .specials-hero img {
-    width: 100%; height: 100%; object-fit: cover;
-    border-radius: 12px; border: 2px solid var(--gold);
+  .specials-hero {
+    width: 42%;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    align-self: stretch;
   }
+  .specials-hero.product-frame {
+    /* same gold outer + name ❖ price marker as gallery cards */
+    height: 100%;
+  }
+  .specials-hero .photo-card {
+    flex: 1 1 auto;
+    min-height: 0;
+  }
+  .specials-hero .card-detail {
+    padding: 8px 12px 10px;
+  }
+  .specials-hero .card-name { font-size: 18px; }
+  .specials-hero .card-price { font-size: 20px; }
   .specials-items { flex: 1; display: flex; flex-direction: column; justify-content: space-evenly; }
   .specials-items .tv-item { margin: 8px 0 4px; }
   .specials-items .tv-item .name { font-size: 24px; }
@@ -102,7 +117,14 @@
       <div class="specials-box">
         <h1 class="screen-title"><span class="rule"></span><span class="orn">❖</span>{{ s.specials.title }}<span class="orn">❖</span><span class="rule"></span></h1>
         <div class="specials-inner">
-          <div class="specials-hero"><img src="../photos/{{ s.specials.hero.photo }}" alt="{{ s.specials.hero.name }}"></div>
+          <div class="specials-hero product-frame">
+            <div class="photo-card"><img src="../photos/{{ s.specials.hero.photo }}" alt="{{ s.specials.hero.name }}"></div>
+            <div class="card-detail">
+              <span class="card-name">{{ s.specials.hero.name }}</span>
+              <span class="card-sep">❖</span>
+              <span class="card-price">{{ s.specials.hero.price }}</span>
+            </div>
+          </div>
           <div class="specials-items">
             {% for item in s.specials["items"] %}
             <div class="tv-item">
