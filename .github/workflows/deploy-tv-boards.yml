@@ -45,12 +45,24 @@ jobs:
           done
           HASH=$(sha256sum menu.json html-menus/tv-screens.json html-menus/photo-map.json | sha256sum | awk '{print $1}')
           printf '{"version":"%s","builtAt":"%s","source":"github-actions"}\n' "$HASH" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > /tmp/maza-tv/version.json
+          # Match maza-tv-boards/vercel.json — Fully Kiosk uses clean /screenN paths
           cat > /tmp/maza-tv/vercel.json <<'JSON'
           {
-            "cleanUrls": false,
+            "cleanUrls": true,
             "trailingSlash": false,
+            "rewrites": [
+              { "source": "/screen1", "destination": "/screen1.html" },
+              { "source": "/screen2", "destination": "/screen2.html" },
+              { "source": "/screen3", "destination": "/screen3.html" },
+              { "source": "/s1", "destination": "/screen1.html" },
+              { "source": "/s2", "destination": "/screen2.html" },
+              { "source": "/s3", "destination": "/screen3.html" }
+            ],
             "headers": [
               { "source": "/(.*).html", "headers": [{ "key": "Cache-Control", "value": "no-cache, must-revalidate" }] },
+              { "source": "/screen1", "headers": [{ "key": "Cache-Control", "value": "no-cache, must-revalidate" }] },
+              { "source": "/screen2", "headers": [{ "key": "Cache-Control", "value": "no-cache, must-revalidate" }] },
+              { "source": "/screen3", "headers": [{ "key": "Cache-Control", "value": "no-cache, must-revalidate" }] },
               { "source": "/version.json", "headers": [{ "key": "Cache-Control", "value": "no-cache, must-revalidate" }] },
               { "source": "/tv-theme.css", "headers": [{ "key": "Cache-Control", "value": "no-cache, must-revalidate" }] },
               { "source": "/photos/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=3600, stale-while-revalidate=86400" }] }
