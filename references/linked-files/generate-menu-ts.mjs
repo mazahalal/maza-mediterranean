@@ -13,6 +13,20 @@ import fs from 'fs';
 
 const json = JSON.parse(fs.readFileSync('menu.json', 'utf8'));
 
+// PUBLIC MENU = sections only.
+// menu.json may carry internal top-level keys (e.g. temporarily_unavailable)
+// for ops / restock tracking. Never export those to data/menu.ts or the live site.
+if (!Array.isArray(json.sections)) {
+  console.error('❌ menu.json missing sections[] — aborting');
+  process.exit(1);
+}
+const ignoredTopLevel = Object.keys(json).filter((k) => k !== 'sections');
+const skippedUnavailable = Array.isArray(json.temporarily_unavailable)
+  ? json.temporarily_unavailable.length
+  : 0;
+// Working object is sections-only — never pass other top-level keys through.
+const publicMenu = { sections: json.sections };
+
 // Known image paths — add new items here when photography is available
 // Prefer true vertical (9:16) assets named *-vertical when available.
 // Sources:
@@ -108,8 +122,8 @@ export const menuData: MenuCategory[] = [
 `;
 
 const sections = [];
-for (let si = 0; si < json.sections.length; si++) {
-  const section = json.sections[si];
+for (let si = 0; si < publicMenu.sections.length; si++) {
+  const section = publicMenu.sections[si];
   let block = `  {\n    category: "${esc(section.name)}"`;
   if (section.subtitle) {
     block += `,\n    subtitle: "${esc(section.subtitle)}"`;
@@ -128,5 +142,11 @@ out += '\n];\n';
 
 fs.writeFileSync('data/menu.ts', out);
 console.log(`✅ data/menu.ts regenerated from menu.json (${out.length} chars, ${out.split('\n').length} lines)`);
-console.log(`   ${json.sections.length} sections, ${json.sections.reduce((sum, s) => sum + s.items.length, 0)} items`);
+console.log(`   ${publicMenu.sections.length} sections, ${publicMenu.sections.reduce((sum, s) => sum + s.items.length, 0)} items`);
 console.log(`   ${Object.keys(images).length} image mappings`);
+if (skippedUnavailable > 0) {
+  console.log(`   skipped temporarily_unavailable: ${skippedUnavailable} item(s) (not public)`);
+}
+if (ignoredTopLevel.length) {
+  console.log(`   ignored top-level keys: ${ignoredTopLevel.join(', ')}`);
+}
