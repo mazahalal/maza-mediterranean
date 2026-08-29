@@ -131,6 +131,7 @@ export const menuData: MenuCategory[] = [
       { name: "Peace Tea Raspberry", price: "$2.25", note: "16oz can" },
       { name: "Minute Maid Apple Juice", price: "$2.75", note: "10oz" },
       { name: "Minute Maid Orange Juice 100%", price: "$2.75", note: "10oz" },
+      { name: "Mexican Coke", price: "$3.99", note: "355ml glass — temporarily MIA" },
       { name: "Mexican Fanta Grape", price: "$3.99", note: "355ml glass" },
       { name: "Al Reef Pomegranate Juice", price: "$2.49", note: "Arabic juice" },
       { name: "Al Reef Mango Juice", price: "$2.49", note: "Arabic juice" },
