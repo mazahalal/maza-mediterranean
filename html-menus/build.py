@@ -67,11 +67,15 @@ def sync_photos(photo_lib: Path, mapping: dict) -> dict:
     for key, rel in mapping.items():
         # assets/ paths live next to build.py; everything else is under photo_lib
         src = (HERE / rel) if str(rel).startswith("assets/") else (photo_lib / rel)
-        if not src.is_file():
-            missing.append(f"{key} -> {rel}")
-            continue
         dest_name = f"{slug(key)}.jpg"
         dest = PHOTOS_DIR / dest_name
+        if not src.is_file():
+            # CI / no OneDrive: keep already-committed photos/ cache
+            if dest.is_file():
+                local[key] = dest_name
+            else:
+                missing.append(f"{key} -> {rel}")
+            continue
         if not dest.exists() or src.stat().st_mtime > dest.stat().st_mtime:
             with Image.open(src) as im:
                 im = ImageOps.exif_transpose(im)  # honor camera rotation

@@ -38,6 +38,8 @@ jobs:
           cp html-menus/out/screen3-loaded.html /tmp/maza-tv/screen3.html
           cp html-menus/tv-theme.css /tmp/maza-tv/
           cp html-menus/photos/*.jpg /tmp/maza-tv/photos/ 2>/dev/null || true
+          cp html-menus/photos/*.png /tmp/maza-tv/photos/ 2>/dev/null || true
+          cp html-menus/photos/*.webp /tmp/maza-tv/photos/ 2>/dev/null || true
           for f in /tmp/maza-tv/screen1.html /tmp/maza-tv/screen2.html /tmp/maza-tv/screen3.html; do
             sed -i 's|href="../tv-theme.css"|href="/tv-theme.css"|g' "$f"
             sed -i 's|src="../photos/|src="/photos/|g' "$f"
