@@ -1,5 +1,5 @@
 {
-  "_comment": "TV screen definitions. Item refs are [Section, Item] pairs resolved from menu.json at build time \u2014 prices/notes always come from menu.json, never hardcoded here. Edit groupings/cards freely; text data stays in menu.json.",
+  "_comment": "TV screen definitions. Item refs are [Section, Item] pairs resolved from menu.json at build time — prices/notes always come from menu.json, never hardcoded here. Edit groupings/cards freely; text data stays in menu.json.",
   "screens": [
     {
       "id": "screen1-wraps",
@@ -253,7 +253,7 @@
         }
       },
       "row2": {
-        "_layout_note": "4 equal cols; text top; one photo bottom each: burger | hummus | sambusah | kibbeh. tabouleh unused in grid.",
+        "_layout_note": "4 equal cols; text top; one photo bottom each: burger | hummus | sambusah | falafel. tabouleh unused in grid.",
         "burgers": {
           "section": "Burgers"
         },
@@ -337,20 +337,16 @@
               ],
               [
                 "Sides",
-                "Kibbeh (3pc)"
-              ],
-              [
-                "Sides",
                 "Maza Salad"
               ]
             ],
             "photo": {
               "ref": [
                 "Sides",
-                "Kibbeh (3pc)"
+                "Falafel (4pc)"
               ],
-              "photo": "sides-kibbeh-3pc.jpg",
-              "caption": "Kibbeh"
+              "photo": "sides-falafel-4pc.jpg",
+              "caption": "Falafel"
             }
           }
         ],
@@ -374,10 +370,10 @@
           {
             "ref": [
               "Sides",
-              "Kibbeh (3pc)"
+              "Falafel (4pc)"
             ],
-            "photo": "sides-kibbeh-3pc.jpg",
-            "caption": "Kibbeh"
+            "photo": "sides-falafel-4pc.jpg",
+            "caption": "Falafel"
           },
           {
             "ref": [

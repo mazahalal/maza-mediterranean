@@ -303,10 +303,6 @@
           "price": "$3.99"
         },
         {
-          "name": "Kibbeh (3pc)",
-          "price": "$11.99"
-        },
-        {
           "name": "Maza Salad",
           "price": "$13.99",
           "note": "Choose from: Chicken or Steak"
@@ -393,6 +389,12 @@
       "name": "Mexican Coke",
       "price": "$3.99",
       "note": "355ml glass",
+      "reason": "temporarily MIA — out of stock; do not show on website or TV"
+    },
+    {
+      "section": "Sides",
+      "name": "Kibbeh (3pc)",
+      "price": "$11.99",
       "reason": "temporarily MIA — out of stock; do not show on website or TV"
     }
   ]
