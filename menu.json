@@ -354,11 +354,6 @@
           "note": "10oz"
         },
         {
-          "name": "Mexican Coke",
-          "price": "$3.99",
-          "note": "355ml glass — temporarily MIA"
-        },
-        {
           "name": "Mexican Fanta Grape",
           "price": "$3.99",
           "note": "355ml glass"
@@ -390,6 +385,15 @@
           "note": "SM 12oz · LG 24oz"
         }
       ]
+    }
+  ],
+  "temporarily_unavailable": [
+    {
+      "section": "Drinks",
+      "name": "Mexican Coke",
+      "price": "$3.99",
+      "note": "355ml glass",
+      "reason": "temporarily MIA — out of stock; do not show on website or TV"
     }
   ]
 }
