@@ -242,12 +242,12 @@
         {
           "name": "Crispy Chicken Sandwich",
           "price": "$11.85",
-          "note": "Kids Meal \u2014 Comes with Fries"
+          "note": "Kids Meal — Comes with Fries"
         },
         {
           "name": "All Beef Burger",
           "price": "$11.85",
-          "note": "Kids Meal \u2014 Comes with Fries"
+          "note": "Kids Meal — Comes with Fries"
         }
       ]
     },
@@ -354,6 +354,11 @@
           "note": "10oz"
         },
         {
+          "name": "Mexican Coke",
+          "price": "$3.99",
+          "note": "355ml glass — temporarily MIA"
+        },
+        {
           "name": "Mexican Fanta Grape",
           "price": "$3.99",
           "note": "355ml glass"
@@ -377,12 +382,12 @@
     },
     {
       "name": "Sharbat",
-      "subtitle": "House-made \u00b7 no refill",
+      "subtitle": "House-made · no refill",
       "items": [
         {
           "name": "Daily Selection",
           "price": "SM $1.99 | LG $3.99",
-          "note": "SM 12oz \u00b7 LG 24oz"
+          "note": "SM 12oz · LG 24oz"
         }
       ]
     }
