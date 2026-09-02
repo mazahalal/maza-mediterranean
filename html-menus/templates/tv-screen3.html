@@ -454,65 +454,49 @@
     font-size: 17px;
   }
 
-  /* DRINKS — equal gutters: rail=gap throughout · list · image · list */
+  /* DRINKS — flex row: N equal columns + packshot on the right */
   .s3-drinks {
     flex: 1 1 auto;
-    display: grid;
-    /* OUTER air on text rails · packshot hugged to lists */
-    grid-template-columns:
-      28px   /* outer left of soft-drinks */
-      4px
-      minmax(150px, 0.95fr)  /* soft drinks */
-      0px    /* snug to packshot */
-      minmax(340px, 2.5fr)   /* packshot fills middle */
-      0px    /* snug to packshot */
-      minmax(150px, 0.95fr)  /* juice */
-      4px
-      28px;  /* outer right of juice */
-    grid-template-rows: auto minmax(0, 1fr);
-    column-gap: 0;
-    row-gap: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 12px;
     min-width: 0;
     min-height: 0;
     height: 100%;
     padding: 0;
-    align-items: stretch;
   }
   .s3-drinks > .band-title {
-    grid-column: 1 / -1;
-    grid-row: 1;
-    margin: 0;
-    flex-shrink: 0;
-    line-height: 1.1;
-    font-size: 24px;
+    display: none; /* row3 has its own section headers */
   }
   .s3-drinks-lists {
-    display: contents; /* children place into parent grid */
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 10px;
+    min-width: 0;
+    min-height: 0;
   }
   .s3-drinks-col {
-    grid-row: 2;
+    flex: 1 1 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-self: stretch;
     height: 100%;
     min-width: 0;
     min-height: 0;
-    z-index: 2;
     padding: 0;
-    gap: 0;
+    gap: 2px;
   }
-  /* Soft drinks list */
-  .s3-drinks-col:first-of-type { grid-column: 3; padding-left: 4px; }
-  /* Juice list */
-  .s3-drinks-col:last-of-type { grid-column: 7; padding-right: 4px; }
   .s3-drinks-col .group-title {
-    font-size: 14px;
-    letter-spacing: .12em;
+    font-size: 13px;
+    letter-spacing: .1em;
     text-transform: uppercase;
     color: var(--gold);
-    text-align: center; /* centered over the list */
-    margin: 0;
+    text-align: center;
+    margin: 0 0 4px;
     flex-shrink: 0;
     line-height: 1.15;
     width: 100%;
@@ -520,55 +504,54 @@
   .s3-drinks-col .tv-item {
     margin: 0;
     width: 100%;
-    flex: 1 1 auto;
-    align-items: center;
+    display: flex;
+    align-items: baseline;
     min-height: 0;
+    flex: 0 0 auto;
   }
   .s3-drinks-col .tv-item .name {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
-    white-space: normal;
-    line-height: 1.15;
+    white-space: nowrap;
+    line-height: 1.2;
     text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .s3-drinks-col .tv-item .price {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     text-align: right;
+    flex-shrink: 0;
   }
   .s3-drinks-col .tv-item .dots {
-    margin: 0 6px;
+    margin: 0 4px;
+    flex: 1;
   }
   .s3-drinks-col .tv-note {
-    font-size: 12px;
+    font-size: 11px;
     margin: 0;
     line-height: 1.1;
     flex: 0 0 auto;
     text-align: left;
   }
 
-  /* BIG packshot — center cell */
+  /* Packshot — right rail */
   .s3-drinks-ad {
-    grid-column: 5;
-    grid-row: 2;
+    flex: 0 0 180px;
     min-width: 0;
     min-height: 0;
     height: 100%;
-    width: 100%;
-    align-self: stretch;
     display: flex;
     align-items: center;
     justify-content: center;
     pointer-events: none;
-    z-index: 1;
-    overflow: visible; /* never clip bottle edges */
+    overflow: visible;
     padding: 0;
-    margin: 0 -2px; /* slight bleed toward lists */
     box-sizing: border-box;
   }
   .s3-drinks-ad img {
     display: block;
-    /* fit inside cell by the tighter dimension — never crop */
     width: auto;
     height: auto;
     max-width: 100%;
