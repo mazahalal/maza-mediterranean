@@ -411,19 +411,6 @@
           "name": "Drinks",
           "groups": [
             {
-              "name": "Water & Bubbles",
-              "items": [
-                [
-                  "Drinks",
-                  "Bottled Water"
-                ],
-                [
-                  "Drinks",
-                  "Topo Chico Sparkling Water"
-                ]
-              ]
-            },
-            {
               "name": "Soft Drinks & Mexican Soda",
               "items": [
                 [
@@ -461,8 +448,20 @@
               ]
             },
             {
-              "name": "Juice",
+              "name": "",
+              "items": []
+            },
+            {
+              "name": "Water & Juice",
               "items": [
+                [
+                  "Drinks",
+                  "Bottled Water"
+                ],
+                [
+                  "Drinks",
+                  "Topo Chico Sparkling Water"
+                ],
                 [
                   "Drinks",
                   "Minute Maid 100% Apple Juice"
