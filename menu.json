@@ -242,12 +242,12 @@
         {
           "name": "Crispy Chicken Sandwich",
           "price": "$11.85",
-          "note": "Kids Meal — Comes with Fries"
+          "note": "Kids Meal \u2014 Comes with Fries"
         },
         {
           "name": "All Beef Burger",
           "price": "$11.85",
-          "note": "Kids Meal — Comes with Fries"
+          "note": "Kids Meal \u2014 Comes with Fries"
         }
       ]
     },
@@ -331,13 +331,21 @@
           "price": "$1.49"
         },
         {
-          "name": "Fountain Drink",
-          "price": "$2.49",
-          "note": "20oz, refillable"
+          "name": "Water Cup",
+          "price": "$1.49"
         },
         {
-          "name": "Middle Eastern Black Tea",
+          "name": "Topo Chico Sparkling Water",
           "price": "$2.99"
+        },
+        {
+          "name": "Hot Middle Eastern Black Tea",
+          "price": "$2.99"
+        },
+        {
+          "name": "Gold Peak Peach Tea",
+          "price": "$4.99",
+          "note": "100% cane sugar"
         },
         {
           "name": "Peace Tea Raspberry",
@@ -345,14 +353,14 @@
           "note": "16oz can"
         },
         {
-          "name": "Minute Maid 100% Apple Juice",
-          "price": "$2.75",
-          "note": "10oz"
+          "name": "Fountain Drink",
+          "price": "$2.49",
+          "note": "20oz, refillable"
         },
         {
-          "name": "Minute Maid 100% Orange Juice",
-          "price": "$2.75",
-          "note": "10oz"
+          "name": "Mexican Coke",
+          "price": "$3.99",
+          "note": "355ml glass"
         },
         {
           "name": "Mexican Fanta Grape",
@@ -360,50 +368,25 @@
           "note": "355ml glass"
         },
         {
-          "name": "Al Reef Pomegranate Juice",
-          "price": "$2.49",
-          "note": "Arabic juice"
-        },
-        {
-          "name": "Al Reef Mango Juice",
-          "price": "$2.49",
-          "note": "Arabic juice"
-        },
-        {
-          "name": "Al Reef Orange Juice",
-          "price": "$2.49",
-          "note": "Arabic juice"
+          "name": "Mexican Fanta Strawberry",
+          "price": "$3.99",
+          "note": "355ml glass"
         },
         {
           "name": "Mexican Sprite",
-          "price": "$3.99"
-        },
-        {
-          "name": "Topo Chico Sparkling Water",
-          "price": "$2.99"
-        },
-        {
-          "name": "Gold Peak Tea",
-          "price": "$4.99"
-        },
-        {
-          "name": "Mexican Coke",
-          "price": "$3.99"
-        },
-        {
-          "name": "Mexican Fanta Strawberry",
-          "price": "$3.99"
+          "price": "$3.99",
+          "note": "355ml glass"
         }
       ]
     },
     {
       "name": "Sharbat",
-      "subtitle": "House-made · no refill",
+      "subtitle": "House-made \u00b7 no refill",
       "items": [
         {
           "name": "Daily Selection",
           "price": "SM $1.99 | LG $3.99",
-          "note": "SM 12oz · LG 24oz"
+          "note": "SM 12oz \u00b7 LG 24oz"
         }
       ]
     }
