@@ -926,15 +926,9 @@
         </div>
         {% endfor %}
       </div>
-      {% if s.row3.drinks.ad_photo is defined and s.row3.drinks.ad_photo %}
       <div class="s3-drinks-ad" aria-hidden="true">
         <img src="../photos/{{ s.row3.drinks.ad_photo }}" alt="">
       </div>
-      {% elif s.row3.drinks.ad_photos is defined and s.row3.drinks.ad_photos %}
-      <div class="s3-drinks-ad" aria-hidden="true">
-        <img src="../photos/{{ s.row3.drinks.ad_photos[0].photo }}" alt="">
-      </div>
-      {% endif %}
     </div>
     <div class="v-divider"></div>
     <div class="s3-sharbat">
