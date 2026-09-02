@@ -242,12 +242,12 @@
         {
           "name": "Crispy Chicken Sandwich",
           "price": "$11.85",
-          "note": "Kids Meal \u2014 Comes with Fries"
+          "note": "Kids Meal — Comes with Fries"
         },
         {
           "name": "All Beef Burger",
           "price": "$11.85",
-          "note": "Kids Meal \u2014 Comes with Fries"
+          "note": "Kids Meal — Comes with Fries"
         }
       ]
     },
@@ -306,6 +306,11 @@
           "name": "Maza Salad",
           "price": "$13.99",
           "note": "Choose from: Chicken or Steak"
+        },
+        {
+          "name": "Kibbeh (3pc)",
+          "price": "$11.99",
+          "note": ""
         }
       ]
     },
@@ -393,22 +398,15 @@
     },
     {
       "name": "Sharbat",
-      "subtitle": "House-made \u00b7 no refill",
+      "subtitle": "House-made · no refill",
       "items": [
         {
           "name": "Daily Selection",
           "price": "SM $1.99 | LG $3.99",
-          "note": "SM 12oz \u00b7 LG 24oz"
+          "note": "SM 12oz · LG 24oz"
         }
       ]
     }
   ],
-  "temporarily_unavailable": [
-    {
-      "section": "Sides",
-      "name": "Kibbeh (3pc)",
-      "price": "$11.99",
-      "reason": "temporarily MIA \u2014 out of stock; do not show on website or TV"
-    }
-  ]
+  "temporarily_unavailable": []
 }
