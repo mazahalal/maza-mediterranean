@@ -133,7 +133,12 @@ export const menuData: MenuCategory[] = [
       { name: "Mexican Fanta Grape", price: "$3.99", note: "355ml glass" },
       { name: "Al Reef Pomegranate Juice", price: "$2.49", note: "Arabic juice" },
       { name: "Al Reef Mango Juice", price: "$2.49", note: "Arabic juice" },
-      { name: "Al Reef Orange Juice", price: "$2.49", note: "Arabic juice" }
+      { name: "Al Reef Orange Juice", price: "$2.49", note: "Arabic juice" },
+      { name: "Mexican Sprite", price: "$3.99" },
+      { name: "Topo Chico", price: "$2.99" },
+      { name: "Gold Peak Tea", price: "$4.99" },
+      { name: "Mexican Coke", price: "$3.99" },
+      { name: "Mexican Fanta Strawberry", price: "$3.99" }
     ],
   },
   {
