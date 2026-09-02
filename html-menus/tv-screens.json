@@ -1,5 +1,5 @@
 {
-  "_comment": "TV screen definitions. Item refs are [Section, Item] pairs resolved from menu.json at build time \u2014 prices/notes always come from menu.json, never hardcoded here. Edit groupings/cards freely; text data stays in menu.json.",
+  "_comment": "TV screen definitions. Item refs are [Section, Item] pairs resolved from menu.json at build time — prices/notes always come from menu.json, never hardcoded here. Edit groupings/cards freely; text data stays in menu.json.",
   "screens": [
     {
       "id": "screen1-wraps",
@@ -431,7 +431,16 @@
                 ],
                 [
                   "Drinks",
-                  "Mexican Fanta Grape"
+                  "Topo Chico Sparkling Water"
+                ]
+              ]
+            },
+            {
+              "name": "100% Real Sugar Mexican Soda",
+              "items": [
+                [
+                  "Drinks",
+                  "Mexican Coke"
                 ],
                 [
                   "Drinks",
@@ -439,19 +448,15 @@
                 ],
                 [
                   "Drinks",
-                  "Topo Chico"
-                ],
-                [
-                  "Drinks",
-                  "Gold Peak Tea"
-                ],
-                [
-                  "Drinks",
-                  "Mexican Coke"
+                  "Mexican Fanta Grape"
                 ],
                 [
                   "Drinks",
                   "Mexican Fanta Strawberry"
+                ],
+                [
+                  "Drinks",
+                  "Gold Peak Tea"
                 ]
               ]
             },
@@ -460,11 +465,11 @@
               "items": [
                 [
                   "Drinks",
-                  "Minute Maid Apple Juice"
+                  "Minute Maid 100% Apple Juice"
                 ],
                 [
                   "Drinks",
-                  "Minute Maid Orange Juice 100%"
+                  "Minute Maid 100% Orange Juice"
                 ],
                 [
                   "Drinks",
