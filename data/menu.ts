@@ -112,7 +112,8 @@ export const menuData: MenuCategory[] = [
       { name: "Sambusah (2pc)", price: "$9.49", image: "/images/maza/menu/opt-sambusah-vertical.jpg" },
       { name: "Tabouleh", price: "$4.99", image: "/images/maza/menu/opt-tabouleh.jpg" },
       { name: "Side Salad", price: "$3.99", image: "/images/maza/menu/opt-side-salad-vertical.jpg" },
-      { name: "Maza Salad", price: "$13.99", note: "Choose from: Chicken or Steak" }
+      { name: "Maza Salad", price: "$13.99", note: "Choose from: Chicken or Steak" },
+      { name: "Kibbeh (3pc)", price: "$11.99", image: "/images/maza/menu/opt-kibbeh.jpg" }
     ],
   },
   {
