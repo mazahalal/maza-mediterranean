@@ -454,35 +454,46 @@
     font-size: 17px;
   }
 
-  /* DRINKS — 3 equal columns: text · image · text */
+  /* DRINKS — 3 columns across, packshot underneath spanning full width */
   .s3-drinks {
     flex: 1 1 auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: stretch;
-    gap: 12px;
+    gap: 6px;
     min-width: 0;
     min-height: 0;
     height: 100%;
     padding: 0;
   }
   .s3-drinks > .band-title {
-    display: none; /* row3 has its own section headers */
+    margin: 0;
+    flex-shrink: 0;
+    line-height: 1.1;
+    font-size: 22px;
+  }
+  .s3-drinks-lists {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 14px;
+    min-width: 0;
+    min-height: 0;
   }
   .s3-drinks-col {
     flex: 1 1 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-self: stretch;
     min-width: 0;
     min-height: 0;
     padding: 0;
     gap: 2px;
   }
   .s3-drinks-col .group-title {
-    font-size: 14px;
-    letter-spacing: .12em;
+    font-size: 13px;
+    letter-spacing: .1em;
     text-transform: uppercase;
     color: var(--gold);
     text-align: center;
@@ -494,48 +505,49 @@
   .s3-drinks-col .tv-item {
     margin: 0;
     width: 100%;
-    flex: 1 1 auto;
-    align-items: center;
+    display: flex;
+    align-items: baseline;
     min-height: 0;
+    flex: 0 0 auto;
   }
   .s3-drinks-col .tv-item .name {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
-    white-space: normal;
-    line-height: 1.15;
+    white-space: nowrap;
+    line-height: 1.2;
     text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .s3-drinks-col .tv-item .price {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     text-align: right;
+    flex-shrink: 0;
   }
   .s3-drinks-col .tv-item .dots {
-    margin: 0 6px;
+    margin: 0 4px;
+    flex: 1;
   }
   .s3-drinks-col .tv-note {
-    font-size: 12px;
+    font-size: 11px;
     margin: 0;
     line-height: 1.1;
     flex: 0 0 auto;
     text-align: left;
   }
 
-  /* Image column — center, full height */
+  /* Packshot — full width under the lists */
   .s3-drinks-ad {
-    flex: 1 1 0;
+    flex: 0 0 auto;
     min-width: 0;
-    min-height: 0;
-    height: 100%;
-    align-self: stretch;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     pointer-events: none;
-    z-index: 1;
     overflow: visible;
     padding: 0;
-    margin: 0 -2px;
     box-sizing: border-box;
   }
   .s3-drinks-ad img {
@@ -543,7 +555,7 @@
     width: auto;
     height: auto;
     max-width: 100%;
-    max-height: 100%;
+    max-height: 130px;
     object-fit: contain;
     object-position: center center;
     background: transparent;
@@ -903,21 +915,26 @@
     <div class="v-divider"></div>
     <div class="s3-drinks">
       <h2 class="band-title"><span class="rule"></span>{{ s.row3.drinks.name }}<span class="rule"></span></h2>
-      {% for g in s.row3.drinks.groups %}
-      {% if g.name == '' %}
+      <div class="s3-drinks-lists">
+        {% for g in s.row3.drinks.groups %}
+        <div class="s3-drinks-col">
+          <h4 class="group-title">{{ g.name }}</h4>
+          {% for item in g["items"] %}
+          <div class="tv-item"><span class="name">{{ item.name }}</span><span class="dots"></span><span class="price">{{ item.price }}</span></div>
+          {% if item.first_note %}<p class="tv-note">{{ item.first_note }}</p>{% endif %}
+          {% endfor %}
+        </div>
+        {% endfor %}
+      </div>
+      {% if s.row3.drinks.ad_photo is defined and s.row3.drinks.ad_photo %}
       <div class="s3-drinks-ad" aria-hidden="true">
         <img src="../photos/{{ s.row3.drinks.ad_photo }}" alt="">
       </div>
-      {% else %}
-      <div class="s3-drinks-col">
-        <h4 class="group-title">{{ g.name }}</h4>
-        {% for item in g["items"] %}
-        <div class="tv-item"><span class="name">{{ item.name }}</span><span class="dots"></span><span class="price">{{ item.price }}</span></div>
-        {% if item.first_note %}<p class="tv-note">{{ item.first_note }}</p>{% endif %}
-        {% endfor %}
+      {% elif s.row3.drinks.ad_photos is defined and s.row3.drinks.ad_photos %}
+      <div class="s3-drinks-ad" aria-hidden="true">
+        <img src="../photos/{{ s.row3.drinks.ad_photos[0].photo }}" alt="">
       </div>
       {% endif %}
-      {% endfor %}
     </div>
     <div class="v-divider"></div>
     <div class="s3-sharbat">

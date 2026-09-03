@@ -1,5 +1,5 @@
 {
-  "_comment": "TV screen definitions. Item refs are [Section, Item] pairs resolved from menu.json at build time \u2014 prices/notes always come from menu.json, never hardcoded here. Edit groupings/cards freely; text data stays in menu.json.",
+  "_comment": "TV screen definitions. Item refs are [Section, Item] pairs resolved from menu.json at build time — prices/notes always come from menu.json, never hardcoded here. Edit groupings/cards freely; text data stays in menu.json.",
   "screens": [
     {
       "id": "screen1-wraps",
@@ -411,8 +411,12 @@
           "name": "Drinks",
           "groups": [
             {
-              "name": "Soft Drinks & Mexican Soda",
+              "name": "Soft Drinks",
               "items": [
+                [
+                  "Drinks",
+                  "Bottled Water"
+                ],
                 [
                   "Drinks",
                   "Fountain Drink"
@@ -425,6 +429,15 @@
                   "Drinks",
                   "Peace Tea Raspberry"
                 ],
+                [
+                  "Drinks",
+                  "Topo Chico Sparkling Water"
+                ]
+              ]
+            },
+            {
+              "name": "100% Real Sugar Mexican Soda",
+              "items": [
                 [
                   "Drinks",
                   "Mexican Coke"
@@ -448,20 +461,8 @@
               ]
             },
             {
-              "name": "",
-              "items": []
-            },
-            {
-              "name": "Water & Juice",
+              "name": "Juice",
               "items": [
-                [
-                  "Drinks",
-                  "Bottled Water"
-                ],
-                [
-                  "Drinks",
-                  "Topo Chico Sparkling Water"
-                ],
                 [
                   "Drinks",
                   "Minute Maid 100% Apple Juice"
@@ -485,7 +486,8 @@
               ]
             }
           ],
-          "ad_photo": "drinks-packshot-flyingv-nobg.png"
+          "ad_photo": "drinks-packshot-flyingv-nobg.png",
+          "_ad_note": "Single packshot hero (flying-V lineup, transparent). Lists above image."
         },
         "sharbat": {
           "section": "Sharbat"
