@@ -413,9 +413,6 @@
             {
               "name": "Soft Drinks & Mexican Soda",
               "items": [
-                {
-                  "sub": "Soft Drinks"
-                },
                 [
                   "Drinks",
                   "Fountain Drink"
@@ -428,9 +425,6 @@
                   "Drinks",
                   "Peace Tea Raspberry"
                 ],
-                {
-                  "sub": "Mexican Soda"
-                },
                 [
                   "Drinks",
                   "Mexican Coke"
@@ -449,7 +443,7 @@
                 ],
                 [
                   "Drinks",
-                  "Gold Peak Peach Tea"
+                  "Gold Peak Tea"
                 ]
               ]
             },
@@ -460,9 +454,6 @@
             {
               "name": "Water & Juice",
               "items": [
-                {
-                  "sub": "Water"
-                },
                 [
                   "Drinks",
                   "Bottled Water"
@@ -471,9 +462,6 @@
                   "Drinks",
                   "Topo Chico Sparkling Water"
                 ],
-                {
-                  "sub": "Juice"
-                },
                 [
                   "Drinks",
                   "Minute Maid 100% Apple Juice"
@@ -497,8 +485,7 @@
               ]
             }
           ],
-          "ad_photo": "drinks-packshot-flyingv-nobg.png",
-          "_ad_note": "Single packshot hero (flying-V lineup, transparent). Lists above image."
+          "ad_photo": "drinks-packshot-flyingv-nobg.png"
         },
         "sharbat": {
           "section": "Sharbat"

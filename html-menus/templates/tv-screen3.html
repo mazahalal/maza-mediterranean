@@ -454,46 +454,35 @@
     font-size: 17px;
   }
 
-  /* DRINKS — 3 columns across, packshot underneath spanning full width */
+  /* DRINKS — 3 equal columns: text · image · text */
   .s3-drinks {
     flex: 1 1 auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: stretch;
-    gap: 6px;
+    gap: 12px;
     min-width: 0;
     min-height: 0;
     height: 100%;
     padding: 0;
   }
   .s3-drinks > .band-title {
-    margin: 0;
-    flex-shrink: 0;
-    line-height: 1.1;
-    font-size: 22px;
-  }
-  .s3-drinks-lists {
-    flex: 1 1 auto;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 14px;
-    min-width: 0;
-    min-height: 0;
+    display: none; /* row3 has its own section headers */
   }
   .s3-drinks-col {
     flex: 1 1 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-self: stretch;
     min-width: 0;
     min-height: 0;
     padding: 0;
     gap: 2px;
   }
   .s3-drinks-col .group-title {
-    font-size: 13px;
-    letter-spacing: .1em;
+    font-size: 14px;
+    letter-spacing: .12em;
     text-transform: uppercase;
     color: var(--gold);
     text-align: center;
@@ -505,49 +494,48 @@
   .s3-drinks-col .tv-item {
     margin: 0;
     width: 100%;
-    display: flex;
-    align-items: baseline;
+    flex: 1 1 auto;
+    align-items: center;
     min-height: 0;
-    flex: 0 0 auto;
   }
   .s3-drinks-col .tv-item .name {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
-    white-space: nowrap;
-    line-height: 1.2;
+    white-space: normal;
+    line-height: 1.15;
     text-align: left;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
   .s3-drinks-col .tv-item .price {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
     text-align: right;
-    flex-shrink: 0;
   }
   .s3-drinks-col .tv-item .dots {
-    margin: 0 4px;
-    flex: 1;
+    margin: 0 6px;
   }
   .s3-drinks-col .tv-note {
-    font-size: 11px;
+    font-size: 12px;
     margin: 0;
     line-height: 1.1;
     flex: 0 0 auto;
     text-align: left;
   }
 
-  /* Packshot — full width under the lists */
+  /* Image column — center, full height */
   .s3-drinks-ad {
-    flex: 0 0 auto;
+    flex: 1 1 0;
     min-width: 0;
-    width: 100%;
+    min-height: 0;
+    height: 100%;
+    align-self: stretch;
     display: flex;
     align-items: center;
     justify-content: center;
     pointer-events: none;
+    z-index: 1;
     overflow: visible;
     padding: 0;
+    margin: 0 -2px;
     box-sizing: border-box;
   }
   .s3-drinks-ad img {
@@ -555,7 +543,7 @@
     width: auto;
     height: auto;
     max-width: 100%;
-    max-height: 130px;
+    max-height: 100%;
     object-fit: contain;
     object-position: center center;
     background: transparent;
@@ -924,17 +912,14 @@
       <div class="s3-drinks-col">
         <h4 class="group-title">{{ g.name }}</h4>
         {% for item in g["items"] %}
-          {% if item is mapping and item.sub is defined %}
-          <p class="tv-subcat">{{ item.sub }}</p>
-          {% else %}
-          <div class="tv-item"><span class="name">{{ item.name }}</span><span class="dots"></span><span class="price">{{ item.price }}</span></div>
-          {% if item.first_note %}<p class="tv-note">{{ item.first_note }}</p>{% endif %}
-          {% endif %}
+        <div class="tv-item"><span class="name">{{ item.name }}</span><span class="dots"></span><span class="price">{{ item.price }}</span></div>
+        {% if item.first_note %}<p class="tv-note">{{ item.first_note }}</p>{% endif %}
         {% endfor %}
       </div>
       {% endif %}
       {% endfor %}
     </div>
+    <div class="v-divider"></div>
     <div class="s3-sharbat">
       {% set sh = s.row3.sharbat["items"][0] %}
       {# price like "SM 1.99 | LG 3.99"; note like "SM 12oz · LG 24oz" #}
