@@ -1,5 +1,5 @@
 {
-  "_comment": "TV screen definitions. Item refs are [Section, Item] pairs resolved from menu.json at build time — prices/notes always come from menu.json, never hardcoded here. Edit groupings/cards freely; text data stays in menu.json.",
+  "_comment": "TV screen definitions. Item refs are [Section, Item] pairs resolved from menu.json at build time \u2014 prices/notes always come from menu.json, never hardcoded here. Edit groupings/cards freely; text data stays in menu.json.",
   "screens": [
     {
       "id": "screen1-wraps",
@@ -411,12 +411,11 @@
           "name": "Drinks",
           "groups": [
             {
-              "name": "Soft Drinks",
+              "name": "Soft Drinks & Mexican Soda",
               "items": [
-                [
-                  "Drinks",
-                  "Bottled Water"
-                ],
+                {
+                  "sub": "Soft Drinks"
+                },
                 [
                   "Drinks",
                   "Fountain Drink"
@@ -429,15 +428,9 @@
                   "Drinks",
                   "Peace Tea Raspberry"
                 ],
-                [
-                  "Drinks",
-                  "Topo Chico Sparkling Water"
-                ]
-              ]
-            },
-            {
-              "name": "100% Real Sugar Mexican Soda",
-              "items": [
+                {
+                  "sub": "Mexican Soda"
+                },
                 [
                   "Drinks",
                   "Mexican Coke"
@@ -456,13 +449,31 @@
                 ],
                 [
                   "Drinks",
-                  "Gold Peak Tea"
+                  "Gold Peak Peach Tea"
                 ]
               ]
             },
             {
-              "name": "Juice",
+              "name": "",
+              "items": []
+            },
+            {
+              "name": "Water & Juice",
               "items": [
+                {
+                  "sub": "Water"
+                },
+                [
+                  "Drinks",
+                  "Bottled Water"
+                ],
+                [
+                  "Drinks",
+                  "Topo Chico Sparkling Water"
+                ],
+                {
+                  "sub": "Juice"
+                },
                 [
                   "Drinks",
                   "Minute Maid 100% Apple Juice"

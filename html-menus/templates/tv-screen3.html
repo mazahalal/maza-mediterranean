@@ -915,28 +915,26 @@
     <div class="v-divider"></div>
     <div class="s3-drinks">
       <h2 class="band-title"><span class="rule"></span>{{ s.row3.drinks.name }}<span class="rule"></span></h2>
-      <div class="s3-drinks-lists">
-        {% for g in s.row3.drinks.groups %}
-        <div class="s3-drinks-col">
-          <h4 class="group-title">{{ g.name }}</h4>
-          {% for item in g["items"] %}
-          <div class="tv-item"><span class="name">{{ item.name }}</span><span class="dots"></span><span class="price">{{ item.price }}</span></div>
-          {% if item.first_note %}<p class="tv-note">{{ item.first_note }}</p>{% endif %}
-          {% endfor %}
-        </div>
-        {% endfor %}
-      </div>
-      {% if s.row3.drinks.ad_photo is defined and s.row3.drinks.ad_photo %}
+      {% for g in s.row3.drinks.groups %}
+      {% if g.name == '' %}
       <div class="s3-drinks-ad" aria-hidden="true">
         <img src="../photos/{{ s.row3.drinks.ad_photo }}" alt="">
       </div>
-      {% elif s.row3.drinks.ad_photos is defined and s.row3.drinks.ad_photos %}
-      <div class="s3-drinks-ad" aria-hidden="true">
-        <img src="../photos/{{ s.row3.drinks.ad_photos[0].photo }}" alt="">
+      {% else %}
+      <div class="s3-drinks-col">
+        <h4 class="group-title">{{ g.name }}</h4>
+        {% for item in g["items"] %}
+          {% if item is mapping and item.sub is defined %}
+          <p class="tv-subcat">{{ item.sub }}</p>
+          {% else %}
+          <div class="tv-item"><span class="name">{{ item.name }}</span><span class="dots"></span><span class="price">{{ item.price }}</span></div>
+          {% if item.first_note %}<p class="tv-note">{{ item.first_note }}</p>{% endif %}
+          {% endif %}
+        {% endfor %}
       </div>
       {% endif %}
+      {% endfor %}
     </div>
-    <div class="v-divider"></div>
     <div class="s3-sharbat">
       {% set sh = s.row3.sharbat["items"][0] %}
       {# price like "SM 1.99 | LG 3.99"; note like "SM 12oz · LG 24oz" #}
