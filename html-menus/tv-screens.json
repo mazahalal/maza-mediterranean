@@ -485,9 +485,6 @@
               ]
             }
           ],
-<<<<<<< Updated upstream
-          "ad_photo": "drinks-packshot-flyingv-nobg.png"
-=======
           "ad_photos": [
             "drink-ad-mexican-sodas.jpg",
             "drink-ad-alreef-juices.jpg",
@@ -509,7 +506,7 @@
             "$2.49"
           ],
           "_ad_note": "8 x 3:1 drink ads, rotating carousel (no crop, 1920x640)"
->>>>>>> Stashed changes
+
         },
         "sharbat": {
           "section": "Sharbat"

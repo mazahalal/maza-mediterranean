@@ -69,8 +69,16 @@ def sync_photos(photo_lib: Path, mapping: dict) -> dict:
         src = (HERE / rel) if str(rel).startswith("assets/") else (photo_lib / rel)
         dest_name = f"{slug(key)}.jpg"
         dest = PHOTOS_DIR / dest_name
-        if not src.is_file():
-            # CI / no OneDrive: keep already-committed photos/ cache
+        try:
+            if not src.is_file():
+                # CI / no OneDrive: keep already-committed photos/ cache
+                if dest.is_file():
+                    local[key] = dest_name
+                else:
+                    missing.append(f"{key} -> {rel}")
+                continue
+        except OSError:
+            # OneDrive unmounted / network path gone — use cache
             if dest.is_file():
                 local[key] = dest_name
             else:

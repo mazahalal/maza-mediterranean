@@ -480,78 +480,6 @@
     padding: 0;
     gap: 2px;
   }
-<<<<<<< Updated upstream
-  .s3-drinks-col .group-title {
-    font-size: 14px;
-    letter-spacing: .12em;
-    text-transform: uppercase;
-    color: var(--gold);
-    text-align: center;
-    margin: 0 0 4px;
-    flex-shrink: 0;
-    line-height: 1.15;
-    width: 100%;
-  }
-  .s3-drinks-col .tv-item {
-    margin: 0;
-    width: 100%;
-    flex: 1 1 auto;
-    align-items: center;
-    min-height: 0;
-  }
-  .s3-drinks-col .tv-item .name {
-    font-size: 16px;
-    font-weight: 500;
-    white-space: normal;
-    line-height: 1.15;
-    text-align: left;
-  }
-  .s3-drinks-col .tv-item .price {
-    font-size: 16px;
-    font-weight: 600;
-    text-align: right;
-  }
-  .s3-drinks-col .tv-item .dots {
-    margin: 0 6px;
-  }
-  .s3-drinks-col .tv-note {
-    font-size: 12px;
-    margin: 0;
-    line-height: 1.1;
-    flex: 0 0 auto;
-    text-align: left;
-  }
-
-  /* Image column — center, full height */
-  .s3-drinks-ad {
-    flex: 1 1 0;
-    min-width: 0;
-    min-height: 0;
-    height: 100%;
-    align-self: stretch;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    pointer-events: none;
-    z-index: 1;
-    overflow: visible;
-    padding: 0;
-    margin: 0 -2px;
-    box-sizing: border-box;
-  }
-  .s3-drinks-ad img {
-    display: block;
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    object-position: center center;
-    background: transparent;
-    border: none;
-    transform: none;
-    filter: drop-shadow(0 8px 14px rgba(0,0,0,.55));
-=======
   .s3-drinks-carousel {
     flex: 0 1 auto;
     position: relative;
@@ -587,23 +515,13 @@
   .s3-drink-slide.active .s3-drinks-price {
     opacity: 1;
   }
-  .s3-price-name {
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--gold-light);
-  }
-  .s7-price-val {
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--gold);
->>>>>>> Stashed changes
-  }
 
   /* SHARBAT — featured card (widened; transparent cut photo) */
   .s3-sharbat {
-    flex: 0 0 auto;
-    width: 400px;
+    flex: 0 0 400px !important;
+    min-width: 0;
     max-width: 400px;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -611,18 +529,17 @@
     min-height: 0;
   }
   .sharbat-card {
-    flex: 1;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     text-align: center;
     min-height: 0;
+    min-width: 0;
     padding: 6px 12px 8px;
     gap: 4px;
     border: 2px solid var(--gold);
-    outline: 1px solid rgba(211,171,94,.4);
-    outline-offset: 3px;
     border-radius: 10px;
     background:
       radial-gradient(ellipse 90% 55% at 50% 0%, rgba(211,171,94,.12), transparent 62%),
@@ -634,6 +551,7 @@
     flex: 1 1 auto;
     min-height: 110px;
     max-height: 160px;
+    min-width: 0;
     overflow: hidden;
     border-radius: 0;
     border: none;
@@ -949,30 +867,14 @@
     <div class="v-divider"></div>
     <div class="s3-drinks">
       <h2 class="band-title"><span class="rule"></span>{{ s.row3.drinks.name }}<span class="rule"></span></h2>
-<<<<<<< Updated upstream
-      {% for g in s.row3.drinks.groups %}
-      {% if g.name == '' %}
-      <div class="s3-drinks-ad" aria-hidden="true">
-        <img src="../photos/{{ s.row3.drinks.ad_photo }}" alt="">
-      </div>
-      {% else %}
-      <div class="s3-drinks-col">
-        <h4 class="group-title">{{ g.name }}</h4>
-        {% for item in g["items"] %}
-        <div class="tv-item"><span class="name">{{ item.name }}</span><span class="dots"></span><span class="price">{{ item.price }}</span></div>
-        {% if item.first_note %}<p class="tv-note">{{ item.first_note }}</p>{% endif %}
-=======
       <div class="s3-drinks-carousel">
         {% for photo in s.row3.drinks.ad_photos %}
         <div class="s3-drink-slide {% if loop.first %}active{% endif %}">
           <img src="/photos/{{ photo }}" alt="" draggable="false" />
           <div class="s3-drinks-price">{{ s.row3.drinks.ad_prices[loop.index0] }}</div>
         </div>
->>>>>>> Stashed changes
         {% endfor %}
       </div>
-      {% endif %}
-      {% endfor %}
     </div>
     <div class="v-divider"></div>
     <div class="s3-sharbat">
@@ -1112,8 +1014,6 @@
   setInterval(check, INTERVAL_MS);
 })();
 </script>
-<<<<<<< Updated upstream
-=======
 <script>
 (function () {
   /* Drink ad carousel — fade through ad_photos every 5s, price overlay sync */
@@ -1129,6 +1029,5 @@
   }, 5000);
 })();
 </script>
->>>>>>> Stashed changes
 </body>
 </html>
