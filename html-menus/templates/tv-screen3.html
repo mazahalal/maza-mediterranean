@@ -416,8 +416,8 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    width: 260px;
-    max-width: 280px;
+    width: 400px;
+    max-width: 400px;
     min-height: 0;
   }
   .s3-desserts .band-title { font-size: 26px; text-align: center; }
@@ -480,6 +480,7 @@
     padding: 0;
     gap: 2px;
   }
+<<<<<<< Updated upstream
   .s3-drinks-col .group-title {
     font-size: 14px;
     letter-spacing: .12em;
@@ -550,19 +551,64 @@
     border: none;
     transform: none;
     filter: drop-shadow(0 8px 14px rgba(0,0,0,.55));
+=======
+  .s3-drinks-carousel {
+    flex: 0 1 auto;
+    position: relative;
+    min-height: 0;
+    text-align: center;
+  }
+  .s3-drink-slide {
+    display: none;
+    position: relative;
+    height: 100%;
+  }
+  .s3-drink-slide.active {
+    display: block;
+  }
+  .s3-drink-slide img {
+    height: 100%;
+    width: auto;
+    display: block;
+  }
+  .s3-drinks-price {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    z-index: 5;
+    font-size: 38px;
+    font-weight: 700;
+    color: #d3ab5e;
+    text-shadow: 0 2px 8px rgba(0,0,0,.7);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  .s3-drink-slide.active .s3-drinks-price {
+    opacity: 1;
+  }
+  .s3-price-name {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--gold-light);
+  }
+  .s7-price-val {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--gold);
+>>>>>>> Stashed changes
   }
 
   /* SHARBAT — featured card (widened; transparent cut photo) */
   .s3-sharbat {
-    width: 24%;
-    min-width: 260px;
-    max-width: 320px;
+    flex: 0 0 auto;
+    width: 400px;
+    max-width: 400px;
     display: flex;
     flex-direction: column;
     align-items: stretch;
     justify-content: stretch;
     min-height: 0;
-    flex-shrink: 0;
   }
   .sharbat-card {
     flex: 1;
@@ -903,6 +949,7 @@
     <div class="v-divider"></div>
     <div class="s3-drinks">
       <h2 class="band-title"><span class="rule"></span>{{ s.row3.drinks.name }}<span class="rule"></span></h2>
+<<<<<<< Updated upstream
       {% for g in s.row3.drinks.groups %}
       {% if g.name == '' %}
       <div class="s3-drinks-ad" aria-hidden="true">
@@ -914,6 +961,14 @@
         {% for item in g["items"] %}
         <div class="tv-item"><span class="name">{{ item.name }}</span><span class="dots"></span><span class="price">{{ item.price }}</span></div>
         {% if item.first_note %}<p class="tv-note">{{ item.first_note }}</p>{% endif %}
+=======
+      <div class="s3-drinks-carousel">
+        {% for photo in s.row3.drinks.ad_photos %}
+        <div class="s3-drink-slide {% if loop.first %}active{% endif %}">
+          <img src="/photos/{{ photo }}" alt="" draggable="false" />
+          <div class="s3-drinks-price">{{ s.row3.drinks.ad_prices[loop.index0] }}</div>
+        </div>
+>>>>>>> Stashed changes
         {% endfor %}
       </div>
       {% endif %}
@@ -1057,5 +1112,23 @@
   setInterval(check, INTERVAL_MS);
 })();
 </script>
+<<<<<<< Updated upstream
+=======
+<script>
+(function () {
+  /* Drink ad carousel — fade through ad_photos every 5s, price overlay sync */
+  var carousel = document.querySelector('.s3-drinks-carousel');
+  if (!carousel) return;
+  var slides = carousel.querySelectorAll('.s3-drink-slide');
+  if (!slides.length) return;
+  var idx = 0;
+  setInterval(function () {
+    slides[idx].classList.remove('active');
+    idx = (idx + 1) % slides.length;
+    slides[idx].classList.add('active');
+  }, 5000);
+})();
+</script>
+>>>>>>> Stashed changes
 </body>
 </html>
