@@ -125,7 +125,7 @@ export const menuData: MenuCategory[] = [
   {
     category: "Drinks",
     items: [
-      { name: "Bottled Water", price: "$1.49" },
+      { name: "Aquafina Water", price: "$1.49" },
       { name: "Water Cup", price: "Free" },
       { name: "Topo Chico Sparkling Water", price: "$2.99" },
       { name: "Al Reef Pomegranate Juice", price: "$2.49", note: "Arabic juice" },
