@@ -127,7 +127,6 @@ export const menuData: MenuCategory[] = [
     items: [
       { name: "Bottled Water", price: "$1.49" },
       { name: "Water Cup", price: "Free" },
-      { name: "Topo Chico Sparkling Water", price: "$2.99" },
       { name: "Al Reef Pomegranate Juice", price: "$2.49", note: "Arabic juice" },
       { name: "Al Reef Mango Juice", price: "$2.49", note: "Arabic juice" },
       { name: "Al Reef Orange Juice", price: "$2.49", note: "Arabic juice" },
