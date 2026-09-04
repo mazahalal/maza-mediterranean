@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { useState } from "react";
 import LogoLockup from "./LogoLockup";
-import { TAKEOUT_URL } from "@/lib/ordering";
+import DeliveryIcon from "./DeliveryIcon";
+import { TAKEOUT_URL, deliveryUrl } from "@/lib/ordering";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -17,8 +18,14 @@ const navLinks = [
 const takeoutClassDesktop =
   "inline-flex items-center justify-center bg-[#D3AB5E] hover:bg-[#C49A4D] text-[#0A1F1E] font-semibold px-3.5 py-2 rounded text-xs lg:text-sm transition-colors whitespace-nowrap";
 
+const deliveryClassDesktop =
+  "inline-flex items-center justify-center gap-1.5 border border-[#D3AB5E] text-[#D3AB5E] hover:bg-[#D3AB5E] hover:text-[#0A1F1E] font-semibold px-3.5 py-2 rounded text-xs lg:text-sm transition-colors whitespace-nowrap";
+
 const takeoutClassMobile =
   "block w-full bg-[#D3AB5E] hover:bg-[#C49A4D] text-[#0A1F1E] font-semibold px-5 py-3 rounded text-center text-sm transition-colors";
+
+const deliveryClassMobile =
+  "flex w-full items-center justify-center gap-2 border border-[#D3AB5E] text-[#D3AB5E] hover:bg-[#D3AB5E] hover:text-[#0A1F1E] font-semibold px-5 py-3 rounded text-sm transition-colors";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,6 +53,15 @@ export default function Navbar() {
               className={takeoutClassDesktop}
             >
               Order Takeout
+            </a>
+            <a
+              href={deliveryUrl("header_cta")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={deliveryClassDesktop}
+            >
+              <DeliveryIcon />
+              Delivery
             </a>
           </div>
         </div>
@@ -86,6 +102,16 @@ export default function Navbar() {
               className={takeoutClassMobile}
             >
               Order Takeout
+            </a>
+            <a
+              href={deliveryUrl("header_mobile")}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsOpen(false)}
+              className={deliveryClassMobile}
+            >
+              <DeliveryIcon className="w-5 h-5" />
+              Order Delivery
             </a>
           </div>
         </div>
