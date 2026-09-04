@@ -119,7 +119,14 @@ export const menuData: MenuCategory[] = [
   {
     category: "Baklava",
     items: [
-      { name: "Cashew or Pistachio", price: "$3.99" }
+      { name: "Cashew Baklava", price: "$3.99" },
+      { name: "Pistachio Baklava", price: "$3.49" }
+    ],
+  },
+  {
+    category: "Kunāfah",
+    items: [
+      { name: "Kunāfah (2pc)", price: "$4.99" }
     ],
   },
   {
