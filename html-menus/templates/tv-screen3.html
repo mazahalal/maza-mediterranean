@@ -410,30 +410,39 @@
     overflow: hidden;
   }
   .s3-desserts {
-    flex: 0 0 auto;
+    flex: 0 0 400px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 6px;
     width: 400px;
     max-width: 400px;
+    min-width: 0;
     min-height: 0;
+    overflow: hidden;
   }
-  .s3-desserts .band-title { font-size: 26px; text-align: center; }
-  .s3-desserts .product-frame {
-    width: 100%;
+  .s3-desserts .band-title { font-size: 24px; text-align: center; margin: 0; flex: 0 0 auto; }
+  .s3-desserts-stack {
     flex: 1 1 auto;
     min-height: 0;
-    max-height: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .s3-desserts .product-frame {
+    width: 100%;
+    flex: 1 1 0;
+    min-height: 0;
+    max-height: none;
   }
   .s3-desserts .product-frame .photo-card {
     flex: 1 1 auto;
-    min-height: 170px;
-    max-height: 230px;
+    min-height: 0;
+    max-height: none;
     overflow: hidden;
   }
-  .s3-desserts .product-frame .photo-card img {
+  .s3-desserts .product-frame.baklava .photo-card img {
     object-fit: cover;
     /* pan up + left, tighter crop — baklava only, no side white/counter */
     object-position: 38% 40%;
@@ -442,16 +451,25 @@
     transform: scale(1.52);
     transform-origin: center center;
   }
+  .s3-desserts .product-frame.kunafah .photo-card img {
+    object-fit: cover;
+    object-position: 50% 45%;
+    width: 100%;
+    height: 100%;
+    transform: scale(1.08);
+    transform-origin: center center;
+  }
   .s3-desserts .product-frame .card-detail {
     justify-content: center;
     text-align: center;
+    padding: 4px 8px 6px;
   }
   .s3-desserts .product-frame .card-name {
-    font-size: 14px;
+    font-size: 12px;
     text-align: center;
   }
   .s3-desserts .product-frame .card-price {
-    font-size: 17px;
+    font-size: 16px;
   }
 
   /* DRINKS — 3 equal columns: text · image · text */
@@ -485,11 +503,13 @@
     position: relative;
     min-height: 0;
     text-align: center;
+    overflow: hidden;
   }
   .s3-drink-slide {
     display: none;
     position: relative;
     height: 100%;
+    max-width: 100%;
   }
   .s3-drink-slide.active {
     display: block;
@@ -497,6 +517,7 @@
   .s3-drink-slide img {
     height: 100%;
     width: auto;
+    max-width: 100%;
     display: block;
   }
   .s3-drinks-price {
@@ -521,15 +542,17 @@
     flex: 0 0 400px !important;
     min-width: 0;
     max-width: 400px;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: stretch;
     justify-content: stretch;
     min-height: 0;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
   }
   .sharbat-card {
-    width: 100%;
+    align-self: stretch;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -539,12 +562,16 @@
     min-width: 0;
     padding: 6px 12px 8px;
     gap: 4px;
-    border: 2px solid var(--gold);
+    border-top: 2px solid var(--gold);
+    border-right: 2px solid var(--gold);
+    border-bottom: 2px solid var(--gold);
+    border-left: none;
     border-radius: 10px;
     background:
       radial-gradient(ellipse 90% 55% at 50% 0%, rgba(211,171,94,.12), transparent 62%),
       linear-gradient(180deg, #0c0a08 0%, #000 55%, #0a0806 100%);
     box-sizing: border-box;
+    overflow: hidden;
   }
   .sharbat-card .sharbat-photo {
     width: 100%;
@@ -849,19 +876,44 @@
 
   <hr class="h-rule">
 
-  <!-- ROW 3: DESSERTS | DRINKS (col | coke | col) | SHARBAT -->
+  <!-- ROW 3: DESSERTS | DRINKS carousel | SHARBAT -->
   <div class="s3-row3">
     <div class="s3-desserts">
-      <h2 class="band-title">Baklava</h2>
-      {% set d = s.row3.desserts_card.ref %}
-      {% set dname = s.row3.desserts_card.caption if s.row3.desserts_card.caption else d.name %}
-      <div class="product-frame">
-        <div class="photo-card"><img src="../photos/{{ d.photo }}" alt="Baklava"></div>
-        <div class="card-detail">
-          <span class="card-name">{{ dname }}</span>
-          <span class="card-sep">❖</span>
-          <span class="card-price">{{ d.price }}</span>
+      <h2 class="band-title">{{ s.row3.desserts_title if s.row3.desserts_title is defined else "Desserts" }}</h2>
+      {# Dual photo stack: Baklava (price range) + Kunāfah #}
+      <div class="s3-desserts-stack">
+        {% set baklava = s.row3.desserts_cards[0].ref if s.row3.desserts_cards is defined else s.row3.desserts_card.ref %}
+        {% set baklava_photo = s.row3.desserts_cards[0].photo if s.row3.desserts_cards is defined and s.row3.desserts_cards[0].photo else baklava.photo %}
+        {% set baklava_name = "Baklava" %}
+        {% set baklava_price = baklava.price %}
+        {% if s.row3.desserts_cards is defined and s.row3.desserts_cards|length > 1 %}
+          {% set p0 = s.row3.desserts_cards[0].ref.price|replace('$','') %}
+          {% set p1 = s.row3.desserts_cards[1].ref.price|replace('$','') %}
+          {% if p0 != p1 %}
+            {% set baklava_price = "$" ~ ([p0, p1]|sort)[0] ~ " / $" ~ ([p0, p1]|sort)[1] %}
+          {% endif %}
+        {% endif %}
+        <div class="product-frame baklava">
+          <div class="photo-card"><img src="../photos/{{ baklava_photo }}" alt="Baklava"></div>
+          <div class="card-detail">
+            <span class="card-name">{{ baklava_name }} · Cashew / Pistachio</span>
+            <span class="card-sep">❖</span>
+            <span class="card-price">{{ baklava_price }}</span>
+          </div>
         </div>
+        {% if s.row3.desserts_cards is defined and s.row3.desserts_cards|length > 2 %}
+        {% set kuna = s.row3.desserts_cards[2].ref %}
+        {% set kuna_photo = s.row3.desserts_cards[2].photo if s.row3.desserts_cards[2].photo else kuna.photo %}
+        {% set kuna_name = s.row3.desserts_cards[2].caption if s.row3.desserts_cards[2].caption else kuna.name %}
+        <div class="product-frame kunafah">
+          <div class="photo-card"><img src="../photos/{{ kuna_photo }}" alt="Kunāfah"></div>
+          <div class="card-detail">
+            <span class="card-name">{{ kuna_name }}</span>
+            <span class="card-sep">❖</span>
+            <span class="card-price">${{ kuna.price }}</span>
+          </div>
+        </div>
+        {% endif %}
       </div>
     </div>
     <div class="v-divider"></div>

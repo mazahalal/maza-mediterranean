@@ -119,14 +119,14 @@ export const menuData: MenuCategory[] = [
   {
     category: "Baklava",
     items: [
-      { name: "Cashew Baklava", price: "$3.99" },
-      { name: "Pistachio Baklava", price: "$3.49" }
+      { name: "Cashew Baklava", price: "$3.99", image: "/images/maza/menu/opt-baklava.jpg" },
+      { name: "Pistachio Baklava", price: "$3.49", image: "/images/maza/menu/opt-baklava.jpg" }
     ],
   },
   {
     category: "Kunāfah",
     items: [
-      { name: "Kunāfah (2pc)", price: "$4.99" }
+      { name: "Kunāfah (2pc)", price: "$4.99", image: "/images/maza/menu/opt-kunafah.jpg" }
     ],
   },
   {

@@ -42,7 +42,7 @@ BRAND = {
 }
 
 # Sections rendered in the compact (2-col, text-focused) layout
-COMPACT_SECTIONS = {"Sides", "Drinks", "Sharbat", "Wrap Upgrades", "Kids Meals", "Baklava"}
+COMPACT_SECTIONS = {"Sides", "Drinks", "Sharbat", "Wrap Upgrades", "Kids Meals", "Baklava", "Kunāfah"}
 
 
 def slug(text: str) -> str:

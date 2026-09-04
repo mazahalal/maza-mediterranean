@@ -391,20 +391,37 @@
         }
       },
       "row3": {
+        "desserts_title": "Desserts",
+        "desserts_cards": [
+          {
+            "ref": ["Baklava", "Cashew Baklava"],
+            "caption": "Cashew Baklava",
+            "photo": "baklava-cashew-baklava.jpg"
+          },
+          {
+            "ref": ["Baklava", "Pistachio Baklava"],
+            "caption": "Pistachio Baklava",
+            "photo": "baklava-pistachio-baklava.jpg"
+          },
+          {
+            "ref": ["Kunāfah", "Kunāfah (2pc)"],
+            "caption": "Kunāfah (2pc)",
+            "photo": "kunafah-kunafah-2pc.jpg"
+          }
+        ],
         "desserts_card": {
           "ref": [
             "Baklava",
-            "Cashew or Pistachio"
+            "Cashew Baklava"
           ],
-          "caption": ""
+          "caption": "Cashew Baklava"
         },
         "desserts": {
           "title": "Desserts",
           "items": [
-            [
-              "Baklava",
-              "Cashew or Pistachio"
-            ]
+            ["Baklava", "Cashew Baklava"],
+            ["Baklava", "Pistachio Baklava"],
+            ["Kunāfah", "Kunāfah (2pc)"]
           ]
         },
         "drinks": {

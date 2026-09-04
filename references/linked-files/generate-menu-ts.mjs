@@ -85,7 +85,10 @@ const images = {
   'Fries|Sides': '/images/maza/menu/opt-side-fries-vertical.jpg',
 
   // --- Baklava ---
-  'Walnut or Pistachio|Baklava': '/images/maza/menu/opt-baklava.jpg',
+  'Cashew Baklava|Baklava': '/images/maza/menu/opt-baklava.jpg',
+  'Pistachio Baklava|Baklava': '/images/maza/menu/opt-baklava.jpg',
+  // --- Kunāfah ---
+  'Kunāfah (2pc)|Kunāfah': '/images/maza/menu/opt-kunafah.jpg',
 };
 
 function esc(s) {
