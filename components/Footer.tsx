@@ -1,6 +1,6 @@
 import LogoLockup from "./LogoLockup";
 import PhoneLink from "./PhoneLink";
-import { TAKEOUT_URL } from "@/lib/ordering";
+import { TAKEOUT_URL, deliveryUrl } from "@/lib/ordering";
 
 export default function Footer() {
   return (
@@ -25,6 +25,17 @@ export default function Footer() {
                 className="text-[#D3AB5E] hover:text-[#F5F1E8] transition-colors font-medium"
               >
                 Order Takeout →
+              </a>
+              <span className="text-[#D3AB5E]/40 hidden sm:inline" aria-hidden="true">
+                |
+              </span>
+              <a
+                href={deliveryUrl("footer")}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#D3AB5E] hover:text-[#F5F1E8] transition-colors font-medium"
+              >
+                Order Delivery →
               </a>
               <span className="text-[#D3AB5E]/40 hidden sm:inline" aria-hidden="true">
                 |
