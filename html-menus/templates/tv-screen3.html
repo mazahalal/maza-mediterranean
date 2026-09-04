@@ -881,23 +881,25 @@
   <div class="s3-row3">
     <div class="s3-desserts">
       <h2 class="band-title">{{ s.row3.desserts_title if s.row3.desserts_title is defined else "Desserts" }}</h2>
-      {# Dual photo stack: Baklava (price range) + Kunāfah #}
+      {# Dual photo stack: Baklava ($3.99 both) + Pistachio Kunāfah #}
       <div class="s3-desserts-stack">
         {% set baklava = s.row3.desserts_cards[0].ref if s.row3.desserts_cards is defined else s.row3.desserts_card.ref %}
         {% set baklava_photo = s.row3.desserts_cards[0].photo if s.row3.desserts_cards is defined and s.row3.desserts_cards[0].photo else baklava.photo %}
-        {% set baklava_name = "Baklava" %}
+        {% set baklava_name = "Baklava · Cashew / Pistachio" %}
         {% set baklava_price = baklava.price %}
         {% if s.row3.desserts_cards is defined and s.row3.desserts_cards|length > 1 %}
           {% set p0 = s.row3.desserts_cards[0].ref.price|replace('$','') %}
           {% set p1 = s.row3.desserts_cards[1].ref.price|replace('$','') %}
-          {% if p0 != p1 %}
+          {% if p0 == p1 %}
+            {% set baklava_price = "$" ~ p0 %}
+          {% else %}
             {% set baklava_price = "$" ~ ([p0, p1]|sort)[0] ~ " / $" ~ ([p0, p1]|sort)[1] %}
           {% endif %}
         {% endif %}
         <div class="product-frame baklava">
           <div class="photo-card"><img src="../photos/{{ baklava_photo }}" alt="Baklava"></div>
           <div class="card-detail">
-            <span class="card-name">{{ baklava_name }} · Cashew / Pistachio</span>
+            <span class="card-name">{{ baklava_name }}</span>
             <span class="card-sep">❖</span>
             <span class="card-price">{{ baklava_price }}</span>
           </div>
@@ -907,7 +909,7 @@
         {% set kuna_photo = s.row3.desserts_cards[2].photo if s.row3.desserts_cards[2].photo else kuna.photo %}
         {% set kuna_name = s.row3.desserts_cards[2].caption if s.row3.desserts_cards[2].caption else kuna.name %}
         <div class="product-frame kunafah">
-          <div class="photo-card"><img src="../photos/{{ kuna_photo }}" alt="Kunāfah"></div>
+          <div class="photo-card"><img src="../photos/{{ kuna_photo }}" alt="Kunāfah · Pistachio"></div>
           <div class="card-detail">
             <span class="card-name">{{ kuna_name }}</span>
             <span class="card-sep">❖</span>

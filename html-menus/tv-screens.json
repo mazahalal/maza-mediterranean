@@ -404,9 +404,9 @@
             "photo": "baklava-pistachio-baklava.jpg"
           },
           {
-            "ref": ["Kunāfah", "Kunāfah (2pc)"],
-            "caption": "Kunāfah (2pc)",
-            "photo": "kunafah-kunafah-2pc.jpg"
+            "ref": ["Kunāfah", "Kunāfah (Pistachio, 2pc)"],
+            "caption": "Kunāfah · Pistachio (2pc)",
+            "photo": "kunafah-kunafah-pistachio-2pc.jpg"
           }
         ],
         "desserts_card": {
@@ -421,7 +421,7 @@
           "items": [
             ["Baklava", "Cashew Baklava"],
             ["Baklava", "Pistachio Baklava"],
-            ["Kunāfah", "Kunāfah (2pc)"]
+            ["Kunāfah", "Kunāfah (Pistachio, 2pc)"]
           ]
         },
         "drinks": {

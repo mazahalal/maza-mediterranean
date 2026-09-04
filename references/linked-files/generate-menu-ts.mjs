@@ -88,7 +88,7 @@ const images = {
   'Cashew Baklava|Baklava': '/images/maza/menu/opt-baklava.jpg',
   'Pistachio Baklava|Baklava': '/images/maza/menu/opt-baklava.jpg',
   // --- Kunāfah ---
-  'Kunāfah (2pc)|Kunāfah': '/images/maza/menu/opt-kunafah.jpg',
+  'Kunāfah (Pistachio, 2pc)|Kunāfah': '/images/maza/menu/opt-kunafah.jpg',
 };
 
 function esc(s) {
