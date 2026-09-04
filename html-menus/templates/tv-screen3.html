@@ -485,11 +485,13 @@
     position: relative;
     min-height: 0;
     text-align: center;
+    overflow: hidden;
   }
   .s3-drink-slide {
     display: none;
     position: relative;
     height: 100%;
+    max-width: 100%;
   }
   .s3-drink-slide.active {
     display: block;
@@ -497,6 +499,7 @@
   .s3-drink-slide img {
     height: 100%;
     width: auto;
+    max-width: 100%;
     display: block;
   }
   .s3-drinks-price {
@@ -521,15 +524,17 @@
     flex: 0 0 400px !important;
     min-width: 0;
     max-width: 400px;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: stretch;
     justify-content: stretch;
     min-height: 0;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
   }
   .sharbat-card {
-    width: 100%;
+    align-self: stretch;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -539,12 +544,16 @@
     min-width: 0;
     padding: 6px 12px 8px;
     gap: 4px;
-    border: 2px solid var(--gold);
+    border-top: 2px solid var(--gold);
+    border-right: 2px solid var(--gold);
+    border-bottom: 2px solid var(--gold);
+    border-left: none;
     border-radius: 10px;
     background:
       radial-gradient(ellipse 90% 55% at 50% 0%, rgba(211,171,94,.12), transparent 62%),
       linear-gradient(180deg, #0c0a08 0%, #000 55%, #0a0806 100%);
     box-sizing: border-box;
+    overflow: hidden;
   }
   .sharbat-card .sharbat-photo {
     width: 100%;
