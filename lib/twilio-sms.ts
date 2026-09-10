@@ -200,3 +200,68 @@ export function validateTwilioSignature(
     return false;
   }
 }
+
+/**
+ * Single source of truth for the opt-in welcome text.
+ *
+ * Both opt-in paths must send the same wording: the inbound JOIN keyword
+ * handler (Twilio webhook) and the web form (`/api/sms/subscribe`). The
+ * confirmation text IS the 15% off coupon, so it has to arrive on both paths.
+ */
+export const WELCOME_MESSAGE =
+  'Welcome to MAZA Mediterranean! Show this text at checkout for 15% off your next visit. Reply STOP to unsubscribe. Reply HELP for info. Msg&data rates may apply.';
+
+/**
+ * Send an SMS through the Maza Messaging Service.
+ *
+ * Uses the Messaging Service SID so carrier/A2P routing and the verified
+ * campaign apply. Returns false (never throws) so a delivery failure cannot
+ * break an opt-in the subscriber already completed.
+ */
+export async function sendSms(to: string, body: string): Promise<boolean> {
+  const accountSid = process.env.TWILIO_ACCOUNT_SID || '';
+  const authToken = process.env.TWILIO_AUTH_TOKEN || '';
+  const messagingServiceSid = process.env.TWILIO_MESSAGING_SERVICE_SID || '';
+
+  if (!accountSid || !authToken || !messagingServiceSid) {
+    console.error('[Twilio] sendSms is not configured', {
+      hasAccountSid: Boolean(accountSid),
+      hasAuthToken: Boolean(authToken),
+      hasMessagingServiceSid: Boolean(messagingServiceSid),
+    });
+    return false;
+  }
+
+  try {
+    const res = await fetch(
+      `https://api.twilio.com/2010-04-01/Accounts/${accountSid}/Messages.json`,
+      {
+        method: 'POST',
+        headers: {
+          Authorization: `Basic ${Buffer.from(`${accountSid}:${authToken}`).toString('base64')}`,
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: new URLSearchParams({
+          To: to,
+          MessagingServiceSid: messagingServiceSid,
+          Body: body,
+        }).toString(),
+        cache: 'no-store',
+      }
+    );
+
+    if (!res.ok) {
+      const detail = await res.text();
+      console.error(
+        `[Twilio] sendSms failed status=${res.status} to=${to} body=${detail.slice(0, 500)}`
+      );
+      return false;
+    }
+
+    console.log(`[Twilio] sendSms ok to=${to}`);
+    return true;
+  } catch (error) {
+    console.error('[Twilio] sendSms error', error);
+    return false;
+  }
+}

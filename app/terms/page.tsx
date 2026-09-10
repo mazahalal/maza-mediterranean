@@ -1,7 +1,8 @@
 export const metadata = {
   alternates: { canonical: "https://mazahalalfood.com/terms" },
   title: "Terms & Conditions | Maza Mediterranean Cuisine",
-  description: "Terms and conditions for Maza Mediterranean Cuisine SMS messaging program and website usage.",
+  description:
+    "Terms and conditions for Maza Mediterranean Cuisine SMS messaging program and website usage.",
 };
 
 export default function TermsPage() {
@@ -12,9 +13,7 @@ export default function TermsPage() {
           <h1 className="font-display text-4xl md:text-5xl font-bold text-gold-gradient mb-4 tracking-wider">
             Terms &amp; Conditions
           </h1>
-          <p className="text-[#B8B8B8] text-lg">
-            Last updated: July 1, 2026
-          </p>
+          <p className="text-[#B8B8B8] text-lg">Last updated: September 9, 2026</p>
         </div>
 
         <div className="space-y-8">
@@ -23,32 +22,49 @@ export default function TermsPage() {
               Maza SMS Messaging Program
             </h2>
             <p className="text-[#F5F1E8] leading-relaxed mb-4">
-              By subscribing to the Maza Mediterranean Cuisine (&quot;Maza,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) SMS messaging program, you agree to receive recurring automated promotional text messages (specials, offers, and restaurant updates) from Maza at the phone number you provided.
+              By subscribing to the Maza Mediterranean Cuisine (&quot;Maza,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) SMS
+              messaging program, you agree to receive recurring automated promotional text messages
+              (specials, offers, and restaurant updates) <strong>from Maza only</strong> at the phone
+              number you provided. Consent is given directly to Maza Mediterranean Cuisine for this
+              program. Consent is not buried in unrelated agreements and is not shared with other
+              brands.
+            </p>
+            <p className="text-[#F5F1E8] leading-relaxed mb-4">
+              This program is <strong>not</strong> affiliate marketing, third-party lead generation,
+              or partner promotional messaging. We do not sell, buy, or transfer SMS leads. Messages
+              promote only Maza Mediterranean Cuisine (Chandler, AZ).
             </p>
 
             <h3 className="font-display text-xl font-bold text-[#D3AB5E] mt-6 mb-3 tracking-wide">
               Message Frequency
             </h3>
             <p className="text-[#F5F1E8] leading-relaxed mb-4">
-              Up to 4 promotional messages per month. Message frequency may vary based on specials and seasonal offers.
+              Up to 4 promotional messages per month. Message frequency may vary based on specials
+              and seasonal offers.
             </p>
 
             <h3 className="font-display text-xl font-bold text-[#D3AB5E] mt-6 mb-3 tracking-wide">
               Message &amp; Data Rates
             </h3>
             <p className="text-[#F5F1E8] leading-relaxed mb-4">
-              Message and data rates may apply. Check with your mobile carrier for details on your plan. You are responsible for any charges from your mobile carrier.
+              Message and data rates may apply. Check with your mobile carrier for details on your
+              plan. You are responsible for any charges from your mobile carrier.
             </p>
 
             <h3 className="font-display text-xl font-bold text-[#D3AB5E] mt-6 mb-3 tracking-wide">
               How to Opt Out
             </h3>
             <p className="text-[#F5F1E8] leading-relaxed mb-4">
-              <strong>To opt out, text STOP to any message from Maza.</strong> You will receive a confirmation text confirming your unsubscribe request. After unsubscribing, you will no longer receive SMS messages from Maza unless you re-subscribe.
+              <strong>To opt out, text STOP to any message from Maza.</strong> You will receive a
+              confirmation text confirming your unsubscribe request. After unsubscribing, you will no
+              longer receive SMS messages from Maza unless you re-subscribe.
             </p>
             <p className="text-[#F5F1E8] leading-relaxed">
-              To re-subscribe, text JOIN or MAZA to (928) 264-4111 or complete the form at{' '}
-              <a href="https://mazahalalfood.com/sms-join" className="text-[#D3AB5E] hover:underline">
+              To re-subscribe, text JOIN or MAZA to (928) 264-4111 or complete the form at{" "}
+              <a
+                href="https://mazahalalfood.com/sms-join"
+                className="text-[#D3AB5E] hover:underline"
+              >
                 mazahalalfood.com/sms-join
               </a>
               .
@@ -58,7 +74,8 @@ export default function TermsPage() {
               How to Get Help
             </h3>
             <p className="text-[#F5F1E8] leading-relaxed mb-4">
-              <strong>For help, text HELP to any message from Maza</strong> or contact our customer support team:
+              <strong>For help, text HELP to any message from Maza</strong> or contact our customer
+              support team:
             </p>
             <ul className="list-disc list-inside text-[#F5F1E8] leading-relaxed space-y-1 ml-4">
               <li>Phone: (480) 534-6550</li>
@@ -72,10 +89,30 @@ export default function TermsPage() {
               Eligibility &amp; Consent
             </h2>
             <p className="text-[#F5F1E8] leading-relaxed mb-4">
-              You must be at least 18 years old and the authorized user of the mobile phone number you provide. By subscribing, you confirm that you are the account holder or have the account holder&apos;s permission to enroll.
+              You must be at least 18 years old and the authorized user of the mobile phone number
+              you provide. By subscribing, you confirm that you are the account holder or have the
+              account holder&apos;s permission to enroll.
+            </p>
+            <p className="text-[#F5F1E8] leading-relaxed mb-4">
+              Consent is not a condition of purchase. You may decline SMS messaging and still place
+              orders and dine at Maza Mediterranean Cuisine.
             </p>
             <p className="text-[#F5F1E8] leading-relaxed">
-              Consent is not a condition of purchase. You may decline SMS messaging and still place orders and dine at Maza Mediterranean Cuisine.
+              Opt-in is collected only through Maza&apos;s own channels (keyword SMS, in-store QR to
+              Maza SMS/web, or the Maza web form). We do not obtain consent via third-party lists or
+              shared opt-in forms.
+            </p>
+          </div>
+
+          <div className="bg-[#0E0E0E] p-8 rounded-lg border border-[rgba(211,171,94,0.15)]">
+            <h2 className="font-display text-2xl font-bold text-[#D3AB5E] mb-4 tracking-wide">
+              No Third-Party / Affiliate Marketing
+            </h2>
+            <p className="text-[#F5F1E8] leading-relaxed mb-4">
+              We do not share, sell, or provide your mobile phone number or messaging consent data to
+              third parties or affiliates for marketing or promotional purposes. We do not send SMS on
+              behalf of other companies and do not allow other companies to message you under this
+              program.
             </p>
           </div>
 
@@ -84,7 +121,9 @@ export default function TermsPage() {
               Supported Carriers
             </h2>
             <p className="text-[#F5F1E8] leading-relaxed mb-4">
-              Our SMS program is available on most major US carriers, including AT&amp;T, T-Mobile, Verizon, Sprint, Boost, MetroPCS, and others. <strong>Carriers are not liable for any delayed or undelivered messages.</strong>
+              Our SMS program is available on most major US carriers, including AT&amp;T, T-Mobile,
+              Verizon, Sprint, Boost, MetroPCS, and others.{" "}
+              <strong>Carriers are not liable for any delayed or undelivered messages.</strong>
             </p>
           </div>
 
@@ -94,10 +133,12 @@ export default function TermsPage() {
             </h2>
             <p className="text-[#F5F1E8] leading-relaxed">
               Your privacy is important to us. Please review our{" "}
-              <a href="/privacy" className="text-[#D3AB5E] hover:underline">
+              <a href="https://mazahalalfood.com/privacy" className="text-[#D3AB5E] hover:underline">
                 Privacy Policy
               </a>{" "}
-              for details on how we collect, use, and protect your personal information, including mobile phone numbers.
+              for details on how we collect, use, and protect your personal information, including
+              mobile phone numbers and SMS consent. The Privacy Policy is incorporated into these
+              Terms for the SMS program.
             </p>
           </div>
 
@@ -106,7 +147,9 @@ export default function TermsPage() {
               Changes to These Terms
             </h2>
             <p className="text-[#F5F1E8] leading-relaxed">
-              We reserve the right to update these terms at any time. Changes will be posted on this page with an updated date. Continued use of the SMS program after changes constitutes acceptance of the new terms.
+              We reserve the right to update these terms at any time. Changes will be posted on this
+              page with an updated date. Continued use of the SMS program after changes constitutes
+              acceptance of the new terms.
             </p>
           </div>
         </div>
