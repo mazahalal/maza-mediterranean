@@ -13,7 +13,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { normalizeToE164, addSubscriber } from '@/lib/twilio-sms';
+import { normalizeToE164, addSubscriber, sendSms, WELCOME_MESSAGE } from '@/lib/twilio-sms';
 
 export async function POST(req: NextRequest) {
   try {
@@ -42,10 +42,18 @@ export async function POST(req: NextRequest) {
 
     const { created, subscriber } = await addSubscriber(normalized, source);
 
+    // The confirmation text IS the 15% off coupon. Send it on first opt-in only,
+    // matching the wording the inbound JOIN keyword handler sends.
+    let messaged = false;
+    if (created) {
+      messaged = await sendSms(normalized, WELCOME_MESSAGE);
+    }
+
     return NextResponse.json({
       success: true,
       created,
       phone: normalized,
+      messaged,
       message: created
         ? 'You are subscribed! Show your confirmation text at checkout for 15% off your next visit.'
         : 'You are already on our list. See you soon!',

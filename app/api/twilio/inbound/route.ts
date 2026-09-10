@@ -21,6 +21,7 @@ import {
   addSubscriber,
   removeSubscriber,
   validateTwilioSignature,
+  WELCOME_MESSAGE,
 } from '@/lib/twilio-sms';
 
 function parseFormBody(rawBody: string): Record<string, string> {
@@ -86,7 +87,7 @@ export async function POST(req: NextRequest) {
     case 'UNSTOP': {
       const { created } = await addSubscriber(normalizedPhone, 'sms');
       const message = created
-        ? 'Welcome to MAZA Mediterranean! Show this text at checkout for 15% off your next visit. Reply STOP to unsubscribe. Reply HELP for info. Msg&data rates may apply.'
+        ? WELCOME_MESSAGE
         : 'You are already on the MAZA list! Show this text at checkout for 15% off your next visit. Reply STOP to unsubscribe. Reply HELP for info. Msg&data rates may apply.';
       return twimlResponse(`<Response><Message>${escapeXml(message)}</Message></Response>`);
     }
