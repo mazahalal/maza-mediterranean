@@ -198,6 +198,13 @@
       "name": "Specials",
       "items": [
         {
+          "name": "Tepsi Baytinijan",
+          "price": "$20.00",
+          "notes": [
+            "Iraqi eggplant casserole \u2014 eggplant, potato, tomato, onion + seasoned meat, served over rice"
+          ]
+        },
+        {
           "name": "Maza Special",
           "price": "$48.45",
           "notes": [
