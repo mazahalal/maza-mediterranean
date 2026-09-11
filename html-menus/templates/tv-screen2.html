@@ -52,20 +52,42 @@
     flex-direction: column;
     min-height: 0;
     align-self: stretch;
+    position: relative;
   }
-  .specials-hero.product-frame {
+  /* rotating hero — one slide per special, same order as the list below */
+  .specials-slide { display: none; }
+  .specials-slide.active { display: flex; flex-direction: column; height: 100%; min-height: 0; }
+  .specials-slide.product-frame {
     /* same gold outer + name ❖ price marker as gallery cards */
     height: 100%;
   }
-  .specials-hero .photo-card {
+  .specials-slide .photo-card {
     flex: 1 1 auto;
     min-height: 0;
   }
-  .specials-hero .card-detail {
+  .specials-slide .card-detail {
     padding: 8px 12px 10px;
   }
-  .specials-hero .card-name { font-size: 18px; }
-  .specials-hero .card-price { font-size: 20px; }
+  .specials-slide .card-name { font-size: 18px; }
+  .specials-slide .card-price { font-size: 20px; }
+
+  /* the list row matching the hero slide currently on screen */
+  .specials-items .spec-item {
+    border-left: 4px solid transparent;
+    border-radius: 5px;
+    padding-left: 14px;
+    opacity: .58;
+    transition: opacity .5s ease, border-color .5s ease, background .5s ease;
+  }
+  .specials-items .spec-item.highlight {
+    opacity: 1;
+    border-left-color: var(--gold);
+    background: linear-gradient(90deg, rgba(211,171,94,.15), rgba(211,171,94,0) 80%);
+  }
+  .specials-items .spec-item .name,
+  .specials-items .spec-item .price { transition: color .5s ease; }
+  .specials-items .spec-item.highlight .name,
+  .specials-items .spec-item.highlight .price { color: var(--gold-light); }
   .specials-items { flex: 1; display: flex; flex-direction: column; justify-content: space-evenly; }
   .specials-items .tv-item { margin: 8px 0 4px; }
   .specials-items .tv-item .name { font-size: 24px; }
@@ -117,22 +139,39 @@
       <div class="specials-box">
         <h1 class="screen-title"><span class="rule"></span><span class="orn">❖</span>{{ s.specials.title }}<span class="orn">❖</span><span class="rule"></span></h1>
         <div class="specials-inner">
-          <div class="specials-hero product-frame">
-            <div class="photo-card"><img src="../photos/{{ s.specials.hero.photo }}" alt="{{ s.specials.hero.name }}"></div>
-            <div class="card-detail">
-              <span class="card-name">{{ s.specials.hero.name }}</span>
-              <span class="card-sep">❖</span>
-              <span class="card-price">{{ s.specials.hero.price }}</span>
+          <div class="specials-hero">
+            {% if s.specials.slides %}
+            {% for slide in s.specials.slides %}
+            <div class="specials-slide product-frame{% if loop.first %} active{% endif %}" data-i="{{ loop.index0 }}">
+              <div class="photo-card"><img src="../photos/{{ slide.photo }}" alt="{{ slide.name }}"></div>
+              <div class="card-detail">
+                <span class="card-name">{{ slide.name }}</span>
+                <span class="card-sep">❖</span>
+                <span class="card-price">{{ slide.price }}</span>
+              </div>
             </div>
+            {% endfor %}
+            {% else %}
+            <div class="specials-slide product-frame active">
+              <div class="photo-card"><img src="../photos/{{ s.specials.hero.photo }}" alt="{{ s.specials.hero.name }}"></div>
+              <div class="card-detail">
+                <span class="card-name">{{ s.specials.hero.name }}</span>
+                <span class="card-sep">❖</span>
+                <span class="card-price">{{ s.specials.hero.price }}</span>
+              </div>
+            </div>
+            {% endif %}
           </div>
           <div class="specials-items">
             {% for item in s.specials["items"] %}
-            <div class="tv-item">
-              <span class="name">{{ item.name }}</span>
-              <span class="dots"></span>
-              <span class="price">{{ item.price }}</span>
+            <div class="spec-item{% if loop.first %} highlight{% endif %}" data-i="{{ loop.index0 }}">
+              <div class="tv-item">
+                <span class="name">{{ item.name }}</span>
+                <span class="dots"></span>
+                <span class="price">{{ item.price }}</span>
+              </div>
+              {% for note in item.all_notes %}<p class="tv-note">{{ note }}</p>{% endfor %}
             </div>
-            {% for note in item.all_notes %}<p class="tv-note">{{ note }}</p>{% endfor %}
             {% endfor %}
           </div>
         </div>
@@ -225,6 +264,26 @@
   }
   check();
   setInterval(check, INTERVAL_MS);
+})();
+</script>
+<script>
+(function () {
+  /* Specials rotator — hero image cycles through the specials and the matching
+     list row highlights in sync. Slides and rows share their index (data-i),
+     so order in tv-screens.json is the only thing that pairs them. */
+  var slides = document.querySelectorAll('.specials-hero .specials-slide');
+  var rows = document.querySelectorAll('.specials-items .spec-item');
+  if (slides.length < 2 || rows.length < 2) return;
+  var i = 0;
+  var MS = {{ s.specials.rotate_ms or 6000 }};
+  function show(n) {
+    slides[i].classList.remove('active');
+    rows[i].classList.remove('highlight');
+    i = ((n % slides.length) + slides.length) % slides.length;
+    slides[i].classList.add('active');
+    rows[i].classList.add('highlight');
+  }
+  setInterval(function () { show(i + 1); }, MS);
 })();
 </script>
 </body>
