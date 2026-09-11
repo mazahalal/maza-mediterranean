@@ -1,4 +1,6 @@
 import { MetadataRoute } from 'next'
+import { OFFERING_SLUGS } from '@/data/offerings'
+import { NEIGHBORHOOD_SLUGS } from '@/data/neighborhoods'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://mazahalalfood.com'
@@ -120,5 +122,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]
 
-  return routes
+  // SEO Bible §3.1 Core 30 offering pages + §4 Phase 3 neighborhood pages.
+  const offeringRoutes: MetadataRoute.Sitemap = OFFERING_SLUGS.map((slug) => ({
+    url: `${baseUrl}/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }))
+
+  const neighborhoodRoutes: MetadataRoute.Sitemap = NEIGHBORHOOD_SLUGS.map(
+    (slug) => ({
+      url: `${baseUrl}/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    }),
+  )
+
+  return [...routes, ...offeringRoutes, ...neighborhoodRoutes]
 }
