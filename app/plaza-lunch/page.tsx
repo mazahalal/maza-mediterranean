@@ -74,16 +74,8 @@ export default function PlazaLunchPage() {
   return (
     <div className="min-h-[100dvh] bg-[#0A1F1E] text-[#F5F1E8] px-5 py-10">
       <div className="mx-auto w-full max-w-md">
-        {/* ── Above the fold ─────────────────────────────────────────── */}
-        <header className="text-center mb-12">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/MAZA_logo_trans.webp"
-            alt="Maza Mediterranean Cuisine"
-            width={180}
-            height={60}
-            className="mx-auto w-40 h-auto mb-6"
-          />
+        {/* ── Above the fold — text only; the site header already carries the logo ── */}
+        <header className="text-center mb-8">
           <h1 className="font-display text-2xl tracking-[4px] text-[#D3AB5E] mb-5">
             PLAZA LUNCH CLUB
           </h1>
@@ -95,6 +87,11 @@ export default function PlazaLunchPage() {
             FOR PLAZA &amp; NEARBY EMPLOYEES
           </p>
         </header>
+
+        {/* ── Wrap gallery — sits directly under the hero text ────────── */}
+        <section className="mb-12">
+          <WrapGallery wraps={WRAP_GALLERY} />
+        </section>
 
         {/* ── How it works ───────────────────────────────────────────── */}
         <section className="mb-10">
@@ -151,12 +148,6 @@ export default function PlazaLunchPage() {
               Burgers and sandwiches are in the deal too.
             </p>
           </div>
-        </section>
-
-        {/* ── Wrap gallery ───────────────────────────────────────────── */}
-        <section className="mb-10">
-          <SectionHeading>WRAP GALLERY</SectionHeading>
-          <WrapGallery wraps={WRAP_GALLERY} />
         </section>
 
         {/* ── Exclusions ─────────────────────────────────────────────── */}
