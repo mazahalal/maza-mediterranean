@@ -4,41 +4,15 @@ import MenuLightbox from "./components/MenuLightbox";
 import MenuCategoryNav from "./components/MenuCategoryNav";
 import MenuTracker from "@/components/MenuTracker";
 import { menuData } from "@/data/menu";
+import { buildMenuJsonLd, SITE } from "@/lib/menu-schema";
 import DeliveryIcon from "@/components/DeliveryIcon";
 import { TAKEOUT_URL, deliveryUrl } from "@/lib/ordering";
 
 export { metadata };
 
-const SITE = "https://mazahalalfood.com";
-
 // MAZ-32: Menu schema (Menu + MenuSection + MenuItem) for agent + local SEO
 // image URLs absolute for visual search / SEO Bible §5
-const menuJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Menu",
-  name: "Maza Mediterranean Cuisine Menu",
-  description:
-    "Authentic Mediterranean wraps, plates, burgers, sides, and desserts. Halal-certified. Big portions, real ingredients, honest prices.",
-  url: `${SITE}/menu`,
-  hasMenuSection: menuData.map((section) => ({
-    "@type": "MenuSection",
-    name: section.category,
-    hasMenuItem: section.items.map((item) => ({
-      "@type": "MenuItem",
-      name: item.name,
-      description:
-        item.description || item.note || item.notes?.join(" ") || "",
-      ...(item.image
-        ? { image: item.image.startsWith("http") ? item.image : `${SITE}${item.image}` }
-        : {}),
-      offers: {
-        "@type": "Offer",
-        price: parseFloat(item.price.replace("$", "")),
-        priceCurrency: "USD",
-      },
-    })),
-  })),
-};
+const menuJsonLd = buildMenuJsonLd(menuData, { url: `${SITE}/menu` });
 
 export default function MenuPage() {
   return (

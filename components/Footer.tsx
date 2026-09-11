@@ -1,6 +1,7 @@
 import LogoLockup from "./LogoLockup";
 import PhoneLink from "./PhoneLink";
 import { TAKEOUT_URL, deliveryUrl } from "@/lib/ordering";
+import { MAZA_SOCIAL_LINKS } from "@/lib/maza-profiles";
 
 export default function Footer() {
   return (
@@ -46,6 +47,25 @@ export default function Footer() {
               >
                 We&apos;re Hiring →
               </a>
+            </p>
+            <p className="pt-1 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
+              {MAZA_SOCIAL_LINKS.map((social, index) => (
+                <span key={social.name} className="flex items-center gap-x-4">
+                  {index > 0 && (
+                    <span className="text-[#D3AB5E]/40 hidden sm:inline" aria-hidden="true">
+                      |
+                    </span>
+                  )}
+                  <a
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#D3AB5E] hover:text-[#F5F1E8] transition-colors font-medium"
+                  >
+                    {social.name}
+                  </a>
+                </span>
+              ))}
             </p>
           </div>
         </div>

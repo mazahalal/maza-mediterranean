@@ -1,5 +1,6 @@
 import CategoryTracker from "@/components/CategoryTracker";
-import { menuData } from "@/data/menu"
+import { menuData, type MenuCategory } from "@/data/menu";
+import { buildMenuJsonLd, SITE } from "@/lib/menu-schema";
 
 export const metadata = {
   alternates: { canonical: "https://mazahalalfood.com/menu/desserts-drinks" },
@@ -10,11 +11,22 @@ export const metadata = {
 const dessertCats = ["Baklava", "Kunāfah", "Drinks", "Sharbat"] as const
 const dessertSections = dessertCats
   .map((cat) => menuData.find((c) => c.category === cat))
-  .filter(Boolean)
+  .filter((section): section is MenuCategory => Boolean(section))
+
+const dessertJsonLd = buildMenuJsonLd(dessertSections, {
+  url: `${SITE}/menu/desserts-drinks`,
+  name: "Maza Mediterranean Cuisine | Desserts and Drinks Menu",
+  description: "Baklava, Kunafah, sharbat, and fountain drinks. The perfect finish to any meal. Halal-certified Mediterranean food in Chandler, AZ.",
+});
 
 export default function DessertsDrinksPage() {
   return (
-    <div className="py-16 px-4">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(dessertJsonLd) }}
+      />
+      <div className="py-16 px-4">
       <CategoryTracker category="desserts-drinks" />
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
@@ -66,6 +78,7 @@ export default function DessertsDrinksPage() {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   )
 }

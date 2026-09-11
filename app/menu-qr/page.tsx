@@ -1,5 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { MAZA_APPLE_MAPS_URL } from "@/lib/maza-maps";
+import {
+  MAZA_DOORDASH_URL,
+  MAZA_FACEBOOK_URL,
+  MAZA_GRUBHUB_URL,
+  MAZA_INSTAGRAM_URL,
+  MAZA_TIKTOK_URL,
+  MAZA_UBEREATS_URL,
+} from "@/lib/maza-profiles";
 
 export const metadata: Metadata = {
   title: "Quick Links | Maza Mediterranean Cuisine",
@@ -53,7 +62,7 @@ export default function MenuQRPage() {
         <div className="text-[#D3AB5E] text-sm tracking-widest mb-4 px-1">DELIVERY</div>
         <div>
           <div className="mb-8">
-            <a href="https://www.ubereats.com/store/maza-mediterranean-cuisine/yoX-jsvQQFSioTBP37vQnQ" target="_blank" rel="noopener noreferrer">
+            <a href={MAZA_UBEREATS_URL} target="_blank" rel="noopener noreferrer">
               <div className="flex items-center justify-center gap-3 w-full py-5 px-6 rounded-full border border-[#D3AB5E]/40 bg-[#0A1F1E] hover:bg-[#D3AB5E] hover:text-[#0A1F1E] active:scale-[0.985] transition-all text-lg font-medium tracking-wide">
                 <span className="text-xl flex items-center">
                   <img src="/uber_eats.svg" alt="" className="h-6 w-auto" />
@@ -64,7 +73,7 @@ export default function MenuQRPage() {
           </div>
 
           <div className="mb-8">
-            <a href="https://www.doordash.com/store/46422584" target="_blank" rel="noopener noreferrer">
+            <a href={MAZA_DOORDASH_URL} target="_blank" rel="noopener noreferrer">
               <div className="flex items-center justify-center gap-3 w-full py-5 px-6 rounded-full border border-[#D3AB5E]/40 bg-[#0A1F1E] hover:bg-[#D3AB5E] hover:text-[#0A1F1E] active:scale-[0.985] transition-all text-lg font-medium tracking-wide">
                 <span className="text-xl flex items-center">
                   <img src="/doordash.svg" alt="" className="h-6 w-auto" />
@@ -75,7 +84,7 @@ export default function MenuQRPage() {
           </div>
 
           <div className="mb-8">
-            <a href="https://www.grubhub.com/restaurant/maza-mediterranean-cuisine-3419-w-frye-rd-suite-2-chandler/14875480" target="_blank" rel="noopener noreferrer">
+            <a href={MAZA_GRUBHUB_URL} target="_blank" rel="noopener noreferrer">
               <div className="flex items-center justify-center gap-3 w-full py-5 px-6 rounded-full border border-[#D3AB5E]/40 bg-[#0A1F1E] hover:bg-[#D3AB5E] hover:text-[#0A1F1E] active:scale-[0.985] transition-all text-lg font-medium tracking-wide">
                 <span className="text-xl flex items-center">
                   <img src="/grubhub_icon.svg" alt="" className="h-6 w-auto" />
@@ -108,7 +117,7 @@ export default function MenuQRPage() {
           </div>
 
           <div className="mb-8">
-            <a href="https://maps.apple.com/place?place-id=I7007BFFB5FD13BAB&address=3491+W+Frye+Rd%2C+Ste+2%2C+Chandler%2C+AZ++85226%2C+United+States&coordinate=33.297117%2C-111.901518&name=Maza&_provider=9902" target="_blank" rel="noopener noreferrer">
+            <a href={MAZA_APPLE_MAPS_URL} target="_blank" rel="noopener noreferrer">
               <div className="flex items-center justify-center gap-3 w-full py-5 px-6 rounded-full border border-[#D3AB5E]/40 bg-[#0A1F1E] hover:bg-[#D3AB5E] hover:text-[#0A1F1E] active:scale-[0.985] transition-all text-lg font-medium tracking-wide">
                 <span className="text-xl flex items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
@@ -138,7 +147,7 @@ export default function MenuQRPage() {
         <div className="text-[#D3AB5E] text-sm tracking-widest mb-4 px-1">FOLLOW US ONLINE</div>
         <div>
           <div className="mb-8">
-            <a href="https://instagram.com/maza.halal" target="_blank" rel="noopener noreferrer">
+            <a href={MAZA_INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">
               <div className="flex items-center justify-center gap-3 w-full py-5 px-6 rounded-full border border-[#D3AB5E]/40 bg-[#0A1F1E] hover:bg-[#D3AB5E] hover:text-[#0A1F1E] active:scale-[0.985] transition-all text-lg font-medium tracking-wide">
                 <span className="text-xl flex items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
@@ -151,7 +160,7 @@ export default function MenuQRPage() {
           </div>
 
           <div className="mb-8">
-            <a href="https://tiktok.com/@maza.halal" target="_blank" rel="noopener noreferrer">
+            <a href={MAZA_TIKTOK_URL} target="_blank" rel="noopener noreferrer">
               <div className="flex items-center justify-center gap-3 w-full py-5 px-6 rounded-full border border-[#D3AB5E]/40 bg-[#0A1F1E] hover:bg-[#D3AB5E] hover:text-[#0A1F1E] active:scale-[0.985] transition-all text-lg font-medium tracking-wide">
                 <span className="text-xl flex items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
@@ -164,7 +173,7 @@ export default function MenuQRPage() {
           </div>
 
           <div className="mb-8">
-            <a href="https://www.facebook.com/profile.php?id=61590423133133" target="_blank" rel="noopener noreferrer">
+            <a href={MAZA_FACEBOOK_URL} target="_blank" rel="noopener noreferrer">
               <div className="flex items-center justify-center gap-3 w-full py-5 px-6 rounded-full border border-[#D3AB5E]/40 bg-[#0A1F1E] hover:bg-[#D3AB5E] hover:text-[#0A1F1E] active:scale-[0.985] transition-all text-lg font-medium tracking-wide">
                 <span className="text-xl flex items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
