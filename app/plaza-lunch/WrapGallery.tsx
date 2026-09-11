@@ -86,7 +86,7 @@ export default function WrapGallery({ wraps }: { wraps: WrapShot[] }) {
       {/* Lightbox */}
       {active && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
+          className="fixed inset-0 z-[60] flex items-center justify-center bg-black/90 p-4"
           onClick={close}
           onTouchStart={(e) => {
             touchStartX.current = e.touches[0].clientX;
