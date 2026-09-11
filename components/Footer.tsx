@@ -1,4 +1,5 @@
 import LogoLockup from "./LogoLockup";
+import GoogleRating from "./GoogleRating";
 import PhoneLink from "./PhoneLink";
 import { TAKEOUT_URL, deliveryUrl } from "@/lib/ordering";
 import { MAZA_SOCIAL_LINKS } from "@/lib/maza-profiles";
@@ -13,6 +14,9 @@ export default function Footer() {
           <p className="text-[#B8B8B8] max-w-md">
             Big portions. Real ingredients. Honest prices.
           </p>
+
+          {/* MAZ-113: visible counterpart to the Restaurant aggregateRating in JSON-LD */}
+          <GoogleRating className="text-[#F5F1E8]" />
 
           <div className="text-sm text-[#B8B8B8] space-y-1">
             <p>3491 W Frye Rd, Suite 2 · Chandler, AZ 85226</p>

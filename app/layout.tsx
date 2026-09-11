@@ -7,6 +7,12 @@ import Footer from "@/components/Footer";
 import FloatingOrderButton from "@/components/FloatingOrderButton";
 import { MAZA_GEO } from "@/lib/maza-maps";
 import { MAZA_SAME_AS } from "@/lib/maza-profiles";
+import {
+  MAZA_RATING_VALUE,
+  MAZA_REVIEW_COUNT,
+  MAZA_RATING_BEST,
+  MAZA_RATING_WORST,
+} from "@/lib/maza-rating";
 
 const cinzel = Cinzel({
   variable: "--font-cinzel",
@@ -80,15 +86,15 @@ export default function RootLayout({
               servesCuisine: ["Mediterranean", "Middle Eastern", "Halal"],
               hasMenu: "https://mazahalalfood.com/menu",
               sameAs: MAZA_SAME_AS,
-              // Verified against the Google Business Profile place page for
-              // Maza | Mediterranean Cuisine (3491 W Frye Rd Ste 2) on 2026-09-11:
-              // 4.9 average, 100 reviews.
+              // MAZ-113: reads the same constants as the visible rating in the
+              // footer (components/GoogleRating.tsx) so the two cannot drift.
+              // Refresh instructions live at lib/maza-rating.ts.
               aggregateRating: {
                 "@type": "AggregateRating",
-                ratingValue: "4.9",
-                reviewCount: "100",
-                bestRating: "5",
-                worstRating: "1",
+                ratingValue: MAZA_RATING_VALUE,
+                reviewCount: MAZA_REVIEW_COUNT,
+                bestRating: MAZA_RATING_BEST,
+                worstRating: MAZA_RATING_WORST,
               },
               geo: {
                 "@type": "GeoCoordinates",
