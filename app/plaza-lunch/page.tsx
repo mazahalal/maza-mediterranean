@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://mazahalalfood.com/plaza-lunch" },
   title: "Plaza Lunch Club — Any Wrap $10 | Maza Mediterranean Cuisine",
   description:
-    "Plaza Lunch Club: any wrap on the menu is $10 for plaza and nearby employees. No app, no signup. Maza is one block from your building in Chandler, AZ.",
+    "Plaza Lunch Club: any wrap, burger or sandwich on the menu is $10 for plaza and nearby employees. No app, no signup. Maza is one block from your building in Chandler, AZ.",
   icons: {
     icon: "/maza_ornate_logo.webp",
   },
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 const STEPS = [
   "Walk over to MAZA — one block from your building",
   "Ask for the Plaza Lunch Club at the register",
-  "Any wrap on the menu is $10",
+  "Any wrap, burger or sandwich on the menu is $10",
   "No app, no signup, no office forms needed",
 ];
 
@@ -133,6 +133,9 @@ export default function PlazaLunchPage() {
                 </li>
               ))}
             </ul>
+            <p className="mt-5 border-l-2 border-[#D3AB5E] pl-3 text-sm text-[#E9C87B]">
+              Burgers and sandwiches are in the deal too.
+            </p>
           </div>
         </section>
 
@@ -142,8 +145,8 @@ export default function PlazaLunchPage() {
             EXCLUSIONS
           </h2>
           <p className="text-xs leading-relaxed text-[#B8B8B8]/75">
-            Wraps only. Plates, burgers, sandwiches and sides are not included.
-            Dine-in or to-go. Not valid with other offers.
+            Plates and sides are not included. Dine-in or to-go. Not valid with
+            other offers.
           </p>
         </section>
 
