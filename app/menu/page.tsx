@@ -59,13 +59,13 @@ export default function MenuPage() {
               &amp; more. Big portions, real ingredients, honest prices.
               Mediterranean food Chandler AZ.
             </p>
-            <div className="mt-8 mb-4 relative w-full max-w-sm sm:max-w-md mx-auto aspect-[9/16] max-h-[70vh] rounded-xl overflow-hidden shadow-xl border border-[#D3AB5E]/20">
+            <div className="mt-8 mb-4 relative w-full max-w-2xl mx-auto aspect-[1195/896] rounded-xl overflow-hidden shadow-xl border border-[#D3AB5E]/20">
               <Image
-                src="/images/maza/menu/opt-maza-special-vertical.jpg"
-                alt="Mixed grill platter — Maza Special, Maza Mediterranean Cuisine Chandler AZ"
+                src="/images/maza/menu/opt-family-meal.jpg"
+                alt="Family Meal mixed grill platter — chicken tikka, lamb tikka, shish and kofta kebabs over rice, Maza Mediterranean Cuisine Chandler AZ"
                 fill
                 priority
-                sizes="(max-width: 640px) 100vw, 448px"
+                sizes="(max-width: 672px) 100vw, 672px"
                 className="object-cover"
               />
             </div>
