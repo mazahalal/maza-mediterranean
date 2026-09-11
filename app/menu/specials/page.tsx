@@ -1,5 +1,6 @@
 import CategoryTracker from "@/components/CategoryTracker";
-import { menuData } from "@/data/menu"
+import { menuData } from "@/data/menu";
+import { buildMenuJsonLd, SITE } from "@/lib/menu-schema";
 
 export const metadata = {
   alternates: { canonical: "https://mazahalalfood.com/menu/specials" },
@@ -9,9 +10,20 @@ export const metadata = {
 
 const specials = menuData.find(c => c.category === "Specials")
 
+const specialsJsonLd = buildMenuJsonLd(specials ? [specials] : [], {
+  url: `${SITE}/menu/specials`,
+  name: "Maza Mediterranean Cuisine | Specials Menu",
+  description: "Signature family platters and house specials, made for sharing. Halal-certified Mediterranean food in Chandler, AZ.",
+});
+
 export default function SpecialsPage() {
   return (
-    <div className="py-16 px-4">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(specialsJsonLd) }}
+      />
+      <div className="py-16 px-4">
       <CategoryTracker category="specials" />
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
@@ -49,6 +61,7 @@ export default function SpecialsPage() {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   )
 }

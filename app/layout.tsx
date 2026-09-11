@@ -5,7 +5,8 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingOrderButton from "@/components/FloatingOrderButton";
-import { MAZA_GOOGLE_MAPS_URL, MAZA_GEO } from "@/lib/maza-maps";
+import { MAZA_GEO } from "@/lib/maza-maps";
+import { MAZA_SAME_AS } from "@/lib/maza-profiles";
 
 const cinzel = Cinzel({
   variable: "--font-cinzel",
@@ -58,7 +59,6 @@ export default function RootLayout({
                 addressCountry: "US",
               },
               telephone: "(480) 534-6550",
-              openingHours: "Mo closed; Tu-Su 10:00-22:00",
               openingHoursSpecification: [
                 {
                   "@type": "OpeningHoursSpecification",
@@ -79,7 +79,17 @@ export default function RootLayout({
               priceRange: "$$",
               servesCuisine: ["Mediterranean", "Middle Eastern", "Halal"],
               hasMenu: "https://mazahalalfood.com/menu",
-              sameAs: [MAZA_GOOGLE_MAPS_URL],
+              sameAs: MAZA_SAME_AS,
+              // Verified against the Google Business Profile place page for
+              // Maza | Mediterranean Cuisine (3491 W Frye Rd Ste 2) on 2026-09-11:
+              // 4.9 average, 100 reviews.
+              aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: "4.9",
+                reviewCount: "100",
+                bestRating: "5",
+                worstRating: "1",
+              },
               geo: {
                 "@type": "GeoCoordinates",
                 latitude: MAZA_GEO.latitude,
@@ -108,28 +118,6 @@ export default function RootLayout({
                 "target": "https://mazahalalfood.com/contact",
                 "name": "Make a reservation or catering inquiry"
               }
-            }),
-          }}
-        />
-
-        {/* MAZ-34 Data Hook — Dataset for agent/LLM extraction (Authenticity Update) */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Dataset",
-              name: "Maza Mediterranean Cuisine Menu & Service Data",
-              description: "Real menu items, pricing, and local service facts for Chandler, AZ Mediterranean restaurant. 20+ authentic wraps, plates, and platters. Halal-certified. Open Tuesday–Sunday 10am–10pm. Closed Mondays.",
-              url: "https://mazahalalfood.com/menu",
-              variableMeasured: ["Menu Items", "Pricing", "Service Area"],
-              citation: "https://mazahalalfood.com",
-              isAccessibleForFree: true,
-              creator: {
-                "@type": "Organization",
-                name: "Maza Mediterranean Cuisine"
-              },
-              license: "https://creativecommons.org/licenses/by/4.0/"
             }),
           }}
         />
