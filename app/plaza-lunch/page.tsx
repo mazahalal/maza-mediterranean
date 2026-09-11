@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PhoneLink from "@/components/PhoneLink";
 import MapEmbed from "@/components/MapEmbed";
-import { MAZA_GOOGLE_MAPS_URL } from "@/lib/maza-maps";
+import { MAZA_GOOGLE_MAPS_URL, MAZA_APPLE_MAPS_URL } from "@/lib/maza-maps";
 import { menuData } from "@/data/menu";
+import WrapGallery from "./WrapGallery";
 
 /**
  * Plaza Lunch Club — /plaza-lunch
@@ -153,32 +154,10 @@ export default function PlazaLunchPage() {
         </section>
 
         {/* ── Wrap gallery ───────────────────────────────────────────── */}
-        {WRAP_GALLERY.length > 0 && (
-          <section className="mb-10">
-            <SectionHeading>WRAP GALLERY</SectionHeading>
-            <div className="-mx-5 flex snap-x snap-mandatory gap-3 overflow-x-auto px-5 pb-2">
-              {WRAP_GALLERY.map((wrap) => (
-                <figure key={wrap.name} className="w-[150px] shrink-0 snap-start">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={wrap.image}
-                    alt={`${wrap.name} at Maza Mediterranean Cuisine`}
-                    width={900}
-                    height={1600}
-                    loading="lazy"
-                    className="aspect-[9/16] w-full rounded-lg border border-[#D3AB5E]/30 object-cover"
-                  />
-                  <figcaption className="mt-2 text-[11px] leading-snug text-[#B8B8B8]">
-                    {wrap.name}
-                  </figcaption>
-                </figure>
-              ))}
-            </div>
-            <p className="mt-3 text-[11px] tracking-[2px] text-[#B8B8B8]/70">
-              SWIPE FOR MORE →
-            </p>
-          </section>
-        )}
+        <section className="mb-10">
+          <SectionHeading>WRAP GALLERY</SectionHeading>
+          <WrapGallery wraps={WRAP_GALLERY} />
+        </section>
 
         {/* ── Exclusions ─────────────────────────────────────────────── */}
         <section className="mb-10">
@@ -203,34 +182,52 @@ export default function PlazaLunchPage() {
             <p className="mt-3 text-sm text-[#B8B8B8]">
               Open Tuesday–Sunday 10am–10pm. Closed Mondays.
             </p>
-            <a
-              href={MAZA_GOOGLE_MAPS_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-5 flex w-full items-center justify-center gap-2 rounded-full border border-[#D3AB5E]/50 py-3 text-sm font-medium tracking-wide text-[#D3AB5E] transition-colors hover:bg-[#D3AB5E] hover:text-[#0A1F1E]"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+            <div className="mt-5 grid grid-cols-2 gap-3">
+              <a
+                href={MAZA_GOOGLE_MAPS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex w-full items-center justify-center gap-2 rounded-full border border-[#D3AB5E]/50 py-3 text-sm font-medium tracking-wide text-[#D3AB5E] transition-colors hover:bg-[#D3AB5E] hover:text-[#0A1F1E]"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                />
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                />
-              </svg>
-              Get Directions
-            </a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-4 w-4 shrink-0"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                </svg>
+                Google Maps
+              </a>
+              <a
+                href={MAZA_APPLE_MAPS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex w-full items-center justify-center gap-2 rounded-full border border-[#D3AB5E]/50 py-3 text-sm font-medium tracking-wide text-[#D3AB5E] transition-colors hover:bg-[#D3AB5E] hover:text-[#0A1F1E]"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-4 w-4 shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                </svg>
+                Apple Maps
+              </a>
+            </div>
             <MapEmbed className="mt-4" />
           </div>
         </section>
