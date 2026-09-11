@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PhoneLink from "@/components/PhoneLink";
+import MapEmbed from "@/components/MapEmbed";
 import { MAZA_GOOGLE_MAPS_URL } from "@/lib/maza-maps";
+import { menuData } from "@/data/menu";
 
 /**
  * Plaza Lunch Club — /plaza-lunch
@@ -42,6 +44,17 @@ const WRAPS = [
   "Shredded Chicken Wrap",
   "Shredded Steak Wrap",
 ];
+
+/**
+ * Wrap photography for the gallery — only the wraps that actually have a photo
+ * in data/menu.ts (kept in sync with menu.json / the menu pages). Wraps without
+ * a shot are simply absent rather than shown with a stand-in.
+ */
+const WRAP_GALLERY: { name: string; image: string }[] = (
+  menuData.find((category) => category.category === "Wraps")?.items ?? []
+).flatMap((item) =>
+  item.image ? [{ name: item.name, image: item.image }] : [],
+);
 
 function SectionHeading({ children }: { children: React.ReactNode }) {
   return (
@@ -139,6 +152,34 @@ export default function PlazaLunchPage() {
           </div>
         </section>
 
+        {/* ── Wrap gallery ───────────────────────────────────────────── */}
+        {WRAP_GALLERY.length > 0 && (
+          <section className="mb-10">
+            <SectionHeading>WRAP GALLERY</SectionHeading>
+            <div className="-mx-5 flex snap-x snap-mandatory gap-3 overflow-x-auto px-5 pb-2">
+              {WRAP_GALLERY.map((wrap) => (
+                <figure key={wrap.name} className="w-[150px] shrink-0 snap-start">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={wrap.image}
+                    alt={`${wrap.name} at Maza Mediterranean Cuisine`}
+                    width={900}
+                    height={1600}
+                    loading="lazy"
+                    className="aspect-[9/16] w-full rounded-lg border border-[#D3AB5E]/30 object-cover"
+                  />
+                  <figcaption className="mt-2 text-[11px] leading-snug text-[#B8B8B8]">
+                    {wrap.name}
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+            <p className="mt-3 text-[11px] tracking-[2px] text-[#B8B8B8]/70">
+              SWIPE FOR MORE →
+            </p>
+          </section>
+        )}
+
         {/* ── Exclusions ─────────────────────────────────────────────── */}
         <section className="mb-10">
           <h2 className="font-display text-[11px] tracking-[3px] text-[#D3AB5E]/70 mb-2">
@@ -190,6 +231,7 @@ export default function PlazaLunchPage() {
               </svg>
               Get Directions
             </a>
+            <MapEmbed className="mt-4" />
           </div>
         </section>
 
@@ -201,11 +243,12 @@ export default function PlazaLunchPage() {
               Text JOIN for more offers
             </div>
           </Link>
-          <p className="text-center text-sm text-[#B8B8B8]">
-            <Link href="/menu" className="text-[#D3AB5E] hover:underline">
-              See the full menu →
-            </Link>
-          </p>
+          <Link
+            href="/menu"
+            className="flex w-full items-center justify-center gap-2 rounded-full border border-[#D3AB5E]/50 py-4 text-base font-medium tracking-wide text-[#D3AB5E] transition-colors hover:bg-[#D3AB5E] hover:text-[#0A1F1E]"
+          >
+            See the Full Menu
+          </Link>
         </section>
       </div>
     </div>
