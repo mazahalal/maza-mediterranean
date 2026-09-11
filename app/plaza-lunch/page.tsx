@@ -115,52 +115,6 @@ export default function PlazaLunchPage() {
           </div>
         </section>
 
-        {/* ── Who qualifies ──────────────────────────────────────────── */}
-        <section className="mb-10">
-          <SectionHeading>WHO QUALIFIES</SectionHeading>
-          <div className={CARD}>
-            <p className="text-[15px] leading-relaxed text-[#F5F1E8]">
-              Managers and employees who work in the plaza or at nearby
-              businesses.
-            </p>
-            <p className="mt-3 text-sm text-[#B8B8B8]">
-              One $10 wrap per person, per visit.
-            </p>
-          </div>
-        </section>
-
-        {/* ── The wraps ──────────────────────────────────────────────── */}
-        <section className="mb-10">
-          <SectionHeading>THE WRAPS</SectionHeading>
-          <div className={CARD}>
-            <ul>
-              {WRAPS.map((wrap) => (
-                <li
-                  key={wrap}
-                  className="flex items-center gap-3 border-b border-[#D3AB5E]/15 py-2.5 last:border-b-0 last:pb-0 first:pt-0"
-                >
-                  <span className="text-[#D3AB5E]">▪</span>
-                  <span className="text-[15px] text-[#F5F1E8]">{wrap}</span>
-                </li>
-              ))}
-            </ul>
-            <p className="mt-5 border-l-2 border-[#D3AB5E] pl-3 text-sm text-[#E9C87B]">
-              Burgers and sandwiches are in the deal too.
-            </p>
-          </div>
-        </section>
-
-        {/* ── Exclusions ─────────────────────────────────────────────── */}
-        <section className="mb-10">
-          <h2 className="font-display text-[11px] tracking-[3px] text-[#D3AB5E]/70 mb-2">
-            EXCLUSIONS
-          </h2>
-          <p className="text-xs leading-relaxed text-[#B8B8B8]/75">
-            Plates and sides are not included. Dine-in or to-go. Not valid with
-            other offers.
-          </p>
-        </section>
-
         {/* ── Find us ────────────────────────────────────────────────── */}
         <section className="mb-10">
           <SectionHeading>FIND US</SectionHeading>
@@ -221,6 +175,52 @@ export default function PlazaLunchPage() {
             </div>
             <MapEmbed className="mt-4" />
           </div>
+        </section>
+
+        {/* ── Who qualifies ──────────────────────────────────────────── */}
+        <section className="mb-10">
+          <SectionHeading>WHO QUALIFIES</SectionHeading>
+          <div className={CARD}>
+            <p className="text-[15px] leading-relaxed text-[#F5F1E8]">
+              Managers and employees who work in the plaza or at nearby
+              businesses.
+            </p>
+            <p className="mt-3 text-sm text-[#B8B8B8]">
+              One $10 wrap per person, per visit.
+            </p>
+          </div>
+        </section>
+
+        {/* ── The wraps ──────────────────────────────────────────────── */}
+        <section className="mb-10">
+          <SectionHeading>THE WRAPS</SectionHeading>
+          <div className={CARD}>
+            <ul>
+              {WRAPS.map((wrap) => (
+                <li
+                  key={wrap}
+                  className="flex items-center gap-3 border-b border-[#D3AB5E]/15 py-2.5 last:border-b-0 last:pb-0 first:pt-0"
+                >
+                  <span className="text-[#D3AB5E]">▪</span>
+                  <span className="text-[15px] text-[#F5F1E8]">{wrap}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-5 border-l-2 border-[#D3AB5E] pl-3 text-sm text-[#E9C87B]">
+              Burgers and sandwiches are in the deal too.
+            </p>
+          </div>
+        </section>
+
+        {/* ── Exclusions ─────────────────────────────────────────────── */}
+        <section className="mb-10">
+          <h2 className="font-display text-[11px] tracking-[3px] text-[#D3AB5E]/70 mb-2">
+            EXCLUSIONS
+          </h2>
+          <p className="text-xs leading-relaxed text-[#B8B8B8]/75">
+            Plates and sides are not included. Dine-in or to-go. Not valid with
+            other offers.
+          </p>
         </section>
 
         {/* ── Joins ──────────────────────────────────────────────────── */}
