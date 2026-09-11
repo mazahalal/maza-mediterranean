@@ -68,8 +68,8 @@ const STEPS: { title: string; body: string }[] = [
 
 export default function CateringPage() {
   return (
-    <div className="min-h-[100dvh] bg-[#0A1F1E] text-[#F5F1E8] px-5 py-10">
-      <div className="mx-auto w-full max-w-md">
+    <div className="min-h-[100dvh] bg-[#0A1F1E] text-[#F5F1E8] pb-10">
+      <div className="mx-auto w-full max-w-md px-5 pt-10">
         {/* Above the fold */}
         <header className="text-center mb-8">
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -108,7 +108,22 @@ export default function CateringPage() {
             Call (480) 534-6550
           </PhoneLink>
         </div>
+      </div>
 
+      {/* Hero photo — full-bleed band, natural 16:9, no vertical crop */}
+      <figure className="my-10">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/images/maza/catering-hero-shish-grill.webp"
+          alt="Shish kebabs over open flame on the Maza grill"
+          width={1920}
+          height={1080}
+          decoding="async"
+          className="mx-auto block h-auto w-full max-w-5xl"
+        />
+      </figure>
+
+      <div className="mx-auto w-full max-w-md px-5">
         {/* Build your order */}
         <section className="mb-10">
           <SectionHeading>BUILD YOUR ORDER</SectionHeading>
