@@ -206,9 +206,25 @@
       ],
       "specials": {
         "title": "Specials",
-        "hero": [
-          "Specials",
-          "Maza Special"
+        "_rotate_note": "Hero rotates through `slides` (one per special, in the same order as `items`); the matching item row highlights in sync. Photos resolve from photo-map.json, so adding a special = add the ref here + a photo-map key. rotate_ms controls the interval.",
+        "rotate_ms": 6000,
+        "slides": [
+          [
+            "Specials",
+            "Tepsi Baytinijan"
+          ],
+          [
+            "Specials",
+            "Family Meal"
+          ],
+          [
+            "Specials",
+            "Maza Special"
+          ],
+          [
+            "Specials",
+            "Samak Tandoor"
+          ]
         ],
         "items": [
           [
