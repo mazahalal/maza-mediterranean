@@ -28,6 +28,7 @@ export interface Subscriber {
 const SUBSCRIBER_PREFIX = 'subscriber:';
 const SET_ALL = 'subscribers:all';
 const SET_OPTED_IN = 'subscribers:opted_in';
+const SET_PENDING = 'subscribers:pending';
 
 // Compliance keywords (Twilio auto-handles STOP/UNSTOP on messaging services,
 // but we still record for audit and handle JOIN which is custom)
@@ -110,6 +111,9 @@ export async function addSubscriber(phone: string, source: string = 'sms'): Prom
   await kv.set(key, subscriber);
   await kv.sadd(SET_ALL, phone);
   await kv.sadd(SET_OPTED_IN, phone);
+  // A number that has now opted in must not linger on the imported pending
+  // list, or a later re-permission pass could text them a second time.
+  await kv.srem(SET_PENDING, phone);
 
   return { created: true, subscriber };
 }
