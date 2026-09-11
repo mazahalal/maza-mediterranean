@@ -51,6 +51,47 @@ export async function sendContactEmail({
   });
 }
 
+export type CateringRequestPayload = {
+  name: string;
+  organization?: string;
+  email: string;
+  phone: string;
+  eventDate: string;
+  headcount: string;
+  items: string;
+  fulfillment: string;
+  notes?: string;
+};
+
+export async function sendCateringRequestEmail(data: CateringRequestPayload) {
+  const resend = getResend();
+
+  return resend.emails.send({
+    from: 'Maza Catering <hello@mazahalalfood.com>',
+    to: ['info@mazahalalfood.com'],
+    replyTo: data.email,
+    subject: `New Catering Request: ${data.name} — ${data.eventDate}`,
+    html: `
+      <div style="font-family:Arial,sans-serif;color:#111;line-height:1.45;">
+        <h2 style="margin:0 0 12px;">New Catering Request</h2>
+        <p style="margin:0 0 16px;color:#444;">Submitted via mazahalalfood.com/catering</p>
+        <h3 style="margin:20px 0 8px;border-bottom:1px solid #ddd;padding-bottom:4px;">Contact</h3>
+        ${line('Name', data.name)}
+        ${line('Business or organization', data.organization)}
+        ${line('Email', data.email)}
+        ${line('Phone', data.phone)}
+        <h3 style="margin:20px 0 8px;border-bottom:1px solid #ddd;padding-bottom:4px;">Event</h3>
+        ${line('Event date', data.eventDate)}
+        ${line('Headcount', data.headcount)}
+        ${line('Pickup or delivery', data.fulfillment)}
+        <h3 style="margin:20px 0 8px;border-bottom:1px solid #ddd;padding-bottom:4px;">Order</h3>
+        ${block('Items and quantities', data.items)}
+        ${block('Notes', data.notes)}
+      </div>
+    `,
+  });
+}
+
 export type EmploymentApplicationPayload = {
   fullName: string;
   phone: string;
