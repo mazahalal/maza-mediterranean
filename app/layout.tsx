@@ -55,6 +55,9 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Restaurant",
+              // Stable entity id — page-level JSON-LD (offering + neighborhood
+              // landing pages) references this node instead of re-declaring it.
+              "@id": "https://mazahalalfood.com/#restaurant",
               name: "Maza Mediterranean Cuisine",
               address: {
                 "@type": "PostalAddress",
