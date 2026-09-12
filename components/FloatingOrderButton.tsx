@@ -1,10 +1,15 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { TAKEOUT_URL } from "@/lib/ordering";
 
+/** Staff-only surfaces where a floating takeout CTA does not belong. */
+const STAFF_SURFACES = ["/review-request"];
+
 export default function FloatingOrderButton() {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -23,6 +28,9 @@ export default function FloatingOrderButton() {
       document.removeEventListener("keydown", onKey);
     };
   }, [open]);
+
+  // Staff surfaces: no floating ordering CTA over the register form.
+  if (STAFF_SURFACES.includes(pathname)) return null;
 
   return (
     <div ref={ref} className="fixed bottom-5 right-5 z-50 flex flex-col items-end gap-3">
