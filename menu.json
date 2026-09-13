@@ -201,7 +201,7 @@
           "name": "Tepsi Baytinijan",
           "price": "$20.00",
           "notes": [
-            "Iraqi eggplant casserole \u2014 eggplant, potato, tomato, onion + seasoned meat, served over rice"
+            "Iraqi eggplant casserole — eggplant, potato, tomato, onion + seasoned meat, served over rice"
           ]
         },
         {
@@ -249,12 +249,12 @@
         {
           "name": "Crispy Chicken Sandwich",
           "price": "$11.85",
-          "note": "Kids Meal \u2014 Comes with Fries"
+          "note": "Kids Meal — Comes with Fries"
         },
         {
           "name": "All Beef Burger",
           "price": "$11.85",
-          "note": "Kids Meal \u2014 Comes with Fries"
+          "note": "Kids Meal — Comes with Fries"
         }
       ]
     },
@@ -287,10 +287,6 @@
         },
         {
           "name": "Tzatziki",
-          "price": "SM $1.99 | LG $4.99"
-        },
-        {
-          "name": "Muhammara",
           "price": "SM $1.99 | LG $4.99"
         },
         {
@@ -426,12 +422,12 @@
     },
     {
       "name": "Sharbat",
-      "subtitle": "House-made \u00b7 no refill",
+      "subtitle": "House-made · no refill",
       "items": [
         {
           "name": "Daily Selection",
           "price": "SM $1.99 | LG $3.99",
-          "note": "SM 12oz \u00b7 LG 24oz"
+          "note": "SM 12oz · LG 24oz"
         }
       ]
     }
