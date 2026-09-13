@@ -108,7 +108,6 @@ export const menuData: MenuCategory[] = [
       { name: "Pita", price: "$1.25" },
       { name: "Rice", price: "$3.99" },
       { name: "Tzatziki", price: "SM $1.99 | LG $4.99" },
-      { name: "Muhammara", price: "SM $1.99 | LG $4.99" },
       { name: "Baba Ghanoush", price: "SM $1.99 | LG $4.99" },
       { name: "Sambusah (2pc)", price: "$9.49", image: "/images/maza/menu/opt-sambusah-vertical.jpg" },
       { name: "Tabouleh", price: "$4.99", image: "/images/maza/menu/opt-tabouleh.jpg" },
