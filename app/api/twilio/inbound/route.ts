@@ -22,6 +22,7 @@ import {
   removeSubscriber,
   validateTwilioSignature,
   WELCOME_MESSAGE,
+  ALREADY_SUBSCRIBED_MESSAGE,
 } from '@/lib/twilio-sms';
 
 function parseFormBody(rawBody: string): Record<string, string> {
@@ -86,9 +87,7 @@ export async function POST(req: NextRequest) {
     case 'JOIN':
     case 'UNSTOP': {
       const { created } = await addSubscriber(normalizedPhone, 'sms');
-      const message = created
-        ? WELCOME_MESSAGE
-        : 'You are already on the MAZA list! Show this text at checkout for 15% off your next visit. Reply STOP to unsubscribe. Reply HELP for info. Msg&data rates may apply.';
+      const message = created ? WELCOME_MESSAGE : ALREADY_SUBSCRIBED_MESSAGE;
       return twimlResponse(`<Response><Message>${escapeXml(message)}</Message></Response>`);
     }
 
@@ -99,15 +98,13 @@ export async function POST(req: NextRequest) {
 
     case 'HELP': {
       const helpMessage =
-        'MAZA Mediterranean SMS: Get deals & updates. Msg&data rates may apply. 4 msgs/mo. Reply STOP to unsubscribe, HELP for help. Contact: 480-534-6550';
+        'MAZA Mediterranean SMS: Get deals & updates. Msg&data rates may apply. 4 msgs/mo. Reply STOP to unsubscribe, HELP for help. Menu: https://mazahalalfood.com Contact: 480-534-6550';
       return twimlResponse(`<Response><Message>${escapeXml(helpMessage)}</Message></Response>`);
     }
 
     default: {
       const { created } = await addSubscriber(normalizedPhone, 'sms');
-      const message = created
-        ? 'Welcome to MAZA Mediterranean! Show this text at checkout for 15% off your next visit. Reply STOP to unsubscribe. Reply HELP for info.'
-        : 'You are already on the MAZA list! Reply STOP to unsubscribe, HELP for help.';
+      const message = created ? WELCOME_MESSAGE : ALREADY_SUBSCRIBED_MESSAGE;
       return twimlResponse(`<Response><Message>${escapeXml(message)}</Message></Response>`);
     }
   }

@@ -207,9 +207,14 @@ export function validateTwilioSignature(
  * Both opt-in paths must send the same wording: the inbound JOIN keyword
  * handler (Twilio webhook) and the web form (`/api/sms/subscribe`). The
  * confirmation text IS the 15% off coupon, so it has to arrive on both paths.
+ * Also invites them to the site menu URL on every first join.
  */
 export const WELCOME_MESSAGE =
-  'Welcome to MAZA Mediterranean! Show this text at checkout for 15% off your next visit. Reply STOP to unsubscribe. Reply HELP for info. Msg&data rates may apply.';
+  'Welcome to MAZA Mediterranean! Show this text at checkout for 15% off your next visit. Check out our menu at https://mazahalalfood.com Reply STOP to unsubscribe. Reply HELP for info. Msg&data rates may apply.';
+
+/** Repeat JOIN / already-on-list reply — same coupon + site invite, no second “Welcome”. */
+export const ALREADY_SUBSCRIBED_MESSAGE =
+  'You are already on the MAZA list! Show this text at checkout for 15% off your next visit. Check out our menu at https://mazahalalfood.com Reply STOP to unsubscribe. Reply HELP for info. Msg&data rates may apply.';
 
 /**
  * Send an SMS through the Maza Messaging Service.
