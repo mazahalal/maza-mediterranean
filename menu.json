@@ -4,9 +4,10 @@
       "name": "Wraps",
       "items": [
         {
-          "name": "Beef Gyro",
+          "name": "Beef + Lamb Gyro",
           "price": "$10.91",
           "notes": [
+            "Beef + lamb, same blend as our shish kebab",
             "Served on pita or as a wrap"
           ]
         },
