@@ -93,6 +93,64 @@
   .specials-items .tv-item .name { font-size: 24px; }
   .specials-items .tv-item .price { font-size: 24px; }
   .specials-items .tv-note { font-size: 15.5px; line-height: 1.45; }
+
+  /* Weekend flash special row + hero */
+  .specials-items .spec-item.is-flash {
+    opacity: 1;
+    border: 2px solid var(--gold);
+    border-left-width: 5px;
+    border-radius: 8px;
+    padding: 10px 12px 10px 14px;
+    margin: 4px 0;
+    background: linear-gradient(90deg, rgba(211,171,94,.28), rgba(211,171,94,.06) 75%, transparent);
+    box-shadow: 0 0 20px rgba(211,171,94,.3);
+    position: relative;
+  }
+  .specials-items .spec-item.is-flash .flash-badge {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: #0A1F1E;
+    background: var(--gold);
+    padding: 2px 9px;
+    border-radius: 3px;
+    margin-bottom: 4px;
+  }
+  .specials-items .spec-item.is-flash .name { color: var(--gold-light); font-weight: 600; }
+  .specials-items .spec-item.is-flash .price-stack {
+    display: flex; flex-direction: column; align-items: flex-end; line-height: 1.05;
+  }
+  .specials-items .spec-item.is-flash .price-sale {
+    font-size: 28px; font-weight: 700; color: var(--gold);
+  }
+  .specials-items .spec-item.is-flash .price-was {
+    font-size: 15px; color: rgba(245,241,232,.55); text-decoration: line-through;
+  }
+  .specials-slide.is-flash .card-detail {
+    background: linear-gradient(180deg, rgba(211,171,94,.25), rgba(10,31,30,.95));
+  }
+  .specials-slide.is-flash {
+    box-shadow: 0 0 24px rgba(211,171,94,.45);
+    border-radius: 8px;
+  }
+  .specials-slide.is-flash .flash-ribbon {
+    position: absolute; top: 12px; left: 0; z-index: 3;
+    font-family: var(--font-display);
+    font-size: 14px; font-weight: 700; letter-spacing: .12em;
+    text-transform: uppercase;
+    color: #0A1F1E; background: var(--gold);
+    padding: 7px 16px; border-radius: 0 6px 6px 0;
+    box-shadow: 0 2px 12px rgba(0,0,0,.4);
+  }
+  .specials-slide.is-flash .price-stack {
+    display: flex; flex-direction: column; align-items: flex-end; line-height: 1.05;
+  }
+  .specials-slide.is-flash .price-sale { font-size: 26px; font-weight: 700; color: var(--gold); }
+  .specials-slide.is-flash .price-was { font-size: 14px; color: rgba(245,241,232,.55); text-decoration: line-through; }
+  .specials-hero { position: relative; }
 </style>
 </head>
 <body>
@@ -142,12 +200,20 @@
           <div class="specials-hero">
             {% if s.specials.slides %}
             {% for slide in s.specials.slides %}
-            <div class="specials-slide product-frame{% if loop.first %} active{% endif %}" data-i="{{ loop.index0 }}">
+            <div class="specials-slide product-frame{% if slide.is_flash %} is-flash{% endif %}{% if loop.first %} active{% endif %}" data-i="{{ loop.index0 }}">
+              {% if slide.is_flash %}<span class="flash-ribbon">{{ slide.flash_badge }}</span>{% endif %}
               <div class="photo-card"><img src="../photos/{{ slide.photo }}" alt="{{ slide.name }}"></div>
               <div class="card-detail">
                 <span class="card-name">{{ slide.name }}</span>
                 <span class="card-sep">❖</span>
+                {% if slide.is_flash %}
+                <span class="price-stack">
+                  <span class="price-sale">{{ slide.price }}</span>
+                  <span class="price-was">{{ slide.regular_price }}</span>
+                </span>
+                {% else %}
                 <span class="card-price">{{ slide.price }}</span>
+                {% endif %}
               </div>
             </div>
             {% endfor %}
@@ -164,11 +230,19 @@
           </div>
           <div class="specials-items">
             {% for item in s.specials["items"] %}
-            <div class="spec-item{% if loop.first %} highlight{% endif %}" data-i="{{ loop.index0 }}">
+            <div class="spec-item{% if item.is_flash %} is-flash{% endif %}{% if loop.first %} highlight{% endif %}" data-i="{{ loop.index0 }}">
+              {% if item.is_flash %}<span class="flash-badge">{{ item.flash_badge }}</span>{% endif %}
               <div class="tv-item">
                 <span class="name">{{ item.name }}</span>
                 <span class="dots"></span>
+                {% if item.is_flash %}
+                <span class="price-stack">
+                  <span class="price-sale">{{ item.price }}</span>
+                  <span class="price-was">{{ item.regular_price }}</span>
+                </span>
+                {% else %}
                 <span class="price">{{ item.price }}</span>
+                {% endif %}
               </div>
               {% for note in item.all_notes %}<p class="tv-note">{{ note }}</p>{% endfor %}
             </div>

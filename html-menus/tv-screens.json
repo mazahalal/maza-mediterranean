@@ -1,5 +1,5 @@
 {
-  "_comment": "TV screen definitions. Item refs are [Section, Item] pairs resolved from menu.json at build time \u2014 prices/notes always come from menu.json, never hardcoded here. Edit groupings/cards freely; text data stays in menu.json.",
+  "_comment": "TV screen definitions. Item refs are [Section, Item] pairs resolved from menu.json at build time — prices/notes always come from menu.json, never hardcoded here. Edit groupings/cards freely; text data stays in menu.json.",
   "screens": [
     {
       "id": "screen1-wraps",
@@ -207,8 +207,12 @@
       "specials": {
         "title": "Specials",
         "_rotate_note": "Hero rotates through `slides` (one per special, in the same order as `items`); the matching item row highlights in sync. Photos resolve from photo-map.json, so adding a special = add the ref here + a photo-map key. rotate_ms controls the interval.",
-        "rotate_ms": 6000,
+        "rotate_ms": 5000,
         "slides": [
+          [
+            "Wraps",
+            "Beef + Lamb Gyro"
+          ],
           [
             "Specials",
             "Tepsi Baytinijan"
@@ -227,6 +231,10 @@
           ]
         ],
         "items": [
+          [
+            "Wraps",
+            "Beef + Lamb Gyro"
+          ],
           [
             "Specials",
             "Tepsi Baytinijan"
@@ -414,17 +422,26 @@
         "desserts_title": "Desserts",
         "desserts_cards": [
           {
-            "ref": ["Baklava", "Cashew Baklava"],
+            "ref": [
+              "Baklava",
+              "Cashew Baklava"
+            ],
             "caption": "Cashew Baklava",
             "photo": "baklava-cashew-baklava.jpg"
           },
           {
-            "ref": ["Baklava", "Pistachio Baklava"],
+            "ref": [
+              "Baklava",
+              "Pistachio Baklava"
+            ],
             "caption": "Pistachio Baklava",
             "photo": "baklava-pistachio-baklava.jpg"
           },
           {
-            "ref": ["Kunāfah", "Kunāfah (Pistachio, 2pc)"],
+            "ref": [
+              "Kunāfah",
+              "Kunāfah (Pistachio, 2pc)"
+            ],
             "caption": "Kunāfah · Pistachio (2pc)",
             "photo": "kunafah-kunafah-pistachio-2pc.jpg"
           }
@@ -439,9 +456,18 @@
         "desserts": {
           "title": "Desserts",
           "items": [
-            ["Baklava", "Cashew Baklava"],
-            ["Baklava", "Pistachio Baklava"],
-            ["Kunāfah", "Kunāfah (Pistachio, 2pc)"]
+            [
+              "Baklava",
+              "Cashew Baklava"
+            ],
+            [
+              "Baklava",
+              "Pistachio Baklava"
+            ],
+            [
+              "Kunāfah",
+              "Kunāfah (Pistachio, 2pc)"
+            ]
           ]
         },
         "drinks": {
@@ -543,7 +569,6 @@
             "$2.49"
           ],
           "_ad_note": "8 x 3:1 drink ads, rotating carousel (no crop, 1920x640)"
-
         },
         "sharbat": {
           "section": "Sharbat"
@@ -554,6 +579,21 @@
           "_note": "transparent cut from OneDrive digital/reference/sharbat_three_cups_nobg_v1.png"
         }
       }
+    }
+  ],
+  "flash_specials": [
+    {
+      "ref": [
+        "Wraps",
+        "Beef + Lamb Gyro"
+      ],
+      "sale_price": "8",
+      "regular_price": "10.91",
+      "badge": "WEEKEND $8",
+      "note": "Fri–Sun only · was 10.91",
+      "starts_at": "2026-09-18T07:00:00Z",
+      "ends_at": "2026-09-21T05:00:00Z",
+      "_comment": "Remove after Sun close — build skips once ends_at passes"
     }
   ]
 }

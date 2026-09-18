@@ -186,9 +186,59 @@ def _resolve_node(node, item_index, section_index):
     return node
 
 
+def _apply_flash_specials(cfg: dict, item_index: dict) -> None:
+    """Time-boxed sale price + badge on resolved menu items (TV only).
+    flash_specials entries: {ref:[Section,Item], sale_price, badge?, ends_at ISO UTC}
+    Mutates item_index in place. Expired entries are no-ops.
+    """
+    from datetime import datetime, timezone
+    now = datetime.now(timezone.utc)
+    for flash in cfg.get("flash_specials") or []:
+        ref = flash.get("ref")
+        if not (isinstance(ref, list) and len(ref) == 2):
+            continue
+        key = (ref[0], ref[1])
+        if key not in item_index:
+            print(f"WARN flash_special unknown item: {key}")
+            continue
+        ends = flash.get("ends_at")
+        if ends:
+            try:
+                end_dt = datetime.fromisoformat(ends.replace("Z", "+00:00"))
+                if now >= end_dt:
+                    continue
+            except ValueError:
+                print(f"WARN flash_special bad ends_at: {ends}")
+                continue
+        starts = flash.get("starts_at")
+        if starts:
+            try:
+                start_dt = datetime.fromisoformat(starts.replace("Z", "+00:00"))
+                if now < start_dt:
+                    continue
+            except ValueError:
+                pass
+        it = dict(item_index[key])
+        regular = flash.get("regular_price") or it["price"]
+        sale = str(flash["sale_price"]).replace("$", "")
+        regular = str(regular).replace("$", "")
+        it["regular_price"] = regular
+        it["price"] = sale
+        it["is_flash"] = True
+        it["flash_badge"] = flash.get("badge") or "WEEKEND SPECIAL"
+        note = flash.get("note")
+        notes = list(it.get("all_notes") or [])
+        if note and note not in notes:
+            notes = [note] + notes
+        it["all_notes"] = notes
+        it["first_note"] = notes[0] if notes else it.get("first_note", "")
+        item_index[key] = it
+
+
 def build_tv(env: Environment, local_photos: dict) -> None:
     cfg = json.loads(TV_CONFIG.read_text())
     item_index, section_index = _menu_index(local_photos)
+    _apply_flash_specials(cfg, item_index)
     for screen in cfg["screens"]:
         resolved = _resolve_node(
             {k: v for k, v in screen.items() if k not in ("id", "template")},
