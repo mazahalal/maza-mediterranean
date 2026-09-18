@@ -18,7 +18,7 @@ export const menuData: MenuCategory[] = [
     category: "Wraps",
     subtitle: "Wrapped with hummus, tomato, onion, lettuce, pickle, and garlic sauce",
     items: [
-      { name: "Beef Gyro", price: "$10.91", image: "/images/maza/menu/opt-beef-gyro-vertical.jpg", notes: ["Served on pita or as a wrap"] },
+      { name: "Beef + Lamb Gyro", price: "$10.91", notes: ["Beef + lamb, same blend as our shish kebab", "Served on pita or as a wrap"] },
       { name: "Beef + Lamb Shish Kebab Wrap", price: "$12.99", image: "/images/maza/menu/opt-beef-shish-kebab-wrap-vertical.jpg" },
       { name: "Chicken Shish Kebab Wrap", price: "$12.99", image: "/images/maza/menu/opt-chicken-shish-kebab-wrap-vertical.jpg" },
       { name: "Chicken Tikka Wrap", price: "$11.43" },
