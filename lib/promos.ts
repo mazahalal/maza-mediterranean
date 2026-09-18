@@ -51,7 +51,7 @@ export const GYRO_WEEKEND_SPECIAL: ActivePromo = {
   itemName: "Beef + Lamb Gyro",
   salePrice: "$8",
   regularPrice: "$10.91",
-  blurb: "Our classic gyro — beef + lamb, same blend as the shish kebab. On pita or as a wrap",
+  blurb: "Beef + lamb gyro — served on pita or as a wrap",
   waitNote: "",
   orderAheadNote: "",
   whenLabel: "Friday–Sunday only",
@@ -77,5 +77,15 @@ export function getActiveHomepagePromo(
 ): ActivePromo | null {
   if (isPromoActive(GYRO_WEEKEND_SPECIAL, now)) return GYRO_WEEKEND_SPECIAL;
   if (isPromoActive(SAMAK_WEEKEND_SPECIAL, now)) return SAMAK_WEEKEND_SPECIAL;
+  return null;
+}
+
+/** Active flash sale for a specific menu item name, else null. */
+export function getActivePromoForItem(
+  itemName: string,
+  now: Date | number = Date.now(),
+): ActivePromo | null {
+  const promo = getActiveHomepagePromo(now);
+  if (promo && promo.itemName === itemName) return promo;
   return null;
 }

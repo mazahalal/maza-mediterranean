@@ -2,6 +2,7 @@ import { menuData } from "@/data/menu"
 import { buildMenuJsonLd, SITE } from "@/lib/menu-schema";
 
 import CategoryTracker from "@/components/CategoryTracker";
+import MenuItemPrice from "@/components/MenuItemPrice";
 
 export const metadata = {
   alternates: { canonical: "https://mazahalalfood.com/menu/wraps" },
@@ -41,7 +42,7 @@ export default function WrapsPage() {
             <div key={index} className="bg-[#0F2A28] border border-[#D3AB5E]/20 rounded-xl p-6 hover:border-[#D3AB5E]/40 transition-colors">
               <div className="flex justify-between items-start mb-3">
                 <h3 className="font-semibold text-xl text-[#F5F1E8]">{item.name}</h3>
-                <span className="font-mono text-[#D3AB5E] font-medium whitespace-nowrap">{item.price}</span>
+                <MenuItemPrice itemName={item.name} price={item.price} size="compact" />
               </div>
             </div>
           ))}

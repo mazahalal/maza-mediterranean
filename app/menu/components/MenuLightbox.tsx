@@ -5,6 +5,7 @@ import Image from "next/image";
 import { menuData, MenuItem } from "@/data/menu";
 import { trackMeta } from "@/lib/meta-pixel";
 import { categorySlug } from "./MenuCategoryNav";
+import MenuItemPrice from "@/components/MenuItemPrice";
 
 function menuAlt(item: MenuItem, section?: string): string {
   const cat = section ? ` (${section})` : "";
@@ -119,9 +120,7 @@ export default function MenuLightbox() {
                       <h3 className="font-display text-lg sm:text-xl text-[#F5F1E8] tracking-wide leading-snug">
                         {item.name}
                       </h3>
-                      <span className="text-[#D3AB5E] font-bold text-lg sm:text-xl shrink-0">
-                        {item.price}
-                      </span>
+                      <MenuItemPrice itemName={item.name} price={item.price} size="card" />
                     </div>
                     {item.description && (
                       <p className="text-[#B8B8B8] text-sm leading-relaxed">
@@ -181,9 +180,11 @@ export default function MenuLightbox() {
               <h3 className="font-display text-2xl text-[#F5F1E8] mb-1">
                 {currentItem.name}
               </h3>
-              <p className="text-[#D3AB5E] text-xl font-bold mb-2">
-                {currentItem.price}
-              </p>
+              <MenuItemPrice
+                itemName={currentItem.name}
+                price={currentItem.price}
+                size="lightbox"
+              />
               {currentItem.description && (
                 <p className="text-[#B8B8B8] max-w-md mx-auto text-sm sm:text-base">
                   {currentItem.description}
