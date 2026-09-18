@@ -54,7 +54,7 @@ const images = {
   'Shredded Steak Plate|Plates': '/images/maza/menu/opt-shredded-steak-plate.jpg',
 
   // --- Wraps (prefer verticals) ---
-  'Beef Gyro|Wraps': '/images/maza/menu/opt-beef-gyro-vertical.jpg',
+  'Beef + Lamb Gyro|Wraps': '/images/maza/menu/opt-beef-gyro-vertical.jpg',
   'Crispy Chicken Wrap|Wraps': '/images/maza/menu/opt-crispy-chicken-wrap.jpg',
   'Beef + Lamb Shish Kebab Wrap|Wraps': '/images/maza/menu/opt-beef-shish-kebab-wrap-vertical.jpg',
   'Chicken Shish Kebab Wrap|Wraps': '/images/maza/menu/opt-chicken-shish-kebab-wrap-vertical.jpg',
