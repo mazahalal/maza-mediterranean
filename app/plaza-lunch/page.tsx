@@ -33,7 +33,7 @@ const STEPS = [
 
 /** The 11 wraps that qualify. Source of truth: menu.json (Wraps category). */
 const WRAPS = [
-  "Beef Gyro",
+  "Beef + Lamb Gyro",
   "Beef + Lamb Shish Kebab Wrap",
   "Chicken Shish Kebab Wrap",
   "Chicken Tikka Wrap",

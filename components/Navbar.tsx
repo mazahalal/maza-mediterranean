@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import LogoLockup from "./LogoLockup";
 import DeliveryIcon from "./DeliveryIcon";
+import HeaderPromo from "./HeaderPromo";
 import { TAKEOUT_URL, deliveryUrl } from "@/lib/ordering";
 
 const navLinks = [
@@ -31,7 +32,9 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav id="site-navbar" className="sticky top-0 z-50 bg-[#0A1F1E]/95 backdrop-blur-md border-b border-[rgba(211,171,94,0.2)]">
+    <div className="sticky top-0 z-50">
+      <HeaderPromo />
+    <nav id="site-navbar" className="bg-[#0A1F1E]/95 backdrop-blur-md border-b border-[rgba(211,171,94,0.2)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-5 flex items-center justify-between gap-3">
         <LogoLockup />
 
@@ -117,5 +120,6 @@ export default function Navbar() {
         </div>
       )}
     </nav>
+    </div>
   );
 }

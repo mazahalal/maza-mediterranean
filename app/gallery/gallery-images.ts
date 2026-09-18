@@ -12,7 +12,7 @@ const ambiance: GalleryImage[] = [
 
 // Dish photography (mirrors menu item images)
 const dishes: GalleryImage[] = [
-  { src: "/images/maza/menu/opt-beef-gyro.jpg", alt: "Beef Gyro wrap" },
+  { src: "/images/maza/menu/opt-beef-gyro.jpg", alt: "Beef + Lamb Gyro on pita" },
   { src: "/images/maza/menu/opt-beef-lamb-shish-wrap.jpg", alt: "Beef + Lamb Shish Kebab wrap" },
   { src: "/images/maza/menu/opt-crispy-chicken-wrap.jpg", alt: "Crispy Chicken wrap" },
   { src: "/images/maza/menu/opt-beef-shish-plate.jpg", alt: "Beef + Lamb Shish Kebab plate" },

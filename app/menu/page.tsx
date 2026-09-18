@@ -3,10 +3,13 @@ import { metadata } from "./metadata";
 import MenuLightbox from "./components/MenuLightbox";
 import MenuCategoryNav from "./components/MenuCategoryNav";
 import MenuTracker from "@/components/MenuTracker";
+import SamakWeekendBanner from "@/components/SamakWeekendBanner";
+import SamakWeekendPopup from "@/components/SamakWeekendPopup";
 import { menuData } from "@/data/menu";
 import { buildMenuJsonLd, SITE } from "@/lib/menu-schema";
 import DeliveryIcon from "@/components/DeliveryIcon";
 import { TAKEOUT_URL, deliveryUrl } from "@/lib/ordering";
+import { getActiveHomepagePromo } from "@/lib/promos";
 
 export { metadata };
 
@@ -15,12 +18,20 @@ export { metadata };
 const menuJsonLd = buildMenuJsonLd(menuData, { url: `${SITE}/menu` });
 
 export default function MenuPage() {
+  const promo = getActiveHomepagePromo();
+  const heroSrc = promo?.imageSrc ?? "/images/maza/menu/opt-family-meal.jpg";
+  const heroAlt = promo
+    ? promo.imageAlt
+    : "Family Meal mixed grill platter — chicken tikka, lamb tikka, shish and kofta kebabs over rice, Maza Mediterranean Cuisine Chandler AZ";
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(menuJsonLd) }}
       />
+      <SamakWeekendPopup />
+      <SamakWeekendBanner />
       <div className="py-16 px-4">
         <MenuTracker />
         <div className="max-w-6xl mx-auto">
@@ -33,10 +44,10 @@ export default function MenuPage() {
               &amp; more. Big portions, real ingredients, honest prices.
               Mediterranean food Chandler AZ.
             </p>
-            <div className="mt-8 mb-4 relative w-full max-w-2xl mx-auto aspect-[1195/896] rounded-xl overflow-hidden shadow-xl border border-[#D3AB5E]/20">
+            <div className="mt-8 mb-4 relative w-full max-w-2xl mx-auto aspect-[16/10] rounded-xl overflow-hidden shadow-xl border border-[#D3AB5E]/20">
               <Image
-                src="/images/maza/menu/opt-family-meal.jpg"
-                alt="Family Meal mixed grill platter — chicken tikka, lamb tikka, shish and kofta kebabs over rice, Maza Mediterranean Cuisine Chandler AZ"
+                src={heroSrc}
+                alt={heroAlt}
                 fill
                 priority
                 sizes="(max-width: 672px) 100vw, 672px"
