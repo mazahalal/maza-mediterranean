@@ -4,25 +4,21 @@ import Image from "next/image";
 import { useEffect, useId, useState } from "react";
 import { TAKEOUT_URL } from "@/lib/ordering";
 import {
-  SAMAK_WEEKEND_SPECIAL,
-  isPromoActive,
+  getActiveHomepagePromo,
   type ActivePromo,
 } from "@/lib/promos";
 import PhoneLink from "@/components/PhoneLink";
 
-const STORAGE_KEY = "maza-promo-dismissed:samak-weekend-2026-08-22";
-
 export default function SamakWeekendPopup() {
   const titleId = useId();
   const [open, setOpen] = useState(false);
-  const [promo] = useState<ActivePromo | null>(() =>
-    isPromoActive(SAMAK_WEEKEND_SPECIAL) ? SAMAK_WEEKEND_SPECIAL : null,
-  );
+  const [promo] = useState<ActivePromo | null>(() => getActiveHomepagePromo());
 
   useEffect(() => {
     if (!promo) return;
+    const key = `maza-promo-dismissed:${promo.id}`;
     try {
-      if (window.sessionStorage.getItem(STORAGE_KEY) === "1") return;
+      if (window.sessionStorage.getItem(key) === "1") return;
     } catch {
       /* ignore */
     }
@@ -47,14 +43,18 @@ export default function SamakWeekendPopup() {
 
   function dismiss() {
     setOpen(false);
+    if (!promo) return;
     try {
-      window.sessionStorage.setItem(STORAGE_KEY, "1");
+      window.sessionStorage.setItem(`maza-promo-dismissed:${promo.id}`, "1");
     } catch {
       /* ignore */
     }
   }
 
   if (!promo || !open) return null;
+
+  const img = promo.popupImageSrc || promo.imageSrc;
+  const hasWait = Boolean(promo.waitNote || promo.orderAheadNote);
 
   return (
     <div
@@ -71,14 +71,14 @@ export default function SamakWeekendPopup() {
       />
 
       <div className="relative z-[81] w-full max-w-md overflow-hidden rounded-2xl border border-[#D3AB5E]/40 bg-[#0A1F1E] shadow-2xl shadow-black/50">
-        <div className="relative aspect-[4/3] w-full bg-[#0E0E0E]">
+        <div className="relative aspect-[3/4] w-full max-h-[52vh] bg-[#0E0E0E] sm:aspect-[4/3] sm:max-h-none">
           <Image
-            src={promo.imageSrc}
+            src={img}
             alt={promo.imageAlt}
             fill
             priority
             sizes="(max-width: 448px) 100vw, 448px"
-            className="object-cover object-top"
+            className="object-cover object-center"
           />
           <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#0A1F1E] to-transparent" />
           <button
@@ -90,7 +90,7 @@ export default function SamakWeekendPopup() {
           </button>
         </div>
 
-        <div id="samak-weekend" className="space-y-3 px-5 pb-6 pt-4">
+        <div id="weekend-special-popup" className="space-y-3 px-5 pb-6 pt-4">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#D3AB5E]">
             {promo.title} · {promo.whenLabel}
           </p>
@@ -107,10 +107,16 @@ export default function SamakWeekendPopup() {
               was {promo.regularPrice}
             </span>
           </p>
-          <div className="rounded-lg border border-[#D3AB5E]/35 bg-[#0E0E0E] px-3 py-3 text-sm">
-            <p className="font-semibold text-[#E9C87B]">{promo.waitNote}</p>
-            <p className="mt-1 text-[#F5F1E8]/85">{promo.orderAheadNote}</p>
-          </div>
+          {hasWait && (
+            <div className="rounded-lg border border-[#D3AB5E]/35 bg-[#0E0E0E] px-3 py-3 text-sm">
+              {promo.waitNote ? (
+                <p className="font-semibold text-[#E9C87B]">{promo.waitNote}</p>
+              ) : null}
+              {promo.orderAheadNote ? (
+                <p className="mt-1 text-[#F5F1E8]/85">{promo.orderAheadNote}</p>
+              ) : null}
+            </div>
+          )}
 
           <div className="flex flex-col gap-2 pt-1 sm:flex-row">
             <a
@@ -119,7 +125,7 @@ export default function SamakWeekendPopup() {
               rel="noopener noreferrer"
               className="inline-flex flex-1 items-center justify-center rounded bg-[#D3AB5E] px-4 py-3 text-center text-sm font-semibold tracking-wide text-[#0A1F1E] transition-colors hover:bg-[#C49A4D]"
             >
-              Order Ahead
+              Order Takeout
             </a>
             <PhoneLink className="inline-flex flex-1 items-center justify-center rounded border border-[#D3AB5E] px-4 py-3 text-center text-sm font-semibold tracking-wide text-[#D3AB5E] transition-colors hover:bg-[#D3AB5E] hover:text-[#0A1F1E]">
               Call

@@ -8,21 +8,23 @@ import {
 import PhoneLink from "@/components/PhoneLink";
 
 function BannerInner({ promo }: { promo: ActivePromo }) {
+  const hasWait = Boolean(promo.waitNote || promo.orderAheadNote);
+
   return (
     <section
       aria-label={`${promo.itemName} ${promo.title}`}
       className="border-b border-[#D3AB5E]/35 bg-[#0A1F1E]"
+      id="weekend-special"
     >
       <div className="mx-auto grid max-w-6xl gap-0 md:grid-cols-2 md:items-stretch">
-        {/* Visible plate photo */}
         <div className="relative min-h-[200px] w-full aspect-[16/10] md:aspect-auto md:min-h-[320px]">
           <Image
-            src="/images/maza/promos/samak-plate.jpg"
+            src={promo.imageSrc}
             alt={promo.imageAlt}
             fill
             priority
             sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-cover object-[center_40%]"
+            className="object-cover object-center"
           />
         </div>
 
@@ -41,9 +43,13 @@ function BannerInner({ promo }: { promo: ActivePromo }) {
                 {promo.regularPrice}
               </span>
             </p>
-            <p className="mt-3 text-sm font-semibold text-[#E9C87B] md:text-base">
-              {promo.waitNote}. {promo.orderAheadNote}
-            </p>
+            {hasWait && (
+              <p className="mt-3 text-sm font-semibold text-[#E9C87B] md:text-base">
+                {[promo.waitNote, promo.orderAheadNote]
+                  .filter(Boolean)
+                  .join(". ")}
+              </p>
+            )}
           </div>
 
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -53,13 +59,13 @@ function BannerInner({ promo }: { promo: ActivePromo }) {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded bg-[#D3AB5E] px-6 py-3 text-center text-sm font-semibold tracking-wide text-[#0A1F1E] transition-colors hover:bg-[#C49A4D]"
             >
-              Order Ahead
+              Order Takeout
             </a>
             <PhoneLink className="inline-flex items-center justify-center rounded border border-[#D3AB5E] px-6 py-3 text-center text-sm font-semibold tracking-wide text-[#D3AB5E] transition-colors hover:bg-[#D3AB5E] hover:text-[#0A1F1E]">
               Call to Order
             </PhoneLink>
             <Link
-              href="/menu#samak-weekend"
+              href="/menu#weekend-special"
               className="inline-flex items-center justify-center rounded border border-[#D3AB5E]/40 px-6 py-3 text-center text-sm font-semibold tracking-wide text-[#F5F1E8]/90 transition-colors hover:border-[#D3AB5E] hover:text-[#D3AB5E]"
             >
               See on Menu
@@ -71,7 +77,7 @@ function BannerInner({ promo }: { promo: ActivePromo }) {
   );
 }
 
-/** Homepage / menu strip — only while the weekend special window is open. */
+/** Homepage / menu strip — only while an active promo window is open. */
 export default function SamakWeekendBanner() {
   const promo = getActiveHomepagePromo();
   if (!promo) return null;

@@ -6,7 +6,7 @@ import CategoryTracker from "@/components/CategoryTracker";
 export const metadata = {
   alternates: { canonical: "https://mazahalalfood.com/menu/wraps" },
   title: "Wraps | Maza Mediterranean Cuisine",
-  description: "Fresh wraps — beef gyro, shawarma, shish kebab, chicken tikka. Made in-house daily. Chandler Mediterranean food done right.",
+  description: "Fresh wraps — beef + lamb gyro, shawarma, shish kebab, chicken tikka. Made in-house daily. Chandler Mediterranean food done right.",
 }
 
 const wraps = menuData.find(c => c.category === "Wraps")
@@ -14,7 +14,7 @@ const wraps = menuData.find(c => c.category === "Wraps")
 const wrapsJsonLd = buildMenuJsonLd(wraps ? [wraps] : [], {
   url: `${SITE}/menu/wraps`,
   name: "Maza Mediterranean Cuisine | Wraps Menu",
-  description: "Fresh wraps: beef gyro, shawarma, shish kebab, chicken tikka. Made in house daily. Halal-certified Mediterranean food in Chandler, AZ.",
+  description: "Fresh wraps: beef + lamb gyro, shawarma, shish kebab, chicken tikka. Made in house daily. Halal-certified Mediterranean food in Chandler, AZ.",
 });
 
 export default function WrapsPage() {
