@@ -88,11 +88,22 @@
   .specials-items .spec-item .price { transition: color .5s ease; }
   .specials-items .spec-item.highlight .name,
   .specials-items .spec-item.highlight .price { color: var(--gold-light); }
-  .specials-items { flex: 1; display: flex; flex-direction: column; justify-content: space-evenly; }
-  .specials-items .tv-item { margin: 8px 0 4px; }
-  .specials-items .tv-item .name { font-size: 24px; }
-  .specials-items .tv-item .price { font-size: 24px; }
-  .specials-items .tv-note { font-size: 15.5px; line-height: 1.45; }
+  .specials-items { flex: 1; display: flex; flex-direction: column; justify-content: space-evenly; min-height: 0; overflow: hidden; }
+  .specials-items .tv-item { margin: 4px 0 2px; }
+  .specials-items .tv-item .name { font-size: 22px; }
+  .specials-items .tv-item .price { font-size: 22px; }
+  .specials-items .tv-note { font-size: 14px; line-height: 1.3; margin: 0 0 2px; }
+  .specials-items .spec-item { padding-top: 4px; padding-bottom: 4px; }
+  .specials-items .spec-item.is-flash { padding-top: 8px; padding-bottom: 6px; margin: 2px 0; }
+  .specials-items .spec-item.is-flash .price-sale { font-size: 24px; }
+  /* long family/maza notes — clamp so 4 rows fit */
+  .specials-items .tv-note {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .specials-items .spec-item.is-flash .tv-note { -webkit-line-clamp: 2; }
 
   /* Weekend flash special row + hero */
   .specials-items .spec-item.is-flash {
