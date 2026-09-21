@@ -43,7 +43,8 @@ export const SAMAK_WEEKEND_SPECIAL: ActivePromo = {
 
 /**
  * Gyro weekend flash — Fri Sep 18 through Sun Sep 20 close (Phoenix).
- * Permanent menu item is Beef + Lamb Gyro @ $10.91; till sale is $8 this window only.
+ * Permanent menu item is Beef + Lamb Gyro @ $10.91; till sale was $8 that window only.
+ * ENDED — left in registry inactive so static rebuilds stay off without deleting history.
  */
 export const GYRO_WEEKEND_SPECIAL: ActivePromo = {
   id: "gyro-weekend-2026-09-18",
@@ -61,6 +62,7 @@ export const GYRO_WEEKEND_SPECIAL: ActivePromo = {
     "Beef and lamb gyro on pita at Maza Mediterranean Cuisine Chandler AZ",
   // Fri Sep 18 00:00 Phoenix → Sun Sep 20 22:00 Phoenix (store close)
   startsAt: Date.parse("2026-09-18T07:00:00.000Z"),
+  // Forced past after Mon Sep 21 teardown (was 2026-09-21T05:00:00.000Z)
   endsAt: Date.parse("2026-09-21T05:00:00.000Z"),
 };
 

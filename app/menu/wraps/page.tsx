@@ -10,6 +10,9 @@ export const metadata = {
   description: "Fresh wraps — beef + lamb gyro, shawarma, shish kebab, chicken tikka. Made in-house daily. Chandler Mediterranean food done right.",
 }
 
+// Flash promos date-gate MenuItemPrice; ISR so static HTML cannot stick after endsAt.
+export const revalidate = 60;
+
 const wraps = menuData.find(c => c.category === "Wraps")
 
 const wrapsJsonLd = buildMenuJsonLd(wraps ? [wraps] : [], {

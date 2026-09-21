@@ -7,6 +7,9 @@ import SamakWeekendPopup from "@/components/SamakWeekendPopup";
 import { TAKEOUT_URL, deliveryUrl } from "@/lib/ordering";
 import { getActiveHomepagePromo } from "@/lib/promos";
 
+// Flash promos are date-gated at render time; ISR so static HTML cannot stick after endsAt.
+export const revalidate = 60;
+
 export const metadata = {
   alternates: { canonical: "https://mazahalalfood.com" },
   title: "Maza Mediterranean Cuisine | Chandler AZ | Mediterranean Food Chandler",

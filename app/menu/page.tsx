@@ -13,6 +13,9 @@ import { getActiveHomepagePromo } from "@/lib/promos";
 
 export { metadata };
 
+// Flash promos are date-gated at render time; ISR so static HTML cannot stick after endsAt.
+export const revalidate = 60;
+
 // MAZ-32: Menu schema (Menu + MenuSection + MenuItem) for agent + local SEO
 // image URLs absolute for visual search / SEO Bible §5
 const menuJsonLd = buildMenuJsonLd(menuData, { url: `${SITE}/menu` });
