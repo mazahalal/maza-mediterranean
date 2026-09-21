@@ -217,14 +217,6 @@
           "notes": [
             "2x Beef + Lamb Shish Kebab, 2x Chicken Shish Kebab, 2x Chicken Tikka, 2x Lamb Tikka, 2x Ribeye Tikka (10 total), +4 Pita, Rice, Salad, Hummus + Tahini, Baba Ghanoush"
           ]
-        },
-        {
-          "name": "Samak Tandoor",
-          "price": "$38.97",
-          "notes": [
-            "Whole large fish with rice and salad",
-            "Please allow 1 hour to prepare"
-          ]
         }
       ]
     },
@@ -432,5 +424,16 @@
       ]
     }
   ],
-  "temporarily_unavailable": []
+  "temporarily_unavailable": [
+    {
+      "section": "Specials",
+      "name": "Samak Tandoor",
+      "price": "$38.97",
+      "notes": [
+        "Whole large fish with rice and salad",
+        "Please allow 1 hour to prepare"
+      ],
+      "reason": "moratorium — temporarily off menu; do not show on website or TV"
+    }
+  ]
 }
