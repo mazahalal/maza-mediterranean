@@ -1,6 +1,9 @@
+import Link from "next/link";
 import CategoryTracker from "@/components/CategoryTracker";
 import { menuData } from "@/data/menu";
 import { buildMenuJsonLd, SITE } from "@/lib/menu-schema";
+import RelatedLinks from "@/components/RelatedLinks";
+import { linkForMenuItem } from "@/lib/menu-item-links";
 
 export const metadata = {
   alternates: { canonical: "https://mazahalalfood.com/menu/specials" },
@@ -39,7 +42,18 @@ export default function SpecialsPage() {
           {specials?.items.map((item, index) => (
             <div key={index} className="bg-[#0F2A28] border border-[#D3AB5E]/20 rounded-xl p-6 hover:border-[#D3AB5E]/40 transition-colors">
               <div className="flex justify-between items-start mb-3">
-                <h3 className="font-semibold text-xl text-[#F5F1E8]">{item.name}</h3>
+                {(() => {
+                  const dishLink = linkForMenuItem(item.name);
+                  return dishLink ? (
+                    <h3 className="font-semibold text-xl text-[#F5F1E8]">
+                      <Link href={dishLink.href} className="hover:text-[#D3AB5E] transition-colors">
+                        {item.name}
+                      </Link>
+                    </h3>
+                  ) : (
+                    <h3 className="font-semibold text-xl text-[#F5F1E8]">{item.name}</h3>
+                  );
+                })()}
                 <span className="font-mono text-[#D3AB5E] font-medium whitespace-nowrap">{item.price}</span>
               </div>
               {item.note && (
@@ -49,7 +63,9 @@ export default function SpecialsPage() {
           ))}
         </div>
 
-        <div className="mt-12 text-center space-y-4">
+        
+        <RelatedLinks routeKey="menu/specials" heading="Signature specials" />
+<div className="mt-12 text-center space-y-4">
           <a 
             href="tel:4805346550" 
             className="inline-block px-8 py-4 bg-[#D3AB5E] text-[#0A1F1E] font-semibold rounded-lg hover:bg-[#C49A4D] transition-colors text-lg"

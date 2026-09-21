@@ -6,6 +6,8 @@ import { menuData, MenuItem } from "@/data/menu";
 import { trackMeta } from "@/lib/meta-pixel";
 import { categorySlug } from "./MenuCategoryNav";
 import MenuItemPrice from "@/components/MenuItemPrice";
+import Link from "next/link";
+import { linkForMenuItem } from "@/lib/menu-item-links";
 
 function menuAlt(item: MenuItem, section?: string): string {
   const cat = section ? ` (${section})` : "";
@@ -122,6 +124,19 @@ export default function MenuLightbox() {
                       </h3>
                       <MenuItemPrice itemName={item.name} price={item.price} size="card" />
                     </div>
+                    {(() => {
+                      const dishLink = linkForMenuItem(item.name);
+                      if (!dishLink) return null;
+                      return (
+                        <Link
+                          href={dishLink.href}
+                          onClick={(e) => e.stopPropagation()}
+                          className="text-[#D3AB5E] text-sm hover:underline mb-1.5 w-fit"
+                        >
+                          About {dishLink.label} →
+                        </Link>
+                      );
+                    })()}
                     {item.description && (
                       <p className="text-[#B8B8B8] text-sm leading-relaxed">
                         {item.description}
@@ -185,6 +200,20 @@ export default function MenuLightbox() {
                 price={currentItem.price}
                 size="lightbox"
               />
+              {(() => {
+                const dishLink = linkForMenuItem(currentItem.name);
+                if (!dishLink) return null;
+                return (
+                  <p className="mt-2">
+                    <Link
+                      href={dishLink.href}
+                      className="text-[#D3AB5E] text-sm hover:underline"
+                    >
+                      About {dishLink.label} →
+                    </Link>
+                  </p>
+                );
+              })()}
               {currentItem.description && (
                 <p className="text-[#B8B8B8] max-w-md mx-auto text-sm sm:text-base">
                   {currentItem.description}

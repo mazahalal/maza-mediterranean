@@ -6,6 +6,7 @@ import SamakWeekendBanner from "@/components/SamakWeekendBanner";
 import SamakWeekendPopup from "@/components/SamakWeekendPopup";
 import { TAKEOUT_URL, deliveryUrl } from "@/lib/ordering";
 import { getActiveHomepagePromo } from "@/lib/promos";
+import RelatedLinks from "@/components/RelatedLinks";
 
 // Flash promos are date-gated at render time; ISR so static HTML cannot stick after endsAt.
 export const revalidate = 60;
@@ -89,6 +90,13 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Internal link hub — Jev link audit 2026-09-20 */}
+      <section className="py-12 px-6 bg-[#0A1F1E] border-t border-[#D3AB5E]/20">
+        <div className="max-w-5xl mx-auto">
+          <RelatedLinks routeKey="home" heading="Popular at Maza" />
         </div>
       </section>
 

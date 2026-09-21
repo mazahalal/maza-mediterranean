@@ -1,3 +1,4 @@
+import RelatedLinks from "@/components/RelatedLinks";
 import Image from "next/image";
 import { metadata } from "./metadata";
 import MenuLightbox from "./components/MenuLightbox";
@@ -92,6 +93,8 @@ export default function MenuPage() {
               Order ahead for pickup, or get delivery to your door.
             </p>
           </div>
+
+          <RelatedLinks routeKey="menu" heading="Popular dishes" />
 
           <div className="mt-8 bg-[#0E0E0E] p-8 rounded-lg border border-[rgba(211,171,94,0.15)] text-center">
             <p className="text-[#F5F1E8]">

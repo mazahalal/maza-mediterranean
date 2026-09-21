@@ -5,6 +5,7 @@ import MapEmbed from "@/components/MapEmbed";
 import { MAZA_GOOGLE_MAPS_URL, MAZA_APPLE_MAPS_URL } from "@/lib/maza-maps";
 import { menuData } from "@/data/menu";
 import WrapGallery from "./WrapGallery";
+import RelatedLinks from "@/components/RelatedLinks";
 
 /**
  * Plaza Lunch Club — /plaza-lunch
@@ -211,6 +212,8 @@ export default function PlazaLunchPage() {
             </p>
           </div>
         </section>
+
+        <RelatedLinks routeKey="plaza-lunch" heading="See the wraps" className="mb-10" />
 
         {/* ── Exclusions ─────────────────────────────────────────────── */}
         <section className="mb-10">

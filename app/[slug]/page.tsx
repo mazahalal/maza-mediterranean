@@ -55,9 +55,126 @@ function resolveOffering(page: OfferingPage): Resolved {
     { name: page.h1, href: `/${page.slug}` },
   ];
 
+  // Cross-link to sibling offerings so Core 30 pages stop being orphans.
+  // Keep anchors dish-native (Jev audit 2026-09-20).
+  const siblingLinks: { label: string; href: string }[] = (() => {
+    switch (page.slug) {
+      case "gyro":
+        return [
+          { label: "Loaded Fries", href: "/loaded-fries" },
+          { label: "Loaded Hummus", href: "/loaded-hummus" },
+          { label: "Wraps menu", href: "/menu/wraps" },
+        ];
+      case "shish-kebab":
+        return [
+          { label: "Mix Kebab", href: "/mix-kebab" },
+          { label: "Maza Grill", href: "/maza-grill" },
+          { label: "Hummus & Baba Ghanoush", href: "/hummus-and-baba-ghanoush" },
+          { label: "Plates menu", href: "/menu/plates" },
+        ];
+      case "chicken-tikka":
+        return [
+          { label: "Lamb Tikka", href: "/lamb-tikka" },
+          { label: "Maza Grill", href: "/maza-grill" },
+          { label: "Hummus & Baba Ghanoush", href: "/hummus-and-baba-ghanoush" },
+        ];
+      case "lamb-tikka":
+        return [
+          { label: "Chicken Tikka", href: "/chicken-tikka" },
+          { label: "Family Meal", href: "/family-meal" },
+          { label: "Hummus & Baba Ghanoush", href: "/hummus-and-baba-ghanoush" },
+        ];
+      case "ribeye-tikka":
+        return [
+          { label: "Family Meal", href: "/family-meal" },
+          { label: "Maza Grill", href: "/maza-grill" },
+          { label: "Halal Mediterranean", href: "/halal-mediterranean-chandler" },
+        ];
+      case "mix-kebab":
+        return [
+          { label: "Shish Kebab", href: "/shish-kebab" },
+          { label: "Maza Grill", href: "/maza-grill" },
+          { label: "Family Meal", href: "/family-meal" },
+        ];
+      case "maza-grill":
+        return [
+          { label: "Mix Kebab", href: "/mix-kebab" },
+          { label: "Chicken Tikka", href: "/chicken-tikka" },
+          { label: "Shish Kebab", href: "/shish-kebab" },
+          { label: "Ribeye Tikka", href: "/ribeye-tikka" },
+        ];
+      case "falafel":
+        return [
+          { label: "Mezze Platter", href: "/mezze-platter" },
+          { label: "Hummus & Baba Ghanoush", href: "/hummus-and-baba-ghanoush" },
+          { label: "Loaded Hummus", href: "/loaded-hummus" },
+        ];
+      case "arayes":
+        return [
+          { label: "Wraps menu", href: "/menu/wraps" },
+          { label: "Plaza Lunch Club", href: "/plaza-lunch" },
+        ];
+      case "loaded-fries":
+      case "loaded-hummus":
+        return [
+          { label: "Beef Gyro", href: "/gyro" },
+          { label: "Hummus & Baba Ghanoush", href: "/hummus-and-baba-ghanoush" },
+        ];
+      case "hummus-and-baba-ghanoush":
+        return [
+          { label: "Falafel", href: "/falafel" },
+          { label: "Tabouleh & Salads", href: "/tabouleh-and-salads" },
+          { label: "Halal Mediterranean", href: "/halal-mediterranean-chandler" },
+        ];
+      case "mezze-platter":
+        return [
+          { label: "Falafel", href: "/falafel" },
+          { label: "Hummus & Baba Ghanoush", href: "/hummus-and-baba-ghanoush" },
+          { label: "Family Meal", href: "/family-meal" },
+        ];
+      case "tabouleh-and-salads":
+        return [
+          { label: "Falafel", href: "/falafel" },
+          { label: "Mezze Platter", href: "/mezze-platter" },
+          { label: "Sides menu", href: "/menu/sides" },
+        ];
+      case "baklava":
+        return [{ label: "Kunāfah", href: "/kunafah" }, { label: "Desserts", href: "/menu/desserts-drinks" }];
+      case "kunafah":
+        return [{ label: "Baklava", href: "/baklava" }, { label: "Desserts", href: "/menu/desserts-drinks" }];
+      case "family-meal":
+        return [
+          { label: "Mezze Platter", href: "/mezze-platter" },
+          { label: "Ribeye Tikka", href: "/ribeye-tikka" },
+          { label: "Shish Kebab", href: "/shish-kebab" },
+          { label: "Specials menu", href: "/menu/specials" },
+        ];
+      case "tepsi-baytinijan":
+      case "samak-tandoor":
+        return [
+          { label: "Family Meal", href: "/family-meal" },
+          { label: "Specials menu", href: "/menu/specials" },
+        ];
+      case "halal-mediterranean-chandler":
+        return [
+          { label: "Mix Kebab", href: "/mix-kebab" },
+          { label: "Shish Kebab", href: "/shish-kebab" },
+          { label: "Maza Grill", href: "/maza-grill" },
+          { label: "Beef Gyro", href: "/gyro" },
+          { label: "Falafel", href: "/falafel" },
+        ];
+      case "burgers":
+        return [{ label: "Burgers menu", href: "/menu/burgers" }, { label: "Plaza Lunch Club", href: "/plaza-lunch" }];
+      default:
+        return [];
+    }
+  })();
+
   const related = [
     { label: `See ${page.menuLabel}`, href: page.menuPath },
+    ...siblingLinks,
     { label: "Full menu", href: "/menu" },
+    { label: "Gallery", href: "/gallery" },
     { label: "Catering", href: "/catering" },
     { label: "Contact & directions", href: "/contact" },
   ].filter((link, index, all) => all.findIndex((l) => l.href === link.href) === index);

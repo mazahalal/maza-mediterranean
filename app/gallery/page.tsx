@@ -1,4 +1,5 @@
 import GalleryMosaic from "./GalleryMosaic";
+import RelatedLinks from "@/components/RelatedLinks";
 import { galleryImages } from "./gallery-images";
 
 const imageObjects = galleryImages.map((img, index) => ({
@@ -45,6 +46,8 @@ export default function GalleryPage() {
           </div>
 
           <GalleryMosaic />
+
+          <RelatedLinks routeKey="gallery" heading="Order what you see" />
         </div>
       </div>
     </>

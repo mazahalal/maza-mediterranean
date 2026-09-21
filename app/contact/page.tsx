@@ -1,5 +1,7 @@
 "use client";
 
+import RelatedLinks from "@/components/RelatedLinks";
+
 import { trackContact } from "@/lib/meta-pixel";
 import PhoneLink from "@/components/PhoneLink";
 import MapEmbed from "@/components/MapEmbed";
@@ -170,6 +172,8 @@ export default function ContactPage() {
             )}
           </div>
         </div>
+
+        <RelatedLinks routeKey="contact" heading="Also useful" />
       </div>
     </div>
   );

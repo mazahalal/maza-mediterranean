@@ -1,7 +1,9 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import PhoneLink from "@/components/PhoneLink";
 import { MAZA_GOOGLE_MAPS_URL } from "@/lib/maza-maps";
 import CateringRequestForm from "./CateringRequestForm";
+import RelatedLinks from "@/components/RelatedLinks";
 
 /**
  * Catering landing page at /catering
@@ -178,6 +180,8 @@ export default function CateringPage() {
           <SectionHeading>REQUEST YOUR CATERING</SectionHeading>
           <CateringRequestForm />
         </section>
+
+        <RelatedLinks routeKey="catering" heading="Related" className="mb-10" />
 
         {/* Find us */}
         <section className="mb-10">
