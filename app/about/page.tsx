@@ -1,3 +1,4 @@
+import RelatedLinks from "@/components/RelatedLinks";
 export const metadata = {
   alternates: { canonical: "https://mazahalalfood.com/about" },
   title: "About Maza Mediterranean | Chandler AZ Mediterranean Restaurant",
@@ -63,6 +64,8 @@ export default function AboutPage() {
               </li>
             </ul>
           </div>
+
+          <RelatedLinks routeKey="about" heading="Explore Maza" />
         </div>
       </div>
     </div>
