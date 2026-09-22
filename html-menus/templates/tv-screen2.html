@@ -43,7 +43,7 @@
     display: flex; flex-direction: column;
     min-height: 0;
   }
-  .specials-box .screen-title { font-size: 38px; }
+  .specials-box .screen-title { font-size: 42px; }
   .specials-box .screen-title .rule { width: 60px; }
   .specials-inner { flex: 1; display: flex; gap: 30px; align-items: stretch; margin-top: 8px; min-height: 0; }
   .specials-hero {
@@ -66,44 +66,45 @@
     min-height: 0;
   }
   .specials-slide .card-detail {
-    padding: 8px 12px 10px;
+    padding: 12px 14px 14px;
   }
-  .specials-slide .card-name { font-size: 18px; }
-  .specials-slide .card-price { font-size: 20px; }
+  .specials-slide .card-name { font-size: 24px; }
+  .specials-slide .card-price { font-size: 28px; }
 
   /* the list row matching the hero slide currently on screen */
+  /* 2-slot layout: larger type, full notes (no clamp), both rows more present */
   .specials-items .spec-item {
-    border-left: 4px solid transparent;
-    border-radius: 5px;
-    padding-left: 14px;
-    opacity: .58;
+    border-left: 5px solid transparent;
+    border-radius: 6px;
+    padding: 10px 12px 12px 16px;
+    opacity: .78;
     transition: opacity .5s ease, border-color .5s ease, background .5s ease;
   }
   .specials-items .spec-item.highlight {
     opacity: 1;
     border-left-color: var(--gold);
-    background: linear-gradient(90deg, rgba(211,171,94,.15), rgba(211,171,94,0) 80%);
+    background: linear-gradient(90deg, rgba(211,171,94,.18), rgba(211,171,94,0) 80%);
   }
   .specials-items .spec-item .name,
   .specials-items .spec-item .price { transition: color .5s ease; }
   .specials-items .spec-item.highlight .name,
   .specials-items .spec-item.highlight .price { color: var(--gold-light); }
-  .specials-items { flex: 1; display: flex; flex-direction: column; justify-content: space-evenly; min-height: 0; overflow: hidden; }
-  .specials-items .tv-item { margin: 4px 0 2px; }
-  .specials-items .tv-item .name { font-size: 22px; }
-  .specials-items .tv-item .price { font-size: 22px; }
-  .specials-items .tv-note { font-size: 14px; line-height: 1.3; margin: 0 0 2px; }
-  .specials-items .spec-item { padding-top: 4px; padding-bottom: 4px; }
-  .specials-items .spec-item.is-flash { padding-top: 8px; padding-bottom: 6px; margin: 2px 0; }
-  .specials-items .spec-item.is-flash .price-sale { font-size: 24px; }
-  /* long family/maza notes — clamp so 4 rows fit */
+  .specials-items { flex: 1; display: flex; flex-direction: column; justify-content: space-evenly; min-height: 0; overflow: visible; }
+  .specials-items .tv-item { margin: 0 0 6px; }
+  .specials-items .tv-item .name { font-size: 28px; }
+  .specials-items .tv-item .price { font-size: 28px; }
   .specials-items .tv-note {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+    font-size: 17px;
+    line-height: 1.35;
+    margin: 0 0 4px;
+    display: block;
+    overflow: visible;
+    -webkit-line-clamp: unset;
+    white-space: normal;
   }
-  .specials-items .spec-item.is-flash .tv-note { -webkit-line-clamp: 2; }
+  .specials-items .spec-item.is-flash { padding-top: 10px; padding-bottom: 10px; margin: 4px 0; }
+  .specials-items .spec-item.is-flash .price-sale { font-size: 28px; }
+  .specials-items .spec-item.is-flash .tv-note { -webkit-line-clamp: unset; overflow: visible; }
 
   /* Weekend flash special row + hero */
   .specials-items .spec-item.is-flash {
