@@ -210,10 +210,6 @@
         "rotate_ms": 5000,
         "slides": [
           [
-            "Wraps",
-            "Beef + Lamb Gyro"
-          ],
-          [
             "Specials",
             "Tepsi Baytinijan"
           ],
@@ -227,10 +223,6 @@
           ]
         ],
         "items": [
-          [
-            "Wraps",
-            "Beef + Lamb Gyro"
-          ],
           [
             "Specials",
             "Tepsi Baytinijan"
@@ -573,19 +565,5 @@
       }
     }
   ],
-  "flash_specials": [
-    {
-      "ref": [
-        "Wraps",
-        "Beef + Lamb Gyro"
-      ],
-      "sale_price": "8",
-      "regular_price": "10.91",
-      "badge": "WEEKEND $8",
-      "note": "Fri–Sun only · was 10.91",
-      "starts_at": "2026-09-18T07:00:00Z",
-      "ends_at": "2026-09-21T05:00:00Z",
-      "_comment": "Remove after Sun close — build skips once ends_at passes"
-    }
-  ]
+  "flash_specials": []
 }
