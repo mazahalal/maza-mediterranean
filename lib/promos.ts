@@ -66,6 +66,29 @@ export const GYRO_WEEKEND_SPECIAL: ActivePromo = {
   endsAt: Date.parse("2026-09-21T05:00:00.000Z"),
 };
 
+/**
+ * Midweek cash push — MAZA Special $39.99 Wed Sep 23 + Thu Sep 24 only (Phoenix).
+ * Permanent menu price stays $48.45 in menu.json; till must match wall (Frank POS button).
+ */
+export const MAZA_SPECIAL_MIDWEEK: ActivePromo = {
+  id: "maza-special-wed-thu-2026-09-23",
+  title: "Midweek Special",
+  itemName: "Maza Special",
+  salePrice: "$39.99",
+  regularPrice: "$48.45",
+  blurb:
+    "4 kebabs (chicken tikka, lamb tikka, beef+lamb shish, chicken shish) + 2 pita, rice, salad, hummus + tahini, baba",
+  waitNote: "",
+  orderAheadNote: "Dine-in or pickup. Call (480) 534-6550.",
+  whenLabel: "Wednesday & Thursday only",
+  imageSrc: "/images/maza/promos/maza-special-plate.jpg",
+  imageAlt:
+    "Maza Special mixed kebab plate at Maza Mediterranean Cuisine Chandler AZ",
+  // Wed Sep 23 00:00 Phoenix → Thu Sep 24 22:00 Phoenix (store close)
+  startsAt: Date.parse("2026-09-23T07:00:00.000Z"),
+  endsAt: Date.parse("2026-09-25T05:00:00.000Z"),
+};
+
 export function isPromoActive(
   promo: ActivePromo,
   now: Date | number = Date.now(),
@@ -77,6 +100,7 @@ export function isPromoActive(
 export function getActiveHomepagePromo(
   now: Date | number = Date.now(),
 ): ActivePromo | null {
+  if (isPromoActive(MAZA_SPECIAL_MIDWEEK, now)) return MAZA_SPECIAL_MIDWEEK;
   if (isPromoActive(GYRO_WEEKEND_SPECIAL, now)) return GYRO_WEEKEND_SPECIAL;
   if (isPromoActive(SAMAK_WEEKEND_SPECIAL, now)) return SAMAK_WEEKEND_SPECIAL;
   return null;
