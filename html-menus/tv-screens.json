@@ -1,5 +1,5 @@
 {
-  "_comment": "TV screen definitions. Item refs are [Section, Item] pairs resolved from menu.json at build time — prices/notes always come from menu.json, never hardcoded here. Edit groupings/cards freely; text data stays in menu.json.",
+  "_comment": "TV screen definitions. Item refs are [Section, Item] pairs resolved from menu.json at build time \u2014 prices/notes always come from menu.json, never hardcoded here. Edit groupings/cards freely; text data stays in menu.json.",
   "screens": [
     {
       "id": "screen1-wraps",
@@ -211,21 +211,21 @@
         "slides": [
           [
             "Specials",
-            "Family Meal"
+            "Maza Special"
           ],
           [
             "Specials",
-            "Maza Special"
+            "Family Meal"
           ]
         ],
         "items": [
           [
             "Specials",
-            "Family Meal"
+            "Maza Special"
           ],
           [
             "Specials",
-            "Maza Special"
+            "Family Meal"
           ]
         ]
       }
@@ -415,10 +415,10 @@
           },
           {
             "ref": [
-              "Kunāfah",
-              "Kunāfah (Pistachio, 2pc)"
+              "Kun\u0101fah",
+              "Kun\u0101fah (Pistachio, 2pc)"
             ],
-            "caption": "Kunāfah · Pistachio (2pc)",
+            "caption": "Kun\u0101fah \u00b7 Pistachio (2pc)",
             "photo": "kunafah-kunafah-pistachio-2pc.jpg"
           }
         ],
@@ -441,8 +441,8 @@
               "Pistachio Baklava"
             ],
             [
-              "Kunāfah",
-              "Kunāfah (Pistachio, 2pc)"
+              "Kun\u0101fah",
+              "Kun\u0101fah (Pistachio, 2pc)"
             ]
           ]
         },
@@ -557,5 +557,18 @@
       }
     }
   ],
-  "flash_specials": []
+  "flash_specials": [
+    {
+      "ref": [
+        "Specials",
+        "Maza Special"
+      ],
+      "sale_price": "39.99",
+      "regular_price": "48.45",
+      "badge": "WED\u2013THU $39.99",
+      "note": "Wed\u2013Thu only \u00b7 was 48.45 \u00b7 dine-in or pickup",
+      "starts_at": "2026-09-22T19:00:00.000Z",
+      "ends_at": "2026-09-25T05:00:00.000Z"
+    }
+  ]
 }
