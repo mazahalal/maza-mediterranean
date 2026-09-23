@@ -84,8 +84,8 @@ export const MAZA_SPECIAL_MIDWEEK: ActivePromo = {
   imageSrc: "/images/maza/promos/maza-special-plate.jpg",
   imageAlt:
     "Maza Special mixed kebab plate at Maza Mediterranean Cuisine Chandler AZ",
-  // Wed Sep 23 00:00 Phoenix → Thu Sep 24 22:00 Phoenix (store close)
-  startsAt: Date.parse("2026-09-23T07:00:00.000Z"),
+  // Armed Tue night 2026-09-22 so boards/site go live before Wed open; ends Thu 22:00 Phx
+  startsAt: Date.parse("2026-09-23T06:00:00.000Z"), // ~11pm Tue Phx
   endsAt: Date.parse("2026-09-25T05:00:00.000Z"),
 };
 
