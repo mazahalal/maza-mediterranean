@@ -68,9 +68,6 @@ export const MENU_ITEM_LINKS: Record<string, MenuItemLink> = {
   Baklava: { href: "/baklava", label: "Baklava" },
   "Baklava Cashew": { href: "/baklava", label: "Baklava" },
   "Baklava Pistachio": { href: "/baklava", label: "Baklava" },
-  Kunāfah: { href: "/kunafah", label: "Kunāfah" },
-  Kunafah: { href: "/kunafah", label: "Kunāfah" },
-  "Kunāfah Pistachio": { href: "/kunafah", label: "Kunāfah" },
 };
 
 export function linkForMenuItem(name: string): MenuItemLink | null {
@@ -133,7 +130,6 @@ export const RELATED_BY_ROUTE: Record<string, RelatedChip[]> = {
   ],
   "menu/desserts-drinks": [
     { href: "/baklava", label: "Baklava" },
-    { href: "/kunafah", label: "Kunāfah" },
   ],
   "menu/burgers": [{ href: "/burgers", label: "Burgers" }],
   about: [
@@ -151,7 +147,6 @@ export const RELATED_BY_ROUTE: Record<string, RelatedChip[]> = {
     { href: "/maza-grill", label: "Maza Grill" },
     { href: "/loaded-hummus", label: "Loaded Hummus" },
     { href: "/loaded-fries", label: "Loaded Fries" },
-    { href: "/kunafah", label: "Kunāfah" },
   ],
   catering: [
     { href: "/shish-kebab", label: "Shish Kebab" },

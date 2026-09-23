@@ -139,9 +139,7 @@ function resolveOffering(page: OfferingPage): Resolved {
           { label: "Sides menu", href: "/menu/sides" },
         ];
       case "baklava":
-        return [{ label: "Kunāfah", href: "/kunafah" }, { label: "Desserts", href: "/menu/desserts-drinks" }];
-      case "kunafah":
-        return [{ label: "Baklava", href: "/baklava" }, { label: "Desserts", href: "/menu/desserts-drinks" }];
+        return [{ label: "Desserts", href: "/menu/desserts-drinks" }];
       case "family-meal":
         return [
           { label: "Mezze Platter", href: "/mezze-platter" },

@@ -77,7 +77,7 @@ export const NEIGHBORHOOD_PAGES: NeighborhoodPage[] = [
       { label: "Beef Gyro Wrap", price: "$10.91" },
       { label: "Chicken Tikka Plate", price: "$19.67", note: "2 kebabs, rice, salad, baba ghanoush & hummus + tahini" },
       { label: "Mix Kebab Plate", price: "$20.71" },
-      { label: "Kunāfah (Pistachio, 2pc)", price: "$4.99" },
+      { label: "Cashew Baklava", price: "$3.99" },
     ],
     faqs: [
       {

@@ -620,9 +620,7 @@ export const OFFERING_PAGES: OfferingPage[] = [
     priceHeading: "Baklava pricing",
     priceRows: [
       { label: "Cashew Baklava", price: "$3.99" },
-      { label: "Pistachio Baklava", price: "$3.99" },
-      { label: "Kunāfah (Pistachio, 2pc)", price: "$4.99" },
-    ],
+      { label: "Pistachio Baklava", price: "$3.99" },    ],
     faqs: [
       {
         question: "Which baklava should I get?",
@@ -643,42 +641,6 @@ export const OFFERING_PAGES: OfferingPage[] = [
     image: "/images/maza/menu/opt-baklava.jpg",
     imageAlt: "Cashew and pistachio baklava at Maza Mediterranean Cuisine Chandler AZ",
     keywords: ["baklava Chandler AZ", "pistachio baklava Chandler", "Middle Eastern dessert Chandler"],
-  },
-  {
-    slug: "kunafah",
-    h1: "Kunāfah in Chandler, AZ",
-    title: "Kunāfah (Pistachio, 2pc) $4.99 | Chandler, AZ | Maza",
-    description:
-      "Kunāfah with pistachio, two pieces for $4.99, at Maza Mediterranean Cuisine in Chandler, AZ. Crisp shredded pastry, cheese, and syrup.",
-    hook: "Kunāfah at Maza is two pieces for $4.99 — shredded pastry over sweet cheese, crisped and finished with syrup and pistachio. It is served warm, which is the only way kunāfah is worth eating, and it is the dessert to order if you want something hot after a grill plate.",
-    intro:
-      "Kunāfah is the other half of the Middle Eastern dessert conversation alongside baklava: crisp instead of flaky, cheese instead of nuts, hot instead of room temperature.",
-    priceHeading: "Kunāfah pricing",
-    priceRows: [
-      { label: "Kunāfah (Pistachio, 2pc)", price: "$4.99" },
-      { label: "Pistachio Baklava", price: "$3.99" },
-      { label: "Cashew Baklava", price: "$3.99" },
-    ],
-    faqs: [
-      {
-        question: "Is kunāfah served hot?",
-        answer:
-          "Yes — kunāfah is served warm. If you are picking up an order to eat later, baklava travels better.",
-      },
-      {
-        question: "What is in Maza's kunāfah?",
-        answer:
-          "Shredded pastry with sweet cheese and pistachio, finished with syrup. It comes two pieces for $4.99.",
-      },
-      FAQ_ORDER,
-      FAQ_HOURS,
-    ],
-    menuPath: "/menu/desserts-drinks",
-    menuLabel: "desserts & drinks",
-    menuSection: "Kunāfah",
-    image: "/images/maza/menu/opt-kunafah.jpg",
-    imageAlt: "Kunafah with pistachio at Maza Mediterranean Cuisine in Chandler AZ",
-    keywords: ["kunafah Chandler AZ", "knafeh Chandler", "Middle Eastern dessert Chandler AZ"],
   },
   {
     slug: "tepsi-baytinijan",
@@ -913,9 +875,7 @@ export const OFFERING_PAGES: OfferingPage[] = [
     priceRows: [
       { label: "Appetizer Plate", price: "$15.51", note: "Start the table with mezze" },
       { label: "Chicken Tikka Plate", price: "$19.67", note: "Most-ordered plate" },
-      { label: "Maza Grill", price: "$27.99", note: "Three kebabs, one plate" },
-      { label: "Kunāfah (Pistachio, 2pc)", price: "$4.99", note: "Warm dessert to finish" },
-    ],
+      { label: "Maza Grill", price: "$27.99", note: "Three kebabs, one plate" },    ],
     faqs: [
       FAQ_HOURS,
       FAQ_PARKING,
