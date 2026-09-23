@@ -881,7 +881,7 @@
   <div class="s3-row3">
     <div class="s3-desserts">
       <h2 class="band-title">{{ s.row3.desserts_title if s.row3.desserts_title is defined else "Desserts" }}</h2>
-      {# Dual photo stack: Baklava ($3.99 both) + Pistachio Kunāfah #}
+      {# Desserts photo stack: Baklava flavors (kunafah discontinued) #}
       <div class="s3-desserts-stack">
         {% set baklava = s.row3.desserts_cards[0].ref if s.row3.desserts_cards is defined else s.row3.desserts_card.ref %}
         {% set baklava_photo = s.row3.desserts_cards[0].photo if s.row3.desserts_cards is defined and s.row3.desserts_cards[0].photo else baklava.photo %}

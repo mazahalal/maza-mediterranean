@@ -42,7 +42,6 @@ const dishes: GalleryImage[] = [
   { src: "/images/maza/menu/opt-side-salad.jpg", alt: "Side salad" },
   { src: "/images/maza/menu/opt-kibbeh.jpg", alt: "Kibbeh (3pc)" },
   { src: "/images/maza/menu/opt-baklava.jpg", alt: "Baklava — cashew or pistachio" },
-  { src: "/images/maza/menu/opt-kunafah.jpg", alt: "Kunāfah — pistachio" },
 ];
 
 export const galleryImages: GalleryImage[] = [...ambiance, ...dishes];

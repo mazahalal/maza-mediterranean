@@ -412,14 +412,6 @@
             ],
             "caption": "Pistachio Baklava",
             "photo": "baklava-pistachio-baklava.jpg"
-          },
-          {
-            "ref": [
-              "Kun\u0101fah",
-              "Kun\u0101fah (Pistachio, 2pc)"
-            ],
-            "caption": "Kun\u0101fah \u00b7 Pistachio (2pc)",
-            "photo": "kunafah-kunafah-pistachio-2pc.jpg"
           }
         ],
         "desserts_card": {
@@ -439,10 +431,6 @@
             [
               "Baklava",
               "Pistachio Baklava"
-            ],
-            [
-              "Kun\u0101fah",
-              "Kun\u0101fah (Pistachio, 2pc)"
             ]
           ]
         },
