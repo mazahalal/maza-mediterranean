@@ -77,7 +77,7 @@ export const NEIGHBORHOOD_PAGES: NeighborhoodPage[] = [
       { label: "Beef Gyro Wrap", price: "$10.91" },
       { label: "Chicken Tikka Plate", price: "$19.67", note: "2 kebabs, rice, salad, baba ghanoush & hummus + tahini" },
       { label: "Mix Kebab Plate", price: "$20.71" },
-      { label: "Cashew Baklava", price: "$3.99" },
+      { label: "Dubai Chocolate Style Baklava", price: "$3.99" },
     ],
     faqs: [
       {
@@ -110,7 +110,7 @@ export const NEIGHBORHOOD_PAGES: NeighborhoodPage[] = [
       { label: "Maza Grill", price: "$27.99", note: "Three kebabs — the group order" },
       { label: "Family Meal", price: "$87.49", note: "Ten skewers, feeds four to six" },
       { label: "Falafel Plate", price: "$16.55" },
-      { label: "Baklava", price: "$3.99", note: "Cashew or pistachio" },
+      { label: "Baklava", price: "$3.99", note: "Pistachio or Dubai chocolate style" },
     ],
     faqs: [
       {

@@ -611,21 +611,22 @@ export const OFFERING_PAGES: OfferingPage[] = [
   {
     slug: "baklava",
     h1: "Baklava in Chandler, AZ",
-    title: "Baklava $3.99 — Cashew & Pistachio | Chandler, AZ | Maza",
+    title: "Baklava $3.99 — Pistachio & Dubai Chocolate Style | Chandler, AZ | Maza",
     description:
-      "Cashew and pistachio baklava, $3.99 each, at Maza Mediterranean Cuisine in Chandler, AZ. Layered phyllo, honey syrup, made in house.",
-    hook: "Maza serves two baklava, cashew and pistachio, and both are $3.99. They are built the same way: layer on layer of phyllo, brushed and baked, then finished with syrup — the kind of dessert that is a fifteen-bite job and worth ordering two of.",
+      "Pistachio and Dubai chocolate style baklava, $3.99 each, at Maza Mediterranean Cuisine in Chandler, AZ. Layered phyllo, honey syrup, made in house.",
+    hook: "Maza serves two baklava, pistachio and Dubai chocolate style, and both are $3.99. They are built the same way: layer on layer of phyllo, brushed and baked, then finished with syrup — the kind of dessert that is a fifteen-bite job and worth ordering two of.",
     intro:
-      "Baklava is the standard close to a Mediterranean meal, and we keep both the cashew and the pistachio version so nobody has to split one.",
+      "Baklava is the standard close to a Mediterranean meal, and we keep both the pistachio and the Dubai chocolate style so nobody has to split one.",
     priceHeading: "Baklava pricing",
     priceRows: [
-      { label: "Cashew Baklava", price: "$3.99" },
-      { label: "Pistachio Baklava", price: "$3.99" },    ],
+      { label: "Dubai Chocolate Style Baklava", price: "$3.99" },
+      { label: "Pistachio Baklava", price: "$3.99" },
+    ],
     faqs: [
       {
         question: "Which baklava should I get?",
         answer:
-          "Cashew is the milder, sweeter one; pistachio is nuttier and a little less sweet. They are both $3.99, so the honest answer is to get one of each.",
+          "Pistachio is the classic nutty baklava; Dubai chocolate style is the chocolate-pistachio finish. They are both $3.99, so the honest answer is to get one of each.",
       },
       {
         question: "Does baklava contain dairy?",
@@ -639,7 +640,7 @@ export const OFFERING_PAGES: OfferingPage[] = [
     menuLabel: "desserts & drinks",
     menuSection: "Baklava",
     image: "/images/maza/menu/opt-baklava.jpg",
-    imageAlt: "Cashew and pistachio baklava at Maza Mediterranean Cuisine Chandler AZ",
+    imageAlt: "Pistachio and Dubai chocolate style baklava at Maza Mediterranean Cuisine Chandler AZ",
     keywords: ["baklava Chandler AZ", "pistachio baklava Chandler", "Middle Eastern dessert Chandler"],
   },
   {
@@ -875,7 +876,8 @@ export const OFFERING_PAGES: OfferingPage[] = [
     priceRows: [
       { label: "Appetizer Plate", price: "$15.51", note: "Start the table with mezze" },
       { label: "Chicken Tikka Plate", price: "$19.67", note: "Most-ordered plate" },
-      { label: "Maza Grill", price: "$27.99", note: "Three kebabs, one plate" },    ],
+      { label: "Maza Grill", price: "$27.99", note: "Three kebabs, one plate" },
+    ],
     faqs: [
       FAQ_HOURS,
       FAQ_PARKING,

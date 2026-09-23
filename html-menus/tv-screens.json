@@ -400,9 +400,9 @@
           {
             "ref": [
               "Baklava",
-              "Cashew Baklava"
+              "Dubai Chocolate Style Baklava"
             ],
-            "caption": "Cashew Baklava",
+            "caption": "Dubai Chocolate Style Baklava",
             "photo": "baklava-cashew-baklava.jpg"
           },
           {
@@ -417,16 +417,16 @@
         "desserts_card": {
           "ref": [
             "Baklava",
-            "Cashew Baklava"
+            "Dubai Chocolate Style Baklava"
           ],
-          "caption": "Cashew Baklava"
+          "caption": "Dubai Chocolate Style Baklava"
         },
         "desserts": {
           "title": "Desserts",
           "items": [
             [
               "Baklava",
-              "Cashew Baklava"
+              "Dubai Chocolate Style Baklava"
             ],
             [
               "Baklava",

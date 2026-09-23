@@ -85,7 +85,7 @@ const images = {
   'Fries|Sides': '/images/maza/menu/opt-side-fries-vertical.jpg',
 
   // --- Baklava ---
-  'Cashew Baklava|Baklava': '/images/maza/menu/opt-baklava.jpg',
+  'Dubai Chocolate Style Baklava|Baklava': '/images/maza/menu/opt-baklava.jpg',
   'Pistachio Baklava|Baklava': '/images/maza/menu/opt-baklava.jpg',
 };
 

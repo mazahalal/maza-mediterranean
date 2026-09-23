@@ -66,7 +66,9 @@ export const MENU_ITEM_LINKS: Record<string, MenuItemLink> = {
 
   // Desserts
   Baklava: { href: "/baklava", label: "Baklava" },
-  "Baklava Cashew": { href: "/baklava", label: "Baklava" },
+  "Dubai Chocolate Style Baklava": { href: "/baklava", label: "Baklava" },
+  "Pistachio Baklava": { href: "/baklava", label: "Baklava" },
+  "Baklava Dubai Chocolate": { href: "/baklava", label: "Baklava" },
   "Baklava Pistachio": { href: "/baklava", label: "Baklava" },
 };
 

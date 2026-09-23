@@ -451,15 +451,6 @@
     transform: scale(1.52);
     transform-origin: center center;
   }
-  .s3-desserts .product-frame.kunafah .photo-card img {
-    /* horizontal pistachio tray shot — full landscape, no square crop */
-    object-fit: cover;
-    object-position: 50% 48%;
-    width: 100%;
-    height: 100%;
-    transform: none;
-    transform-origin: center center;
-  }
   .s3-desserts .product-frame .card-detail {
     justify-content: center;
     text-align: center;
@@ -885,7 +876,7 @@
       <div class="s3-desserts-stack">
         {% set baklava = s.row3.desserts_cards[0].ref if s.row3.desserts_cards is defined else s.row3.desserts_card.ref %}
         {% set baklava_photo = s.row3.desserts_cards[0].photo if s.row3.desserts_cards is defined and s.row3.desserts_cards[0].photo else baklava.photo %}
-        {% set baklava_name = "Baklava · Cashew / Pistachio" %}
+        {% set baklava_name = "Baklava · Pistachio / Dubai Chocolate" %}
         {% set baklava_price = baklava.price %}
         {% if s.row3.desserts_cards is defined and s.row3.desserts_cards|length > 1 %}
           {% set p0 = s.row3.desserts_cards[0].ref.price|replace('$','') %}
@@ -904,19 +895,6 @@
             <span class="card-price">{{ baklava_price }}</span>
           </div>
         </div>
-        {% if s.row3.desserts_cards is defined and s.row3.desserts_cards|length > 2 %}
-        {% set kuna = s.row3.desserts_cards[2].ref %}
-        {% set kuna_photo = s.row3.desserts_cards[2].photo if s.row3.desserts_cards[2].photo else kuna.photo %}
-        {% set kuna_name = s.row3.desserts_cards[2].caption if s.row3.desserts_cards[2].caption else kuna.name %}
-        <div class="product-frame kunafah">
-          <div class="photo-card"><img src="../photos/{{ kuna_photo }}" alt="Kunāfah · Pistachio"></div>
-          <div class="card-detail">
-            <span class="card-name">{{ kuna_name }}</span>
-            <span class="card-sep">❖</span>
-            <span class="card-price">${{ kuna.price }}</span>
-          </div>
-        </div>
-        {% endif %}
       </div>
     </div>
     <div class="v-divider"></div>
