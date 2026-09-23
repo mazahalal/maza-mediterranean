@@ -123,12 +123,6 @@ export const menuData: MenuCategory[] = [
     ],
   },
   {
-    category: "Kunāfah",
-    items: [
-      { name: "Kunāfah (Pistachio, 2pc)", price: "$4.99", image: "/images/maza/menu/opt-kunafah.jpg" }
-    ],
-  },
-  {
     category: "Drinks",
     items: [
       { name: "Bottled Water", price: "$1.49" },
