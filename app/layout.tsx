@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Cinzel, Montserrat } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -14,17 +14,22 @@ import {
   MAZA_RATING_WORST,
 } from "@/lib/maza-rating";
 
-const cinzel = Cinzel({
+/**
+ * Self-hosted (next/font/local) — avoids next/font/google + Turbopack flakes on Vercel
+ * ("next/font/google queries have exactly one entry" / missing @vercel/turbopack-next font).
+ * Files are latin variable woff2 pulled from fonts.gstatic (Cinzel / Montserrat).
+ */
+const cinzel = localFont({
+  src: "./fonts/cinzel.woff2",
+  weight: "500 700",
   variable: "--font-cinzel",
-  subsets: ["latin"],
-  weight: ["500", "700"],
   display: "swap",
 });
 
-const montserrat = Montserrat({
+const montserrat = localFont({
+  src: "./fonts/montserrat.woff2",
+  weight: "300 600",
   variable: "--font-montserrat",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
   display: "swap",
 });
 
