@@ -50,8 +50,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${cinzel.variable} ${montserrat.variable}`}>
       <body className="min-h-screen flex flex-col bg-[#0A1F1E] text-[#F5F1E8]">
+        <a href="#main-content" className="skip-to-content">
+          Skip to main content
+        </a>
         <Navbar />
-        <main className="flex-1">{children}</main>
+        <main id="main-content" className="flex-1" tabIndex={-1}>
+          {children}
+        </main>
         <Footer />
         <FloatingOrderButton />
         <script
@@ -214,7 +219,8 @@ export default function RootLayout({
           <img
             height="1"
             width="1"
-            style={{ display: 'none' }}
+            style={{ display: "none" }}
+            alt=""
             src={`https://www.facebook.com/tr?id=${process.env.NEXT_PUBLIC_META_PIXEL_ID}&ev=PageView&noscript=1`}
           />
         </noscript>

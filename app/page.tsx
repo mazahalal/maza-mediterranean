@@ -7,6 +7,7 @@ import SamakWeekendPopup from "@/components/SamakWeekendPopup";
 import { TAKEOUT_URL, deliveryUrl } from "@/lib/ordering";
 import { getActiveHomepagePromo } from "@/lib/promos";
 import RelatedLinks from "@/components/RelatedLinks";
+import { MAZA_GOOGLE_MAPS_URL } from "@/lib/maza-maps";
 
 // Flash promos are date-gated at render time; ISR so static HTML cannot stick after endsAt.
 export const revalidate = 60;
@@ -34,12 +35,36 @@ export default function Home() {
       >
         <div className="absolute inset-0 bg-[#0A1F1E]/70"></div>
         <div className="relative text-center px-6">
-          <div className="mb-4">
-            <span className="font-display text-6xl md:text-8xl tracking-[0.2em] text-[#D3AB5E]">MAZA</span>
-          </div>
-          <div className="font-display text-2xl md:text-4xl tracking-[0.3em] text-[#F5F1E8] mb-6">MEDITERRANEAN CUISINE</div>
-          <p className="text-xl md:text-2xl text-[#F5F1E8]/90 mb-8">
+          {/* Single H1 with restaurant name — DoorDash/SEO checklist + a11y hierarchy */}
+          <h1 className="mb-6">
+            <span className="block font-display text-6xl md:text-8xl tracking-[0.2em] text-[#D3AB5E]">
+              MAZA
+            </span>
+            <span className="mt-2 block font-display text-2xl md:text-4xl tracking-[0.3em] text-[#F5F1E8]">
+              Mediterranean Cuisine
+            </span>
+            <span className="sr-only"> | Chandler, AZ</span>
+          </h1>
+          <p className="text-xl md:text-2xl text-[#F5F1E8]/90 mb-4">
             Big portions. Real ingredients.<br />Honest prices.<br />Mediterranean food Chandler AZ — halal Mediterranean near Chandler Mall and Tempe.
+          </p>
+          <p className="mb-8 text-sm md:text-base tracking-wide text-[#F5F1E8]/85">
+            <span className="text-[#D3AB5E] font-semibold">4.9 ★</span>
+            <span className="mx-2 text-[#F5F1E8]/40" aria-hidden="true">
+              ·
+            </span>
+            <span>100+ Google reviews</span>
+            <span className="mx-2 text-[#F5F1E8]/40" aria-hidden="true">
+              ·
+            </span>
+            <a
+              href={MAZA_GOOGLE_MAPS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline decoration-[#D3AB5E]/50 underline-offset-4 hover:text-[#D3AB5E] transition-colors"
+            >
+              Read reviews
+            </a>
           </p>
           <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
             <Link
@@ -137,6 +162,19 @@ export default function Home() {
       <section className="py-16 px-6 text-center border-t border-[#D3AB5E]/20">
         <h2 className="font-display text-4xl text-[#D3AB5E] tracking-wide mb-4">Open Tue–Sun, 10am–10pm</h2>
         <p className="text-[#F5F1E8]/80 text-lg">Dine in or grab it to go. Closed Mondays.</p>
+        <p className="mt-4 text-[#F5F1E8]/80">
+          Rated{" "}
+          <span className="text-[#D3AB5E] font-semibold">4.9 ★</span> from 100+
+          Google reviews.{" "}
+          <a
+            href={MAZA_GOOGLE_MAPS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline decoration-[#D3AB5E]/50 underline-offset-4 hover:text-[#D3AB5E] transition-colors"
+          >
+            See what guests say →
+          </a>
+        </p>
       </section>
 
       {/* Final CTA */}
