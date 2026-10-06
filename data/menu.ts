@@ -2,6 +2,7 @@ export interface MenuItem {
   name: string;
   description?: string;
   price: string;
+  out_of_stock?: string;
   note?: string;
   notes?: string[];
   image?: string;
@@ -103,7 +104,7 @@ export const menuData: MenuCategory[] = [
       { name: "Dolma", price: "$5.99" },
       { name: "Fries", price: "$3.49", image: "/images/maza/menu/opt-side-fries-vertical.jpg" },
       { name: "Falafel (4pc)", price: "$3.99", image: "/images/maza/menu/opt-falafel-side.jpg" },
-      { name: "Hummus with tahini and pita", price: "$5.99", image: "/images/maza/menu/opt-hummus-pita.jpg" },
+      { name: "Hummus with tahini and pita", price: "$5.99", image: "/images/maza/menu/opt-hummus-pita.jpg", out_of_stock: "out-of-stock-today-available-tomorrow" },
       { name: "Pita", price: "$1.25" },
       { name: "Rice", price: "$3.99" },
       { name: "Tzatziki", price: "SM $1.99 | LG $4.99" },
