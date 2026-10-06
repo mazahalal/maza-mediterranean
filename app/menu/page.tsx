@@ -12,6 +12,32 @@ import DeliveryIcon from "@/components/DeliveryIcon";
 import { TAKEOUT_URL, deliveryUrl } from "@/lib/ordering";
 import { getActiveHomepagePromo } from "@/lib/promos";
 
+function OutOfStockBanner() {
+  const outOfStock = menuData
+    .flatMap((s) => s.items)
+    .filter((i) => i.out_of_stock);
+
+  if (outOfStock.length === 0) return null;
+
+  const names = outOfStock.map((i) => i.name).join(", ");
+
+  return (
+    <div className="bg-[#3a1f1f] border border-[#ff8a8a]/40 rounded-xl px-6 py-5 flex items-center gap-4">
+      <svg className="w-8 h-8 text-[#ff8a8a] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+      </svg>
+      <div className="flex-1">
+        <p className="text-[#ff8a8a] font-semibold text-lg">
+          Unfortunately, we are currently out of {names}
+        </p>
+        <p className="text-[#F5F1E8]/70 text-sm mt-1">
+          It will be back tomorrow. Please enjoy everything else on the menu in the meantime!
+        </p>
+      </div>
+    </div>
+  );
+}
+
 export { metadata };
 
 // Flash promos are date-gated at render time; ISR so static HTML cannot stick after endsAt.
@@ -65,6 +91,7 @@ export default function MenuPage() {
         <MenuCategoryNav />
 
         <div className="max-w-6xl mx-auto">
+          <OutOfStockBanner />
           <div className="mt-10">
             <MenuLightbox />
           </div>
