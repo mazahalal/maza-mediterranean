@@ -54,7 +54,7 @@ function buildSpecs() {
           currency: 'USD',
           display: item.price,
         },
-        availability: 'available',
+        availability: item.out_of_stock ? 'out_of_stock' : 'available',
         dietary: {
           halal: true,
           vegetarian: isVegetarian || false,

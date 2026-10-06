@@ -54,7 +54,15 @@ export default function SidesPage() {
                     <h3 className="font-semibold text-xl text-[#F5F1E8]">{item.name}</h3>
                   );
                 })()}
-                <span className="font-mono text-[#D3AB5E] font-medium whitespace-nowrap">{item.price}</span>
+                <div className="flex items-center gap-2 shrink-0">
+                  {item.out_of_stock && (
+                    <span className="inline-flex items-center gap-1.5 bg-[#3a1f1f] text-[#ff8a8a] text-xs font-semibold px-2.5 py-1 rounded-full border border-[#ff8a8a]/30 whitespace-nowrap">
+                      <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" /></svg>
+                      Out today — back tomorrow
+                    </span>
+                  )}
+                  <span className="font-mono text-[#D3AB5E] font-medium whitespace-nowrap">{item.price}</span>
+                </div>
               </div>
               {item.note && <p className="text-[#B8B8B8] text-sm">{item.note}</p>}
             </div>

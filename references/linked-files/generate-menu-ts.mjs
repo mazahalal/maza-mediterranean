@@ -97,6 +97,7 @@ function formatItem(item, sectionName) {
   const parts = [`name: "${esc(item.name)}"`, `price: "${item.price}"`];
   const img = images[`${item.name}|${sectionName}`];
   if (img) parts.push(`image: "${img}"`);
+  if (item.out_of_stock) parts.push(`out_of_stock: "${esc(item.out_of_stock)}"`);
   if (item.note) parts.push(`note: "${esc(item.note)}"`);
   if (item.notes?.length) {
     parts.push(`notes: [${item.notes.map((n) => `"${esc(n)}"`).join(', ')}]`);
