@@ -19,7 +19,14 @@ function OutOfStockBanner() {
 
   if (outOfStock.length === 0) return null;
 
-  const names = outOfStock.map((i) => i.name).join(", ");
+  // Extract a short display name from the item name — e.g.
+  // "Hummus with tahini and pita" -> "hummus"
+  // Dedupe so "Hummus" only appears once even if multiple items are out.
+  const displayNames = [
+    ...new Set(
+      outOfStock.map((i) => i.name.split(" with")[0].split(" (")[0].toLowerCase())
+    ),
+  ].join(", and ");
 
   return (
     <div className="bg-[#3a1f1f] border border-[#ff8a8a]/40 rounded-xl px-6 py-5 flex items-center gap-4">
@@ -28,10 +35,10 @@ function OutOfStockBanner() {
       </svg>
       <div className="flex-1">
         <p className="text-[#ff8a8a] font-semibold text-lg">
-          Unfortunately, we are currently out of {names}
+          Unfortunately, we are currently out of {displayNames}
         </p>
         <p className="text-[#F5F1E8]/70 text-sm mt-1">
-          It will be back tomorrow. Please enjoy everything else on the menu in the meantime!
+          It will be back tomorrow — in between all the things it goes in! Please enjoy everything else on the menu in the meantime.
         </p>
       </div>
     </div>
