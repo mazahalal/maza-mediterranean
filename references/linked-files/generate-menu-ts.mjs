@@ -109,6 +109,7 @@ let out = `export interface MenuItem {
   name: string;
   description?: string;
   price: string;
+  out_of_stock?: string;
   note?: string;
   notes?: string[];
   image?: string;

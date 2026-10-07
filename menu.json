@@ -267,8 +267,7 @@
         },
         {
           "name": "Hummus with tahini and pita",
-          "price": "$5.99",
-          "out_of_stock": "out-of-stock-today-available-tomorrow"
+          "price": "$5.99"
         },
         {
           "name": "Pita",
