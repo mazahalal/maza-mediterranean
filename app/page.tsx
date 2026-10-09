@@ -118,6 +118,44 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Catering promo — advertises the /catering page and request form */}
+      <section className="py-20 px-6 bg-[#0A1F1E] border-t border-[#D3AB5E]/20">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            <div className="overflow-hidden rounded-lg">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/maza/catering-hero-shish-grill.webp"
+                alt="Shish kebabs over open flame on the Maza grill"
+                width={1920}
+                height={1080}
+                decoding="async"
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <div>
+              <h2 className="font-display text-3xl text-[#D3AB5E] tracking-wide mb-4">
+                Catering by Maza
+              </h2>
+              <p className="text-[#F5F1E8]/90 text-lg mb-6">
+                Shish kebab, rice, hummus, baba ghanoush, tzatziki and salad
+                trays for offices, parties, weddings and schools. 100% halal,
+                fresh from our grill, family-meal size.
+              </p>
+              <div className="space-y-4">
+                <Link
+                  href="/catering"
+                  className="inline-block bg-[#D3AB5E] hover:bg-[#C49A4D] text-[#0A1F1E] font-semibold px-8 py-3.5 rounded text-base tracking-wide transition-colors"
+                >
+                  Request Catering
+                </Link>
+                <PhoneLink className="inline-block border border-[#D3AB5E] text-[#D3AB5E] font-semibold px-8 py-3.5 rounded text-base tracking-wide hover:bg-[#D3AB5E] hover:text-[#0A1F1E] transition-colors" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Internal link hub — Jev link audit 2026-09-20 */}
       <section className="py-12 px-6 bg-[#0A1F1E] border-t border-[#D3AB5E]/20">
         <div className="max-w-5xl mx-auto">
@@ -184,7 +222,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
             <Link
               href="/menu"
-              className="inline-block bg-[#D3AB5E] hover:bg-[#A87C3D] text-[#0A1F1E] font-semibold px-10 py-4 rounded text-lg tracking-wide"
+              className="inline-block bg-[#D3AB5E] hover:bg-[#A87C3D] text-[#0A1F1E] font-semibold px-10 py-4 rounded text-lg tracking-wide transition-colors"
             >
               See the Full Menu
             </Link>
