@@ -10,6 +10,7 @@ import { TAKEOUT_URL, deliveryUrl } from "@/lib/ordering";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/menu", label: "Menu" },
+  { href: "/catering", label: "Catering" },
   { href: "/gallery", label: "Gallery" },
   { href: "/about", label: "About" },
   { href: "/careers", label: "Careers" },
