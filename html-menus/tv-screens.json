@@ -1,5 +1,5 @@
 {
-  "_comment": "TV screen definitions. Item refs are [Section, Item] pairs resolved from menu.json at build time \u2014 prices/notes always come from menu.json, never hardcoded here. Edit groupings/cards freely; text data stays in menu.json.",
+  "_comment": "TV screen definitions. Item refs are [Section, Item] pairs resolved from menu.json at build time — prices/notes always come from menu.json, never hardcoded here. Edit groupings/cards freely; text data stays in menu.json.",
   "screens": [
     {
       "id": "screen1-wraps",
@@ -400,14 +400,6 @@
           {
             "ref": [
               "Baklava",
-              "Dubai Chocolate Style Baklava"
-            ],
-            "caption": "Dubai Chocolate Style Baklava",
-            "photo": "baklava-cashew-baklava.jpg"
-          },
-          {
-            "ref": [
-              "Baklava",
               "Pistachio Baklava"
             ],
             "caption": "Pistachio Baklava",
@@ -417,17 +409,13 @@
         "desserts_card": {
           "ref": [
             "Baklava",
-            "Dubai Chocolate Style Baklava"
+            "Pistachio Baklava"
           ],
-          "caption": "Dubai Chocolate Style Baklava"
+          "caption": "Pistachio Baklava"
         },
         "desserts": {
           "title": "Desserts",
           "items": [
-            [
-              "Baklava",
-              "Dubai Chocolate Style Baklava"
-            ],
             [
               "Baklava",
               "Pistachio Baklava"
@@ -467,10 +455,6 @@
                 [
                   "Drinks",
                   "Mexican Fanta Strawberry"
-                ],
-                [
-                  "Drinks",
-                  "Gold Peak Peach Tea"
                 ]
               ]
             },
@@ -496,26 +480,12 @@
                 [
                   "Drinks",
                   "Minute Maid 100% Orange Juice"
-                ],
-                [
-                  "Drinks",
-                  "Al Reef Pomegranate Juice"
-                ],
-                [
-                  "Drinks",
-                  "Al Reef Mango Juice"
-                ],
-                [
-                  "Drinks",
-                  "Al Reef Orange Juice"
                 ]
               ]
             }
           ],
           "ad_photos": [
             "drink-ad-mexican-sodas.jpg",
-            "drink-ad-alreef-juices.jpg",
-            "drink-ad-gold-peak-peach-tea.jpg",
             "drink-ad-fanta-only.jpg",
             "drink-ad-mexican-coke.jpg",
             "drink-ad-mexican-sprite.jpg",
@@ -524,15 +494,13 @@
           ],
           "ad_prices": [
             "$3.99",
-            "$2.49",
-            "$2.99",
             "$3.99",
             "$3.99",
             "$3.99",
             "$2.75",
-            "$2.49"
+            "$2.99"
           ],
-          "_ad_note": "8 x 3:1 drink ads, rotating carousel (no crop, 1920x640)"
+          "_ad_note": "6 x 3:1 drink ads, rotating carousel (no crop, 1920x640)"
         },
         "sharbat": {
           "section": "Sharbat"
