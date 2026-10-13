@@ -1,5 +1,5 @@
 {
-  "_comment": "TV screen definitions. Item refs are [Section, Item] pairs resolved from menu.json at build time \u2014 prices/notes always come from menu.json, never hardcoded here. Edit groupings/cards freely; text data stays in menu.json.",
+  "_comment": "TV screen definitions. Item refs are [Section, Item] pairs resolved from menu.json at build time — prices/notes always come from menu.json, never hardcoded here. Edit groupings/cards freely; text data stays in menu.json.",
   "screens": [
     {
       "id": "screen1-wraps",
@@ -400,14 +400,6 @@
           {
             "ref": [
               "Baklava",
-              "Dubai Chocolate Style Baklava"
-            ],
-            "caption": "Dubai Chocolate Style Baklava",
-            "photo": "baklava-cashew-baklava.jpg"
-          },
-          {
-            "ref": [
-              "Baklava",
               "Pistachio Baklava"
             ],
             "caption": "Pistachio Baklava",
@@ -417,17 +409,13 @@
         "desserts_card": {
           "ref": [
             "Baklava",
-            "Dubai Chocolate Style Baklava"
+            "Pistachio Baklava"
           ],
-          "caption": "Dubai Chocolate Style Baklava"
+          "caption": "Pistachio Baklava"
         },
         "desserts": {
           "title": "Desserts",
           "items": [
-            [
-              "Baklava",
-              "Dubai Chocolate Style Baklava"
-            ],
             [
               "Baklava",
               "Pistachio Baklava"
