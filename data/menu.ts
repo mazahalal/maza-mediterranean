@@ -119,7 +119,6 @@ export const menuData: MenuCategory[] = [
   {
     category: "Baklava",
     items: [
-      { name: "Dubai Chocolate Style Baklava", price: "$3.99", image: "/images/maza/menu/opt-baklava.jpg" },
       { name: "Pistachio Baklava", price: "$3.99", image: "/images/maza/menu/opt-baklava.jpg" }
     ],
   },
