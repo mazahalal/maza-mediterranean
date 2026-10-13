@@ -313,10 +313,6 @@
       "name": "Baklava",
       "items": [
         {
-          "name": "Dubai Chocolate Style Baklava",
-          "price": "$3.99"
-        },
-        {
           "name": "Pistachio Baklava",
           "price": "$3.99"
         }
@@ -425,6 +421,12 @@
         "Please allow 1 hour to prepare"
       ],
       "reason": "moratorium - temporarily off menu; do not show on website or TV"
+    },
+    {
+      "section": "Baklava",
+      "name": "Dubai Chocolate Style Baklava",
+      "price": "$3.99",
+      "reason": "temporarily MIA — only pistachio baklava in stock; do not show on website or TV"
     }
   ]
 }
