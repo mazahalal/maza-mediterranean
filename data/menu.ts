@@ -127,7 +127,6 @@ export const menuData: MenuCategory[] = [
     items: [
       { name: "Bottled Water", price: "$1.49" },
       { name: "Water Cup", price: "Free" },
-      { name: "Topo Chico Sparkling Water", price: "$2.99" },
       { name: "Minute Maid 100% Apple Juice", price: "$2.75", note: "10oz" },
       { name: "Minute Maid 100% Orange Juice", price: "$2.75", note: "10oz" },
       { name: "Hot Middle Eastern Black Tea", price: "$2.99" },
