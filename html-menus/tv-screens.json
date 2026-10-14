@@ -485,16 +485,18 @@
             "drink-ad-fanta-only.jpg",
             "drink-ad-mexican-coke.jpg",
             "drink-ad-mexican-sprite.jpg",
-            "drink-ad-minute-maid-juices.jpg"
+            "drink-ad-minute-maid-juices.jpg",
+            "drink-ad-karkadeh.jpg"
           ],
           "ad_prices": [
             "$3.99",
             "$3.99",
             "$3.99",
             "$3.99",
-            "$2.75"
+            "$2.75",
+            "$1.99"
           ],
-          "_ad_note": "5 x 3:1 drink ads, rotating carousel (no crop, 1920x640)"
+          "_ad_note": "6 x 3:1 drink ads, rotating carousel (no crop, 1920x640)"
         },
         "sharbat": {
           "section": "Sharbat"
