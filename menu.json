@@ -201,7 +201,7 @@
           "name": "Tepsi Baytinijan",
           "price": "$20.00",
           "notes": [
-            "Iraqi eggplant casserole — eggplant, potato, tomato, onion + seasoned meat, served over rice"
+            "Iraqi eggplant casserole \u2014 eggplant, potato, tomato, onion + seasoned meat, served over rice"
           ]
         },
         {
@@ -241,12 +241,12 @@
         {
           "name": "Crispy Chicken Sandwich",
           "price": "$11.85",
-          "note": "Kids Meal — Comes with Fries"
+          "note": "Kids Meal \u2014 Comes with Fries"
         },
         {
           "name": "All Beef Burger",
           "price": "$11.85",
-          "note": "Kids Meal — Comes with Fries"
+          "note": "Kids Meal \u2014 Comes with Fries"
         }
       ]
     },
@@ -377,12 +377,12 @@
     },
     {
       "name": "Sharbat",
-      "subtitle": "House-made · no refill",
+      "subtitle": "House-made \u00b7 no refill",
       "items": [
         {
           "name": "Daily Selection",
           "price": "SM $1.99 | LG $3.99",
-          "note": "SM 12oz · LG 24oz"
+          "note": "SM 12oz \u00b7 LG 24oz"
         }
       ]
     }
@@ -402,7 +402,7 @@
       "section": "Baklava",
       "name": "Dubai Chocolate Style Baklava",
       "price": "$3.99",
-      "reason": "temporarily MIA — only pistachio baklava in stock; do not show on website or TV"
+      "reason": "temporarily MIA \u2014 only pistachio baklava in stock; do not show on website or TV"
     }
   ]
 }
