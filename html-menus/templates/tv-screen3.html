@@ -875,23 +875,14 @@
   <div class="s3-row3">
     <div class="s3-desserts">
       <h2 class="band-title">{{ s.row3.desserts_title if s.row3.desserts_title is defined else "Desserts" }}</h2>
-      {# Desserts photo stack: Baklava flavors (kunafah discontinued) #}
+      {# Desserts: pistachio baklava only (Dubai chocolate MIA; kunafah discontinued) #}
       <div class="s3-desserts-stack">
         {% set baklava = s.row3.desserts_cards[0].ref if s.row3.desserts_cards is defined else s.row3.desserts_card.ref %}
         {% set baklava_photo = s.row3.desserts_cards[0].photo if s.row3.desserts_cards is defined and s.row3.desserts_cards[0].photo else baklava.photo %}
         {% set baklava_name = "Baklava · Pistachio" %}
-        {% set baklava_price = baklava.price %}
-        {% if s.row3.desserts_cards is defined and s.row3.desserts_cards|length > 1 %}
-          {% set p0 = s.row3.desserts_cards[0].ref.price|replace('$','') %}
-          {% set p1 = s.row3.desserts_cards[1].ref.price|replace('$','') %}
-          {% if p0 == p1 %}
-            {% set baklava_price = "$" ~ p0 %}
-          {% else %}
-            {% set baklava_price = "$" ~ ([p0, p1]|sort)[0] ~ " / $" ~ ([p0, p1]|sort)[1] %}
-          {% endif %}
-        {% endif %}
+        {% set baklava_price = baklava.price if baklava.price is string and baklava.price.startswith('$') else ('$' ~ baklava.price|replace('$','')) %}
         <div class="product-frame baklava">
-          <div class="photo-card"><img src="../photos/{{ baklava_photo }}" alt="Baklava"></div>
+          <div class="photo-card"><img src="../photos/{{ baklava_photo }}" alt="Pistachio Baklava"></div>
           <div class="card-detail">
             <span class="card-name">{{ baklava_name }}</span>
             <span class="card-sep">❖</span>
