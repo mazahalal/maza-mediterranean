@@ -20,7 +20,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '22.23.4'
 
       - name: Generate data/menu.ts from menu.json
         run: node references/linked-files/generate-menu-ts.mjs
