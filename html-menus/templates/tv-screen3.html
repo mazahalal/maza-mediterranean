@@ -422,6 +422,9 @@
     min-height: 0;
     overflow: hidden;
   }
+  /* Baklava off: collapse desserts so drinks + sharbat take the full row */
+  .s3-row3.no-desserts .s3-drinks { flex: 1.15 1 auto; }
+  .s3-row3.no-desserts .s3-sharbat { flex: 0.85 1 auto; }
   .s3-desserts .band-title { font-size: 24px; text-align: center; margin: 0; flex: 0 0 auto; }
   .s3-desserts-stack {
     flex: 1 1 auto;
@@ -871,8 +874,10 @@
 
   <hr class="h-rule">
 
-  <!-- ROW 3: DESSERTS | DRINKS carousel | SHARBAT -->
-  <div class="s3-row3">
+  <!-- ROW 3: DESSERTS (optional) | DRINKS carousel | SHARBAT -->
+  {% set desserts_hidden = s.row3.desserts_hidden is defined and s.row3.desserts_hidden %}
+  <div class="s3-row3{% if desserts_hidden %} no-desserts{% endif %}">
+    {% if not desserts_hidden %}
     <div class="s3-desserts">
       <h2 class="band-title">{{ s.row3.desserts_title if s.row3.desserts_title is defined else "Desserts" }}</h2>
       {# Desserts: baklava frame; supports temporary unavailable (no menu ref) #}
@@ -900,6 +905,7 @@
       </div>
     </div>
     <div class="v-divider"></div>
+    {% endif %}
     <div class="s3-drinks">
       <h2 class="band-title"><span class="rule"></span>{{ s.row3.drinks.name }}<span class="rule"></span></h2>
       <div class="s3-drinks-carousel">

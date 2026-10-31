@@ -453,7 +453,9 @@
           "photo": "sharbat-three-cups-nobg.png",
           "caption": "Sharbat",
           "_note": "transparent cut from OneDrive digital/reference/sharbat_three_cups_nobg_v1.png"
-        }
+        },
+        "desserts_hidden": true,
+        "_desserts_note": "Baklava temporarily off menu — hide desserts column; drinks+sharbat expand. Set desserts_hidden false + restore desserts_cards.ref when baklava returns."
       }
     }
   ],
