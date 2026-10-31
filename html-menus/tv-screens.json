@@ -105,15 +105,6 @@
                 "Chicken Tikka Plate"
               ]
             ]
-          },
-          {
-            "name": "Maza Special",
-            "items": [
-              [
-                "Specials",
-                "Maza Special"
-              ]
-            ]
           }
         ],
         [
@@ -137,7 +128,7 @@
         ],
         [
           {
-            "name": "Mixed",
+            "name": "Mixed / House",
             "items": [
               [
                 "Plates",
@@ -146,6 +137,10 @@
               [
                 "Plates",
                 "Maza Grill"
+              ],
+              [
+                "Specials",
+                "Maza Special"
               ]
             ]
           }
@@ -190,6 +185,10 @@
             "Family Meal"
           ]
         ]
+      },
+      "_plates_ui": {
+        "hide_item_notes": true,
+        "_note": "Plate column shows name+price only — notes clutter TV; Family Meal bullets carry detail."
       }
     },
     {
