@@ -217,7 +217,7 @@ export const OFFERING_PAGES: OfferingPage[] = [
     priceRows: [
       { label: "Lamb Tikka Plate", price: "$20.71", note: "2 lamb tikka, pita, rice, salad, baba ghanoush & hummus + tahini" },
       { label: "Lamb Tikka Wrap", price: "$13.51" },
-      { label: "Family Meal", price: "$87.49", note: "3 beef + lamb + 3 chicken shish + pita, rice, sides" },
+      { label: "Family Meal", price: "$87.49", note: "Weekend special: 12 shish (3 of each)" },
     ],
     faqs: [
       {
@@ -249,7 +249,7 @@ export const OFFERING_PAGES: OfferingPage[] = [
     priceRows: [
       { label: "Ribeye Tikka Plate", price: "$24.87", note: "2 ribeye tikka, pita, rice, salad, baba ghanoush & hummus + tahini" },
       { label: "Ribeye Tikka Wrap", price: "$14.55" },
-      { label: "Family Meal", price: "$87.49", note: "3 beef + lamb + 3 chicken shish" },
+      { label: "Family Meal", price: "$87.49", note: "Weekend special: 12 shish, 3 of each" },
     ],
     faqs: [
       {
@@ -281,7 +281,7 @@ export const OFFERING_PAGES: OfferingPage[] = [
     priceRows: [
       { label: "Mix Kebab", price: "$20.71", note: "1 chicken shish kebab + 1 beef & lamb shish kebab, pita, rice, salad, baba ghanoush & hummus + tahini" },
       { label: "Maza Grill", price: "$27.99", note: "Three-kebab version with chicken tikka" },
-      { label: "Family Meal", price: "$87.49", note: "6 shish kebabs, feeds a crowd" },
+      { label: "Family Meal", price: "$87.49", note: "Weekend special: 12 shish, 3 of each" },
     ],
     faqs: [
       {
@@ -686,7 +686,7 @@ export const OFFERING_PAGES: OfferingPage[] = [
     priceRows: [
       { label: "Samak Tandoor", price: "$38.97", note: "Whole large fish with rice and salad — please allow 1 hour to prepare" },
       { label: "Maza Special", price: "$48.45", note: "Four skewers + 2 pita, rice, sides" },
-      { label: "Family Meal", price: "$87.49", note: "6 shish kebabs — the largest order on the menu" },
+      { label: "Family Meal", price: "$87.49", note: "Weekend special: 12 shish for $87.49" },
     ],
     faqs: [
       {
@@ -712,15 +712,15 @@ export const OFFERING_PAGES: OfferingPage[] = [
   {
     slug: "family-meal",
     h1: "Family Meal & Group Platters in Chandler, AZ",
-    title: "Family Meal $87.49 — 6 Skewers | Chandler, AZ | Maza",
+    title: "Family Meal $87.49 — Weekend 12 Shish | Chandler, AZ | Maza",
     description:
-      "Maza Family Meal $87.49 — 3 beef + lamb shish and 3 chicken shish, pita, rice and sides. Feeds a table.",
-    hook: "The Maza Family Meal is $87.49 with three beef + lamb shish kebab and three chicken shish kebab — plus pita, rice, and sides. The next size down, the Maza Special, is $48.45 with four skewers and feeds two to three.",
+      "Maza Family Meal weekend special $87.49 — 12 shish (3 of each): beef + lamb, chicken shish, chicken tikka, ribeye. Same price, today & tomorrow only.",
+    hook: "The Maza Family Meal is a weekend special at $87.49 — 12 shish, 3 of each (beef + lamb shish, chicken shish, chicken tikka, ribeye tikka), today and tomorrow only. The next size down, the Maza Special, is $48.45 with four skewers (2 chicken tikka + beef/lamb and chicken shish) and feeds two to three.",
     intro:
       "Built for a table rather than a person. Order it for a family dinner, a work lunch in the Price Road corridor, or a game night where nobody wants to choose.",
     priceHeading: "Group platter pricing",
     priceRows: [
-      { label: "Family Meal", price: "$87.49", note: "3 beef + lamb shish, 3 chicken shish + 4 pita, rice, sides" },
+      { label: "Family Meal", price: "$87.49", note: "WEEKEND: 12 shish — 3 of each + 4 pita, rice, sides" },
       { label: "Maza Special", price: "$48.45", note: "4 skewers + 2 pita, rice, sides — feeds 2–3" },
       { label: "Appetizer Plate", price: "$15.51", note: "Add a mezze start to the table" },
     ],
@@ -741,7 +741,7 @@ export const OFFERING_PAGES: OfferingPage[] = [
     menuLabel: "specials",
     menuSection: "Specials",
     image: "/images/maza/menu/opt-family-meal.jpg",
-    imageAlt: "Maza Family Meal platter with shish kebabs at Maza Mediterranean Cuisine Chandler AZ",
+    imageAlt: "Maza Family Meal weekend special 12 shish platter at Maza Mediterranean Cuisine Chandler AZ",
     keywords: ["family meal Chandler AZ", "Mediterranean catering platter Chandler", "group food Chandler"],
   },
   {
@@ -820,12 +820,12 @@ export const OFFERING_PAGES: OfferingPage[] = [
     title: "Halal Catering in Chandler, AZ | Maza Mediterranean Cuisine",
     description:
       "Halal Mediterranean catering in Chandler — kebab platters, family meals and mezze for offices and events. Price Road corridor and East Valley delivery available.",
-    hook: "Maza caters halal Mediterranean food across Chandler and the East Valley, from a $48.45 Maza Special of four skewers up to the $87.49 Family Meal with six shish kebabs, plus mezze platters and salads. We cook for offices in the Price Road corridor, family events, and gatherings where the food has to be halal-certified.",
+    hook: "Maza caters halal Mediterranean food across Chandler and the East Valley, from a $48.45 Maza Special of four skewers up to the $87.49 Family Meal weekend special (12 shish), plus mezze platters and salads. We cook for offices in the Price Road corridor, family events, and gatherings where the food has to be halal-certified.",
     intro:
       "Catering is the same kitchen as the restaurant — the same grills, the same halal-certified meat, the same rice and sides. Tell us headcount and timing and we will size the order.",
     priceHeading: "Catering anchors",
     priceRows: [
-      { label: "Family Meal", price: "$87.49", note: "3 beef + lamb + 3 chicken shish — four to six people" },
+      { label: "Family Meal", price: "$87.49", note: "Weekend special: 12 shish, 3 of each" },
       { label: "Maza Special", price: "$48.45", note: "4 skewers + 2 pita, rice, sides — two to three people" },
       { label: "Appetizer Plate", price: "$15.51", note: "Mezze start for the table" },
       { label: "Maza Salad", price: "$13.99", note: "Choose chicken or steak" },
@@ -901,7 +901,7 @@ export const OFFERING_PAGES: OfferingPage[] = [
       { label: "Beef Gyro Wrap", price: "$10.91", note: "Great traveller" },
       { label: "Chicken Tikka Plate", price: "$19.67", note: "Full plate, boxed" },
       { label: "Loaded Fries — Gyro", price: "$12.89", note: "Choose up to 3 sauces" },
-      { label: "Family Meal", price: "$87.49", note: "6 shish kebabs — call ahead" },
+      { label: "Family Meal", price: "$87.49", note: "Weekend special 12 shish — call ahead" },
     ],
     faqs: [
       FAQ_ORDER,

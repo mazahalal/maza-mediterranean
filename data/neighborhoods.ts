@@ -108,7 +108,7 @@ export const NEIGHBORHOOD_PAGES: NeighborhoodPage[] = [
     priceHeading: "What Gilbert orders",
     priceRows: [
       { label: "Maza Grill", price: "$27.99", note: "Three kebabs — the group order" },
-      { label: "Family Meal", price: "$87.49", note: "6 shish kebabs, feeds four to six" },
+      { label: "Family Meal", price: "$87.49", note: "Weekend special: 12 shish, 3 of each" },
       { label: "Falafel Plate", price: "$16.55" },
       { label: "Pistachio Baklava", price: "$3.99" },
     ],
@@ -240,7 +240,7 @@ export const NEIGHBORHOOD_PAGES: NeighborhoodPage[] = [
     priceHeading: "What Mesa orders",
     priceRows: [
       { label: "Maza Special", price: "$48.45", note: "4 skewers + pita, rice, sides — feeds 2–3" },
-      { label: "Family Meal", price: "$87.49", note: "6 shish kebabs — feeds 4–6" },
+      { label: "Family Meal", price: "$87.49", note: "Weekend special: 12 shish — feeds 4–6" },
       { label: "Maza Grill", price: "$27.99" },
       { label: "Appetizer Plate", price: "$15.51" },
     ],
@@ -265,14 +265,14 @@ export const NEIGHBORHOOD_PAGES: NeighborhoodPage[] = [
     title: "Mediterranean Food Near Queen Creek | Maza Mediterranean Cuisine",
     description:
       "Halal Mediterranean food near Queen Creek — Maza at 3491 W Frye Rd, Chandler. Plates $16.55–$28.99, family platters to share, open Tue–Sun 10am–10pm.",
-    hook: "From Queen Creek, Maza is a run west along Chandler Heights or Riggs Rd to 3491 W Frye Rd, Suite 2 in Chandler. Plates are $16.55 to $28.99, and the $87.49 Family Meal puts six shish kebabs on the table for four to six people.",
+    hook: "From Queen Creek, Maza is a run west along Chandler Heights or Riggs Rd to 3491 W Frye Rd, Suite 2 in Chandler. Plates are $16.55 to $28.99, and the $87.49 Family Meal weekend special puts 12 shish on the table for four to six people.",
     intro:
       "Queen Creek families tend to order big. The platters are built for exactly that — rice, pita, and sides included, so nobody is assembling a meal from four separate orders.",
     directions:
       "Head west from Queen Creek along Riggs Rd or Chandler Heights Rd toward the I-10, then north to Frye Rd. Maza is at 3491 W Frye Rd, Suite 2, with free plaza parking.",
     priceHeading: "What Queen Creek orders",
     priceRows: [
-      { label: "Family Meal", price: "$87.49", note: "3 beef + lamb + 3 chicken shish + pita, rice, sides" },
+      { label: "Family Meal", price: "$87.49", note: "Weekend special: 12 shish (3 of each)" },
       { label: "Maza Special", price: "$48.45" },
       { label: "Ribeye Tikka Plate", price: "$24.87" },
       { label: "Loaded Fries — Gyro", price: "$12.89" },

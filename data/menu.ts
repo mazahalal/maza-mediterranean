@@ -70,8 +70,8 @@ export const menuData: MenuCategory[] = [
     category: "Specials",
     items: [
       { name: "Tepsi Baytinijan", price: "$20.00", notes: ["Iraqi eggplant casserole — eggplant, potato, tomato, onion + seasoned meat, served over rice"] },
-      { name: "Maza Special", price: "$48.45", image: "/images/maza/menu/opt-maza-special-vertical.jpg", notes: ["1x Chicken Tikka, 1x Ribeye Tikka, 1x Beef + Lamb Shish Kebab, 1x Chicken Shish Kebab (4 total), +2 Pita, Rice, Salad, Hummus + Tahini, Baba Ghanoush"] },
-      { name: "Family Meal", price: "$87.49", notes: ["3x Beef + Lamb Shish Kebab, 3x Chicken Shish Kebab (6 total), +4 Pita, Rice, Salad, Hummus + Tahini, Baba Ghanoush"] }
+      { name: "Maza Special", price: "$48.45", image: "/images/maza/menu/opt-maza-special-vertical.jpg", notes: ["2x Chicken Tikka, 1x Beef + Lamb Shish Kebab, 1x Chicken Shish Kebab (4 total), +2 Pita, Rice, Salad, Hummus + Tahini, Baba Ghanoush"] },
+      { name: "Family Meal", price: "$87.49", notes: ["WEEKEND SPECIAL (today & tomorrow only): 12 shish for the regular price — 3x Beef + Lamb Shish Kebab, 3x Chicken Shish Kebab, 3x Chicken Tikka, 3x Ribeye Tikka, +4 Pita, Rice, Salad, Hummus + Tahini, Baba Ghanoush"] }
     ],
   },
   {
