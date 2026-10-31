@@ -115,10 +115,8 @@ export const menuData: MenuCategory[] = [
       { name: "Hot Middle Eastern Black Tea", price: "$2.99" },
       { name: "Peace Tea Raspberry", price: "$2.25", note: "16oz can" },
       { name: "Fountain Drink", price: "$2.49", note: "20oz, refillable" },
-      { name: "Mexican Coke", price: "$3.99", note: "355ml glass" },
       { name: "Mexican Fanta Grape", price: "$3.99", note: "355ml glass" },
-      { name: "Mexican Fanta Strawberry", price: "$3.99", note: "355ml glass" },
-      { name: "Mexican Sprite", price: "$3.99", note: "355ml glass" }
+      { name: "Mexican Fanta Strawberry", price: "$3.99", note: "355ml glass" }
     ],
   },
   {
