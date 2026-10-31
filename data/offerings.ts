@@ -345,7 +345,6 @@ export const OFFERING_PAGES: OfferingPage[] = [
     priceRows: [
       { label: "Falafel Wrap", price: "$9.35" },
       { label: "Falafel (4pc) Side", price: "$3.99" },
-      { label: "Appetizer Plate", price: "$15.51", note: "6 dolma, hummus, baba ghanoush & tzatziki" },
     ],
     faqs: [
       {
@@ -544,7 +543,6 @@ export const OFFERING_PAGES: OfferingPage[] = [
       "This is the part of a Mediterranean menu that is easiest to get wrong and hardest to fake — stuffed grape leaves, fried pastry, and bulgur shells, all rolled by hand in the kitchen.",
     priceHeading: "Mezze and appetizer pricing",
     priceRows: [
-      { label: "Appetizer Plate", price: "$15.51", note: "6 dolma, hummus, baba ghanoush & tzatziki" },
       { label: "Dolma", price: "$5.99", note: "Stuffed grape leaves" },
       { label: "Sambusah (2pc)", price: "$9.49" },
     ],
@@ -788,7 +786,6 @@ export const OFFERING_PAGES: OfferingPage[] = [
     priceRows: [
       { label: "Falafel Wrap", price: "$9.35" },
       { label: "Hummus with tahini and pita", price: "$5.99" },
-      { label: "Dolma", price: "$5.99" },
       { label: "Tabouleh", price: "$4.99" },
       { label: "Baba Ghanoush", price: "SM $1.99 | LG $4.99" },
     ],

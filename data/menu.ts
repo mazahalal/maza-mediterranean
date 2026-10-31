@@ -44,7 +44,6 @@ export const menuData: MenuCategory[] = [
       { name: "Chicken Tikka Plate", price: "$19.67", image: "/images/maza/menu/opt-chicken-tikka-plate.jpg", notes: ["2 Chicken Tikka, 1 Pita, rice, salad, baba ghanoush & hummus + tahini"] },
       { name: "Ribeye Tikka Plate", price: "$24.87", notes: ["2 Ribeye Tikka, 1 Pita, rice, salad, baba ghanoush & hummus + tahini"] },
       { name: "Mix Kebab", price: "$20.71", image: "/images/maza/menu/opt-mix-kebab-plate.jpg", notes: ["1 Chicken Shish Kebab and 1 Beef + Lamb Shish Kebab, 1 Pita, rice, salad, baba ghanoush & hummus + tahini"] },
-      { name: "Appetizer Plate", price: "$15.51", image: "/images/maza/menu/opt-appetizer-plate.jpg", notes: ["6 Dolma, Hummus, Baba Ghanoush & Tzatziki"] },
       { name: "Maza Grill", price: "$27.99", image: "/images/maza/menu/opt-Jun_6_2026_5_29_23.jpg", notes: ["1 Chicken Tikka, 1 Beef + Lamb Shish Kebab, 1 Chicken Shish Kebab, 1 Pita, rice, salad, baba ghanoush & hummus + tahini"] },
       { name: "Shredded Steak Plate", price: "$19.99", image: "/images/maza/menu/opt-shredded-steak-plate.jpg", notes: ["Maza in-house shredded steak over a bed of rice, 1 Pita, salad, baba ghanoush and hummus + tahini", "Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Maza Special Sauce, Pomegranate Molasses. Sauce on the side available."] }
     ],
@@ -92,7 +91,6 @@ export const menuData: MenuCategory[] = [
   {
     category: "Sides",
     items: [
-      { name: "Dolma", price: "$5.99" },
       { name: "Fries", price: "$3.49", image: "/images/maza/menu/opt-side-fries-vertical.jpg" },
       { name: "Hummus with tahini and pita", price: "$5.99", image: "/images/maza/menu/opt-hummus-pita.jpg" },
       { name: "Pita", price: "$1.25" },
