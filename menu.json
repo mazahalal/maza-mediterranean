@@ -94,13 +94,6 @@
           ]
         },
         {
-          "name": "Appetizer Plate",
-          "price": "$15.51",
-          "notes": [
-            "6 Dolma, Hummus, Baba Ghanoush & Tzatziki"
-          ]
-        },
-        {
           "name": "Maza Grill",
           "price": "$27.99",
           "notes": [
@@ -204,10 +197,6 @@
     {
       "name": "Sides",
       "items": [
-        {
-          "name": "Dolma",
-          "price": "$5.99"
-        },
         {
           "name": "Fries",
           "price": "$3.49"
@@ -411,6 +400,21 @@
       "name": "Kibbeh (3pc)",
       "price": "$11.99",
       "reason": "temporary stock gap — urgent hide site+TV; restore when back"
+    },
+    {
+      "section": "Sides",
+      "name": "Dolma",
+      "price": "$5.99",
+      "reason": "temporary stock gap — urgent hide site+TV; restore when back"
+    },
+    {
+      "section": "Plates",
+      "name": "Appetizer Plate",
+      "price": "$15.51",
+      "reason": "temporary stock gap — urgent hide site+TV; restore when back",
+      "notes": [
+        "6 Dolma, Hummus, Baba Ghanoush & Tzatziki"
+      ]
     }
   ]
 }

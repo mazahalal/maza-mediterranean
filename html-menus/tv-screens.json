@@ -133,7 +133,9 @@
                 "Shredded Steak Plate"
               ]
             ]
-          },
+          }
+        ],
+        [
           {
             "name": "Mixed",
             "items": [
@@ -144,10 +146,6 @@
               [
                 "Plates",
                 "Maza Grill"
-              ],
-              [
-                "Plates",
-                "Appetizer Plate"
               ]
             ]
           }
@@ -177,8 +175,9 @@
       ],
       "specials": {
         "title": "Family Meal",
-        "_rotate_note": "Single Family Meal weekend special — hero + detail, no rotator needed but slides keeps template happy.",
-        "rotate_ms": 8000,
+        "layout": "family-max",
+        "_rotate_note": "Solo Family Meal weekend special — maximized hero + type.",
+        "rotate_ms": 10000,
         "slides": [
           [
             "Specials",
@@ -290,10 +289,6 @@
           {
             "name": "Premium Sides",
             "items": [
-              [
-                "Sides",
-                "Dolma"
-              ],
               [
                 "Sides",
                 "Sambusah (2pc)"
