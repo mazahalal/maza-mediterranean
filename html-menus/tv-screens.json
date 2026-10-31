@@ -8,8 +8,12 @@
       "subtitle": "Wrapped with hummus, tomato, onion, lettuce, pickle, and garlic sauce",
       "groups": [
         {
-          "name": "Shredded Steak Wrap",
+          "name": "Shredded Wraps",
           "items": [
+            [
+              "Wraps",
+              "Shredded Chicken Wrap"
+            ],
             [
               "Wraps",
               "Shredded Steak Wrap"
@@ -103,6 +107,10 @@
               [
                 "Plates",
                 "Chicken Tikka Plate"
+              ],
+              [
+                "Plates",
+                "Shredded Chicken Plate"
               ]
             ]
           }

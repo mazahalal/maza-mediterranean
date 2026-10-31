@@ -442,6 +442,7 @@ export const OFFERING_PAGES: OfferingPage[] = [
       "Fries, meat, sauce, repeat. It is the fastest thing on the menu and the easiest share for a table waiting on a grill order.",
     priceHeading: "Loaded fries pricing",
     priceRows: [
+      { label: "Loaded Fries — Shredded Chicken", price: "$11.49", note: "Choose up to 3 sauces" },
       { label: "Loaded Fries — Shredded Steak", price: "$12.89", note: "Choose up to 3 sauces" },
       { label: "Loaded Fries — Gyro", price: "$12.89", note: "Choose up to 3 sauces" },
       { label: "Side Fries", price: "$3.49" },
@@ -474,6 +475,7 @@ export const OFFERING_PAGES: OfferingPage[] = [
       "The hummus is the same tahini-forward bowl that comes with the plates — it just gets a full portion of meat on top instead of a scoop on the side.",
     priceHeading: "Loaded hummus pricing",
     priceRows: [
+      { label: "Loaded Hummus — Shredded Chicken", price: "$11.49", note: "Choose up to 3 sauces" },
       { label: "Loaded Hummus — Shredded Steak", price: "$12.89", note: "Choose up to 3 sauces" },
       { label: "Loaded Hummus — Gyro", price: "$12.89", note: "Choose up to 3 sauces" },
       { label: "Hummus with tahini and pita", price: "$5.99" },

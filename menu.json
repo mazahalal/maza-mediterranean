@@ -40,6 +40,10 @@
         {
           "name": "Shredded Steak Wrap",
           "price": "$14.89"
+        },
+        {
+          "name": "Shredded Chicken Wrap",
+          "price": "$12.49"
         }
       ],
       "subtitle": "Wrapped with hummus, tomato, onion, lettuce, pickle, and garlic sauce"
@@ -107,12 +111,27 @@
             "Maza in-house shredded steak over a bed of rice, 1 Pita, salad, baba ghanoush and hummus + tahini",
             "Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Maza Special Sauce, Pomegranate Molasses. Sauce on the side available."
           ]
+        },
+        {
+          "name": "Shredded Chicken Plate",
+          "price": "$18.49",
+          "notes": [
+            "Maza in-house shredded chicken over a bed of rice, 1 Pita, salad, baba ghanoush and hummus + tahini",
+            "Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Maza Special Sauce, Pomegranate Molasses. Sauce on the side available."
+          ]
         }
       ]
     },
     {
       "name": "Loaded Fries",
       "items": [
+        {
+          "name": "Shredded Chicken",
+          "price": "$11.49",
+          "notes": [
+            "Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Maza Special Sauce, Pomegranate Molasses. Sauce on the side available."
+          ]
+        },
         {
           "name": "Shredded Steak",
           "price": "$12.89"
@@ -127,6 +146,13 @@
     {
       "name": "Loaded Hummus",
       "items": [
+        {
+          "name": "Shredded Chicken",
+          "price": "$11.49",
+          "notes": [
+            "Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Maza Special Sauce, Pomegranate Molasses. Sauce on the side available."
+          ]
+        },
         {
           "name": "Shredded Steak",
           "price": "$12.89"
@@ -334,12 +360,6 @@
       "reason": "temporary stock gap — urgent hide site+TV; restore when back"
     },
     {
-      "section": "Wraps",
-      "name": "Shredded Chicken Wrap",
-      "price": "$12.49",
-      "reason": "temporary stock gap — urgent hide site+TV; restore when back"
-    },
-    {
       "section": "Plates",
       "name": "Lamb Tikka Plate",
       "price": "$20.71",
@@ -356,28 +376,6 @@
       "notes": [
         "Falafel, 1 Pita, salad, baba ghanoush & hummus + tahini"
       ]
-    },
-    {
-      "section": "Plates",
-      "name": "Shredded Chicken Plate",
-      "price": "$18.49",
-      "reason": "temporary stock gap — urgent hide site+TV; restore when back",
-      "notes": [
-        "Maza in-house shredded chicken over a bed of rice, 1 Pita, salad, baba ghanoush and hummus + tahini",
-        "Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Maza Special Sauce, Pomegranate Molasses. Sauce on the side available."
-      ]
-    },
-    {
-      "section": "Loaded Fries",
-      "name": "Shredded Chicken",
-      "price": "$11.49",
-      "reason": "temporary stock gap — urgent hide site+TV; restore when back"
-    },
-    {
-      "section": "Loaded Hummus",
-      "name": "Shredded Chicken",
-      "price": "$11.49",
-      "reason": "temporary stock gap — urgent hide site+TV; restore when back"
     },
     {
       "section": "Sides",
