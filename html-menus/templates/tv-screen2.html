@@ -12,14 +12,14 @@
 <style>
   .s2-main { flex: 1; display: flex; gap: 22px; min-height: 0; }
 
-  /* 3 even plate columns — one header row, aligned items, big type */
-  .s2-left { width: 46%; display: flex; flex-direction: column; min-height: 0; }
+  /* 3 even plate columns — big type fills the panel; tight packing, no dead gaps */
+  .s2-left { width: 48%; display: flex; flex-direction: column; min-height: 0; }
   .s2-cols {
     flex: 1;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-top: 12px;
+    gap: 16px;
+    margin-top: 8px;
     min-height: 0;
     align-items: start;
   }
@@ -30,20 +30,20 @@
     min-width: 0;
   }
   .s2-left .group-title {
-    font-size: 20px;
-    letter-spacing: .2em;
+    font-size: 22px;
+    letter-spacing: .18em;
     text-align: center;
-    margin: 0 0 14px;
-    padding-bottom: 8px;
+    margin: 0 0 10px;
+    padding-bottom: 6px;
     border-bottom: 1px solid rgba(211,171,94,.35);
-    min-height: 1.4em;
+    min-height: 1.3em;
   }
   .s2-col-items {
-    flex: 1;
+    /* pack from top — do NOT space-evenly (creates empty gaps) */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 12px;
+    gap: 10px;
   }
   .s2-left .plate-block { min-width: 0; }
   .s2-left .tv-item {
@@ -51,21 +51,21 @@
     align-items: baseline;
   }
   .s2-left .tv-item .name {
-    font-size: 20px;
+    font-size: 24px;
     white-space: normal;
-    line-height: 1.15;
-    font-weight: 500;
+    line-height: 1.12;
+    font-weight: 600;
   }
   .s2-left .tv-item .price {
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 24px;
+    font-weight: 700;
   }
   .s2-left .tv-note {
     display: block;
-    font-size: 13px;
-    line-height: 1.3;
-    margin: 2px 0 0;
-    color: rgba(245,241,232,.78);
+    font-size: 16px;
+    line-height: 1.28;
+    margin: 3px 0 0;
+    color: rgba(245,241,232,.82);
   }
 
   .s2-right { flex: 1; display: flex; flex-direction: column; gap: 14px; min-height: 0; }
