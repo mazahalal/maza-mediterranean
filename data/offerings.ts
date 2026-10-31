@@ -78,7 +78,6 @@ export const OFFERING_PAGES: OfferingPage[] = [
       "Maza is family-owned, and the kitchen cooks Mediterranean and Middle Eastern food the way it is eaten at home — big portions, real ingredients, honest prices. Dine in, take it to go, or have it delivered across Chandler and the East Valley.",
     priceHeading: "What a plate costs at Maza",
     priceRows: [
-      { label: "Falafel Plate", price: "$16.55", note: "Falafel, pita, salad, baba ghanoush & hummus + tahini" },
       { label: "Chicken Shish Kebab Plate", price: "$19.67", note: "2 kebabs, pita, rice, salad, baba ghanoush & hummus + tahini" },
       { label: "Beef + Lamb Shish Kebab Plate", price: "$20.19", note: "2 kebabs, pita, rice, salad, baba ghanoush & hummus + tahini" },
       { label: "Mix Kebab Plate", price: "$20.71", note: "1 chicken shish kebab + 1 beef & lamb shish kebab" },
@@ -218,7 +217,7 @@ export const OFFERING_PAGES: OfferingPage[] = [
     priceRows: [
       { label: "Lamb Tikka Plate", price: "$20.71", note: "2 lamb tikka, pita, rice, salad, baba ghanoush & hummus + tahini" },
       { label: "Lamb Tikka Wrap", price: "$13.51" },
-      { label: "Family Meal", price: "$87.49", note: "Includes 2 lamb tikka among 10 skewers" },
+      { label: "Family Meal", price: "$87.49", note: "Weekend special: 12 shish (3 of each)" },
     ],
     faqs: [
       {
@@ -250,7 +249,7 @@ export const OFFERING_PAGES: OfferingPage[] = [
     priceRows: [
       { label: "Ribeye Tikka Plate", price: "$24.87", note: "2 ribeye tikka, pita, rice, salad, baba ghanoush & hummus + tahini" },
       { label: "Ribeye Tikka Wrap", price: "$14.55" },
-      { label: "Family Meal", price: "$87.49", note: "Includes 2 ribeye tikka among 10 skewers" },
+      { label: "Family Meal", price: "$87.49", note: "Weekend special: 12 shish, 3 of each" },
     ],
     faqs: [
       {
@@ -282,7 +281,7 @@ export const OFFERING_PAGES: OfferingPage[] = [
     priceRows: [
       { label: "Mix Kebab", price: "$20.71", note: "1 chicken shish kebab + 1 beef & lamb shish kebab, pita, rice, salad, baba ghanoush & hummus + tahini" },
       { label: "Maza Grill", price: "$27.99", note: "Three-kebab version with chicken tikka" },
-      { label: "Family Meal", price: "$87.49", note: "Ten skewers, feeds a crowd" },
+      { label: "Family Meal", price: "$87.49", note: "Weekend special: 12 shish, 3 of each" },
     ],
     faqs: [
       {
@@ -344,10 +343,9 @@ export const OFFERING_PAGES: OfferingPage[] = [
       "Falafel is fried to order so the shell stays crisp and the middle stays green and soft. It is also the base of our Appetizer Plate and one of the three fillings for loaded hummus.",
     priceHeading: "Falafel pricing",
     priceRows: [
-      { label: "Falafel Plate", price: "$16.55", note: "Falafel, pita, salad, baba ghanoush & hummus + tahini" },
       { label: "Falafel Wrap", price: "$9.35" },
       { label: "Falafel (4pc) Side", price: "$3.99" },
-      { label: "Appetizer Plate", price: "$15.51", note: "Hummus + tahini, dolma, falafel, baba ghanoush, pita and salad" },
+      { label: "Appetizer Plate", price: "$15.51", note: "6 dolma, hummus, baba ghanoush & tzatziki" },
     ],
     faqs: [
       {
@@ -439,13 +437,12 @@ export const OFFERING_PAGES: OfferingPage[] = [
     h1: "Loaded Fries in Chandler, AZ",
     title: "Loaded Fries $11.49–$12.89 | Chandler, AZ | Maza Mediterranean",
     description:
-      "Maza loaded fries in Chandler — shredded chicken $11.49, shredded steak or gyro $12.89, with up to three sauces. Halal-certified.",
-    hook: "Loaded fries at Maza start at $11.49 for shredded chicken and run $12.89 for shredded steak or gyro. Each order takes up to three sauces from tahini, garlic sauce, sriracha mayo, Maza special sauce, and pomegranate molasses — and you can get the sauces on the side.",
+      "Maza loaded fries in Chandler — shredded steak or gyro $12.89, with up to three sauces. Halal-certified.",
+    hook: "Loaded fries at Maza run $12.89 for shredded steak or gyro. Each order takes up to three sauces from tahini, garlic sauce, sriracha mayo, Maza special sauce, and pomegranate molasses — and you can get the sauces on the side.",
     intro:
       "Fries, meat, sauce, repeat. It is the fastest thing on the menu and the easiest share for a table waiting on a grill order.",
     priceHeading: "Loaded fries pricing",
     priceRows: [
-      { label: "Loaded Fries — Shredded Chicken", price: "$11.49", note: "Choose up to 3 sauces" },
       { label: "Loaded Fries — Shredded Steak", price: "$12.89", note: "Choose up to 3 sauces" },
       { label: "Loaded Fries — Gyro", price: "$12.89", note: "Choose up to 3 sauces" },
       { label: "Side Fries", price: "$3.49" },
@@ -472,13 +469,12 @@ export const OFFERING_PAGES: OfferingPage[] = [
     h1: "Loaded Hummus in Chandler, AZ",
     title: "Loaded Hummus $11.49–$12.89 | Chandler, AZ | Maza Mediterranean",
     description:
-      "Loaded hummus in Chandler — shredded chicken $11.49, shredded steak or gyro $12.89, over hummus with up to three sauces. Halal-certified.",
-    hook: "Loaded hummus is $11.49 with shredded chicken, or $12.89 with shredded steak or gyro, spooned over a full bowl of hummus and finished with up to three sauces. It is the order that turns an appetizer into a meal, and it travels well for pickup.",
+      "Loaded hummus in Chandler — shredded steak or gyro $12.89, over hummus with up to three sauces. Halal-certified.",
+    hook: "Loaded hummus is $12.89 with shredded steak or gyro, spooned over a full bowl of hummus and finished with up to three sauces. It is the order that turns an appetizer into a meal, and it travels well for pickup.",
     intro:
       "The hummus is the same tahini-forward bowl that comes with the plates — it just gets a full portion of meat on top instead of a scoop on the side.",
     priceHeading: "Loaded hummus pricing",
     priceRows: [
-      { label: "Loaded Hummus — Shredded Chicken", price: "$11.49", note: "Choose up to 3 sauces" },
       { label: "Loaded Hummus — Shredded Steak", price: "$12.89", note: "Choose up to 3 sauces" },
       { label: "Loaded Hummus — Gyro", price: "$12.89", note: "Choose up to 3 sauces" },
       { label: "Hummus with tahini and pita", price: "$5.99" },
@@ -487,7 +483,7 @@ export const OFFERING_PAGES: OfferingPage[] = [
       {
         question: "Is the hummus vegetarian?",
         answer:
-          "Plain hummus with tahini and pita is $5.99 and is vegetarian. The loaded versions add shredded chicken, shredded steak, or gyro on top.",
+          "Plain hummus with tahini and pita is $5.99 and is vegetarian. The loaded versions add shredded steak or gyro on top.",
       },
       FAQ_HALAL,
       FAQ_ORDER,
@@ -497,7 +493,7 @@ export const OFFERING_PAGES: OfferingPage[] = [
     menuLabel: "the full menu",
     menuSection: "Loaded Hummus",
     image: "/images/maza/menu/opt-loaded-hummus-chicken.jpg",
-    imageAlt: "Loaded hummus with shredded chicken at Maza Mediterranean Cuisine Chandler AZ",
+    imageAlt: "Loaded hummus with gyro at Maza Mediterranean Cuisine Chandler AZ",
     keywords: ["loaded hummus Chandler", "hummus Chandler AZ", "Mediterranean appetizer Chandler"],
   },
   {
@@ -543,22 +539,21 @@ export const OFFERING_PAGES: OfferingPage[] = [
     title: "Mezze Platter & Appetizers | Chandler, AZ | Maza Mediterranean",
     description:
       "Maza mezze in Chandler — Appetizer Plate $15.51, dolma $5.99, sambusah $9.49, kibbeh $11.99. Halal Mediterranean starters made in house.",
-    hook: "The Maza Appetizer Plate is $15.51 and lands with hummus + tahini, dolma, falafel, baba ghanoush, pita, and salad. Ordering separately, dolma is $5.99, sambusah (2pc) is $9.49, and kibbeh (3pc) is $11.99.",
+    hook: "The Maza Appetizer Plate is $15.51 and lands with 6 dolma, hummus, baba ghanoush, and tzatziki. Ordering separately, dolma is $5.99, sambusah (2pc) is $9.49, and kibbeh (3pc) is $11.99.",
     intro:
       "This is the part of a Mediterranean menu that is easiest to get wrong and hardest to fake — stuffed grape leaves, fried pastry, and bulgur shells, all rolled by hand in the kitchen.",
     priceHeading: "Mezze and appetizer pricing",
     priceRows: [
-      { label: "Appetizer Plate", price: "$15.51", note: "Hummus + tahini, dolma, falafel, baba ghanoush, 1 pita and salad" },
+      { label: "Appetizer Plate", price: "$15.51", note: "6 dolma, hummus, baba ghanoush & tzatziki" },
       { label: "Dolma", price: "$5.99", note: "Stuffed grape leaves" },
       { label: "Sambusah (2pc)", price: "$9.49" },
       { label: "Kibbeh (3pc)", price: "$11.99" },
-      { label: "Falafel (4pc)", price: "$3.99" },
     ],
     faqs: [
       {
         question: "What is on the Appetizer Plate?",
         answer:
-          "Hummus + tahini, dolma, falafel, baba ghanoush, one pita, and salad — $15.51. It is the fastest way to try the mezze side of the menu.",
+          "6 dolma, hummus, baba ghanoush, and tzatziki — $15.51. It is the fastest way to try the mezze side of the menu.",
       },
       {
         question: "What is sambusah?",
@@ -572,7 +567,7 @@ export const OFFERING_PAGES: OfferingPage[] = [
     menuLabel: "sides",
     menuSection: "Sides",
     image: "/images/maza/menu/opt-appetizer-plate.jpg",
-    imageAlt: "Mezze appetizer plate with hummus dolma falafel and baba ghanoush at Maza Mediterranean Cuisine Chandler AZ",
+    imageAlt: "Mezze appetizer plate with dolma hummus baba ghanoush and tzatziki at Maza Mediterranean Cuisine Chandler AZ",
     keywords: ["mezze Chandler AZ", "Mediterranean appetizers Chandler", "dolma Chandler"],
   },
   {
@@ -691,7 +686,7 @@ export const OFFERING_PAGES: OfferingPage[] = [
     priceRows: [
       { label: "Samak Tandoor", price: "$38.97", note: "Whole large fish with rice and salad — please allow 1 hour to prepare" },
       { label: "Maza Special", price: "$48.45", note: "Four skewers + 2 pita, rice, sides" },
-      { label: "Family Meal", price: "$87.49", note: "Ten skewers — the largest order on the menu" },
+      { label: "Family Meal", price: "$87.49", note: "Weekend special: 12 shish for $87.49" },
     ],
     faqs: [
       {
@@ -717,15 +712,15 @@ export const OFFERING_PAGES: OfferingPage[] = [
   {
     slug: "family-meal",
     h1: "Family Meal & Group Platters in Chandler, AZ",
-    title: "Family Meal $87.49 — 10 Skewers | Chandler, AZ | Maza",
+    title: "Family Meal $87.49 — Weekend 12 Shish | Chandler, AZ | Maza",
     description:
-      "Maza Family Meal $87.49 — 10 skewers (beef + lamb, chicken shish, chicken tikka, lamb tikka, ribeye tikka), pita, rice and sides. Feeds a table.",
-    hook: "The Maza Family Meal is $87.49 and carries ten skewers — two each of beef + lamb shish kebab, chicken shish kebab, chicken tikka, lamb tikka, and ribeye tikka — with pita, rice, and sides. The next size down, the Maza Special, is $48.45 with four skewers and feeds two to three.",
+      "Maza Family Meal weekend special $87.49 — 12 shish (3 of each): beef + lamb, chicken shish, chicken tikka, ribeye. Same price, today & tomorrow only.",
+    hook: "The Maza Family Meal is a weekend special at $87.49 — 12 shish, 3 of each (beef + lamb shish, chicken shish, chicken tikka, ribeye tikka), today and tomorrow only. The next size down, the Maza Special, is $48.45 with four skewers (2 chicken tikka + beef/lamb and chicken shish) and feeds two to three.",
     intro:
       "Built for a table rather than a person. Order it for a family dinner, a work lunch in the Price Road corridor, or a game night where nobody wants to choose.",
     priceHeading: "Group platter pricing",
     priceRows: [
-      { label: "Family Meal", price: "$87.49", note: "2 beef + lamb shish, 2 chicken shish, 2 chicken tikka, 2 lamb tikka, 2 ribeye tikka + 2 pita, rice, sides" },
+      { label: "Family Meal", price: "$87.49", note: "WEEKEND: 12 shish — 3 of each + 4 pita, rice, sides" },
       { label: "Maza Special", price: "$48.45", note: "4 skewers + 2 pita, rice, sides — feeds 2–3" },
       { label: "Appetizer Plate", price: "$15.51", note: "Add a mezze start to the table" },
     ],
@@ -746,7 +741,7 @@ export const OFFERING_PAGES: OfferingPage[] = [
     menuLabel: "specials",
     menuSection: "Specials",
     image: "/images/maza/menu/opt-family-meal.jpg",
-    imageAlt: "Maza Family Meal platter with ten skewers at Maza Mediterranean Cuisine Chandler AZ",
+    imageAlt: "Maza Family Meal weekend special 12 shish platter at Maza Mediterranean Cuisine Chandler AZ",
     keywords: ["family meal Chandler AZ", "Mediterranean catering platter Chandler", "group food Chandler"],
   },
   {
@@ -763,7 +758,6 @@ export const OFFERING_PAGES: OfferingPage[] = [
       { label: "Kids Crispy Chicken Sandwich", price: "$11.85", note: "Kids meal — comes with fries" },
       { label: "Kids All Beef Burger", price: "$11.85", note: "Kids meal — comes with fries" },
       { label: "Side Fries", price: "$3.49" },
-      { label: "Falafel (4pc)", price: "$3.99" },
     ],
     faqs: [
       FAQ_HALAL,
@@ -793,7 +787,6 @@ export const OFFERING_PAGES: OfferingPage[] = [
       "The vegetarian side of a Mediterranean menu is not an afterthought here — falafel, hummus, baba ghanoush, dolma, and tabouleh are all made in house and all stand on their own as a meal.",
     priceHeading: "Vegetarian and vegan pricing",
     priceRows: [
-      { label: "Falafel Plate", price: "$16.55", note: "Falafel, pita, salad, baba ghanoush & hummus + tahini" },
       { label: "Falafel Wrap", price: "$9.35" },
       { label: "Hummus with tahini and pita", price: "$5.99" },
       { label: "Dolma", price: "$5.99" },
@@ -827,12 +820,12 @@ export const OFFERING_PAGES: OfferingPage[] = [
     title: "Halal Catering in Chandler, AZ | Maza Mediterranean Cuisine",
     description:
       "Halal Mediterranean catering in Chandler — kebab platters, family meals and mezze for offices and events. Price Road corridor and East Valley delivery available.",
-    hook: "Maza caters halal Mediterranean food across Chandler and the East Valley, from a $48.45 Maza Special of four skewers up to the $87.49 Family Meal with ten skewers, plus mezze platters and salads. We cook for offices in the Price Road corridor, family events, and gatherings where the food has to be halal-certified.",
+    hook: "Maza caters halal Mediterranean food across Chandler and the East Valley, from a $48.45 Maza Special of four skewers up to the $87.49 Family Meal weekend special (12 shish), plus mezze platters and salads. We cook for offices in the Price Road corridor, family events, and gatherings where the food has to be halal-certified.",
     intro:
       "Catering is the same kitchen as the restaurant — the same grills, the same halal-certified meat, the same rice and sides. Tell us headcount and timing and we will size the order.",
     priceHeading: "Catering anchors",
     priceRows: [
-      { label: "Family Meal", price: "$87.49", note: "10 skewers + pita, rice, sides — four to six people" },
+      { label: "Family Meal", price: "$87.49", note: "Weekend special: 12 shish, 3 of each" },
       { label: "Maza Special", price: "$48.45", note: "4 skewers + 2 pita, rice, sides — two to three people" },
       { label: "Appetizer Plate", price: "$15.51", note: "Mezze start for the table" },
       { label: "Maza Salad", price: "$13.99", note: "Choose chicken or steak" },
@@ -908,7 +901,7 @@ export const OFFERING_PAGES: OfferingPage[] = [
       { label: "Beef Gyro Wrap", price: "$10.91", note: "Great traveller" },
       { label: "Chicken Tikka Plate", price: "$19.67", note: "Full plate, boxed" },
       { label: "Loaded Fries — Gyro", price: "$12.89", note: "Choose up to 3 sauces" },
-      { label: "Family Meal", price: "$87.49", note: "Ten skewers — call ahead" },
+      { label: "Family Meal", price: "$87.49", note: "Weekend special 12 shish — call ahead" },
     ],
     faqs: [
       FAQ_ORDER,

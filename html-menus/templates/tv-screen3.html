@@ -875,14 +875,22 @@
   <div class="s3-row3">
     <div class="s3-desserts">
       <h2 class="band-title">{{ s.row3.desserts_title if s.row3.desserts_title is defined else "Desserts" }}</h2>
-      {# Desserts: pistachio baklava only (Dubai chocolate MIA; kunafah discontinued) #}
+      {# Desserts: baklava frame; supports temporary unavailable (no menu ref) #}
       <div class="s3-desserts-stack">
-        {% set baklava = s.row3.desserts_cards[0].ref if s.row3.desserts_cards is defined else s.row3.desserts_card.ref %}
-        {% set baklava_photo = s.row3.desserts_cards[0].photo if s.row3.desserts_cards is defined and s.row3.desserts_cards[0].photo else baklava.photo %}
-        {% set baklava_name = "Baklava · Pistachio" %}
+        {% set dcard = s.row3.desserts_cards[0] if s.row3.desserts_cards is defined and s.row3.desserts_cards else s.row3.desserts_card %}
+        {% set baklava_unavail = dcard.unavailable is defined and dcard.unavailable %}
+        {% if baklava_unavail %}
+        {% set baklava_photo = dcard.photo if dcard.photo is defined else "baklava-pistachio-baklava.jpg" %}
+        {% set baklava_name = dcard.caption if dcard.caption is defined else "Baklava · Temporarily Unavailable" %}
+        {% set baklava_price = "—" %}
+        {% else %}
+        {% set baklava = dcard.ref %}
+        {% set baklava_photo = dcard.photo if dcard.photo is defined else baklava.photo %}
+        {% set baklava_name = dcard.caption if dcard.caption is defined else "Baklava · Pistachio" %}
         {% set baklava_price = baklava.price if baklava.price is string and baklava.price.startswith('$') else ('$' ~ baklava.price|replace('$','')) %}
+        {% endif %}
         <div class="product-frame baklava">
-          <div class="photo-card"><img src="../photos/{{ baklava_photo }}" alt="Pistachio Baklava"></div>
+          <div class="photo-card"><img src="../photos/{{ baklava_photo }}" alt="{{ baklava_name }}"></div>
           <div class="card-detail">
             <span class="card-name">{{ baklava_name }}</span>
             <span class="card-sep">❖</span>

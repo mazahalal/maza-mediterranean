@@ -16,7 +16,7 @@ const sides = menuData.find(c => c.category === "Sides")
 const sidesJsonLd = buildMenuJsonLd(sides ? [sides] : [], {
   url: `${SITE}/menu/sides`,
   name: "Maza Mediterranean Cuisine | Sides Menu",
-  description: "Fresh sides: hummus, rice, dolma, fries, tabouleh, falafel. Perfect additions to any plate or wrap. Halal-certified Mediterranean food in Chandler, AZ.",
+  description: "Fresh sides: hummus, rice, dolma, fries, tabouleh. Perfect additions to any plate or wrap. Halal-certified Mediterranean food in Chandler, AZ.",
 });
 
 export default function SidesPage() {
