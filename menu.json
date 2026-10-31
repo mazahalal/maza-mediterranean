@@ -27,14 +27,6 @@
           "price": "$14.55"
         },
         {
-          "name": "Falafel Wrap",
-          "price": "$9.35"
-        },
-        {
-          "name": "Lamb Tikka Wrap",
-          "price": "$13.51"
-        },
-        {
           "name": "Arayes Lahm or Dajaj",
           "price": "$15.55",
           "notes": [
@@ -44,10 +36,6 @@
         {
           "name": "Ribeye Tikka Wrap",
           "price": "$14.55"
-        },
-        {
-          "name": "Shredded Chicken Wrap",
-          "price": "$12.49"
         },
         {
           "name": "Shredded Steak Wrap",
@@ -92,13 +80,6 @@
           ]
         },
         {
-          "name": "Lamb Tikka Plate",
-          "price": "$20.71",
-          "notes": [
-            "2 Lamb Tikka, 1 Pita, rice, salad, baba ghanoush & hummus + tahini"
-          ]
-        },
-        {
           "name": "Ribeye Tikka Plate",
           "price": "$24.87",
           "notes": [
@@ -113,17 +94,10 @@
           ]
         },
         {
-          "name": "Falafel",
-          "price": "$16.55",
-          "notes": [
-            "Falafel, 1 Pita, salad, baba ghanoush & hummus + tahini"
-          ]
-        },
-        {
           "name": "Appetizer Plate",
           "price": "$15.51",
           "notes": [
-            "Hummus + Tahini, Dolma, Falafel, Baba Ghanoush, 1 Pita and Salad"
+            "6 Dolma, Hummus, Baba Ghanoush & Tzatziki"
           ]
         },
         {
@@ -141,14 +115,6 @@
           ]
         },
         {
-          "name": "Shredded Chicken Plate",
-          "price": "$18.49",
-          "notes": [
-            "Maza in-house shredded chicken over a bed of rice, 1 Pita, salad, baba ghanoush and hummus + tahini",
-            "Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Maza Special Sauce, Pomegranate Molasses. Sauce on the side available."
-          ]
-        },
-        {
           "name": "Shredded Steak Plate",
           "price": "$19.99",
           "notes": [
@@ -161,10 +127,6 @@
     {
       "name": "Loaded Fries",
       "items": [
-        {
-          "name": "Shredded Chicken",
-          "price": "$11.49"
-        },
         {
           "name": "Shredded Steak",
           "price": "$12.89"
@@ -179,10 +141,6 @@
     {
       "name": "Loaded Hummus",
       "items": [
-        {
-          "name": "Shredded Chicken",
-          "price": "$11.49"
-        },
         {
           "name": "Shredded Steak",
           "price": "$12.89"
@@ -208,14 +166,14 @@
           "name": "Maza Special",
           "price": "$48.45",
           "notes": [
-            "1x Chicken Tikka, 1x Lamb Tikka, 1x Beef + Lamb Shish Kebab, 1x Chicken Shish Kebab (4 total), +2 Pita, Rice, Salad, Hummus + Tahini, Baba Ghanoush"
+            "1x Chicken Tikka, 1x Ribeye Tikka, 1x Beef + Lamb Shish Kebab, 1x Chicken Shish Kebab (4 total), +2 Pita, Rice, Salad, Hummus + Tahini, Baba Ghanoush"
           ]
         },
         {
           "name": "Family Meal",
           "price": "$87.49",
           "notes": [
-            "2x Beef + Lamb Shish Kebab, 2x Chicken Shish Kebab, 2x Chicken Tikka, 2x Lamb Tikka, 2x Ribeye Tikka (10 total), +4 Pita, Rice, Salad, Hummus + Tahini, Baba Ghanoush"
+            "4x Beef + Lamb Shish Kebab, 2x Chicken Shish Kebab, 2x Chicken Tikka, 2x Ribeye Tikka (10 total), +4 Pita, Rice, Salad, Hummus + Tahini, Baba Ghanoush"
           ]
         }
       ]
@@ -262,10 +220,6 @@
           "price": "$3.49"
         },
         {
-          "name": "Falafel (4pc)",
-          "price": "$3.99"
-        },
-        {
           "name": "Hummus with tahini and pita",
           "price": "$5.99"
         },
@@ -306,15 +260,6 @@
           "name": "Kibbeh (3pc)",
           "price": "$11.99",
           "note": ""
-        }
-      ]
-    },
-    {
-      "name": "Baklava",
-      "items": [
-        {
-          "name": "Pistachio Baklava",
-          "price": "$3.99"
         }
       ]
     },
@@ -403,6 +348,76 @@
       "name": "Dubai Chocolate Style Baklava",
       "price": "$3.99",
       "reason": "temporarily MIA — only pistachio baklava in stock; do not show on website or TV"
+    },
+    {
+      "section": "Wraps",
+      "name": "Falafel Wrap",
+      "price": "$9.35",
+      "reason": "temporary stock gap — urgent hide site+TV; restore when back"
+    },
+    {
+      "section": "Wraps",
+      "name": "Lamb Tikka Wrap",
+      "price": "$13.51",
+      "reason": "temporary stock gap — urgent hide site+TV; restore when back"
+    },
+    {
+      "section": "Wraps",
+      "name": "Shredded Chicken Wrap",
+      "price": "$12.49",
+      "reason": "temporary stock gap — urgent hide site+TV; restore when back"
+    },
+    {
+      "section": "Plates",
+      "name": "Lamb Tikka Plate",
+      "price": "$20.71",
+      "reason": "temporary stock gap — urgent hide site+TV; restore when back",
+      "notes": [
+        "2 Lamb Tikka, 1 Pita, rice, salad, baba ghanoush & hummus + tahini"
+      ]
+    },
+    {
+      "section": "Plates",
+      "name": "Falafel",
+      "price": "$16.55",
+      "reason": "temporary stock gap — urgent hide site+TV; restore when back",
+      "notes": [
+        "Falafel, 1 Pita, salad, baba ghanoush & hummus + tahini"
+      ]
+    },
+    {
+      "section": "Plates",
+      "name": "Shredded Chicken Plate",
+      "price": "$18.49",
+      "reason": "temporary stock gap — urgent hide site+TV; restore when back",
+      "notes": [
+        "Maza in-house shredded chicken over a bed of rice, 1 Pita, salad, baba ghanoush and hummus + tahini",
+        "Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Maza Special Sauce, Pomegranate Molasses. Sauce on the side available."
+      ]
+    },
+    {
+      "section": "Loaded Fries",
+      "name": "Shredded Chicken",
+      "price": "$11.49",
+      "reason": "temporary stock gap — urgent hide site+TV; restore when back"
+    },
+    {
+      "section": "Loaded Hummus",
+      "name": "Shredded Chicken",
+      "price": "$11.49",
+      "reason": "temporary stock gap — urgent hide site+TV; restore when back"
+    },
+    {
+      "section": "Sides",
+      "name": "Falafel (4pc)",
+      "price": "$3.99",
+      "reason": "temporary stock gap — urgent hide site+TV; restore when back"
+    },
+    {
+      "section": "Baklava",
+      "name": "Pistachio Baklava",
+      "price": "$3.99",
+      "reason": "temporary stock gap — urgent hide site+TV; restore when back"
     }
   ]
 }

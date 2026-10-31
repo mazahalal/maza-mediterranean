@@ -59,7 +59,7 @@ export default function MenuPage() {
   const heroSrc = promo?.imageSrc ?? "/images/maza/menu/opt-family-meal.jpg";
   const heroAlt = promo
     ? promo.imageAlt
-    : "Family Meal mixed grill platter — chicken tikka, lamb tikka, shish and kofta kebabs over rice, Maza Mediterranean Cuisine Chandler AZ";
+    : "Family Meal mixed grill platter — chicken tikka, ribeye tikka, shish kebabs over rice, Maza Mediterranean Cuisine Chandler AZ";
 
   return (
     <>

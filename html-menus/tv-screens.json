@@ -8,12 +8,8 @@
       "subtitle": "Wrapped with hummus, tomato, onion, lettuce, pickle, and garlic sauce",
       "groups": [
         {
-          "name": "Shredded Wraps",
+          "name": "Shredded Steak Wrap",
           "items": [
-            [
-              "Wraps",
-              "Shredded Chicken Wrap"
-            ],
             [
               "Wraps",
               "Shredded Steak Wrap"
@@ -42,10 +38,6 @@
             ],
             [
               "Wraps",
-              "Lamb Tikka Wrap"
-            ],
-            [
-              "Wraps",
               "Ribeye Tikka Wrap"
             ]
           ]
@@ -60,10 +52,6 @@
             [
               "Wraps",
               "Crispy Chicken Wrap"
-            ],
-            [
-              "Wraps",
-              "Falafel Wrap"
             ],
             [
               "Wraps",
@@ -119,28 +107,6 @@
               [
                 "Plates",
                 "Grilled Chicken Teriyaki Plate"
-              ],
-              [
-                "Plates",
-                "Shredded Chicken Plate"
-              ]
-            ]
-          },
-          {
-            "name": "Lamb",
-            "items": [
-              [
-                "Plates",
-                "Lamb Tikka Plate"
-              ]
-            ]
-          },
-          {
-            "name": "Plant Based",
-            "items": [
-              [
-                "Plates",
-                "Falafel"
               ]
             ]
           }
@@ -198,10 +164,6 @@
         [
           "Plates",
           "Mix Kebab"
-        ],
-        [
-          "Plates",
-          "Shredded Chicken Plate"
         ]
       ],
       "specials": {
@@ -251,13 +213,13 @@
         "right_card": {
           "ref": [
             "Loaded Hummus",
-            "Shredded Chicken"
+            "Gyro"
           ],
-          "caption": "Loaded Chicken Hummus"
+          "caption": "Loaded Gyro Hummus"
         }
       },
       "row2": {
-        "_layout_note": "4 equal cols; text top; one photo bottom each: burger | hummus | sambusah | falafel. tabouleh unused in grid.",
+        "_layout_note": "4 equal cols; text top; one photo bottom each: burger | hummus | sambusah | kibbeh. tabouleh unused in grid.",
         "burgers": {
           "section": "Burgers"
         },
@@ -333,24 +295,24 @@
               ],
               [
                 "Sides",
-                "Falafel (4pc)"
-              ],
-              [
-                "Sides",
                 "Sambusah (2pc)"
               ],
               [
                 "Sides",
                 "Maza Salad"
+              ],
+              [
+                "Sides",
+                "Kibbeh (3pc)"
               ]
             ],
             "photo": {
               "ref": [
                 "Sides",
-                "Falafel (4pc)"
+                "Kibbeh (3pc)"
               ],
-              "photo": "sides-falafel-4pc-v2.jpg",
-              "caption": "Falafel"
+              "photo": "sides-kibbeh-3pc.jpg",
+              "caption": "Kibbeh"
             }
           }
         ],
@@ -374,10 +336,10 @@
           {
             "ref": [
               "Sides",
-              "Falafel (4pc)"
+              "Kibbeh (3pc)"
             ],
-            "photo": "sides-falafel-4pc-v2.jpg",
-            "caption": "Falafel"
+            "photo": "sides-kibbeh-3pc.jpg",
+            "caption": "Kibbeh"
           },
           {
             "ref": [
@@ -398,29 +360,18 @@
         "desserts_title": "Desserts",
         "desserts_cards": [
           {
-            "ref": [
-              "Baklava",
-              "Pistachio Baklava"
-            ],
-            "caption": "Pistachio Baklava",
-            "photo": "baklava-pistachio-baklava.jpg"
+            "caption": "Baklava · Temporarily Unavailable",
+            "photo": "baklava-pistachio-baklava.jpg",
+            "unavailable": true
           }
         ],
         "desserts_card": {
-          "ref": [
-            "Baklava",
-            "Pistachio Baklava"
-          ],
-          "caption": "Pistachio Baklava"
+          "caption": "Baklava · Temporarily Unavailable",
+          "unavailable": true
         },
         "desserts": {
           "title": "Desserts",
-          "items": [
-            [
-              "Baklava",
-              "Pistachio Baklava"
-            ]
-          ]
+          "items": []
         },
         "drinks": {
           "name": "Drinks",
