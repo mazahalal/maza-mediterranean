@@ -287,22 +287,12 @@
           "note": "20oz, refillable"
         },
         {
-          "name": "Mexican Coke",
-          "price": "$3.99",
-          "note": "355ml glass"
-        },
-        {
           "name": "Mexican Fanta Grape",
           "price": "$3.99",
           "note": "355ml glass"
         },
         {
           "name": "Mexican Fanta Strawberry",
-          "price": "$3.99",
-          "note": "355ml glass"
-        },
-        {
-          "name": "Mexican Sprite",
           "price": "$3.99",
           "note": "355ml glass"
         }
