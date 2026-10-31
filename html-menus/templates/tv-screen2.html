@@ -10,17 +10,57 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../tv-theme.css">
 <style>
-  .s2-main { flex: 1; display: flex; gap: 24px; min-height: 0; }
+  .s2-main { flex: 1; display: flex; gap: 22px; min-height: 0; }
 
-  /* 3 even plate columns — slightly wider left so type breathes */
-  .s2-left { width: 44%; display: flex; flex-direction: column; min-height: 0; }
-  .s2-cols { flex: 1; display: flex; gap: 18px; margin-top: 10px; min-height: 0; }
-  .s2-col { flex: 1; display: flex; flex-direction: column; justify-content: space-evenly; }
-  .s2-left .group-title { font-size: 17px; letter-spacing: .18em; text-align: left; margin: 0 0 4px; }
-  .s2-left .tv-item { margin: 5px 0; }
-  .s2-left .tv-item .name { font-size: 18px; white-space: normal; }
-  .s2-left .tv-item .price { font-size: 18px; }
-  .s2-left .tv-note { font-size: 13px; margin: -2px 0 4px; }
+  /* 3 even plate columns — one header row, aligned items, big type */
+  .s2-left { width: 46%; display: flex; flex-direction: column; min-height: 0; }
+  .s2-cols {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 12px;
+    min-height: 0;
+    align-items: start;
+  }
+  .s2-col {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    min-width: 0;
+  }
+  .s2-left .group-title {
+    font-size: 20px;
+    letter-spacing: .2em;
+    text-align: center;
+    margin: 0 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(211,171,94,.35);
+    min-height: 1.4em;
+  }
+  .s2-col-items {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 18px;
+  }
+  .s2-left .tv-item {
+    margin: 0;
+    align-items: baseline;
+  }
+  .s2-left .tv-item .name {
+    font-size: 22px;
+    white-space: normal;
+    line-height: 1.2;
+    font-weight: 500;
+  }
+  .s2-left .tv-item .price {
+    font-size: 22px;
+    font-weight: 600;
+  }
+  /* plate notes hidden on TV — clutter; Family Meal bullets carry detail */
+  .s2-left .tv-note { display: none; }
 
   .s2-right { flex: 1; display: flex; flex-direction: column; gap: 14px; min-height: 0; }
 
@@ -34,9 +74,9 @@
   .s2-gallery .product-frame:nth-child(-n+3) { grid-column: span 2; }
   .s2-gallery .product-frame:nth-child(n+4) { grid-column: span 3; }
   /* slightly shorter gallery so Family Meal panel can grow */
-  .s2-gallery .product-frame .photo-card { height: 168px; flex: 0 0 168px; }
-  .s2-gallery .product-frame .card-name { font-size: 14px; }
-  .s2-gallery .product-frame .card-price { font-size: 16px; }
+  .s2-gallery .product-frame .photo-card { height: 160px; flex: 0 0 160px; }
+  .s2-gallery .product-frame .card-name { font-size: 15px; }
+  .s2-gallery .product-frame .card-price { font-size: 17px; }
 
   .specials-box {
     flex: 1.55;
@@ -75,21 +115,47 @@
   .specials-slide .card-price { font-size: 34px; }
 
   /* Family Meal solo panel — maximize type + image */
-  .specials-box.family-max .specials-hero { width: 56%; }
+  .specials-box.family-max .specials-hero { width: 54%; }
   .specials-box.family-max .specials-slide .card-name { font-size: 34px; letter-spacing: .04em; }
   .specials-box.family-max .specials-slide .card-price { font-size: 40px; }
-  .specials-box.family-max .specials-items .tv-item .name { font-size: 36px; }
-  .specials-box.family-max .specials-items .tv-item .price { font-size: 36px; }
-  .specials-box.family-max .specials-items .tv-note {
-    font-size: 20px;
-    line-height: 1.4;
-  }
+  .specials-box.family-max .specials-items .tv-item .name { font-size: 34px; }
+  .specials-box.family-max .specials-items .tv-item .price { font-size: 34px; }
   .specials-box.family-max .specials-items .spec-item {
-    padding: 14px 14px 16px 18px;
+    padding: 12px 14px 14px 16px;
+    opacity: 1;
+  }
+  .specials-box.family-max .tv-bullets {
+    list-style: none;
+    margin: 10px 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .specials-box.family-max .tv-bullets li {
+    position: relative;
+    padding-left: 1.15em;
+    font-size: 20px;
+    line-height: 1.35;
+    color: rgba(245,241,232,.92);
+  }
+  .specials-box.family-max .tv-bullets li::before {
+    content: "❖";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--gold);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .specials-box.family-max .tv-bullets li.is-lead {
+    font-size: 21px;
+    font-weight: 600;
+    color: var(--gold-light);
+    margin-bottom: 4px;
   }
 
   /* the list row matching the hero slide currently on screen */
-  /* 2-slot layout: larger type, full notes (no clamp), both rows more present */
   .specials-items .spec-item {
     border-left: 5px solid transparent;
     border-radius: 6px;
@@ -106,7 +172,7 @@
   .specials-items .spec-item .price { transition: color .5s ease; }
   .specials-items .spec-item.highlight .name,
   .specials-items .spec-item.highlight .price { color: var(--gold-light); }
-  .specials-items { flex: 1; display: flex; flex-direction: column; justify-content: space-evenly; min-height: 0; overflow: visible; }
+  .specials-items { flex: 1; display: flex; flex-direction: column; justify-content: center; min-height: 0; overflow: visible; }
   .specials-items .tv-item { margin: 0 0 6px; }
   .specials-items .tv-item .name { font-size: 28px; }
   .specials-items .tv-item .price { font-size: 28px; }
@@ -191,17 +257,19 @@
       <div class="s2-cols">
         {% for col in s.columns %}
         <div class="s2-col">
+          {% set g0 = col[0] %}
+          <h3 class="group-title"><span class="dash">—</span> {{ g0.name }}</h3>
+          <div class="s2-col-items">
           {% for g in col %}
-          <h3 class="group-title"><span class="dash">—</span> {{ g.name }}</h3>
           {% for item in g["items"] %}
           <div class="tv-item">
             <span class="name">{{ item.name }}</span>
             <span class="dots"></span>
             <span class="price">{{ item.price }}</span>
           </div>
-          {% for note in item.all_notes %}<p class="tv-note">{{ note }}</p>{% endfor %}
           {% endfor %}
           {% endfor %}
+          </div>
         </div>
         {% endfor %}
       </div>
@@ -273,7 +341,15 @@
                 <span class="price">{{ item.price }}</span>
                 {% endif %}
               </div>
+              {% if item.all_notes and item.all_notes|length > 1 %}
+              <ul class="tv-bullets">
+                {% for note in item.all_notes %}
+                <li{% if loop.first %} class="is-lead"{% endif %}>{{ note }}</li>
+                {% endfor %}
+              </ul>
+              {% else %}
               {% for note in item.all_notes %}<p class="tv-note">{{ note }}</p>{% endfor %}
+              {% endif %}
             </div>
             {% endfor %}
           </div>

@@ -159,7 +159,12 @@
           "name": "Family Meal",
           "price": "$87.49",
           "notes": [
-            "WEEKEND SPECIAL (today & tomorrow only): 12 shish for the regular price — 3x Beef + Lamb Shish Kebab, 3x Chicken Shish Kebab, 3x Chicken Tikka, 3x Ribeye Tikka, +4 Pita, Rice, Salad, Hummus + Tahini, Baba Ghanoush"
+            "WEEKEND SPECIAL — today & tomorrow only · 12 shish for $87.49",
+            "3× Beef + Lamb Shish Kebab",
+            "3× Chicken Shish Kebab",
+            "3× Chicken Tikka",
+            "3× Ribeye Tikka",
+            "Includes 4 Pita, Rice, Salad, Hummus + Tahini, Baba Ghanoush"
           ]
         }
       ]
