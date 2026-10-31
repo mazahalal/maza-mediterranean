@@ -547,7 +547,6 @@ export const OFFERING_PAGES: OfferingPage[] = [
       { label: "Appetizer Plate", price: "$15.51", note: "6 dolma, hummus, baba ghanoush & tzatziki" },
       { label: "Dolma", price: "$5.99", note: "Stuffed grape leaves" },
       { label: "Sambusah (2pc)", price: "$9.49" },
-      { label: "Kibbeh (3pc)", price: "$11.99" },
     ],
     faqs: [
       {
