@@ -377,7 +377,7 @@
           "name": "Drinks",
           "groups": [
             {
-              "name": "Soft Drinks & Mexican Soda",
+              "name": "Soft Drinks & Mexican Fanta",
               "items": [
                 [
                   "Drinks",
@@ -390,14 +390,6 @@
                 [
                   "Drinks",
                   "Peace Tea Raspberry"
-                ],
-                [
-                  "Drinks",
-                  "Mexican Coke"
-                ],
-                [
-                  "Drinks",
-                  "Mexican Sprite"
                 ],
                 [
                   "Drinks",
@@ -432,22 +424,16 @@
             }
           ],
           "ad_photos": [
-            "drink-ad-mexican-sodas.jpg",
             "drink-ad-fanta-only.jpg",
-            "drink-ad-mexican-coke.jpg",
-            "drink-ad-mexican-sprite.jpg",
             "drink-ad-minute-maid-juices.jpg",
             "drink-ad-karkadeh.jpg"
           ],
           "ad_prices": [
             "$3.99",
-            "$3.99",
-            "$3.99",
-            "$3.99",
             "$2.75",
             "SM $1.99\nLG $3.99"
           ],
-          "_ad_note": "6 x 3:1 drink ads, rotating carousel (no crop, 1920x640)"
+          "_ad_note": "3 x 3:1 drink ads, rotating carousel (no crop, 1920x640)"
         },
         "sharbat": {
           "section": "Sharbat"
