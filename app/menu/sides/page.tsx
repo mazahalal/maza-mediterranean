@@ -34,12 +34,14 @@ export default function SidesPage() {
             Sides
           </h1>
           <p className="text-[#B8B8B8] text-lg max-w-2xl mx-auto">
-            Real ingredients, made fresh daily. The perfect companions to our plates and wraps.
+            {sides?.items?.length
+              ? "Real ingredients, made fresh daily. The perfect companions to our plates and wraps."
+              : "Sides are temporarily unavailable — ask your server what's back on the line today."}
           </p>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {sides?.items.map((item, index) => (
+          {sides?.items?.length ? sides.items.map((item, index) => (
             <div key={index} className="bg-[#0F2A28] border border-[#D3AB5E]/20 rounded-xl p-6 hover:border-[#D3AB5E]/40 transition-colors">
               <div className="flex justify-between items-start mb-3">
                 {(() => {
@@ -58,7 +60,12 @@ export default function SidesPage() {
               </div>
               {item.note && <p className="text-[#B8B8B8] text-sm">{item.note}</p>}
             </div>
-          ))}
+          )) : (
+            <div className="md:col-span-2 lg:col-span-3 bg-[#0F2A28] border border-[#D3AB5E]/25 rounded-xl p-8 text-center">
+              <p className="text-[#F5F1E8] text-lg">All sides are temporarily off the menu.</p>
+              <p className="text-[#B8B8B8] mt-2">Plates still include rice, pita, salad, baba ghanoush, and hummus + tahini.</p>
+            </div>
+          )}
         </div>
 
         

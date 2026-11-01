@@ -8,14 +8,12 @@ interface MenuBoardProps {
   includeShawarma: boolean;
 }
 
-const SCREEN_1_CATEGORIES = ['Wraps', 'Wrap Upgrades', 'Plates'];
+const SCREEN_1_CATEGORIES = ['Wraps', 'Plates'];
 const SCREEN_2_CATEGORIES = [
-  'Loaded Fries',
   'Loaded Hummus',
   'Burgers',
   'Specials',
   'Kids Meals',
-  'Sides',
   'Desserts & Drinks',
 ];
 

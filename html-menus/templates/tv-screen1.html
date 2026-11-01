@@ -233,6 +233,7 @@
     </div>
   </div>
 
+  {% if s.banner is defined and s.banner %}
   <div class="combo-banner">
     <span class="cb-title">{{ s.banner.title }}</span>
     <span class="cb-sub">— {{ s.banner.subtitle }} —</span>
@@ -243,6 +244,7 @@
     </span>
     <span class="cb-inc">{{ s.banner.item.first_note }}</span>
   </div>
+  {% endif %}
 
 </div>
 <script>
