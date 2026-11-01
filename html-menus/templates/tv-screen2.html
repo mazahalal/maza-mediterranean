@@ -12,7 +12,7 @@
 <style>
   .s2-main { flex: 1; display: flex; gap: 22px; min-height: 0; }
 
-  /* 3 even plate columns — big type; footer band eats leftover blank space */
+  /* 3 even plate columns + photo strip filling leftover height */
   .s2-left { width: 48%; display: flex; flex-direction: column; min-height: 0; }
   .s2-cols {
     flex: 0 1 auto;
@@ -39,11 +39,10 @@
     min-height: 1.25em;
   }
   .s2-col-items {
-    /* pack from top — no space-evenly empty gaps */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 8px;
+    gap: 10px;
   }
   .s2-left .plate-block { min-width: 0; }
   .s2-left .tv-item {
@@ -51,110 +50,53 @@
     align-items: baseline;
   }
   .s2-left .tv-item .name {
-    font-size: 22px;
+    font-size: 21px;
     white-space: normal;
     line-height: 1.1;
     font-weight: 600;
   }
   .s2-left .tv-item .price {
-    font-size: 22px;
+    font-size: 21px;
     font-weight: 700;
   }
-  /* protein-only short notes — shared includes live in footer band */
   .s2-left .tv-note {
     display: block;
-    font-size: 15px;
-    line-height: 1.25;
+    font-size: 14px;
+    line-height: 1.28;
     margin: 2px 0 0;
     color: rgba(245,241,232,.8);
   }
 
-  /* Fills remaining left-panel height — no dead bottom void */
-  .s2-plates-footer {
+  /* Real plate photos eat the leftover blank — not chips, not empty gaps */
+  .s2-plates-showcase {
     flex: 1 1 auto;
-    margin-top: 14px;
-    border: 2px solid var(--gold);
-    border-radius: 8px;
-    padding: 16px 18px 14px;
+    margin-top: 12px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    min-height: 0;
+  }
+  .s2-plates-showcase .product-frame {
+    min-height: 0;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 14px;
-    min-height: 0;
-    background:
-      radial-gradient(ellipse at 20% 0%, rgba(211,171,94,.14), transparent 55%),
-      radial-gradient(ellipse at 80% 100%, rgba(211,171,94,.1), transparent 50%),
-      rgba(10, 31, 30, .35);
   }
-  .s2-plates-footer .pf-title {
-    font-family: var(--font-display);
-    font-size: 26px;
-    font-weight: 700;
-    letter-spacing: .14em;
-    text-transform: uppercase;
-    text-align: center;
-    color: var(--gold);
-    margin: 0;
+  .s2-plates-showcase .photo-card {
+    flex: 1 1 auto;
+    min-height: 180px;
+    height: auto;
   }
-  .s2-plates-footer .pf-title .orn {
-    margin: 0 .35em;
-    opacity: .85;
+  .s2-plates-showcase .photo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
-  .s2-plates-footer .pf-includes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px 12px;
+  .s2-plates-showcase .card-detail {
+    padding: 10px 10px 12px;
   }
-  .s2-plates-footer .pf-chip {
-    font-size: 18px;
-    font-weight: 600;
-    letter-spacing: .04em;
-    color: var(--cream, #F5F1E8);
-    background: rgba(211,171,94,.14);
-    border: 1px solid rgba(211,171,94,.45);
-    border-radius: 999px;
-    padding: 8px 16px;
-    white-space: nowrap;
-  }
-  .s2-plates-footer .pf-chip::before {
-    content: "❖ ";
-    color: var(--gold);
-    font-size: 13px;
-  }
-  .s2-plates-footer .pf-sauces {
-    border-top: 1px solid rgba(211,171,94,.28);
-    padding-top: 12px;
-    text-align: center;
-  }
-  .s2-plates-footer .pf-sauces-title {
-    font-family: var(--font-display);
-    font-size: 15px;
-    font-weight: 700;
-    letter-spacing: .12em;
-    text-transform: uppercase;
-    color: var(--gold-light, #E8C98A);
-    margin: 0 0 8px;
-  }
-  .s2-plates-footer .pf-sauce-row {
-    font-size: 17px;
-    line-height: 1.45;
-    color: rgba(245,241,232,.9);
-    letter-spacing: .02em;
-  }
-  .s2-plates-footer .pf-sauce-row .sep {
-    color: var(--gold);
-    margin: 0 .35em;
-    opacity: .7;
-  }
-  .s2-plates-footer .pf-tag {
-    text-align: center;
-    font-size: 14px;
-    letter-spacing: .08em;
-    text-transform: uppercase;
-    color: rgba(245,241,232,.55);
-    margin: 0;
-  }
+  .s2-plates-showcase .card-name { font-size: 16px; }
+  .s2-plates-showcase .card-price { font-size: 18px; }
 
   .s2-right { flex: 1; display: flex; flex-direction: column; gap: 14px; min-height: 0; }
 
@@ -362,23 +304,7 @@
             <span class="dots"></span>
             <span class="price">{{ item.price }}</span>
           </div>
-          {# Footer carries shared includes/sauces — keep only protein-specific short notes #}
-          {% if s.plates_footer is defined and s.plates_footer %}
-            {% if item.first_note %}
-              {% set short = item.first_note
-                   | replace(', 1 Pita, rice, salad, baba ghanoush & hummus + tahini', '')
-                   | replace(', 1 Pita, rice, salad, baba ghanoush and hummus + tahini', '')
-                   | replace(', 1 Pita, salad, baba ghanoush and hummus + tahini', '')
-                   | replace(' over a bed of rice, 1 Pita, salad, baba ghanoush and hummus + tahini', ' over rice')
-                   | replace(' over a bed of rice, 1 Pita, salad, baba ghanoush & hummus + tahini', ' over rice')
-              %}
-              {% if short and 'Choose up to 3 sauces' not in short %}
-              <p class="tv-note">{{ short }}</p>
-              {% endif %}
-            {% endif %}
-          {% else %}
-            {% for note in item.all_notes %}<p class="tv-note">{{ note }}</p>{% endfor %}
-          {% endif %}
+          {% for note in item.all_notes %}<p class="tv-note">{{ note }}</p>{% endfor %}
           </div>
           {% endfor %}
           {% endfor %}
@@ -387,25 +313,18 @@
         {% endfor %}
       </div>
 
-      {% if s.plates_footer is defined and s.plates_footer %}
-      <div class="s2-plates-footer">
-        <h2 class="pf-title"><span class="orn">❖</span>{{ s.plates_footer.title }}<span class="orn">❖</span></h2>
-        <div class="pf-includes">
-          {% for chip in s.plates_footer.includes %}
-          <span class="pf-chip">{{ chip }}</span>
-          {% endfor %}
+      {% if s.plates_showcase is defined and s.plates_showcase and s.plates_showcase.photos %}
+      <div class="s2-plates-showcase">
+        {% for item in s.plates_showcase.photos %}
+        <div class="product-frame">
+          <div class="photo-card">{% if item.photo %}<img src="../photos/{{ item.photo }}" alt="{{ item.name }}">{% endif %}</div>
+          <div class="card-detail">
+            <span class="card-name">{{ item.name }}</span>
+            <span class="card-sep">❖</span>
+            <span class="card-price">{{ item.price }}</span>
+          </div>
         </div>
-        {% if s.plates_footer.sauces is defined and s.plates_footer.sauces %}
-        <div class="pf-sauces">
-          <p class="pf-sauces-title">{{ s.plates_footer.sauces_title }}</p>
-          <p class="pf-sauce-row">
-            {% for sauce in s.plates_footer.sauces %}
-            {{ sauce }}{% if not loop.last %}<span class="sep">·</span>{% endif %}
-            {% endfor %}
-          </p>
-        </div>
-        {% endif %}
-        {% if s.plates_footer.tagline %}<p class="pf-tag">{{ s.plates_footer.tagline }}</p>{% endif %}
+        {% endfor %}
       </div>
       {% endif %}
     </div>
