@@ -256,13 +256,126 @@
         }
       },
       "row2": {
-        "sides_hidden": true,
+        "_layout_note": "4 equal cols; fries OOS so classic sides skip fries; combo chrome hidden",
         "burgers": {
           "section": "Burgers"
         },
         "kids": {
           "section": "Kids Meals"
         },
+        "sides_title": "Sides",
+        "sides_hidden": false,
+        "sides_groups": [
+          {
+            "name": "Dips & Spreads",
+            "items": [
+              [
+                "Sides",
+                "Hummus with tahini and pita"
+              ],
+              [
+                "Sides",
+                "Tzatziki"
+              ],
+              [
+                "Sides",
+                "Baba Ghanoush"
+              ],
+              [
+                "Sides",
+                "Tabouleh"
+              ]
+            ],
+            "photo": {
+              "ref": [
+                "Sides",
+                "Hummus with tahini and pita"
+              ],
+              "photo": "sides-hummus-with-tahini-and-pita.jpg",
+              "caption": "Hummus"
+            }
+          },
+          {
+            "name": "Classic Sides",
+            "items": [
+              [
+                "Sides",
+                "Rice"
+              ],
+              [
+                "Sides",
+                "Pita"
+              ],
+              [
+                "Sides",
+                "Side Salad"
+              ]
+            ],
+            "photo": {
+              "ref": [
+                "Sides",
+                "Sambusah (2pc)"
+              ],
+              "photo": "sides-sambusah-2pc.jpg",
+              "caption": "Sambusah"
+            }
+          },
+          {
+            "name": "Premium Sides",
+            "items": [
+              [
+                "Sides",
+                "Sambusah (2pc)"
+              ],
+              [
+                "Sides",
+                "Maza Salad"
+              ]
+            ],
+            "photo": {
+              "ref": [
+                "Sides",
+                "Maza Salad"
+              ],
+              "photo": "sides-maza-salad.jpg",
+              "caption": "Maza Salad"
+            }
+          }
+        ],
+        "sides_photos": [
+          {
+            "ref": [
+              "Sides",
+              "Hummus with tahini and pita"
+            ],
+            "photo": "sides-hummus-with-tahini-and-pita.jpg",
+            "caption": "Hummus"
+          },
+          {
+            "ref": [
+              "Sides",
+              "Sambusah (2pc)"
+            ],
+            "photo": "sides-sambusah-2pc.jpg",
+            "caption": "Sambusah"
+          },
+          {
+            "ref": [
+              "Sides",
+              "Maza Salad"
+            ],
+            "photo": "sides-maza-salad.jpg",
+            "caption": "Maza Salad"
+          },
+          {
+            "ref": [
+              "Sides",
+              "Tabouleh"
+            ],
+            "photo": "sides-tabouleh.jpg",
+            "caption": "Tabouleh"
+          }
+        ],
         "burgers_card": {
           "ref": [
             "Burgers",
@@ -271,10 +384,7 @@
           "photo": "burgers-grilled-chicken.jpg",
           "caption": "Grilled Chicken Burger",
           "hide_combo": true
-        },
-        "sides_title": "",
-        "sides_groups": [],
-        "sides_photos": []
+        }
       },
       "row3": {
         "desserts_title": "Desserts",
@@ -364,7 +474,7 @@
           "_note": "transparent cut from OneDrive digital/reference/sharbat_three_cups_nobg_v1.png"
         }
       },
-      "_oos_note": "Fries, all sides, loaded fries, combo upgrade OOS"
+      "_oos_note": "Side fries + loaded fries + combo OOS; other sides still on"
     }
   ],
   "flash_specials": []
