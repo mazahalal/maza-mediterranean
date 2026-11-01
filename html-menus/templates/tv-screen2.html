@@ -67,36 +67,77 @@
     color: rgba(245,241,232,.8);
   }
 
-  /* Real plate photos eat the leftover blank — not chips, not empty gaps */
-  .s2-plates-showcase {
+  /* Giant rotating plate hero — fills leftover left height */
+  .s2-plates-hero {
     flex: 1 1 auto;
     margin-top: 12px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
     min-height: 0;
-  }
-  .s2-plates-showcase .product-frame {
-    min-height: 0;
-    height: 100%;
+    position: relative;
     display: flex;
     flex-direction: column;
   }
-  .s2-plates-showcase .photo-card {
+  .s2-plates-hero .ph-slide {
+    display: none;
+    flex: 1;
+    min-height: 0;
+    height: 100%;
+  }
+  .s2-plates-hero .ph-slide.active {
+    display: flex;
+    flex-direction: column;
+  }
+  .s2-plates-hero .ph-slide.product-frame {
+    height: 100%;
+  }
+  .s2-plates-hero .photo-card {
     flex: 1 1 auto;
-    min-height: 180px;
+    min-height: 0;
     height: auto;
   }
-  .s2-plates-showcase .photo-card img {
+  .s2-plates-hero .photo-card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-  .s2-plates-showcase .card-detail {
-    padding: 10px 10px 12px;
+  .s2-plates-hero .card-detail {
+    padding: 14px 18px 16px;
+    gap: 6px;
   }
-  .s2-plates-showcase .card-name { font-size: 16px; }
-  .s2-plates-showcase .card-price { font-size: 18px; }
+  .s2-plates-hero .card-name {
+    font-size: 28px;
+    letter-spacing: .03em;
+  }
+  .s2-plates-hero .card-price {
+    font-size: 32px;
+    font-weight: 700;
+  }
+  .s2-plates-hero .ph-notes {
+    width: 100%;
+    margin-top: 4px;
+    font-size: 15px;
+    line-height: 1.3;
+    color: rgba(245,241,232,.85);
+    text-align: center;
+  }
+  .s2-plates-hero .ph-dots {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    z-index: 4;
+    display: flex;
+    gap: 6px;
+  }
+  .s2-plates-hero .ph-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: rgba(245,241,232,.35);
+    border: 1px solid rgba(211,171,94,.5);
+  }
+  .s2-plates-hero .ph-dot.on {
+    background: var(--gold);
+    box-shadow: 0 0 8px rgba(211,171,94,.6);
+  }
 
   .s2-right { flex: 1; display: flex; flex-direction: column; gap: 14px; min-height: 0; }
 
@@ -313,15 +354,23 @@
         {% endfor %}
       </div>
 
-      {% if s.plates_showcase is defined and s.plates_showcase and s.plates_showcase.photos %}
-      <div class="s2-plates-showcase">
-        {% for item in s.plates_showcase.photos %}
-        <div class="product-frame">
+      {% if s.plates_hero is defined and s.plates_hero and s.plates_hero.photos %}
+      <div class="s2-plates-hero" id="plates-hero">
+        <div class="ph-dots" aria-hidden="true">
+          {% for item in s.plates_hero.photos %}
+          <span class="ph-dot{% if loop.first %} on{% endif %}" data-i="{{ loop.index0 }}"></span>
+          {% endfor %}
+        </div>
+        {% for item in s.plates_hero.photos %}
+        <div class="ph-slide product-frame{% if loop.first %} active{% endif %}" data-i="{{ loop.index0 }}">
           <div class="photo-card">{% if item.photo %}<img src="../photos/{{ item.photo }}" alt="{{ item.name }}">{% endif %}</div>
           <div class="card-detail">
             <span class="card-name">{{ item.name }}</span>
             <span class="card-sep">❖</span>
             <span class="card-price">{{ item.price }}</span>
+            {% if item.all_notes %}
+            <p class="ph-notes">{{ item.all_notes | join(' · ') }}</p>
+            {% endif %}
           </div>
         </div>
         {% endfor %}
@@ -515,6 +564,26 @@
     i = ((n % slides.length) + slides.length) % slides.length;
     slides[i].classList.add('active');
     rows[i].classList.add('highlight');
+  }
+  setInterval(function () { show(i + 1); }, MS);
+})();
+</script>
+<script>
+(function () {
+  /* Giant plates hero — rotate every plated photo with name/price/notes */
+  var root = document.getElementById('plates-hero');
+  if (!root) return;
+  var slides = root.querySelectorAll('.ph-slide');
+  var dots = root.querySelectorAll('.ph-dot');
+  if (slides.length < 2) return;
+  var i = 0;
+  var MS = {{ s.plates_hero.rotate_ms if s.plates_hero is defined and s.plates_hero.rotate_ms is defined else 7000 }};
+  function show(n) {
+    slides[i].classList.remove('active');
+    if (dots[i]) dots[i].classList.remove('on');
+    i = ((n % slides.length) + slides.length) % slides.length;
+    slides[i].classList.add('active');
+    if (dots[i]) dots[i].classList.add('on');
   }
   setInterval(function () { show(i + 1); }, MS);
 })();

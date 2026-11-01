@@ -198,11 +198,20 @@
         "hide_item_notes": true,
         "_note": "Plate column shows name+price only — notes clutter TV; Family Meal bullets carry detail."
       },
-      "plates_showcase": {
+      "plates_hero": {
+        "rotate_ms": 7000,
         "photos": [
           [
             "Plates",
+            "Chicken Shish Kebab"
+          ],
+          [
+            "Plates",
             "Chicken Tikka Plate"
+          ],
+          [
+            "Plates",
+            "Shredded Chicken Plate"
           ],
           [
             "Plates",
@@ -210,7 +219,23 @@
           ],
           [
             "Plates",
-            "Shredded Chicken Plate"
+            "Ribeye Tikka Plate"
+          ],
+          [
+            "Plates",
+            "Shredded Steak Plate"
+          ],
+          [
+            "Plates",
+            "Mix Kebab"
+          ],
+          [
+            "Plates",
+            "Maza Grill"
+          ],
+          [
+            "Specials",
+            "Maza Special"
           ]
         ]
       }
