@@ -14,6 +14,7 @@ const SCREEN_2_CATEGORIES = [
   'Burgers',
   'Specials',
   'Kids Meals',
+  'Sides',
   'Desserts & Drinks',
 ];
 

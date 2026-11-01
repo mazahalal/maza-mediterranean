@@ -133,6 +133,48 @@
       "subtitle": "Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Maza Special Sauce, Pomegranate Molasses. Sauce on the side available."
     },
     {
+      "name": "Sides",
+      "items": [
+        {
+          "name": "Hummus with tahini and pita",
+          "price": "$5.99"
+        },
+        {
+          "name": "Pita",
+          "price": "$1.25"
+        },
+        {
+          "name": "Rice",
+          "price": "$3.99"
+        },
+        {
+          "name": "Tzatziki",
+          "price": "SM $1.99 | LG $4.99"
+        },
+        {
+          "name": "Baba Ghanoush",
+          "price": "SM $1.99 | LG $4.99"
+        },
+        {
+          "name": "Sambusah (2pc)",
+          "price": "$9.49"
+        },
+        {
+          "name": "Tabouleh",
+          "price": "$4.99"
+        },
+        {
+          "name": "Side Salad",
+          "price": "$3.99"
+        },
+        {
+          "name": "Maza Salad",
+          "price": "$13.99",
+          "note": "Choose from: Chicken or Steak"
+        }
+      ]
+    },
+    {
       "name": "Specials",
       "items": [
         {
@@ -374,61 +416,6 @@
       "name": "Fries",
       "price": "$3.49",
       "reason": "temporary stock gap — urgent hide site+TV; restore when back"
-    },
-    {
-      "section": "Sides",
-      "name": "Hummus with tahini and pita",
-      "price": "$5.99",
-      "reason": "temporary stock gap — urgent hide site+TV; restore when back"
-    },
-    {
-      "section": "Sides",
-      "name": "Pita",
-      "price": "$1.25",
-      "reason": "temporary stock gap — urgent hide site+TV; restore when back"
-    },
-    {
-      "section": "Sides",
-      "name": "Rice",
-      "price": "$3.99",
-      "reason": "temporary stock gap — urgent hide site+TV; restore when back"
-    },
-    {
-      "section": "Sides",
-      "name": "Tzatziki",
-      "price": "SM $1.99 | LG $4.99",
-      "reason": "temporary stock gap — urgent hide site+TV; restore when back"
-    },
-    {
-      "section": "Sides",
-      "name": "Baba Ghanoush",
-      "price": "SM $1.99 | LG $4.99",
-      "reason": "temporary stock gap — urgent hide site+TV; restore when back"
-    },
-    {
-      "section": "Sides",
-      "name": "Sambusah (2pc)",
-      "price": "$9.49",
-      "reason": "temporary stock gap — urgent hide site+TV; restore when back"
-    },
-    {
-      "section": "Sides",
-      "name": "Tabouleh",
-      "price": "$4.99",
-      "reason": "temporary stock gap — urgent hide site+TV; restore when back"
-    },
-    {
-      "section": "Sides",
-      "name": "Side Salad",
-      "price": "$3.99",
-      "reason": "temporary stock gap — urgent hide site+TV; restore when back"
-    },
-    {
-      "section": "Sides",
-      "name": "Maza Salad",
-      "price": "$13.99",
-      "reason": "temporary stock gap — urgent hide site+TV; restore when back",
-      "note": "Choose from: Chicken or Steak"
     }
   ]
 }
