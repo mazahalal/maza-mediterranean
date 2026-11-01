@@ -53,6 +53,20 @@ export const menuData: MenuCategory[] = [
     ],
   },
   {
+    category: "Sides",
+    items: [
+      { name: "Hummus with tahini and pita", price: "$5.99", image: "/images/maza/menu/opt-hummus-pita.jpg" },
+      { name: "Pita", price: "$1.25" },
+      { name: "Rice", price: "$3.99" },
+      { name: "Tzatziki", price: "SM $1.99 | LG $4.99" },
+      { name: "Baba Ghanoush", price: "SM $1.99 | LG $4.99" },
+      { name: "Sambusah (2pc)", price: "$9.49", image: "/images/maza/menu/opt-sambusah-vertical.jpg" },
+      { name: "Tabouleh", price: "$4.99", image: "/images/maza/menu/opt-tabouleh.jpg" },
+      { name: "Side Salad", price: "$3.99", image: "/images/maza/menu/opt-side-salad-vertical.jpg" },
+      { name: "Maza Salad", price: "$13.99", note: "Choose from: Chicken or Steak" }
+    ],
+  },
+  {
     category: "Specials",
     items: [
       { name: "Tepsi Baytinijan", price: "$20.00", notes: ["Iraqi eggplant casserole — eggplant, potato, tomato, onion + seasoned meat, served over rice"] },
