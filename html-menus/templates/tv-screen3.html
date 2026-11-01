@@ -216,7 +216,34 @@
     flex-direction: column;
     align-self: stretch;
   }
-  .s3-row2 .r2-col.burgers { grid-column: 1; padding-right: 4px; }
+  .s3-row2.no-sides {
+    grid-template-columns: 1fr 1fr;
+  }
+  .s3-row2.no-sides > .band-title.burgers-title {
+    grid-column: 1 / -1;
+  }
+  .s3-row2.no-sides > .band-title.sides-title,
+  .s3-row2.no-sides .row2-delim {
+    display: none;
+  }
+  .s3-row2.no-sides .r2-col.burgers {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    gap: 24px;
+    padding-right: 0;
+  }
+  .s3-row2.no-sides .r2-col.burgers .col-text {
+    flex: 1.1;
+    justify-content: center;
+    gap: 18px;
+  }
+  .s3-row2.no-sides .r2-col.burgers .col-photo {
+    flex: 1;
+    max-width: 48%;
+  }
+  .s3-row2.no-sides .tv-item .name { font-size: 20px; max-width: 70%; }
+  .s3-row2.no-sides .tv-item .price { font-size: 20px; }
+  .s3-row2.no-sides .group-title { font-size: 18px; }
   .s3-row2 .r2-col.dips { grid-column: 2; padding-left: 8px; }
   .s3-row2 .r2-col.classic { grid-column: 3; border-left: 1px solid rgba(211,171,94,.3); padding-left: 10px; }
   .s3-row2 .r2-col.premium { grid-column: 4; border-left: 1px solid rgba(211,171,94,.3); padding-left: 10px; }
@@ -793,11 +820,13 @@
 
   <hr class="h-rule">
 
-  <!-- ROW 2: 4 cols — text top, one photo bottom each -->
-  <div class="s3-row2">
+  <!-- ROW 2: Burgers & Kids (+ sides when available) -->
+  <div class="s3-row2{% if s.row2.sides_hidden is defined and s.row2.sides_hidden %} no-sides{% endif %}">
     <h2 class="band-title burgers-title"><span class="rule"></span>Burgers &amp; Kids<span class="rule"></span></h2>
+    {% if not (s.row2.sides_hidden is defined and s.row2.sides_hidden) %}
     <h2 class="band-title sides-title"><span class="rule"></span>{{ s.row2.sides_title }}<span class="rule"></span></h2>
     <div class="row2-delim" aria-hidden="true"></div>
+    {% endif %}
 
     {# COL1 Burgers + Kids #}
     <div class="r2-col burgers">
@@ -819,6 +848,17 @@
       </div>
       {% if s.row2.burgers_card is defined %}
       <div class="col-photo">
+        {% if s.row2.burgers_card.hide_combo is defined and s.row2.burgers_card.hide_combo %}
+        <div class="product-frame">
+          {% set bphoto = s.row2.burgers_card.photo if s.row2.burgers_card.photo is defined else s.row2.burgers_card.ref.photo %}
+          <div class="photo-card"><img src="../photos/{{ bphoto }}" alt="{{ s.row2.burgers_card.caption or 'Burger' }}"></div>
+          <div class="card-detail">
+            <span class="card-name">{{ s.row2.burgers_card.caption or s.row2.burgers_card.ref.name }}</span>
+            <span class="card-sep">❖</span>
+            <span class="card-price">{{ s.row2.burgers_card.ref.price }}</span>
+          </div>
+        </div>
+        {% else %}
         <figure class="s3-combo-fig">
           {% set bphoto = s.row2.burgers_card.photo if s.row2.burgers_card.photo is defined else s.row2.burgers_card.ref.photo %}
           <div class="photo-card"><img src="../photos/{{ bphoto }}" alt="Burger & Fries"></div>
@@ -831,11 +871,13 @@
             <span class="cb-price">4.99</span>
           </div>
         </figure>
+        {% endif %}
       </div>
       {% endif %}
     </div>
 
     {# COLS 2–4 sides groups + bottom photo #}
+    {% if not (s.row2.sides_hidden is defined and s.row2.sides_hidden) %}
     {% set gclass = ['dips', 'classic', 'premium'] %}
     {% for g in s.row2.sides_groups %}
     <div class="r2-col {{ gclass[loop.index0] if loop.index0 < gclass|length else '' }}">
@@ -867,6 +909,7 @@
       {% endif %}
     </div>
     {% endfor %}
+    {% endif %}
   </div>
 
   <hr class="h-rule">

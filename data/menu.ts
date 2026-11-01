@@ -31,13 +31,6 @@ export const menuData: MenuCategory[] = [
     ],
   },
   {
-    category: "Wrap Upgrades",
-    subtitle: "Upgrade any meal to a combo",
-    items: [
-      { name: "Combo Upgrade", price: "$4.99", note: "Includes Fries + Drink" }
-    ],
-  },
-  {
     category: "Plates",
     items: [
       { name: "Beef + Lamb Shish Kebab", price: "$20.19", image: "/images/maza/menu/opt-beef-shish-plate.jpg", notes: ["2 Beef + Lamb Shish Kebab, 1 Pita, rice, salad, baba ghanoush & hummus + tahini"] },
@@ -48,15 +41,6 @@ export const menuData: MenuCategory[] = [
       { name: "Maza Grill", price: "$27.99", image: "/images/maza/menu/opt-Jun_6_2026_5_29_23.jpg", notes: ["1 Chicken Tikka, 1 Beef + Lamb Shish Kebab, 1 Chicken Shish Kebab, 1 Pita, rice, salad, baba ghanoush & hummus + tahini"] },
       { name: "Shredded Steak Plate", price: "$19.99", image: "/images/maza/menu/opt-shredded-steak-plate.jpg", notes: ["Maza in-house shredded steak over a bed of rice, 1 Pita, salad, baba ghanoush and hummus + tahini", "Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Maza Special Sauce, Pomegranate Molasses. Sauce on the side available."] },
       { name: "Shredded Chicken Plate", price: "$18.49", image: "/images/maza/menu/opt-shredded-chicken-plate-vertical.jpg", notes: ["Maza in-house shredded chicken over a bed of rice, 1 Pita, salad, baba ghanoush and hummus + tahini", "Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Maza Special Sauce, Pomegranate Molasses. Sauce on the side available."] }
-    ],
-  },
-  {
-    category: "Loaded Fries",
-    subtitle: "Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Maza Special Sauce, Pomegranate Molasses. Sauce on the side available.",
-    items: [
-      { name: "Shredded Chicken", price: "$11.49", notes: ["Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Maza Special Sauce, Pomegranate Molasses. Sauce on the side available."] },
-      { name: "Shredded Steak", price: "$12.89", image: "/images/maza/menu/opt-loaded-fries-steak.jpg" },
-      { name: "Gyro", price: "$12.89", image: "/images/maza/menu/opt-loaded-fries-gyro.jpg" }
     ],
   },
   {
@@ -86,25 +70,10 @@ export const menuData: MenuCategory[] = [
   },
   {
     category: "Kids Meals",
-    subtitle: "Comes with Fries",
+    subtitle: "Kids favorites",
     items: [
-      { name: "Crispy Chicken Sandwich", price: "$11.85", image: "/images/maza/menu/opt-kids-crispy-chicken.jpg", note: "Kids Meal — Comes with Fries" },
-      { name: "All Beef Burger", price: "$11.85", note: "Kids Meal — Comes with Fries" }
-    ],
-  },
-  {
-    category: "Sides",
-    items: [
-      { name: "Fries", price: "$3.49", image: "/images/maza/menu/opt-side-fries-vertical.jpg" },
-      { name: "Hummus with tahini and pita", price: "$5.99", image: "/images/maza/menu/opt-hummus-pita.jpg" },
-      { name: "Pita", price: "$1.25" },
-      { name: "Rice", price: "$3.99" },
-      { name: "Tzatziki", price: "SM $1.99 | LG $4.99" },
-      { name: "Baba Ghanoush", price: "SM $1.99 | LG $4.99" },
-      { name: "Sambusah (2pc)", price: "$9.49", image: "/images/maza/menu/opt-sambusah-vertical.jpg" },
-      { name: "Tabouleh", price: "$4.99", image: "/images/maza/menu/opt-tabouleh.jpg" },
-      { name: "Side Salad", price: "$3.99", image: "/images/maza/menu/opt-side-salad-vertical.jpg" },
-      { name: "Maza Salad", price: "$13.99", note: "Choose from: Chicken or Steak" }
+      { name: "Crispy Chicken Sandwich", price: "$11.85", image: "/images/maza/menu/opt-kids-crispy-chicken.jpg", note: "Kids Meal" },
+      { name: "All Beef Burger", price: "$11.85", note: "Kids Meal" }
     ],
   },
   {

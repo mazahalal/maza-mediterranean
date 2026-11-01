@@ -117,9 +117,7 @@ export const OFFERING_PAGES: OfferingPage[] = [
     priceHeading: "Gyro on the register",
     priceRows: [
       { label: "Beef Gyro", price: "$10.91", note: "On pita or as a wrap" },
-      { label: "Loaded Fries — Gyro", price: "$12.89", note: "Choose up to 3 sauces" },
       { label: "Loaded Hummus — Gyro", price: "$12.89", note: "Choose up to 3 sauces" },
-      { label: "Combo Upgrade", price: "$4.99", note: "Adds fries + drink to any meal" },
     ],
     faqs: [
       {
@@ -185,7 +183,6 @@ export const OFFERING_PAGES: OfferingPage[] = [
       { label: "Chicken Tikka Plate", price: "$19.67", note: "2 chicken tikka, pita, rice, salad, baba ghanoush & hummus + tahini" },
       { label: "Chicken Tikka Wrap", price: "$11.43" },
       { label: "Maza Grill", price: "$27.99", note: "Includes 1 chicken tikka + 2 other kebabs" },
-      { label: "Combo Upgrade", price: "$4.99", note: "Adds fries + drink" },
     ],
     faqs: [
       {
@@ -403,16 +400,15 @@ export const OFFERING_PAGES: OfferingPage[] = [
     h1: "Burgers in Chandler, AZ",
     title: "Halal Burgers $12.47 | Chandler, AZ | Maza Mediterranean",
     description:
-      "Halal burgers in Chandler — beef burger and grilled chicken burger, both $12.47, handmade in house and never frozen. Kids options $11.85 with fries.",
-    hook: "Every burger at Maza is $12.47 — the beef burger and the grilled chicken burger alike — and both are handmade in house and never frozen. Kids' versions, an all-beef burger or a crispy chicken sandwich, are $11.85 and come with fries.",
+      "Halal burgers in Chandler — beef burger and grilled chicken burger, both $12.47, handmade in house and never frozen. Kids options $11.85 ",
+    hook: "Every burger at Maza is $12.47 — the beef burger and the grilled chicken burger alike — and both are handmade in house and never frozen. Kids' versions, an all-beef burger or a crispy chicken sandwich, are $11.85 and come ",
     intro:
       "The burger is the sleeper order at a Mediterranean restaurant, which is exactly why we make it properly: a hand-formed patty, halal beef, on a toasted bun. No freezer, no pre-formed puck.",
     priceHeading: "Burger pricing",
     priceRows: [
       { label: "Beef Burger", price: "$12.47", note: "Handmade in house, never frozen" },
       { label: "Grilled Chicken Burger", price: "$12.47", note: "Handmade in house, never frozen" },
-      { label: "Kids All Beef Burger", price: "$11.85", note: "Kids meal — comes with fries" },
-      { label: "Combo Upgrade", price: "$4.99", note: "Adds fries + drink" },
+      { label: "Kids All Beef Burger", price: "$11.85", note: "Kids meal — kids meal" },
     ],
     faqs: [
       FAQ_HALAL,
@@ -442,10 +438,6 @@ export const OFFERING_PAGES: OfferingPage[] = [
       "Fries, meat, sauce, repeat. It is the fastest thing on the menu and the easiest share for a table waiting on a grill order.",
     priceHeading: "Loaded fries pricing",
     priceRows: [
-      { label: "Loaded Fries — Shredded Chicken", price: "$11.49", note: "Choose up to 3 sauces" },
-      { label: "Loaded Fries — Shredded Steak", price: "$12.89", note: "Choose up to 3 sauces" },
-      { label: "Loaded Fries — Gyro", price: "$12.89", note: "Choose up to 3 sauces" },
-      { label: "Side Fries", price: "$3.49" },
     ],
     faqs: [
       {
@@ -746,17 +738,16 @@ export const OFFERING_PAGES: OfferingPage[] = [
   {
     slug: "kids-meals",
     h1: "Kids Meals in Chandler, AZ",
-    title: "Kids Meals $11.85 — With Fries | Chandler, AZ | Maza",
+    title: "Kids Meals $11.85 | Chandler, AZ | Maza",
     description:
-      "Maza kids meals in Chandler — crispy chicken sandwich or all-beef burger, $11.85, both come with fries. Halal-certified.",
+      "Maza kids meals in Chandler — crispy chicken sandwich or all-beef burger, $11.85, both come  Halal-certified.",
     hook: "Both Maza kids meals are $11.85 and both come with fries — a crispy chicken sandwich or an all-beef burger. The beef is halal-certified like everything else on the menu, so kids eat from the same supply chain as the rest of the table.",
     intro:
       "Small portions, familiar food, no negotiation. It also means the whole table can eat Mediterranean without someone ordering off-menu.",
     priceHeading: "Kids meal pricing",
     priceRows: [
-      { label: "Kids Crispy Chicken Sandwich", price: "$11.85", note: "Kids meal — comes with fries" },
-      { label: "Kids All Beef Burger", price: "$11.85", note: "Kids meal — comes with fries" },
-      { label: "Side Fries", price: "$3.49" },
+      { label: "Kids Crispy Chicken Sandwich", price: "$11.85", note: "Kids meal — kids meal" },
+      { label: "Kids All Beef Burger", price: "$11.85", note: "Kids meal — kids meal" },
     ],
     faqs: [
       FAQ_HALAL,
@@ -898,7 +889,6 @@ export const OFFERING_PAGES: OfferingPage[] = [
     priceRows: [
       { label: "Beef Gyro Wrap", price: "$10.91", note: "Great traveller" },
       { label: "Chicken Tikka Plate", price: "$19.67", note: "Full plate, boxed" },
-      { label: "Loaded Fries — Gyro", price: "$12.89", note: "Choose up to 3 sauces" },
       { label: "Family Meal", price: "$87.49", note: "Weekend special 12 shish — call ahead" },
     ],
     faqs: [
@@ -933,7 +923,6 @@ export const OFFERING_PAGES: OfferingPage[] = [
       { label: "Beef Gyro Wrap", price: "$10.91" },
       { label: "Chicken Tikka Plate", price: "$19.67", note: "Full plate lunch" },
       { label: "Maza Salad", price: "$13.99", note: "Choose chicken or steak" },
-      { label: "Combo Upgrade", price: "$4.99", note: "Adds fries + drink" },
     ],
     faqs: [
       {
