@@ -198,24 +198,21 @@
         "hide_item_notes": true,
         "_note": "Plate column shows name+price only — notes clutter TV; Family Meal bullets carry detail."
       },
-      "plates_footer": {
-        "title": "Every Plate Includes",
-        "includes": [
-          "Rice",
-          "Fresh Pita",
-          "Salad",
-          "Baba Ghanoush",
-          "Hummus + Tahini"
-        ],
-        "sauces_title": "Shredded plates — choose up to 3 sauces",
-        "sauces": [
-          "Tahini",
-          "Garlic Sauce",
-          "Sriracha Mayo",
-          "Maza Special Sauce",
-          "Pomegranate Molasses"
-        ],
-        "tagline": "Sauce on the side available · Ask your server"
+      "plates_showcase": {
+        "photos": [
+          [
+            "Plates",
+            "Chicken Tikka Plate"
+          ],
+          [
+            "Plates",
+            "Beef + Lamb Shish Kebab"
+          ],
+          [
+            "Plates",
+            "Shredded Chicken Plate"
+          ]
+        ]
       }
     },
     {
