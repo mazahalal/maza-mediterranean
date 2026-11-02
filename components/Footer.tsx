@@ -1,6 +1,7 @@
 import LogoLockup from "./LogoLockup";
 import GoogleRating from "./GoogleRating";
 import PhoneLink from "./PhoneLink";
+import FooterHours from "./FooterHours";
 import { TAKEOUT_URL, deliveryUrl } from "@/lib/ordering";
 import { MAZA_SOCIAL_LINKS } from "@/lib/maza-profiles";
 
@@ -21,7 +22,7 @@ export default function Footer() {
           <div className="text-sm text-[#B8B8B8] space-y-1">
             <p>3491 W Frye Rd, Suite 2 · Chandler, AZ 85226</p>
             <PhoneLink className="hover:text-[#D3AB5E] transition-colors">(480) 534-6550</PhoneLink>
-            <p>Mon Closed · Tue–Sun 10am–10pm</p>
+            <FooterHours />
             <p className="pt-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
               <a
                 href={TAKEOUT_URL}
