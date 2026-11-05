@@ -35,13 +35,6 @@
           "price": "$13.51"
         },
         {
-          "name": "Arayes Lahm or Dajaj",
-          "price": "$15.55",
-          "notes": [
-            "Flat grilled sandwich with cheese. Choose beef + lamb or chicken. Served with salad."
-          ]
-        },
-        {
           "name": "Ribeye Tikka Wrap",
           "price": "$14.55"
         },
@@ -130,13 +123,6 @@
           "price": "$27.99",
           "notes": [
             "1 Chicken Tikka, 1 Beef + Lamb Shish Kebab, 1 Chicken Shish Kebab, 1 Pita, rice, salad, baba ghanoush & hummus + tahini"
-          ]
-        },
-        {
-          "name": "Grilled Chicken Teriyaki Plate",
-          "price": "$28.99",
-          "notes": [
-            "2 Grilled Teriyaki Chicken Cutlets, 1 Pita, rice, salad, baba ghanoush & hummus + tahini"
           ]
         },
         {
@@ -305,10 +291,6 @@
           "name": "Maza Salad",
           "price": "$13.99",
           "note": "Choose from: Chicken or Steak"
-        },
-        {
-          "name": "Kibbeh (3pc)",
-          "price": "$11.99"
         }
       ]
     },
@@ -357,6 +339,11 @@
           "note": "20oz, refillable"
         },
         {
+          "name": "Mexican Coke",
+          "price": "$3.99",
+          "note": "355ml glass"
+        },
+        {
           "name": "Mexican Fanta Grape",
           "price": "$3.99",
           "note": "355ml glass"
@@ -396,6 +383,30 @@
         "Please allow 1 hour to prepare"
       ],
       "reason": "moratorium - temporarily off menu; do not show on website or TV"
+    },
+    {
+      "section": "Wraps",
+      "name": "Arayes Lahm or Dajaj",
+      "price": "$15.55",
+      "reason": "temporary stock gap — urgent hide site+TV; restore when back",
+      "notes": [
+        "Flat grilled sandwich with cheese. Choose beef + lamb or chicken. Served with salad."
+      ]
+    },
+    {
+      "section": "Plates",
+      "name": "Grilled Chicken Teriyaki Plate",
+      "price": "$28.99",
+      "reason": "temporary stock gap — urgent hide site+TV; restore when back",
+      "notes": [
+        "2 Grilled Teriyaki Chicken Cutlets, 1 Pita, rice, salad, baba ghanoush & hummus + tahini"
+      ]
+    },
+    {
+      "section": "Sides",
+      "name": "Kibbeh (3pc)",
+      "price": "$11.99",
+      "reason": "temporary stock gap — urgent hide site+TV; restore when back"
     }
   ]
 }

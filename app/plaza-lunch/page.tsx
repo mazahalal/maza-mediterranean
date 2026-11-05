@@ -41,7 +41,6 @@ const WRAPS = [
   "Crispy Chicken Wrap",
   "Falafel Wrap",
   "Lamb Tikka Wrap",
-  "Arayes Lahm or Dajaj",
   "Ribeye Tikka Wrap",
   "Shredded Chicken Wrap",
   "Shredded Steak Wrap",
