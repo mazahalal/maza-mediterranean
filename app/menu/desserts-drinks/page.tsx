@@ -8,11 +8,10 @@ import { linkForMenuItem } from "@/lib/menu-item-links";
 export const metadata = {
   alternates: { canonical: "https://mazahalalfood.com/menu/desserts-drinks" },
   title: "Desserts & Drinks | Maza Mediterranean Cuisine",
-  description: "Sharbat and fountain drinks. The perfect finish to any meal.",
+  description: "Pistachio baklava, sharbat, and fountain drinks. The perfect finish to any meal.",
 }
 
-// Baklava omitted while temporarily unavailable (section absent from menuData)
-const dessertCats = ["Drinks", "Sharbat"] as const
+const dessertCats = ["Baklava", "Drinks", "Sharbat"] as const
 const dessertSections = dessertCats
   .map((cat) => menuData.find((c) => c.category === cat))
   .filter((section): section is MenuCategory => Boolean(section))
@@ -20,7 +19,7 @@ const dessertSections = dessertCats
 const dessertJsonLd = buildMenuJsonLd(dessertSections, {
   url: `${SITE}/menu/desserts-drinks`,
   name: "Maza Mediterranean Cuisine | Desserts and Drinks Menu",
-  description: "Sharbat and fountain drinks. The perfect finish to any meal. Halal-certified Mediterranean food in Chandler, AZ.",
+  description: "Pistachio baklava, sharbat, and fountain drinks. The perfect finish to any meal. Halal-certified Mediterranean food in Chandler, AZ.",
 });
 
 export default function DessertsDrinksPage() {

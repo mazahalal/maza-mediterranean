@@ -42,6 +42,10 @@
             ],
             [
               "Wraps",
+              "Lamb Tikka Wrap"
+            ],
+            [
+              "Wraps",
               "Ribeye Tikka Wrap"
             ]
           ]
@@ -56,6 +60,10 @@
             [
               "Wraps",
               "Crispy Chicken Wrap"
+            ],
+            [
+              "Wraps",
+              "Falafel Wrap"
             ],
             [
               "Wraps",
@@ -81,7 +89,15 @@
           "Wraps",
           "Arayes Lahm or Dajaj"
         ]
-      ]
+      ],
+      "banner": {
+        "title": "Make It a Combo",
+        "subtitle": "Upgrade any meal to a combo",
+        "item": [
+          "Wrap Upgrades",
+          "Combo Upgrade"
+        ]
+      }
     },
     {
       "id": "screen2-plates",
@@ -102,6 +118,10 @@
               ],
               [
                 "Plates",
+                "Grilled Chicken Teriyaki Plate"
+              ],
+              [
+                "Plates",
                 "Shredded Chicken Plate"
               ]
             ]
@@ -109,7 +129,7 @@
         ],
         [
           {
-            "name": "Beef",
+            "name": "Beef / Lamb",
             "items": [
               [
                 "Plates",
@@ -118,6 +138,10 @@
               [
                 "Plates",
                 "Ribeye Tikka Plate"
+              ],
+              [
+                "Plates",
+                "Lamb Tikka Plate"
               ],
               [
                 "Plates",
@@ -137,6 +161,14 @@
               [
                 "Plates",
                 "Maza Grill"
+              ],
+              [
+                "Plates",
+                "Falafel"
+              ],
+              [
+                "Plates",
+                "Appetizer Plate"
               ],
               [
                 "Specials",
@@ -164,16 +196,23 @@
           "Mix Kebab"
         ],
         [
+          "Plates",
+          "Falafel"
+        ],
+        [
           "Specials",
           "Maza Special"
         ]
       ],
       "specials": {
-        "title": "Family Meal",
+        "title": "Specials",
         "layout": "family-max",
-        "_rotate_note": "Solo Family Meal weekend special — maximized hero + type.",
-        "rotate_ms": 10000,
+        "rotate_ms": 8000,
         "slides": [
+          [
+            "Specials",
+            "Maza Special"
+          ],
           [
             "Specials",
             "Family Meal"
@@ -182,13 +221,13 @@
         "items": [
           [
             "Specials",
+            "Maza Special"
+          ],
+          [
+            "Specials",
             "Family Meal"
           ]
         ]
-      },
-      "_plates_ui": {
-        "hide_item_notes": true,
-        "_note": "Plate column shows name+price only — notes clutter TV; Family Meal bullets carry detail."
       },
       "plates_hero": {
         "rotate_ms": 7000,
@@ -211,6 +250,14 @@
           ],
           [
             "Plates",
+            "Ribeye Tikka Plate"
+          ],
+          [
+            "Plates",
+            "Lamb Tikka Plate"
+          ],
+          [
+            "Plates",
             "Shredded Steak Plate"
           ],
           [
@@ -222,12 +269,19 @@
             "Maza Grill"
           ],
           [
+            "Plates",
+            "Falafel"
+          ],
+          [
+            "Plates",
+            "Appetizer Plate"
+          ],
+          [
             "Specials",
             "Maza Special"
           ]
         ]
-      },
-      "_photo_note": "Ribeye Tikka still out of rotator — no plated photo in digital/product or menu_items (only wrap + grill). Chicken Shish + Beef Shish now use digital/product plate shots."
+      }
     },
     {
       "id": "screen3-loaded",
@@ -235,14 +289,14 @@
       "halal_badge": true,
       "row1": {
         "left": {
-          "section": "Burgers"
+          "section": "Loaded Fries"
         },
         "left_card": {
           "ref": [
-            "Burgers",
-            "Beef Burger"
+            "Loaded Fries",
+            "Shredded Steak"
           ],
-          "caption": "Beef Burger"
+          "caption": "Loaded Steak Fries"
         },
         "right": {
           "section": "Loaded Hummus"
@@ -250,13 +304,13 @@
         "right_card": {
           "ref": [
             "Loaded Hummus",
-            "Gyro"
+            "Shredded Chicken"
           ],
-          "caption": "Loaded Gyro Hummus"
+          "caption": "Loaded Chicken Hummus"
         }
       },
       "row2": {
-        "_layout_note": "4 equal cols; fries OOS so classic sides skip fries; combo chrome hidden",
+        "_layout_note": "4 equal cols; full sides restored incl fries/falafel/dolma; combo bar on",
         "burgers": {
           "section": "Burgers"
         },
@@ -300,6 +354,10 @@
             "items": [
               [
                 "Sides",
+                "Fries"
+              ],
+              [
+                "Sides",
                 "Rice"
               ],
               [
@@ -325,6 +383,18 @@
             "items": [
               [
                 "Sides",
+                "Dolma"
+              ],
+              [
+                "Sides",
+                "Falafel (4pc)"
+              ],
+              [
+                "Sides",
+                "Kibbeh (3pc)"
+              ],
+              [
+                "Sides",
                 "Sambusah (2pc)"
               ],
               [
@@ -335,10 +405,10 @@
             "photo": {
               "ref": [
                 "Sides",
-                "Maza Salad"
+                "Falafel (4pc)"
               ],
-              "photo": "sides-maza-salad.jpg",
-              "caption": "Maza Salad"
+              "photo": "sides-falafel-4pc.jpg",
+              "caption": "Falafel"
             }
           }
         ],
@@ -362,10 +432,10 @@
           {
             "ref": [
               "Sides",
-              "Maza Salad"
+              "Falafel (4pc)"
             ],
-            "photo": "sides-maza-salad.jpg",
-            "caption": "Maza Salad"
+            "photo": "sides-falafel-4pc.jpg",
+            "caption": "Falafel"
           },
           {
             "ref": [
@@ -377,31 +447,38 @@
           }
         ],
         "burgers_card": {
-          "ref": [
-            "Burgers",
-            "Grilled Chicken"
-          ],
-          "photo": "burgers-grilled-chicken.jpg",
-          "caption": "Grilled Chicken Burger",
-          "hide_combo": true
+          "photo": "burger-fries-combo.jpg",
+          "caption": "Burger & Fries",
+          "hide_combo": false
         }
       },
       "row3": {
         "desserts_title": "Desserts",
         "desserts_cards": [
           {
-            "caption": "Baklava · Temporarily Unavailable",
-            "photo": "baklava-pistachio-baklava.jpg",
-            "unavailable": true
+            "ref": [
+              "Baklava",
+              "Pistachio Baklava"
+            ],
+            "caption": "Pistachio Baklava",
+            "photo": "baklava-pistachio-baklava.jpg"
           }
         ],
         "desserts_card": {
-          "caption": "Baklava · Temporarily Unavailable",
-          "unavailable": true
+          "ref": [
+            "Baklava",
+            "Pistachio Baklava"
+          ],
+          "caption": "Pistachio Baklava"
         },
         "desserts": {
           "title": "Desserts",
-          "items": []
+          "items": [
+            [
+              "Baklava",
+              "Pistachio Baklava"
+            ]
+          ]
         },
         "drinks": {
           "name": "Drinks",
@@ -415,7 +492,7 @@
                 ],
                 [
                   "Drinks",
-                  "Middle Eastern Black Tea"
+                  "Hot Middle Eastern Black Tea"
                 ],
                 [
                   "Drinks",
@@ -472,9 +549,9 @@
           "photo": "sharbat-three-cups-nobg.png",
           "caption": "Sharbat",
           "_note": "transparent cut from OneDrive digital/reference/sharbat_three_cups_nobg_v1.png"
-        }
-      },
-      "_oos_note": "Side fries + loaded fries + combo OOS; other sides still on"
+        },
+        "desserts_hidden": false
+      }
     }
   ],
   "flash_specials": []
