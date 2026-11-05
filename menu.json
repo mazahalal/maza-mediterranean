@@ -27,26 +27,37 @@
           "price": "$14.55"
         },
         {
-          "name": "Arayes Lahm or Dajaj",
-          "price": "$15.55",
-          "notes": [
-            "Flat grilled sandwich with cheese. Choose beef + lamb or chicken. Served with salad."
-          ]
+          "name": "Falafel Wrap",
+          "price": "$9.35"
+        },
+        {
+          "name": "Lamb Tikka Wrap",
+          "price": "$13.51"
         },
         {
           "name": "Ribeye Tikka Wrap",
           "price": "$14.55"
         },
         {
-          "name": "Shredded Steak Wrap",
-          "price": "$14.89"
-        },
-        {
           "name": "Shredded Chicken Wrap",
           "price": "$12.49"
+        },
+        {
+          "name": "Shredded Steak Wrap",
+          "price": "$14.89"
         }
-      ],
-      "subtitle": "Wrapped with hummus, tomato, onion, lettuce, pickle, and garlic sauce"
+      ]
+    },
+    {
+      "name": "Wrap Upgrades",
+      "subtitle": "Upgrade any meal to a combo",
+      "items": [
+        {
+          "name": "Combo Upgrade",
+          "price": "$4.99",
+          "note": "Includes Fries + Drink"
+        }
+      ]
     },
     {
       "name": "Plates",
@@ -73,6 +84,13 @@
           ]
         },
         {
+          "name": "Lamb Tikka Plate",
+          "price": "$20.71",
+          "notes": [
+            "2 Lamb Tikka, 1 Pita, rice, salad, baba ghanoush & hummus + tahini"
+          ]
+        },
+        {
           "name": "Ribeye Tikka Plate",
           "price": "$24.87",
           "notes": [
@@ -87,18 +105,24 @@
           ]
         },
         {
+          "name": "Falafel",
+          "price": "$16.55",
+          "notes": [
+            "Falafel, 1 Pita, salad, baba ghanoush & hummus + tahini"
+          ]
+        },
+        {
+          "name": "Appetizer Plate",
+          "price": "$15.51",
+          "notes": [
+            "6 Dolma, Hummus, Baba Ghanoush & Tzatziki"
+          ]
+        },
+        {
           "name": "Maza Grill",
           "price": "$27.99",
           "notes": [
             "1 Chicken Tikka, 1 Beef + Lamb Shish Kebab, 1 Chicken Shish Kebab, 1 Pita, rice, salad, baba ghanoush & hummus + tahini"
-          ]
-        },
-        {
-          "name": "Shredded Steak Plate",
-          "price": "$19.99",
-          "notes": [
-            "Maza in-house shredded steak over a bed of rice, 1 Pita, salad, baba ghanoush and hummus + tahini",
-            "Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Maza Special Sauce, Pomegranate Molasses. Sauce on the side available."
           ]
         },
         {
@@ -108,6 +132,34 @@
             "Maza in-house shredded chicken over a bed of rice, 1 Pita, salad, baba ghanoush and hummus + tahini",
             "Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Maza Special Sauce, Pomegranate Molasses. Sauce on the side available."
           ]
+        },
+        {
+          "name": "Shredded Steak Plate",
+          "price": "$19.99",
+          "notes": [
+            "Maza in-house shredded steak over a bed of rice, 1 Pita, salad, baba ghanoush and hummus + tahini",
+            "Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Maza Special Sauce, Pomegranate Molasses. Sauce on the side available."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Loaded Fries",
+      "items": [
+        {
+          "name": "Shredded Chicken",
+          "price": "$11.49",
+          "notes": [
+            "Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Maza Special Sauce, Pomegranate Molasses. Sauce on the side available."
+          ]
+        },
+        {
+          "name": "Shredded Steak",
+          "price": "$12.89"
+        },
+        {
+          "name": "Gyro",
+          "price": "$12.89"
         }
       ]
     },
@@ -133,8 +185,76 @@
       "subtitle": "Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Maza Special Sauce, Pomegranate Molasses. Sauce on the side available."
     },
     {
+      "name": "Specials",
+      "items": [
+        {
+          "name": "Tepsi Baytinijan",
+          "price": "$20.00",
+          "notes": [
+            "Iraqi eggplant casserole — eggplant, potato, tomato, onion + seasoned meat, served over rice"
+          ]
+        },
+        {
+          "name": "Maza Special",
+          "price": "$48.45",
+          "notes": [
+            "1x Chicken Tikka, 1x Lamb Tikka, 1x Beef + Lamb Shish Kebab, 1x Chicken Shish Kebab (4 total), +2 Pita, Rice, Salad, Hummus + Tahini, Baba Ghanoush"
+          ]
+        },
+        {
+          "name": "Family Meal",
+          "price": "$87.49",
+          "notes": [
+            "2x Beef + Lamb Shish Kebab, 2x Chicken Shish Kebab, 2x Chicken Tikka, 2x Lamb Tikka, 2x Ribeye Tikka (10 total), +4 Pita, Rice, Salad, Hummus + Tahini, Baba Ghanoush"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Burgers",
+      "subtitle": "Handmade in House, never frozen",
+      "items": [
+        {
+          "name": "Beef Burger",
+          "price": "$12.47"
+        },
+        {
+          "name": "Grilled Chicken",
+          "price": "$12.47"
+        }
+      ]
+    },
+    {
+      "name": "Kids Meals",
+      "subtitle": "Comes with Fries",
+      "items": [
+        {
+          "name": "Crispy Chicken Sandwich",
+          "price": "$11.85",
+          "note": "Kids Meal — Comes with Fries"
+        },
+        {
+          "name": "All Beef Burger",
+          "price": "$11.85",
+          "note": "Kids Meal — Comes with Fries"
+        }
+      ]
+    },
+    {
       "name": "Sides",
       "items": [
+        {
+          "name": "Dolma",
+          "price": "$5.99"
+        },
+        {
+          "name": "Fries",
+          "price": "$3.49"
+        },
+        {
+          "name": "Falafel (4pc)",
+          "price": "$3.99"
+        },
         {
           "name": "Hummus with tahini and pita",
           "price": "$5.99"
@@ -175,63 +295,11 @@
       ]
     },
     {
-      "name": "Specials",
+      "name": "Baklava",
       "items": [
         {
-          "name": "Tepsi Baytinijan",
-          "price": "$20.00",
-          "notes": [
-            "Iraqi eggplant casserole — eggplant, potato, tomato, onion + seasoned meat, served over rice"
-          ]
-        },
-        {
-          "name": "Maza Special",
-          "price": "$48.45",
-          "notes": [
-            "2x Chicken Tikka, 1x Beef + Lamb Shish Kebab, 1x Chicken Shish Kebab (4 total), +2 Pita, Rice, Salad, Hummus + Tahini, Baba Ghanoush"
-          ]
-        },
-        {
-          "name": "Family Meal",
-          "price": "$87.49",
-          "notes": [
-            "WEEKEND SPECIAL — today & tomorrow only · 12 shish for $87.49",
-            "3× Beef + Lamb Shish Kebab",
-            "3× Chicken Shish Kebab",
-            "3× Chicken Tikka",
-            "3× Ribeye Tikka",
-            "Includes 4 Pita, Rice, Salad, Hummus + Tahini, Baba Ghanoush"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Burgers",
-      "subtitle": "Handmade in House, never frozen",
-      "items": [
-        {
-          "name": "Beef Burger",
-          "price": "$12.47"
-        },
-        {
-          "name": "Grilled Chicken",
-          "price": "$12.47"
-        }
-      ]
-    },
-    {
-      "name": "Kids Meals",
-      "subtitle": "Kids favorites",
-      "items": [
-        {
-          "name": "Crispy Chicken Sandwich",
-          "price": "$11.85",
-          "note": "Kids Meal"
-        },
-        {
-          "name": "All Beef Burger",
-          "price": "$11.85",
-          "note": "Kids Meal"
+          "name": "Pistachio Baklava",
+          "price": "$3.99"
         }
       ]
     },
@@ -271,6 +339,11 @@
           "note": "20oz, refillable"
         },
         {
+          "name": "Mexican Coke",
+          "price": "$3.99",
+          "note": "355ml glass"
+        },
+        {
           "name": "Mexican Fanta Grape",
           "price": "$3.99",
           "note": "355ml glass"
@@ -296,6 +369,12 @@
   ],
   "temporarily_unavailable": [
     {
+      "section": "Baklava",
+      "name": "Dubai Chocolate Style Baklava",
+      "price": "$3.99",
+      "reason": "temporarily MIA — only pistachio baklava in stock; do not show on website or TV"
+    },
+    {
       "section": "Specials",
       "name": "Samak Tandoor",
       "price": "$38.97",
@@ -306,52 +385,13 @@
       "reason": "moratorium - temporarily off menu; do not show on website or TV"
     },
     {
-      "section": "Baklava",
-      "name": "Dubai Chocolate Style Baklava",
-      "price": "$3.99",
-      "reason": "temporarily MIA — only pistachio baklava in stock; do not show on website or TV"
-    },
-    {
       "section": "Wraps",
-      "name": "Falafel Wrap",
-      "price": "$9.35",
-      "reason": "temporary stock gap — urgent hide site+TV; restore when back"
-    },
-    {
-      "section": "Wraps",
-      "name": "Lamb Tikka Wrap",
-      "price": "$13.51",
-      "reason": "temporary stock gap — urgent hide site+TV; restore when back"
-    },
-    {
-      "section": "Plates",
-      "name": "Lamb Tikka Plate",
-      "price": "$20.71",
+      "name": "Arayes Lahm or Dajaj",
+      "price": "$15.55",
       "reason": "temporary stock gap — urgent hide site+TV; restore when back",
       "notes": [
-        "2 Lamb Tikka, 1 Pita, rice, salad, baba ghanoush & hummus + tahini"
+        "Flat grilled sandwich with cheese. Choose beef + lamb or chicken. Served with salad."
       ]
-    },
-    {
-      "section": "Plates",
-      "name": "Falafel",
-      "price": "$16.55",
-      "reason": "temporary stock gap — urgent hide site+TV; restore when back",
-      "notes": [
-        "Falafel, 1 Pita, salad, baba ghanoush & hummus + tahini"
-      ]
-    },
-    {
-      "section": "Sides",
-      "name": "Falafel (4pc)",
-      "price": "$3.99",
-      "reason": "temporary stock gap — urgent hide site+TV; restore when back"
-    },
-    {
-      "section": "Baklava",
-      "name": "Pistachio Baklava",
-      "price": "$3.99",
-      "reason": "temporary stock gap — urgent hide site+TV; restore when back"
     },
     {
       "section": "Plates",
@@ -366,55 +406,6 @@
       "section": "Sides",
       "name": "Kibbeh (3pc)",
       "price": "$11.99",
-      "reason": "temporary stock gap — urgent hide site+TV; restore when back"
-    },
-    {
-      "section": "Sides",
-      "name": "Dolma",
-      "price": "$5.99",
-      "reason": "temporary stock gap — urgent hide site+TV; restore when back"
-    },
-    {
-      "section": "Plates",
-      "name": "Appetizer Plate",
-      "price": "$15.51",
-      "reason": "temporary stock gap — urgent hide site+TV; restore when back",
-      "notes": [
-        "6 Dolma, Hummus, Baba Ghanoush & Tzatziki"
-      ]
-    },
-    {
-      "section": "Wrap Upgrades",
-      "name": "Combo Upgrade",
-      "price": "$4.99",
-      "reason": "temporary stock gap — urgent hide site+TV; restore when back",
-      "note": "Includes Fries + Drink"
-    },
-    {
-      "section": "Loaded Fries",
-      "name": "Shredded Chicken",
-      "price": "$11.49",
-      "reason": "temporary stock gap — urgent hide site+TV; restore when back",
-      "notes": [
-        "Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Maza Special Sauce, Pomegranate Molasses. Sauce on the side available."
-      ]
-    },
-    {
-      "section": "Loaded Fries",
-      "name": "Shredded Steak",
-      "price": "$12.89",
-      "reason": "temporary stock gap — urgent hide site+TV; restore when back"
-    },
-    {
-      "section": "Loaded Fries",
-      "name": "Gyro",
-      "price": "$12.89",
-      "reason": "temporary stock gap — urgent hide site+TV; restore when back"
-    },
-    {
-      "section": "Sides",
-      "name": "Fries",
-      "price": "$3.49",
       "reason": "temporary stock gap — urgent hide site+TV; restore when back"
     }
   ]

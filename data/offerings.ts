@@ -118,6 +118,8 @@ export const OFFERING_PAGES: OfferingPage[] = [
     priceRows: [
       { label: "Beef Gyro", price: "$10.91", note: "On pita or as a wrap" },
       { label: "Loaded Hummus — Gyro", price: "$12.89", note: "Choose up to 3 sauces" },
+      { label: "Combo Upgrade", price: "$4.99", note: "Adds fries + drink" },
+    
     ],
     faqs: [
       {
@@ -183,6 +185,8 @@ export const OFFERING_PAGES: OfferingPage[] = [
       { label: "Chicken Tikka Plate", price: "$19.67", note: "2 chicken tikka, pita, rice, salad, baba ghanoush & hummus + tahini" },
       { label: "Chicken Tikka Wrap", price: "$11.43" },
       { label: "Maza Grill", price: "$27.99", note: "Includes 1 chicken tikka + 2 other kebabs" },
+      { label: "Combo Upgrade", price: "$4.99", note: "Adds fries + drink" },
+    
     ],
     faqs: [
       {
@@ -214,7 +218,7 @@ export const OFFERING_PAGES: OfferingPage[] = [
     priceRows: [
       { label: "Lamb Tikka Plate", price: "$20.71", note: "2 lamb tikka, pita, rice, salad, baba ghanoush & hummus + tahini" },
       { label: "Lamb Tikka Wrap", price: "$13.51" },
-      { label: "Family Meal", price: "$87.49", note: "Weekend special: 12 shish (3 of each)" },
+      { label: "Family Meal", price: "$87.49", note: "10 skewers — feeds 4–6" },
     ],
     faqs: [
       {
@@ -246,7 +250,7 @@ export const OFFERING_PAGES: OfferingPage[] = [
     priceRows: [
       { label: "Ribeye Tikka Plate", price: "$24.87", note: "2 ribeye tikka, pita, rice, salad, baba ghanoush & hummus + tahini" },
       { label: "Ribeye Tikka Wrap", price: "$14.55" },
-      { label: "Family Meal", price: "$87.49", note: "Weekend special: 12 shish, 3 of each" },
+      { label: "Family Meal", price: "$87.49", note: "10 skewers — feeds 4–6" },
     ],
     faqs: [
       {
@@ -278,7 +282,7 @@ export const OFFERING_PAGES: OfferingPage[] = [
     priceRows: [
       { label: "Mix Kebab", price: "$20.71", note: "1 chicken shish kebab + 1 beef & lamb shish kebab, pita, rice, salad, baba ghanoush & hummus + tahini" },
       { label: "Maza Grill", price: "$27.99", note: "Three-kebab version with chicken tikka" },
-      { label: "Family Meal", price: "$87.49", note: "Weekend special: 12 shish, 3 of each" },
+      { label: "Family Meal", price: "$87.49", note: "10 skewers — feeds 4–6" },
     ],
     faqs: [
       {
@@ -409,6 +413,8 @@ export const OFFERING_PAGES: OfferingPage[] = [
       { label: "Beef Burger", price: "$12.47", note: "Handmade in house, never frozen" },
       { label: "Grilled Chicken Burger", price: "$12.47", note: "Handmade in house, never frozen" },
       { label: "Kids All Beef Burger", price: "$11.85", note: "Kids meal — kids meal" },
+      { label: "Combo Upgrade", price: "$4.99", note: "Adds fries + drink" },
+    
     ],
     faqs: [
       FAQ_HALAL,
@@ -438,6 +444,9 @@ export const OFFERING_PAGES: OfferingPage[] = [
       "Fries, meat, sauce, repeat. It is the fastest thing on the menu and the easiest share for a table waiting on a grill order.",
     priceHeading: "Loaded fries pricing",
     priceRows: [
+      { label: "Side Fries", price: "$3.49" },
+      { label: "Loaded Fries — Shredded Chicken", price: "$11.49", note: "Choose up to 3 sauces" },
+    
     ],
     faqs: [
       {
@@ -713,7 +722,7 @@ export const OFFERING_PAGES: OfferingPage[] = [
     priceRows: [
       { label: "Family Meal", price: "$87.49", note: "WEEKEND: 12 shish — 3 of each + 4 pita, rice, sides" },
       { label: "Maza Special", price: "$48.45", note: "4 skewers + 2 pita, rice, sides — feeds 2–3" },
-      { label: "Appetizer Plate", price: "$15.51", note: "Add a mezze start to the table" },
+      { label: "Appetizer Plate", price: "$15.51", note: "6 Dolma, Hummus, Baba Ghanoush & Tzatziki" },
     ],
     faqs: [
       {
@@ -748,6 +757,8 @@ export const OFFERING_PAGES: OfferingPage[] = [
     priceRows: [
       { label: "Kids Crispy Chicken Sandwich", price: "$11.85", note: "Kids meal — kids meal" },
       { label: "Kids All Beef Burger", price: "$11.85", note: "Kids meal — kids meal" },
+      { label: "Side Fries", price: "$3.49" },
+    
     ],
     faqs: [
       FAQ_HALAL,
@@ -814,9 +825,9 @@ export const OFFERING_PAGES: OfferingPage[] = [
       "Catering is the same kitchen as the restaurant — the same grills, the same halal-certified meat, the same rice and sides. Tell us headcount and timing and we will size the order.",
     priceHeading: "Catering anchors",
     priceRows: [
-      { label: "Family Meal", price: "$87.49", note: "Weekend special: 12 shish, 3 of each" },
+      { label: "Family Meal", price: "$87.49", note: "10 skewers — feeds 4–6" },
       { label: "Maza Special", price: "$48.45", note: "4 skewers + 2 pita, rice, sides — two to three people" },
-      { label: "Appetizer Plate", price: "$15.51", note: "Mezze start for the table" },
+      { label: "Appetizer Plate", price: "$15.51", note: "6 Dolma, Hummus, Baba Ghanoush & Tzatziki" },
       { label: "Maza Salad", price: "$13.99", note: "Choose chicken or steak" },
     ],
     faqs: [
@@ -855,7 +866,7 @@ export const OFFERING_PAGES: OfferingPage[] = [
       "Walk in, order at the counter, and take a table. It is a family restaurant, not a fast-casual chain — the food is cooked to order, so a grill plate is worth the few minutes it takes.",
     priceHeading: "What to order in",
     priceRows: [
-      { label: "Appetizer Plate", price: "$15.51", note: "Start the table with mezze" },
+      { label: "Appetizer Plate", price: "$15.51", note: "6 Dolma, Hummus, Baba Ghanoush & Tzatziki" },
       { label: "Chicken Tikka Plate", price: "$19.67", note: "Most-ordered plate" },
       { label: "Maza Grill", price: "$27.99", note: "Three kebabs, one plate" },
     ],
@@ -923,6 +934,8 @@ export const OFFERING_PAGES: OfferingPage[] = [
       { label: "Beef Gyro Wrap", price: "$10.91" },
       { label: "Chicken Tikka Plate", price: "$19.67", note: "Full plate lunch" },
       { label: "Maza Salad", price: "$13.99", note: "Choose chicken or steak" },
+      { label: "Combo Upgrade", price: "$4.99", note: "Adds fries + drink" },
+    
     ],
     faqs: [
       {
