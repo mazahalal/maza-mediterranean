@@ -39,7 +39,6 @@ const WRAPS = [
   "Chicken Shish Kebab Wrap",
   "Chicken Tikka Wrap",
   "Crispy Chicken Wrap",
-  "Falafel Wrap",
   "Lamb Tikka Wrap",
   "Ribeye Tikka Wrap",
   "Shredded Chicken Wrap",

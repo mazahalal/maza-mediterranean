@@ -336,16 +336,18 @@ export const OFFERING_PAGES: OfferingPage[] = [
   {
     slug: "falafel",
     h1: "Falafel in Chandler, AZ",
-    title: "Falafel Plate $16.55, Wrap $9.35 | Chandler, AZ | Maza Mediterranean",
+    title: "Falafel | Chandler, AZ | Maza Mediterranean (Temporarily Unavailable)",
     description:
-      "Halal falafel in Chandler — $16.55 plate with pita, salad, baba ghanoush + hummus, $9.35 wrap, or $3.99 for a 4-piece side.",
-    hook: "Maza's falafel is $16.55 as a plate with pita, salad, baba ghanoush, and hummus + tahini, $9.35 rolled as a wrap with hummus and garlic sauce, and $3.99 for a four-piece side. It is the vegetarian order on the menu that regulars who eat meat still steal.",
+      "Halal falafel in Chandler — plate, wrap, and 4-piece side are temporarily unavailable. Try the Appetizer Plate ($15.51) for mezze.",
+    hook: "Falafel plate, wrap, and 4-piece side are temporarily unavailable. For a vegetarian plate right now, order the Appetizer Plate ($15.51) with 6 dolma, hummus, baba ghanoush, and tzatziki.",
     intro:
-      "Falafel is fried to order so the shell stays crisp and the middle stays green and soft. It is also the base of our Appetizer Plate and one of the three fillings for loaded hummus.",
+      "When falafel is back in stock it is fried to order — crisp shell, soft middle. Right now the Appetizer Plate is the vegetarian plate order, and loaded hummus is shredded chicken, shredded steak, or gyro.",
     priceHeading: "Falafel pricing",
     priceRows: [
-      { label: "Falafel Wrap", price: "$9.35" },
-      { label: "Falafel (4pc) Side", price: "$3.99" },
+      { label: "Falafel Plate", price: "Temp. unavailable" },
+      { label: "Falafel Wrap", price: "Temp. unavailable" },
+      { label: "Falafel (4pc) Side", price: "Temp. unavailable" },
+      { label: "Appetizer Plate", price: "$15.51" },
     ],
     faqs: [
       {
@@ -379,7 +381,7 @@ export const OFFERING_PAGES: OfferingPage[] = [
     priceHeading: "Arayes pricing",
     priceRows: [
       { label: "Arayes Lahm or Dajaj", price: "$15.55", note: "Flat grilled sandwich with cheese. Choose beef + lamb or chicken. Served with salad." },
-      { label: "Falafel Wrap", price: "$9.35", note: "Lighter, handheld alternative" },
+      { label: "Appetizer Plate", price: "$15.51", note: "Vegetarian mezze plate (falafel temp. unavailable)" },
       { label: "Maza Salad", price: "$13.99", note: "Choose chicken or steak" },
     ],
     faqs: [
@@ -584,13 +586,13 @@ export const OFFERING_PAGES: OfferingPage[] = [
       { label: "Maza Salad", price: "$13.99", note: "Choose chicken or steak" },
       { label: "Tabouleh", price: "$4.99" },
       { label: "Side Salad", price: "$3.99" },
-      { label: "Falafel Plate", price: "$16.55", note: "Comes with salad, baba ghanoush & hummus + tahini" },
+      { label: "Appetizer Plate", price: "$15.51", note: "6 dolma, hummus, baba & tzatziki (falafel temp. unavailable)" },
     ],
     faqs: [
       {
         question: "Can the Maza Salad come vegetarian?",
         answer:
-          "The Maza Salad is priced with chicken or steak. For a vegetarian plate, the Falafel Plate at $16.55 or the Appetizer Plate at $15.51 are the better orders.",
+          "The Maza Salad is priced with chicken or steak. For a vegetarian plate right now, order the Appetizer Plate at $15.51 (falafel is temporarily unavailable).",
       },
       FAQ_HALAL,
       FAQ_ORDER,
@@ -782,13 +784,13 @@ export const OFFERING_PAGES: OfferingPage[] = [
     h1: "Vegetarian & Vegan Options in Chandler, AZ",
     title: "Vegetarian & Vegan Mediterranean | Chandler, AZ | Maza",
     description:
-      "Vegetarian and vegan Mediterranean food in Chandler — falafel $9.35–$16.55, hummus, baba ghanoush, dolma, tabouleh. Halal kitchen.",
-    hook: "Maza's plant-based orders start at $3.99 for a four-piece falafel and run to $16.55 for the falafel plate with pita, salad, baba ghanoush, and hummus + tahini. Hummus with tahini and pita is $5.99, baba ghanoush is $1.99 small, dolma $5.99, and tabouleh $4.99.",
+      "Vegetarian and vegan Mediterranean food in Chandler — Appetizer Plate $15.51, hummus, baba ghanoush, dolma, tabouleh. Halal kitchen. Falafel temporarily unavailable.",
+    hook: "Maza's plant-based orders center on the Appetizer Plate ($15.51) with 6 dolma, hummus, baba ghanoush, and tzatziki. Hummus with tahini and pita is $5.99, baba ghanoush is $1.99 small, dolma $5.99, and tabouleh $4.99. Falafel is temporarily unavailable.",
     intro:
-      "The vegetarian side of a Mediterranean menu is not an afterthought here — falafel, hummus, baba ghanoush, dolma, and tabouleh are all made in house and all stand on their own as a meal.",
+      "The vegetarian side of a Mediterranean menu is not an afterthought here — hummus, baba ghanoush, dolma, and tabouleh are all made in house. Falafel is temporarily unavailable.",
     priceHeading: "Vegetarian and vegan pricing",
     priceRows: [
-      { label: "Falafel Wrap", price: "$9.35" },
+      { label: "Appetizer Plate", price: "$15.51" },
       { label: "Hummus with tahini and pita", price: "$5.99" },
       { label: "Tabouleh", price: "$4.99" },
       { label: "Baba Ghanoush", price: "SM $1.99 | LG $4.99" },
@@ -797,12 +799,12 @@ export const OFFERING_PAGES: OfferingPage[] = [
       {
         question: "What is vegan at Maza?",
         answer:
-          "Falafel, hummus with tahini, baba ghanoush, dolma, tabouleh, and the salads are all plant-based. Avoid the tzatziki and any yogurt-based sauce if you are vegan, and ask for sauces on the side.",
+          "Hummus with tahini, baba ghanoush, dolma, tabouleh, and the salads are plant-based. Avoid the tzatziki and any yogurt-based sauce if you are vegan. Falafel is temporarily unavailable.",
       },
       {
         question: "Is the falafel plate a full meal?",
         answer:
-          "Yes — $16.55 with falafel, pita, salad, baba ghanoush, and hummus + tahini. It is the most complete vegetarian order on the menu.",
+          "The Appetizer Plate at $15.51 (6 dolma, hummus, baba ghanoush, tzatziki) is the complete vegetarian plate while falafel is temporarily unavailable.",
       },
       FAQ_ORDER,
       FAQ_PARKING,
@@ -925,12 +927,12 @@ export const OFFERING_PAGES: OfferingPage[] = [
     title: "Lunch Specials in Chandler, AZ | Maza Mediterranean Cuisine",
     description:
       "Mediterranean lunch in Chandler — wraps from $9.35, chicken tikka plate $19.67, Maza Salad $13.99, and the $10 Plaza Lunch Club for plaza employees.",
-    hook: "Maza wraps start at $9.35 for falafel and $10.91 for beef gyro, and the chicken tikka plate is $19.67 — a full lunch with two skewers, rice, salad, baba ghanoush, and hummus + tahini. Employees in the plaza and nearby businesses can also join the Plaza Lunch Club: any wrap or burger for $10.",
+    hook: "Maza wraps start at $10.91 for beef gyro, and the chicken tikka plate is $19.67 — a full lunch with two skewers, rice, salad, baba ghanoush, and hummus + tahini. Employees in the plaza and nearby businesses can also join the Plaza Lunch Club: any wrap or burger for $10. Falafel is temporarily unavailable.",
     intro:
       "Lunch at Maza is the same kitchen as dinner, cooked to order rather than held warm. If you are on a break, wraps are the fast order; plates take slightly longer but are a bigger meal.",
     priceHeading: "Lunch pricing",
     priceRows: [
-      { label: "Falafel Wrap", price: "$9.35", note: "Fastest vegetarian lunch" },
+      { label: "Appetizer Plate", price: "$15.51", note: "Vegetarian plate (falafel temp. unavailable)" },
       { label: "Beef Gyro Wrap", price: "$10.91" },
       { label: "Chicken Tikka Plate", price: "$19.67", note: "Full plate lunch" },
       { label: "Maza Salad", price: "$13.99", note: "Choose chicken or steak" },
@@ -946,7 +948,7 @@ export const OFFERING_PAGES: OfferingPage[] = [
       {
         question: "What is the fastest lunch order?",
         answer:
-          "A wrap — falafel $9.35, beef gyro $10.91, or chicken tikka $11.43. Plates are cooked to order with two skewers and take a few minutes longer.",
+          "A wrap — beef gyro $10.91 or chicken tikka $11.43. Plates are cooked to order with two skewers and take a few minutes longer. Falafel is temporarily unavailable.",
       },
       FAQ_HOURS,
       FAQ_ORDER,

@@ -27,10 +27,6 @@
           "price": "$14.55"
         },
         {
-          "name": "Falafel Wrap",
-          "price": "$9.35"
-        },
-        {
           "name": "Lamb Tikka Wrap",
           "price": "$13.51"
         },
@@ -102,13 +98,6 @@
           "price": "$20.71",
           "notes": [
             "1 Chicken Shish Kebab and 1 Beef + Lamb Shish Kebab, 1 Pita, rice, salad, baba ghanoush & hummus + tahini"
-          ]
-        },
-        {
-          "name": "Falafel",
-          "price": "$16.55",
-          "notes": [
-            "Falafel, 1 Pita, salad, baba ghanoush & hummus + tahini"
           ]
         },
         {
@@ -250,10 +239,6 @@
         {
           "name": "Fries",
           "price": "$3.49"
-        },
-        {
-          "name": "Falafel (4pc)",
-          "price": "$3.99"
         },
         {
           "name": "Hummus with tahini and pita",
@@ -407,6 +392,27 @@
       "name": "Kibbeh (3pc)",
       "price": "$11.99",
       "reason": "temporary stock gap — urgent hide site+TV; restore when back"
+    },
+    {
+      "section": "Wraps",
+      "name": "Falafel Wrap",
+      "price": "$9.35",
+      "reason": "temporary stock gap — urgent hide site+TV (wrap + plate + side); restore when back"
+    },
+    {
+      "section": "Plates",
+      "name": "Falafel",
+      "price": "$16.55",
+      "reason": "temporary stock gap — urgent hide site+TV (wrap + plate + side); restore when back",
+      "notes": [
+        "Falafel, 1 Pita, salad, baba ghanoush & hummus + tahini"
+      ]
+    },
+    {
+      "section": "Sides",
+      "name": "Falafel (4pc)",
+      "price": "$3.99",
+      "reason": "temporary stock gap — urgent hide site+TV (wrap + plate + side); restore when back"
     }
   ]
 }

@@ -69,7 +69,7 @@ export const NEIGHBORHOOD_PAGES: NeighborhoodPage[] = [
       "Maza Mediterranean Cuisine is Chandler's halal-cooked-from-scratch Mediterranean restaurant at 3491 W Frye Rd, Suite 2. Plates $16.55–$28.99, open Tue–Sun 10am–10pm.",
     hook: "Maza is a Chandler restaurant first — 3491 W Frye Rd, Suite 2, a few minutes off the I-10 in the same plaza as the businesses we feed every weekday. Plates run $16.55 to $28.99 with two kebabs, rice, salad, baba ghanoush, and hummus + tahini, and we are open Tuesday through Sunday, 10am–10pm.",
     intro:
-      "Everything on the menu is cooked to order in one kitchen, from the falafel to the whole grilled fish. Whether you live off Chandler Blvd or work in the Price Road corridor, this is the closest halal Mediterranean kitchen in the city.",
+      "Everything on the menu is cooked to order in one kitchen, from the skewers to the mezze. Whether you live off Chandler Blvd or work in the Price Road corridor, this is the closest halal Mediterranean kitchen in the city.",
     directions:
       "We are at 3491 W Frye Rd, Suite 2 — just west of the I-10, between Chandler Blvd and Frye Rd. Free parking in the plaza lot.",
     priceHeading: "Popular in Chandler",
@@ -109,7 +109,7 @@ export const NEIGHBORHOOD_PAGES: NeighborhoodPage[] = [
     priceRows: [
       { label: "Maza Grill", price: "$27.99", note: "Three kebabs — the group order" },
       { label: "Family Meal", price: "$87.49", note: "Family Meal: 10 skewers, 3 of each" },
-      { label: "Falafel Plate", price: "$16.55" },
+      { label: "Appetizer Plate", price: "$15.51" },
       { label: "Pistachio Baklava", price: "$3.99" },
     ],
     faqs: [
@@ -133,14 +133,14 @@ export const NEIGHBORHOOD_PAGES: NeighborhoodPage[] = [
     title: "Halal Mediterranean Near Tempe, AZ | Maza Mediterranean Cuisine",
     description:
       "Halal Mediterranean food near Tempe — Maza at 3491 W Frye Rd, Chandler, straight down the I-10. Plates $16.55–$28.99, wraps from $9.35.",
-    hook: "Maza is a straight run south from Tempe down the I-10 to Frye Rd — 3491 W Frye Rd, Suite 2 in Chandler. Wraps start at $9.35 for falafel and $10.91 for beef gyro, and full plates with two kebabs run $16.55 to $28.99.",
+    hook: "Maza is a straight run south from Tempe down the I-10 to Frye Rd — 3491 W Frye Rd, Suite 2 in Chandler. Wraps start at $10.91 for beef gyro, and full plates with two kebabs run $16.55 to $28.99.",
     intro:
       "For Tempe students and anyone working along the Broadway corridor, this is the closest proper halal Mediterranean grill on the south side of the freeway — cooked to order, not assembled from a holding tray.",
     directions:
       "Head south on the I-10 from Tempe and exit at Chandler Blvd or Frye Rd. Maza is at 3491 W Frye Rd, Suite 2, with free parking in the plaza lot.",
     priceHeading: "What Tempe orders",
     priceRows: [
-      { label: "Falafel Wrap", price: "$9.35" },
+      { label: "Beef + Lamb Gyro", price: "$10.91" },
       { label: "Beef Gyro Wrap", price: "$10.91" },
       { label: "Loaded Fries — Shredded Chicken", price: "$11.49" },
       { label: "Chicken Tikka Plate", price: "$19.67" },
@@ -199,7 +199,7 @@ export const NEIGHBORHOOD_PAGES: NeighborhoodPage[] = [
     title: "Mediterranean Food Near Sun Lakes | Maza Mediterranean Cuisine",
     description:
       "Halal Mediterranean food a short drive from Sun Lakes — Maza at 3491 W Frye Rd, Chandler. Plates $16.55–$28.99, mezze from $3.99, open Tue–Sun 10am–10pm.",
-    hook: "From Sun Lakes, Maza is a short run north to 3491 W Frye Rd in Chandler, with free plaza parking at the door and single-level, easy access. Plates run $16.55 to $28.99, and mezze starts at $3.99 for a four-piece falafel.",
+    hook: "From Sun Lakes, Maza is a short run north to 3491 W Frye Rd in Chandler, with free plaza parking at the door and single-level, easy access. Plates run $16.55 to $28.99, and mezze sides start around $3.99–$5.99.",
     intro:
       "Sun Lakes diners tend to order the same way: a plate to share and a couple of mezze to start. The kitchen will pack sauces on the side, and everything is available for pickup if you would rather eat at home.",
     directions:
@@ -207,9 +207,9 @@ export const NEIGHBORHOOD_PAGES: NeighborhoodPage[] = [
     priceHeading: "What Sun Lakes orders",
     priceRows: [
       { label: "Chicken Shish Kebab Plate", price: "$19.67" },
-      { label: "Falafel Plate", price: "$16.55" },
+      { label: "Appetizer Plate", price: "$15.51" },
       { label: "Appetizer Plate", price: "$15.51", note: "Mezze to share" },
-      { label: "Falafel (4pc)", price: "$3.99" },
+      { label: "Sambusah (2pc)", price: "$5.99" },
     ],
     faqs: [
       {
