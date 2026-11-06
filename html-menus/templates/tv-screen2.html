@@ -10,137 +10,63 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../tv-theme.css">
 <style>
-  .s2-main { flex: 1; display: flex; gap: 22px; min-height: 0; }
+  .s2-main { flex: 1; display: flex; gap: 30px; min-height: 0; }
 
-  /* 3 even plate columns + photo strip filling leftover height */
-  .s2-left { width: 48%; display: flex; flex-direction: column; min-height: 0; }
+  /* Left column = plates only, fills full height (no bottom hero) */
+  .s2-left { width: 39%; display: flex; flex-direction: column; min-height: 0; }
   .s2-cols {
-    flex: 0 1 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 14px;
-    margin-top: 6px;
+    flex: 1;
+    display: flex;
+    gap: 26px;
+    margin-top: 10px;
     min-height: 0;
-    align-items: start;
   }
   .s2-col {
+    flex: 1;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     min-height: 0;
     min-width: 0;
   }
   .s2-left .group-title {
-    font-size: 20px;
-    letter-spacing: .16em;
-    text-align: center;
-    margin: 0 0 8px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid rgba(211,171,94,.35);
-    min-height: 1.25em;
+    font-size: 19px;
+    letter-spacing: .22em;
+    text-align: left;
+    margin: 0 0 4px;
+    padding-bottom: 0;
+    border-bottom: none;
+    min-height: 0;
   }
   .s2-col-items {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 10px;
+    display: contents;
   }
   .s2-left .plate-block { min-width: 0; }
   .s2-left .tv-item {
-    margin: 0;
+    margin: 6px 0;
     align-items: baseline;
   }
   .s2-left .tv-item .name {
-    font-size: 21px;
+    font-size: 20px;
     white-space: normal;
-    line-height: 1.1;
-    font-weight: 600;
+    line-height: 1.15;
+    font-weight: 500;
   }
   .s2-left .tv-item .price {
-    font-size: 21px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 600;
   }
   .s2-left .tv-note {
     display: block;
-    font-size: 14px;
-    line-height: 1.28;
-    margin: 2px 0 0;
+    font-size: 14.5px;
+    line-height: 1.3;
+    margin: -2px 0 4px;
     color: rgba(245,241,232,.8);
   }
 
-  /* Giant rotating plate hero — fills leftover left height */
-  .s2-plates-hero {
-    flex: 1 1 auto;
-    margin-top: 28px;
-    min-height: 0;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-  }
-  .s2-plates-hero .ph-slide {
-    display: none;
-    flex: 1;
-    min-height: 0;
-    height: 100%;
-  }
-  .s2-plates-hero .ph-slide.active {
-    display: flex;
-    flex-direction: column;
-  }
-  .s2-plates-hero .ph-slide.product-frame {
-    height: 100%;
-  }
-  .s2-plates-hero .photo-card {
-    flex: 1 1 auto;
-    min-height: 0;
-    height: auto;
-  }
-  .s2-plates-hero .photo-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .s2-plates-hero .card-detail {
-    padding: 14px 18px 16px;
-    gap: 6px;
-  }
-  .s2-plates-hero .card-name {
-    font-size: 28px;
-    letter-spacing: .03em;
-  }
-  .s2-plates-hero .card-price {
-    font-size: 32px;
-    font-weight: 700;
-  }
-  .s2-plates-hero .ph-notes {
-    width: 100%;
-    margin-top: 4px;
-    font-size: 15px;
-    line-height: 1.3;
-    color: rgba(245,241,232,.85);
-    text-align: center;
-  }
-  .s2-plates-hero .ph-dots {
-    position: absolute;
-    top: 12px;
-    right: 14px;
-    z-index: 4;
-    display: flex;
-    gap: 6px;
-  }
-  .s2-plates-hero .ph-dot {
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
-    background: rgba(245,241,232,.35);
-    border: 1px solid rgba(211,171,94,.5);
-  }
-  .s2-plates-hero .ph-dot.on {
-    background: var(--gold);
-    box-shadow: 0 0 8px rgba(211,171,94,.6);
-  }
+  .s2-right { flex: 1; display: flex; flex-direction: column; gap: 16px; min-height: 0; }
 
-  .s2-right { flex: 1; display: flex; flex-direction: column; gap: 14px; min-height: 0; }
-
+  /* 5 gallery photos: 3 on top row, 2 on bottom — compact so specials can grow */
   .s2-gallery {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -150,24 +76,24 @@
   .s2-gallery .product-frame { min-height: 0; }
   .s2-gallery .product-frame:nth-child(-n+3) { grid-column: span 2; }
   .s2-gallery .product-frame:nth-child(n+4) { grid-column: span 3; }
-  /* slightly shorter gallery so Family Meal panel can grow */
-  .s2-gallery .product-frame .photo-card { height: 160px; flex: 0 0 160px; }
-  .s2-gallery .product-frame .card-name { font-size: 15px; }
+  .s2-gallery .product-frame .photo-card { height: 168px; flex: 0 0 168px; }
+  .s2-gallery .product-frame .card-name { font-size: 14px; }
   .s2-gallery .product-frame .card-price { font-size: 17px; }
 
+  /* Specials panel — LARGER: both specials + big type + big photo */
   .specials-box {
-    flex: 1.55;
+    flex: 1.7;
     border: 2px solid var(--gold);
     border-radius: 6px;
     padding: 16px 28px 20px;
     display: flex; flex-direction: column;
     min-height: 0;
   }
-  .specials-box .screen-title { font-size: 52px; }
-  .specials-box .screen-title .rule { width: 72px; }
+  .specials-box .screen-title { font-size: 50px; }
+  .specials-box .screen-title .rule { width: 70px; }
   .specials-inner { flex: 1; display: flex; gap: 28px; align-items: stretch; margin-top: 10px; min-height: 0; }
   .specials-hero {
-    width: 52%;
+    width: 48%;
     display: flex;
     flex-direction: column;
     min-height: 0;
@@ -178,7 +104,6 @@
   .specials-slide { display: none; }
   .specials-slide.active { display: flex; flex-direction: column; height: 100%; min-height: 0; }
   .specials-slide.product-frame {
-    /* same gold outer + name ❖ price marker as gallery cards */
     height: 100%;
   }
   .specials-slide .photo-card {
@@ -191,52 +116,11 @@
   .specials-slide .card-name { font-size: 30px; }
   .specials-slide .card-price { font-size: 34px; }
 
-  /* Family Meal solo panel — maximize type + image */
-  .specials-box.family-max .specials-hero { width: 54%; }
-  .specials-box.family-max .specials-slide .card-name { font-size: 34px; letter-spacing: .04em; }
-  .specials-box.family-max .specials-slide .card-price { font-size: 40px; }
-  .specials-box.family-max .specials-items .tv-item .name { font-size: 34px; }
-  .specials-box.family-max .specials-items .tv-item .price { font-size: 34px; }
-  .specials-box.family-max .specials-items .spec-item {
-    padding: 12px 14px 14px 16px;
-    opacity: 1;
-  }
-  .specials-box.family-max .tv-bullets {
-    list-style: none;
-    margin: 10px 0 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-  .specials-box.family-max .tv-bullets li {
-    position: relative;
-    padding-left: 1.15em;
-    font-size: 20px;
-    line-height: 1.35;
-    color: rgba(245,241,232,.92);
-  }
-  .specials-box.family-max .tv-bullets li::before {
-    content: "❖";
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: var(--gold);
-    font-size: 14px;
-    line-height: 1.6;
-  }
-  .specials-box.family-max .tv-bullets li.is-lead {
-    font-size: 21px;
-    font-weight: 600;
-    color: var(--gold-light);
-    margin-bottom: 4px;
-  }
-
-  /* the list row matching the hero slide currently on screen */
+  /* 2-slot specials: both rows present, larger type, full notes */
   .specials-items .spec-item {
     border-left: 5px solid transparent;
     border-radius: 6px;
-    padding: 10px 12px 12px 16px;
+    padding: 12px 14px 14px 16px;
     opacity: .78;
     transition: opacity .5s ease, border-color .5s ease, background .5s ease;
   }
@@ -249,10 +133,10 @@
   .specials-items .spec-item .price { transition: color .5s ease; }
   .specials-items .spec-item.highlight .name,
   .specials-items .spec-item.highlight .price { color: var(--gold-light); }
-  .specials-items { flex: 1; display: flex; flex-direction: column; justify-content: center; min-height: 0; overflow: visible; }
-  .specials-items .tv-item { margin: 0 0 6px; }
-  .specials-items .tv-item .name { font-size: 28px; }
-  .specials-items .tv-item .price { font-size: 28px; }
+  .specials-items { flex: 1; display: flex; flex-direction: column; justify-content: space-evenly; min-height: 0; overflow: visible; }
+  .specials-items .tv-item { margin: 0 0 8px; }
+  .specials-items .tv-item .name { font-size: 30px; }
+  .specials-items .tv-item .price { font-size: 30px; }
   .specials-items .tv-note {
     font-size: 17px;
     line-height: 1.35;
@@ -261,6 +145,33 @@
     overflow: visible;
     -webkit-line-clamp: unset;
     white-space: normal;
+  }
+  .tv-bullets {
+    list-style: none;
+    margin: 8px 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .tv-bullets li {
+    position: relative;
+    padding-left: 1.15em;
+    font-size: 17px;
+    line-height: 1.35;
+    color: rgba(245,241,232,.9);
+  }
+  .tv-bullets li::before {
+    content: "❖";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--gold);
+    font-size: 12px;
+  }
+  .tv-bullets li.is-lead {
+    font-weight: 600;
+    color: var(--gold-light);
   }
   .specials-items .spec-item.is-flash { padding-top: 10px; padding-bottom: 10px; margin: 4px 0; }
   .specials-items .spec-item.is-flash .price-sale { font-size: 28px; }
@@ -334,10 +245,8 @@
       <div class="s2-cols">
         {% for col in s.columns %}
         <div class="s2-col">
-          {% set g0 = col[0] %}
-          <h3 class="group-title"><span class="dash">—</span> {{ g0.name }}</h3>
-          <div class="s2-col-items">
           {% for g in col %}
+          <h3 class="group-title"><span class="dash">—</span> {{ g.name }}</h3>
           {% for item in g["items"] %}
           <div class="plate-block">
           <div class="tv-item">
@@ -349,33 +258,9 @@
           </div>
           {% endfor %}
           {% endfor %}
-          </div>
         </div>
         {% endfor %}
       </div>
-
-      {% if s.plates_hero is defined and s.plates_hero and s.plates_hero.photos %}
-      <div class="s2-plates-hero" id="plates-hero">
-        <div class="ph-dots" aria-hidden="true">
-          {% for item in s.plates_hero.photos %}
-          <span class="ph-dot{% if loop.first %} on{% endif %}" data-i="{{ loop.index0 }}"></span>
-          {% endfor %}
-        </div>
-        {% for item in s.plates_hero.photos %}
-        <div class="ph-slide product-frame{% if loop.first %} active{% endif %}" data-i="{{ loop.index0 }}">
-          <div class="photo-card">{% if item.photo %}<img src="../photos/{{ item.photo }}" alt="{{ item.name }}">{% endif %}</div>
-          <div class="card-detail">
-            <span class="card-name">{{ item.name }}</span>
-            <span class="card-sep">❖</span>
-            <span class="card-price">{{ item.price }}</span>
-            {% if item.all_notes %}
-            <p class="ph-notes">{{ item.all_notes | join(' · ') }}</p>
-            {% endif %}
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-      {% endif %}
     </div>
 
     <div class="v-divider"></div>
@@ -564,26 +449,6 @@
     i = ((n % slides.length) + slides.length) % slides.length;
     slides[i].classList.add('active');
     rows[i].classList.add('highlight');
-  }
-  setInterval(function () { show(i + 1); }, MS);
-})();
-</script>
-<script>
-(function () {
-  /* Giant plates hero — rotate every plated photo with name/price/notes */
-  var root = document.getElementById('plates-hero');
-  if (!root) return;
-  var slides = root.querySelectorAll('.ph-slide');
-  var dots = root.querySelectorAll('.ph-dot');
-  if (slides.length < 2) return;
-  var i = 0;
-  var MS = {{ s.plates_hero.rotate_ms if s.plates_hero is defined and s.plates_hero.rotate_ms is defined else 7000 }};
-  function show(n) {
-    slides[i].classList.remove('active');
-    if (dots[i]) dots[i].classList.remove('on');
-    i = ((n % slides.length) + slides.length) % slides.length;
-    slides[i].classList.add('active');
-    if (dots[i]) dots[i].classList.add('on');
   }
   setInterval(function () { show(i + 1); }, MS);
 })();
