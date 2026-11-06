@@ -60,10 +60,6 @@
             [
               "Wraps",
               "Crispy Chicken Wrap"
-            ],
-            [
-              "Wraps",
-              "Falafel Wrap"
             ]
           ]
         }
@@ -80,10 +76,6 @@
         [
           "Wraps",
           "Chicken Tikka Wrap"
-        ],
-        [
-          "Wraps",
-          "Falafel Wrap"
         ]
       ],
       "banner": {
@@ -117,19 +109,6 @@
                 "Shredded Chicken Plate"
               ]
             ]
-          },
-          {
-            "name": "Plant Based",
-            "items": [
-              [
-                "Plates",
-                "Falafel"
-              ],
-              [
-                "Plates",
-                "Appetizer Plate"
-              ]
-            ]
           }
         ],
         [
@@ -155,7 +134,7 @@
             ]
           },
           {
-            "name": "Mixed",
+            "name": "Mixed / Mezze",
             "items": [
               [
                 "Plates",
@@ -164,6 +143,10 @@
               [
                 "Plates",
                 "Maza Grill"
+              ],
+              [
+                "Plates",
+                "Appetizer Plate"
               ]
             ]
           }
@@ -243,7 +226,7 @@
         }
       },
       "row2": {
-        "_layout_note": "4 equal cols; full sides restored incl fries/falafel/dolma; combo bar on",
+        "_layout_note": "4 equal cols; falafel side OOS; combo bar on",
         "burgers": {
           "section": "Burgers"
         },
@@ -320,25 +303,13 @@
               ],
               [
                 "Sides",
-                "Falafel (4pc)"
-              ],
-              [
-                "Sides",
                 "Sambusah (2pc)"
               ],
               [
                 "Sides",
                 "Maza Salad"
               ]
-            ],
-            "photo": {
-              "ref": [
-                "Sides",
-                "Falafel (4pc)"
-              ],
-              "photo": "sides-falafel-4pc.jpg",
-              "caption": "Falafel"
-            }
+            ]
           }
         ],
         "sides_photos": [
@@ -357,14 +328,6 @@
             ],
             "photo": "sides-sambusah-2pc.jpg",
             "caption": "Sambusah"
-          },
-          {
-            "ref": [
-              "Sides",
-              "Falafel (4pc)"
-            ],
-            "photo": "sides-falafel-4pc.jpg",
-            "caption": "Falafel"
           },
           {
             "ref": [
@@ -440,10 +403,6 @@
                   "Mexican Fanta Strawberry"
                 ]
               ]
-            },
-            {
-              "name": "",
-              "items": []
             },
             {
               "name": "Water & Juice",
