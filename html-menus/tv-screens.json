@@ -76,6 +76,10 @@
         [
           "Wraps",
           "Chicken Tikka Wrap"
+        ],
+        [
+          "Wraps",
+          "Crispy Chicken Wrap"
         ]
       ],
       "banner": {
@@ -109,6 +113,15 @@
                 "Shredded Chicken Plate"
               ]
             ]
+          },
+          {
+            "name": "Mezze",
+            "items": [
+              [
+                "Plates",
+                "Appetizer Plate"
+              ]
+            ]
           }
         ],
         [
@@ -134,7 +147,7 @@
             ]
           },
           {
-            "name": "Mixed / Mezze",
+            "name": "Mixed",
             "items": [
               [
                 "Plates",
@@ -143,10 +156,6 @@
               [
                 "Plates",
                 "Maza Grill"
-              ],
-              [
-                "Plates",
-                "Appetizer Plate"
               ]
             ]
           }
@@ -309,7 +318,15 @@
                 "Sides",
                 "Maza Salad"
               ]
-            ]
+            ],
+            "photo": {
+              "ref": [
+                "Sides",
+                "Fries"
+              ],
+              "photo": "sides-fries.jpg",
+              "caption": "Fries"
+            }
           }
         ],
         "sides_photos": [
