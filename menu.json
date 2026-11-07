@@ -279,6 +279,10 @@
       "name": "Baklava",
       "items": [
         {
+          "name": "Dubai Chocolate Style Baklava",
+          "price": "$3.99"
+        },
+        {
           "name": "Pistachio Baklava",
           "price": "$3.99"
         }
@@ -294,16 +298,6 @@
         {
           "name": "Water Cup",
           "price": "Free"
-        },
-        {
-          "name": "Minute Maid 100% Apple Juice",
-          "price": "$2.75",
-          "note": "10oz"
-        },
-        {
-          "name": "Minute Maid 100% Orange Juice",
-          "price": "$2.75",
-          "note": "10oz"
         },
         {
           "name": "Hot Middle Eastern Black Tea",
@@ -349,12 +343,6 @@
     }
   ],
   "temporarily_unavailable": [
-    {
-      "section": "Baklava",
-      "name": "Dubai Chocolate Style Baklava",
-      "price": "$3.99",
-      "reason": "temporarily MIA — only pistachio baklava in stock; do not show on website or TV"
-    },
     {
       "section": "Specials",
       "name": "Samak Tandoor",

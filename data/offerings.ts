@@ -607,22 +607,23 @@ export const OFFERING_PAGES: OfferingPage[] = [
   },
   {
     slug: "baklava",
-    h1: "Pistachio Baklava in Chandler, AZ",
-    title: "Pistachio Baklava $3.99 | Chandler, AZ | Maza Mediterranean",
+    h1: "Baklava in Chandler, AZ",
+    title: "Baklava $3.99 — Pistachio & Dubai Chocolate Style | Chandler, AZ | Maza",
     description:
-      "Pistachio baklava, $3.99, at Maza Mediterranean Cuisine in Chandler, AZ. Layered phyllo, honey syrup, made in house.",
-    hook: "Maza serves pistachio baklava for $3.99 — layer on layer of phyllo, brushed and baked, finished with syrup. The kind of dessert that is a fifteen-bite job and worth ordering two of.",
+      "Pistachio and Dubai chocolate style baklava, $3.99 each, at Maza Mediterranean Cuisine in Chandler, AZ. Layered phyllo, honey syrup, made in house.",
+    hook: "Maza serves two baklava, pistachio and Dubai chocolate style, and both are $3.99. They are built the same way: layer on layer of phyllo, brushed and baked, then finished with syrup — the kind of dessert that is a fifteen-bite job and worth ordering two of.",
     intro:
-      "Baklava is the standard close to a Mediterranean meal. Right now we are running pistachio baklava only — classic nutty finish, $3.99.",
+      "Baklava is the standard close to a Mediterranean meal, and we keep both the pistachio and the Dubai chocolate style so nobody has to split one.",
     priceHeading: "Baklava pricing",
     priceRows: [
+      { label: "Dubai Chocolate Style Baklava", price: "$3.99" },
       { label: "Pistachio Baklava", price: "$3.99" },
     ],
     faqs: [
       {
-        question: "What baklava do you have?",
+        question: "Which baklava should I get?",
         answer:
-          "Pistachio baklava, $3.99. It is the classic nutty baklava — phyllo, pistachio, and syrup.",
+          "Pistachio is the classic nutty baklava; Dubai chocolate style is the chocolate-pistachio finish. They are both $3.99, so the honest answer is to get one of each.",
       },
       {
         question: "Does baklava contain dairy?",
@@ -636,7 +637,7 @@ export const OFFERING_PAGES: OfferingPage[] = [
     menuLabel: "desserts & drinks",
     menuSection: "Baklava",
     image: "/images/maza/menu/opt-baklava.jpg",
-    imageAlt: "Pistachio baklava at Maza Mediterranean Cuisine Chandler AZ",
+    imageAlt: "Pistachio and Dubai chocolate style baklava at Maza Mediterranean Cuisine Chandler AZ",
     keywords: ["baklava Chandler AZ", "pistachio baklava Chandler", "Middle Eastern dessert Chandler"],
   },
   {
