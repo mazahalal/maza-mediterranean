@@ -209,7 +209,7 @@ export const NEIGHBORHOOD_PAGES: NeighborhoodPage[] = [
       { label: "Chicken Shish Kebab Plate", price: "$19.67" },
       { label: "Appetizer Plate", price: "$15.51" },
       { label: "Appetizer Plate", price: "$15.51", note: "Mezze to share" },
-      { label: "Sambusah (2pc)", price: "$5.99" },
+      { label: "Sambusah (2pc)", price: "Temp. unavailable" },
     ],
     faqs: [
       {
