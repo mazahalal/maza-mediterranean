@@ -440,14 +440,15 @@
             }
           ],
           "ad_photos": [
+            "drink-ad-iced-tea.jpg",
             "drink-ad-mexican-coke.jpg",
             "drink-ad-fanta-only.jpg"
           ],
           "ad_prices": [
+            "SM $1.99",
             "$3.99",
             "$3.99"
-          ],
-          "_ad_note": "carousel ads live: mexican coke + fanta; iced chai/tea ad pending Frank 3:1 art (replaces karkadeh)"
+          ]
         },
         "sharbat": {
           "section": "Sharbat"
