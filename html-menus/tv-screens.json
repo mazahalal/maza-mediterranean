@@ -367,6 +367,14 @@
             ],
             "caption": "Pistachio Baklava",
             "photo": "baklava-pistachio-baklava.jpg"
+          },
+          {
+            "ref": [
+              "Baklava",
+              "Dubai Chocolate Style Baklava"
+            ],
+            "caption": "Dubai Chocolate Style Baklava",
+            "photo": "baklava-cashew-baklava.jpg"
           }
         ],
         "desserts_card": {
@@ -379,6 +387,10 @@
         "desserts": {
           "title": "Desserts",
           "items": [
+            [
+              "Baklava",
+              "Dubai Chocolate Style Baklava"
+            ],
             [
               "Baklava",
               "Pistachio Baklava"
@@ -418,36 +430,24 @@
               ]
             },
             {
-              "name": "Water & Juice",
+              "name": "Water",
               "items": [
                 [
                   "Drinks",
                   "Bottled Water"
-                ],
-                [
-                  "Drinks",
-                  "Minute Maid 100% Apple Juice"
-                ],
-                [
-                  "Drinks",
-                  "Minute Maid 100% Orange Juice"
                 ]
               ]
             }
           ],
           "ad_photos": [
             "drink-ad-mexican-coke.jpg",
-            "drink-ad-fanta-only.jpg",
-            "drink-ad-minute-maid-juices.jpg",
-            "drink-ad-karkadeh.jpg"
+            "drink-ad-fanta-only.jpg"
           ],
           "ad_prices": [
             "$3.99",
-            "$3.99",
-            "$2.75",
-            "SM $1.99\nLG $3.99"
+            "$3.99"
           ],
-          "_ad_note": "3 x 3:1 drink ads, rotating carousel (no crop, 1920x640)"
+          "_ad_note": "carousel ads live: mexican coke + fanta; iced chai/tea ad pending Frank 3:1 art (replaces karkadeh)"
         },
         "sharbat": {
           "section": "Sharbat"

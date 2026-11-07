@@ -110,6 +110,7 @@ export const menuData: MenuCategory[] = [
   {
     category: "Baklava",
     items: [
+      { name: "Dubai Chocolate Style Baklava", price: "$3.99", image: "/images/maza/menu/opt-baklava.jpg" },
       { name: "Pistachio Baklava", price: "$3.99", image: "/images/maza/menu/opt-baklava.jpg" }
     ],
   },
@@ -118,8 +119,6 @@ export const menuData: MenuCategory[] = [
     items: [
       { name: "Bottled Water", price: "$1.49" },
       { name: "Water Cup", price: "Free" },
-      { name: "Minute Maid 100% Apple Juice", price: "$2.75", note: "10oz" },
-      { name: "Minute Maid 100% Orange Juice", price: "$2.75", note: "10oz" },
       { name: "Hot Middle Eastern Black Tea", price: "$2.99" },
       { name: "Peace Tea Raspberry", price: "$2.25", note: "16oz can" },
       { name: "Fountain Drink", price: "$2.49", note: "20oz, refillable" },
