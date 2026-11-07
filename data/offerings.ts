@@ -542,14 +542,14 @@ export const OFFERING_PAGES: OfferingPage[] = [
     h1: "Mezze & Appetizers in Chandler, AZ",
     title: "Mezze Platter & Appetizers | Chandler, AZ | Maza Mediterranean",
     description:
-      "Maza mezze in Chandler — Appetizer Plate $15.51, dolma $5.99, sambusah $9.49, kibbeh $11.99. Halal Mediterranean starters made in house.",
-    hook: "The Maza Appetizer Plate is $15.51 and lands with 6 dolma, hummus, baba ghanoush, and tzatziki. Ordering separately, dolma is $5.99, sambusah (2pc) is $9.49, and kibbeh (3pc) is $11.99.",
+      "Maza mezze in Chandler — Appetizer Plate $15.51, dolma $5.99, sambusah temp. unavailable. Halal Mediterranean starters made in house.",
+    hook: "The Maza Appetizer Plate is $15.51 and lands with 6 dolma, hummus, baba ghanoush, and tzatziki. Ordering separately, dolma is $5.99, sambusah (2pc) is temp. unavailable.",
     intro:
       "This is the part of a Mediterranean menu that is easiest to get wrong and hardest to fake — stuffed grape leaves, fried pastry, and bulgur shells, all rolled by hand in the kitchen.",
     priceHeading: "Mezze and appetizer pricing",
     priceRows: [
       { label: "Dolma", price: "$5.99", note: "Stuffed grape leaves" },
-      { label: "Sambusah (2pc)", price: "$9.49" },
+      { label: "Sambusah (2pc)", price: "Temp. unavailable" },
     ],
     faqs: [
       {
@@ -560,7 +560,7 @@ export const OFFERING_PAGES: OfferingPage[] = [
       {
         question: "What is sambusah?",
         answer:
-          "Sambusah is a thin fried pastry filled with seasoned meat — a Middle Eastern savoury pastry, served two pieces for $9.49.",
+          "Sambusah is a thin fried pastry filled with seasoned meat — currently temp. unavailable.",
       },
       FAQ_ORDER,
       FAQ_HOURS,

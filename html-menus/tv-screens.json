@@ -297,10 +297,10 @@
             "photo": {
               "ref": [
                 "Sides",
-                "Sambusah (2pc)"
+                "Side Salad"
               ],
-              "photo": "sides-sambusah-2pc.jpg",
-              "caption": "Sambusah"
+              "photo": "sides-side-salad.jpg",
+              "caption": "Side Salad"
             }
           },
           {
@@ -309,10 +309,6 @@
               [
                 "Sides",
                 "Dolma"
-              ],
-              [
-                "Sides",
-                "Sambusah (2pc)"
               ],
               [
                 "Sides",
@@ -341,18 +337,18 @@
           {
             "ref": [
               "Sides",
-              "Sambusah (2pc)"
-            ],
-            "photo": "sides-sambusah-2pc.jpg",
-            "caption": "Sambusah"
-          },
-          {
-            "ref": [
-              "Sides",
               "Tabouleh"
             ],
             "photo": "sides-tabouleh.jpg",
             "caption": "Tabouleh"
+          },
+          {
+            "ref": [
+              "Sides",
+              "Side Salad"
+            ],
+            "photo": "sides-side-salad.jpg",
+            "caption": "Side Salad"
           }
         ],
         "burgers_card": {
