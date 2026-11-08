@@ -27,8 +27,19 @@
           "price": "$14.55"
         },
         {
+          "name": "Falafel Wrap",
+          "price": "$9.35"
+        },
+        {
           "name": "Lamb Tikka Wrap",
           "price": "$13.51"
+        },
+        {
+          "name": "Arayes Lahm or Dajaj",
+          "price": "$15.55",
+          "notes": [
+            "Flat grilled sandwich with cheese. Choose beef + lamb or chicken. Served with salad."
+          ]
         },
         {
           "name": "Ribeye Tikka Wrap",
@@ -42,7 +53,8 @@
           "name": "Shredded Steak Wrap",
           "price": "$14.89"
         }
-      ]
+      ],
+      "subtitle": "Wrapped with hummus, tomato, onion, lettuce, pickle, and garlic sauce"
     },
     {
       "name": "Wrap Upgrades",
@@ -101,10 +113,17 @@
           ]
         },
         {
+          "name": "Falafel",
+          "price": "$16.55",
+          "notes": [
+            "Falafel, 1 Pita, salad, baba ghanoush & hummus + tahini"
+          ]
+        },
+        {
           "name": "Appetizer Plate",
           "price": "$15.51",
           "notes": [
-            "6 Dolma, Hummus, Baba Ghanoush & Tzatziki"
+            "Hummus + Tahini, Dolma, Falafel, Baba Ghanoush, 1 Pita and Salad"
           ]
         },
         {
@@ -112,6 +131,13 @@
           "price": "$27.99",
           "notes": [
             "1 Chicken Tikka, 1 Beef + Lamb Shish Kebab, 1 Chicken Shish Kebab, 1 Pita, rice, salad, baba ghanoush & hummus + tahini"
+          ]
+        },
+        {
+          "name": "Grilled Chicken Teriyaki Plate",
+          "price": "$28.99",
+          "notes": [
+            "2 Grilled Teriyaki Chicken Cutlets, 1 Pita, rice, salad, baba ghanoush & hummus + tahini"
           ]
         },
         {
@@ -137,10 +163,7 @@
       "items": [
         {
           "name": "Shredded Chicken",
-          "price": "$11.49",
-          "notes": [
-            "Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Maza Special Sauce, Pomegranate Molasses. Sauce on the side available."
-          ]
+          "price": "$11.49"
         },
         {
           "name": "Shredded Steak",
@@ -150,17 +173,15 @@
           "name": "Gyro",
           "price": "$12.89"
         }
-      ]
+      ],
+      "subtitle": "Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Maza Special Sauce, Pomegranate Molasses. Sauce on the side available."
     },
     {
       "name": "Loaded Hummus",
       "items": [
         {
           "name": "Shredded Chicken",
-          "price": "$11.49",
-          "notes": [
-            "Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Maza Special Sauce, Pomegranate Molasses. Sauce on the side available."
-          ]
+          "price": "$11.49"
         },
         {
           "name": "Shredded Steak",
@@ -180,7 +201,7 @@
           "name": "Tepsi Baytinijan",
           "price": "$20.00",
           "notes": [
-            "Iraqi eggplant casserole — eggplant, potato, tomato, onion + seasoned meat, served over rice"
+            "Iraqi eggplant casserole \u2014 eggplant, potato, tomato, onion + seasoned meat, served over rice"
           ]
         },
         {
@@ -220,12 +241,12 @@
         {
           "name": "Crispy Chicken Sandwich",
           "price": "$11.85",
-          "note": "Kids Meal — Comes with Fries"
+          "note": "Kids Meal \u2014 Comes with Fries"
         },
         {
           "name": "All Beef Burger",
           "price": "$11.85",
-          "note": "Kids Meal — Comes with Fries"
+          "note": "Kids Meal \u2014 Comes with Fries"
         }
       ]
     },
@@ -239,6 +260,10 @@
         {
           "name": "Fries",
           "price": "$3.49"
+        },
+        {
+          "name": "Falafel (4pc)",
+          "price": "$3.99"
         },
         {
           "name": "Hummus with tahini and pita",
@@ -261,6 +286,10 @@
           "price": "SM $1.99 | LG $4.99"
         },
         {
+          "name": "Sambusah (2pc)",
+          "price": "$9.49"
+        },
+        {
           "name": "Tabouleh",
           "price": "$4.99"
         },
@@ -272,16 +301,17 @@
           "name": "Maza Salad",
           "price": "$13.99",
           "note": "Choose from: Chicken or Steak"
+        },
+        {
+          "name": "Kibbeh (3pc)",
+          "price": "$11.99",
+          "note": ""
         }
       ]
     },
     {
       "name": "Baklava",
       "items": [
-        {
-          "name": "Dubai Chocolate Style Baklava",
-          "price": "$3.99"
-        },
         {
           "name": "Pistachio Baklava",
           "price": "$3.99"
@@ -300,6 +330,16 @@
           "price": "Free"
         },
         {
+          "name": "Minute Maid 100% Apple Juice",
+          "price": "$2.75",
+          "note": "10oz"
+        },
+        {
+          "name": "Minute Maid 100% Orange Juice",
+          "price": "$2.75",
+          "note": "10oz"
+        },
+        {
           "name": "Hot Middle Eastern Black Tea",
           "price": "$2.99"
         },
@@ -314,11 +354,6 @@
           "note": "20oz, refillable"
         },
         {
-          "name": "Mexican Coke",
-          "price": "$3.99",
-          "note": "355ml glass"
-        },
-        {
           "name": "Mexican Fanta Grape",
           "price": "$3.99",
           "note": "355ml glass"
@@ -327,17 +362,37 @@
           "name": "Mexican Fanta Strawberry",
           "price": "$3.99",
           "note": "355ml glass"
+        },
+        {
+          "name": "Gatorade",
+          "price": "$2.49",
+          "note": "12oz \u00b7 Fierce Fruit Punch + Berry, Glacier Freeze, Fierce Blue Cherry"
+        },
+        {
+          "name": "Vita Coco Coconut Water",
+          "price": "$2.99",
+          "note": "11.1oz"
+        },
+        {
+          "name": "SunBerry Farms Organic Juice Drink",
+          "price": "$1.49",
+          "note": "6.75oz box \u00b7 Grape, Apple, Fruit Punch"
+        },
+        {
+          "name": "Mexican Coke",
+          "price": "$3.99",
+          "note": "355ml glass"
         }
       ]
     },
     {
       "name": "Sharbat",
-      "subtitle": "House-made · no refill",
+      "subtitle": "House-made \u00b7 no refill",
       "items": [
         {
           "name": "Daily Selection",
           "price": "SM $1.99 | LG $3.99",
-          "note": "SM 12oz · LG 24oz"
+          "note": "SM 12oz \u00b7 LG 24oz"
         }
       ]
     }
@@ -354,55 +409,10 @@
       "reason": "moratorium - temporarily off menu; do not show on website or TV"
     },
     {
-      "section": "Wraps",
-      "name": "Arayes Lahm or Dajaj",
-      "price": "$15.55",
-      "reason": "temporary stock gap — urgent hide site+TV; restore when back",
-      "notes": [
-        "Flat grilled sandwich with cheese. Choose beef + lamb or chicken. Served with salad."
-      ]
-    },
-    {
-      "section": "Plates",
-      "name": "Grilled Chicken Teriyaki Plate",
-      "price": "$28.99",
-      "reason": "temporary stock gap — urgent hide site+TV; restore when back",
-      "notes": [
-        "2 Grilled Teriyaki Chicken Cutlets, 1 Pita, rice, salad, baba ghanoush & hummus + tahini"
-      ]
-    },
-    {
-      "section": "Sides",
-      "name": "Kibbeh (3pc)",
-      "price": "$11.99",
-      "reason": "temporary stock gap — urgent hide site+TV; restore when back"
-    },
-    {
-      "section": "Wraps",
-      "name": "Falafel Wrap",
-      "price": "$9.35",
-      "reason": "temporary stock gap — urgent hide site+TV (wrap + plate + side); restore when back"
-    },
-    {
-      "section": "Plates",
-      "name": "Falafel",
-      "price": "$16.55",
-      "reason": "temporary stock gap — urgent hide site+TV (wrap + plate + side); restore when back",
-      "notes": [
-        "Falafel, 1 Pita, salad, baba ghanoush & hummus + tahini"
-      ]
-    },
-    {
-      "section": "Sides",
-      "name": "Falafel (4pc)",
+      "section": "Baklava",
+      "name": "Dubai Chocolate Style Baklava",
       "price": "$3.99",
-      "reason": "temporary stock gap — urgent hide site+TV (wrap + plate + side); restore when back"
-    },
-    {
-      "name": "Sambusah (2pc)",
-      "price": "$9.49",
-      "_from_section": "Sides",
-      "_hide_reason": "temporary stock gap — urgent hide site+TV; restore when back"
+      "reason": "temporarily MIA \u2014 only pistachio baklava in stock; do not show on website or TV"
     }
   ]
 }
