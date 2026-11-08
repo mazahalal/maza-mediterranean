@@ -60,6 +60,10 @@
             [
               "Wraps",
               "Crispy Chicken Wrap"
+            ],
+            [
+              "Wraps",
+              "Falafel Wrap"
             ]
           ]
         }
@@ -120,6 +124,10 @@
               [
                 "Plates",
                 "Appetizer Plate"
+              ],
+              [
+                "Plates",
+                "Falafel"
               ]
             ]
           }
@@ -235,7 +243,7 @@
         }
       },
       "row2": {
-        "_layout_note": "4 equal cols; falafel side OOS; combo bar on",
+        "_layout_note": "falafel side 2pc text-only (no falafel photos on TV); combo bar on",
         "burgers": {
           "section": "Burgers"
         },
@@ -309,6 +317,10 @@
               [
                 "Sides",
                 "Dolma"
+              ],
+              [
+                "Sides",
+                "Falafel (2pc)"
               ],
               [
                 "Sides",
