@@ -442,12 +442,18 @@
           "ad_photos": [
             "drink-ad-iced-tea.jpg",
             "drink-ad-mexican-coke.jpg",
-            "drink-ad-fanta-only.jpg"
+            "drink-ad-fanta-only.jpg",
+            "drink-ad-gatorade.jpg",
+            "drink-ad-vita-coco.jpg",
+            "drink-ad-sunberry-juices.jpg"
           ],
           "ad_prices": [
             "LG $3.99",
             "$3.99",
-            "$3.99"
+            "$3.99",
+            "$2.49",
+            "$2.99",
+            "$1.49"
           ]
         },
         "sharbat": {
