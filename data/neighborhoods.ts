@@ -39,7 +39,7 @@ const FAQ_HALAL: Faq = {
 const FAQ_HOURS: Faq = {
   question: "What are Maza's hours?",
   answer:
-    "Tuesday through Sunday, 10am–10pm. Closed Mondays.",
+    "Tuesday, Wednesday & Sunday 10am–8pm; Thursday–Saturday 10am–10pm. Closed Mondays.",
 };
 const FAQ_ORDER: Faq = {
   question: "How do I order?",
@@ -66,8 +66,8 @@ export const NEIGHBORHOOD_PAGES: NeighborhoodPage[] = [
     h1: "Mediterranean Food in Chandler, AZ",
     title: "Mediterranean Food in Chandler, AZ | Maza Mediterranean Cuisine",
     description:
-      "Maza Mediterranean Cuisine is Chandler's halal-cooked-from-scratch Mediterranean restaurant at 3491 W Frye Rd, Suite 2. Plates $16.55–$28.99, open Tue–Sun 10am–10pm.",
-    hook: "Maza is a Chandler restaurant first — 3491 W Frye Rd, Suite 2, a few minutes off the I-10 in the same plaza as the businesses we feed every weekday. Plates run $16.55 to $28.99 with two kebabs, rice, salad, baba ghanoush, and hummus + tahini, and we are open Tuesday through Sunday, 10am–10pm.",
+      "Maza Mediterranean Cuisine is Chandler's halal-cooked-from-scratch Mediterranean restaurant at 3491 W Frye Rd, Suite 2. Plates $16.55–$28.99, open Tue/Wed/Sun 10am–8pm · Thu–Sat 10am–10pm.",
+    hook: "Maza is a Chandler restaurant first — 3491 W Frye Rd, Suite 2, a few minutes off the I-10 in the same plaza as the businesses we feed every weekday. Plates run $16.55 to $28.99 with two kebabs, rice, salad, baba ghanoush, and hummus + tahini, and we are open Tue/Wed/Sun 10am–8pm · Thu–Sat 10am–10pm.",
     intro:
       "Everything on the menu is cooked to order in one kitchen, from the skewers to the mezze. Whether you live off Chandler Blvd or work in the Price Road corridor, this is the closest halal Mediterranean kitchen in the city.",
     directions:
@@ -99,7 +99,7 @@ export const NEIGHBORHOOD_PAGES: NeighborhoodPage[] = [
     h1: "Mediterranean Food Near Gilbert, AZ",
     title: "Mediterranean Food Near Gilbert, AZ | Maza Mediterranean Cuisine",
     description:
-      "Halal Mediterranean food a short drive from Gilbert — Maza at 3491 W Frye Rd, Chandler. Plates $16.55–$28.99, open Tue–Sun 10am–10pm.",
+      "Halal Mediterranean food a short drive from Gilbert — Maza at 3491 W Frye Rd, Chandler. Plates $16.55–$28.99, open Tue/Wed/Sun 10am–8pm · Thu–Sat 10am–10pm.",
     hook: "From most of Gilbert, Maza is a straight run west — about 3491 W Frye Rd in Chandler, just off the I-10 in a plaza with free parking. Plates come in at $16.55 to $28.99 with two kebabs, rice, salad, baba ghanoush, and hummus + tahini.",
     intro:
       "Gilbert has plenty of counter-service Mediterranean. What it does not have much of is halal-certified food cooked to order — which is exactly what comes out of the Maza kitchen.",
@@ -165,7 +165,7 @@ export const NEIGHBORHOOD_PAGES: NeighborhoodPage[] = [
     h1: "Mediterranean Food Near Ahwatukee, AZ",
     title: "Mediterranean Food Near Ahwatukee | Maza Mediterranean Cuisine",
     description:
-      "Halal Mediterranean food near Ahwatukee — Maza at 3491 W Frye Rd, Chandler, just across the I-10. Plates $16.55–$28.99, open Tue–Sun 10am–10pm.",
+      "Halal Mediterranean food near Ahwatukee — Maza at 3491 W Frye Rd, Chandler, just across the I-10. Plates $16.55–$28.99, open Tue/Wed/Sun 10am–8pm · Thu–Sat 10am–10pm.",
     hook: "Ahwatukee sits on the west side of the I-10 and Maza sits on the east — 3491 W Frye Rd, Suite 2 in Chandler, one exit apart. Plates are $16.55 to $28.99 with two kebabs, rice, salad, baba ghanoush, and hummus + tahini.",
     intro:
       "For Ahwatukee households, this is the shortest hop across the freeway to a halal kitchen that cooks kebabs to order rather than reheating them — and the plaza parking is free on both sides.",
@@ -198,7 +198,7 @@ export const NEIGHBORHOOD_PAGES: NeighborhoodPage[] = [
     h1: "Mediterranean Food Near Sun Lakes, AZ",
     title: "Mediterranean Food Near Sun Lakes | Maza Mediterranean Cuisine",
     description:
-      "Halal Mediterranean food a short drive from Sun Lakes — Maza at 3491 W Frye Rd, Chandler. Plates $16.55–$28.99, mezze from $3.99, open Tue–Sun 10am–10pm.",
+      "Halal Mediterranean food a short drive from Sun Lakes — Maza at 3491 W Frye Rd, Chandler. Plates $16.55–$28.99, mezze from $3.99, open Tue/Wed/Sun 10am–8pm · Thu–Sat 10am–10pm.",
     hook: "From Sun Lakes, Maza is a short run north to 3491 W Frye Rd in Chandler, with free plaza parking at the door and single-level, easy access. Plates run $16.55 to $28.99, and mezze sides start around $3.99–$5.99.",
     intro:
       "Sun Lakes diners tend to order the same way: a plate to share and a couple of mezze to start. The kitchen will pack sauces on the side, and everything is available for pickup if you would rather eat at home.",
@@ -264,7 +264,7 @@ export const NEIGHBORHOOD_PAGES: NeighborhoodPage[] = [
     h1: "Mediterranean Food Near Queen Creek, AZ",
     title: "Mediterranean Food Near Queen Creek | Maza Mediterranean Cuisine",
     description:
-      "Halal Mediterranean food near Queen Creek — Maza at 3491 W Frye Rd, Chandler. Plates $16.55–$28.99, family platters to share, open Tue–Sun 10am–10pm.",
+      "Halal Mediterranean food near Queen Creek — Maza at 3491 W Frye Rd, Chandler. Plates $16.55–$28.99, family platters to share, open Tue/Wed/Sun 10am–8pm · Thu–Sat 10am–10pm.",
     hook: "From Queen Creek, Maza is a run west along Chandler Heights or Riggs Rd to 3491 W Frye Rd, Suite 2 in Chandler. Plates are $16.55 to $28.99, and the $87.49 Family Meal Family Meal puts 10 skewers on the table for four to six people.",
     intro:
       "Queen Creek families tend to order big. The platters are built for exactly that — rice, pita, and sides included, so nobody is assembling a meal from four separate orders.",
@@ -297,10 +297,10 @@ export const NEIGHBORHOOD_PAGES: NeighborhoodPage[] = [
     h1: "Mediterranean Food Near Ocotillo, Chandler AZ",
     title: "Mediterranean Food Near Ocotillo, Chandler | Maza Mediterranean Cuisine",
     description:
-      "Halal Mediterranean food minutes from Ocotillo — Maza at 3491 W Frye Rd, Suite 2, Chandler. Plates $16.55–$28.99, wraps from $9.35, open Tue–Sun.",
+      "Halal Mediterranean food minutes from Ocotillo — Maza at 3491 W Frye Rd, Suite 2, Chandler. Plates $16.55–$28.99, wraps from $9.35, open Tue/Wed/Sun 10am–8pm · Thu–Sat 10am–10pm.",
     hook: "Ocotillo is Maza's closest neighborhood — the restaurant sits at 3491 W Frye Rd, Suite 2, minutes from the Ocotillo golf corridor. Wraps run $9.35 to $14.89, and plates are $16.55 to $28.99 with two kebabs, rice, salad, baba ghanoush, and hummus + tahini.",
     intro:
-      "This is the order-instead-of-cooking option for Ocotillo households: a full halal grill five minutes away, open until 10pm Tuesday through Sunday, with pickup ready by phone.",
+      "This is the order-instead-of-cooking option for Ocotillo households: a full halal grill five minutes away, open Tue/Wed/Sun until 8pm and Thu–Sat until 10pm, with pickup ready by phone.",
     directions:
       "Maza is at 3491 W Frye Rd, Suite 2 — take Frye Rd or Chandler Blvd toward the I-10 and turn into the plaza; parking is free on site.",
     priceHeading: "What Ocotillo orders",

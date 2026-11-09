@@ -155,7 +155,7 @@ export default function SeoLandingPage({
             Order from Maza
           </h2>
           <p className="text-[#B8B8B8] mb-5">
-            3491 W Frye Rd, Suite 2, Chandler, AZ 85226 · Tue–Sun 10am–10pm ·
+            3491 W Frye Rd, Suite 2, Chandler, AZ 85226 · Tue/Wed/Sun 10am–8pm · Thu–Sat 10am–10pm ·
             Closed Mondays
           </p>
           <div className="flex flex-wrap justify-center gap-3">

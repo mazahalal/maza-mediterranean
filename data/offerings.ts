@@ -48,7 +48,7 @@ export type OfferingPage = {
 const FAQ_HOURS: Faq = {
   question: "What are Maza's hours?",
   answer:
-    "Maza Mediterranean Cuisine is open Tuesday through Sunday, 10am–10pm. We are closed Mondays.",
+    "Maza Mediterranean Cuisine is open Tuesday, Wednesday, and Sunday 10am–8pm, and Thursday through Saturday 10am–10pm. We are closed Mondays.",
 };
 const FAQ_HALAL: Faq = {
   question: "Is the meat halal?",
@@ -72,7 +72,7 @@ export const OFFERING_PAGES: OfferingPage[] = [
     h1: "Halal Mediterranean Restaurant in Chandler, AZ",
     title: "Halal Mediterranean Restaurant in Chandler, AZ | Maza",
     description:
-      "Maza is a halal-certified Mediterranean restaurant at 3491 W Frye Rd, Chandler. Plates $16.55–$28.99, two kebabs each, rice, salad, baba ghanoush + hummus. Open Tue–Sun 10am–10pm.",
+      "Maza is a halal-certified Mediterranean restaurant at 3491 W Frye Rd, Chandler. Plates $16.55–$28.99, two kebabs each, rice, salad, baba ghanoush + hummus. Open Tue/Wed/Sun 10am–8pm · Thu–Sat 10am–10pm.",
     hook: "Every cut of meat at Maza is halal-certified — beef and lamb gyro, shish kebab, chicken tikka, lamb tikka, and ribeye tikka, all grilled to order at 3491 W Frye Rd, Suite 2 in Chandler. Plates run $16.55 to $28.99 and land with two kebabs, rice, salad, baba ghanoush, and hummus + tahini.",
     intro:
       "Maza is family-owned, and the kitchen cooks Mediterranean and Middle Eastern food the way it is eaten at home — big portions, real ingredients, honest prices. Dine in, take it to go, or have it delivered across Chandler and the East Valley.",
@@ -863,8 +863,8 @@ export const OFFERING_PAGES: OfferingPage[] = [
     h1: "Dine-In Mediterranean Restaurant in Chandler, AZ",
     title: "Dine-In Mediterranean Restaurant | Chandler, AZ | Maza",
     description:
-      "Dine in at Maza Mediterranean Cuisine, 3491 W Frye Rd Suite 2, Chandler AZ. Halal plates, kebabs and mezze. Open Tue–Sun 10am–10pm, closed Mondays.",
-    hook: "Maza seats dine-in guests Tuesday through Sunday, 10am–10pm at 3491 W Frye Rd, Suite 2 in Chandler — closed Mondays. Plates run $16.55 to $28.99 with two kebabs, rice, salad, baba ghanoush, and hummus + tahini, and the mezze is made fresh to start the table.",
+      "Dine in at Maza Mediterranean Cuisine, 3491 W Frye Rd Suite 2, Chandler AZ. Halal plates, kebabs and mezze. Open Tue/Wed/Sun 10am–8pm · Thu–Sat 10am–10pm, closed Mondays.",
+    hook: "Maza seats dine-in guests Tue/Wed/Sun 10am–8pm · Thu–Sat 10am–10pm at 3491 W Frye Rd, Suite 2 in Chandler — closed Mondays. Plates run $16.55 to $28.99 with two kebabs, rice, salad, baba ghanoush, and hummus + tahini, and the mezze is made fresh to start the table.",
     intro:
       "Walk in, order at the counter, and take a table. It is a family restaurant, not a fast-casual chain — the food is cooked to order, so a grill plate is worth the few minutes it takes.",
     priceHeading: "What to order in",
@@ -895,8 +895,8 @@ export const OFFERING_PAGES: OfferingPage[] = [
     h1: "Takeout & Delivery in Chandler, AZ",
     title: "Takeout & Delivery | Chandler, AZ | Maza Mediterranean",
     description:
-      "Order Maza takeout in Chandler — call (480) 534-6550, or order delivery via DoorDash, Uber Eats or Grubhub. Halal Mediterranean, open Tue–Sun 10am–10pm.",
-    hook: "Call Maza at (480) 534-6550 for takeout, or order delivery through DoorDash, Uber Eats, or Grubhub — all three carry the same halal Mediterranean menu, including the $10.91 beef gyro and the $87.49 Family Meal. We are open Tuesday through Sunday, 10am–10pm, closed Mondays.",
+      "Order Maza takeout in Chandler — call (480) 534-6550, or order delivery via DoorDash, Uber Eats or Grubhub. Halal Mediterranean, open Tue/Wed/Sun 10am–8pm · Thu–Sat 10am–10pm.",
+    hook: "Call Maza at (480) 534-6550 for takeout, or order delivery through DoorDash, Uber Eats, or Grubhub — all three carry the same halal Mediterranean menu, including the $10.91 beef gyro and the $87.49 Family Meal. Hours: Tue/Wed/Sun 10am–8pm · Thu–Sat 10am–10pm, closed Mondays.",
     intro:
       "Wraps, plates, and mezze all travel well; saucy items are packed separately so nothing arrives soggy. If you want a large order or catering, call rather than using a delivery app.",
     priceHeading: "Popular orders to go",

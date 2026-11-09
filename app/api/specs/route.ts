@@ -83,7 +83,8 @@ function buildSpecs() {
         country: 'US',
       },
       hours: {
-        tue_sun: '10:00-22:00',
+        tue_wed_sun: '10:00-20:00',
+        thu_fri_sat: '10:00-22:00',
         closed: ['Monday'],
       },
     },
