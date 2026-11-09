@@ -49,23 +49,23 @@ export const menuData: MenuCategory[] = [
       { name: "Appetizer Plate", price: "$15.51", image: "/images/maza/menu/opt-appetizer-plate.jpg", notes: ["4 Dolma, 3 Falafel, Hummus, Baba Ghanoush & Tzatziki"] },
       { name: "Falafel", price: "$16.55", image: "/images/maza/menu/opt-PXL_20260601_224012118.jpg", notes: ["5pc Falafel, 1 Pita, salad, baba ghanoush & hummus + tahini"] },
       { name: "Maza Grill", price: "$27.99", image: "/images/maza/menu/opt-Jun_6_2026_5_29_23.jpg", notes: ["1 Chicken Tikka, 1 Beef + Lamb Shish Kebab, 1 Chicken Shish Kebab, 1 Pita, rice, salad, baba ghanoush & hummus + tahini"] },
-      { name: "Shredded Chicken Plate", price: "$18.49", image: "/images/maza/menu/opt-shredded-chicken-plate-vertical.jpg", notes: ["Maza in-house shredded chicken over a bed of rice, 1 Pita, salad, baba ghanoush and hummus + tahini", "Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Maza Spicy Sauce, Pomegranate Molasses. Sauce on the side available."] },
-      { name: "Shredded Steak Plate", price: "$19.99", image: "/images/maza/menu/opt-shredded-steak-plate.jpg", notes: ["Maza in-house shredded steak over a bed of rice, 1 Pita, salad, baba ghanoush and hummus + tahini", "Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Maza Spicy Sauce, Pomegranate Molasses. Sauce on the side available."] }
+      { name: "Shredded Chicken Plate", price: "$18.49", image: "/images/maza/menu/opt-shredded-chicken-plate-vertical.jpg", notes: ["Maza in-house shredded chicken over a bed of rice, 1 Pita, salad, baba ghanoush and hummus + tahini", "Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Sriracha, Maza Spicy Sauce, Pomegranate Molasses. Sauce on the side available."] },
+      { name: "Shredded Steak Plate", price: "$19.99", image: "/images/maza/menu/opt-shredded-steak-plate.jpg", notes: ["Maza in-house shredded steak over a bed of rice, 1 Pita, salad, baba ghanoush and hummus + tahini", "Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Sriracha, Maza Spicy Sauce, Pomegranate Molasses. Sauce on the side available."] }
     ],
   },
   {
     category: "Loaded Fries",
     items: [
-      { name: "Shredded Chicken", price: "$11.49", notes: ["Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Maza Spicy Sauce, Pomegranate Molasses. Sauce on the side available."] },
+      { name: "Shredded Chicken", price: "$11.49", notes: ["Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Sriracha, Maza Spicy Sauce, Pomegranate Molasses. Sauce on the side available."] },
       { name: "Shredded Steak", price: "$12.89", image: "/images/maza/menu/opt-loaded-fries-steak.jpg" },
       { name: "Gyro", price: "$12.89", image: "/images/maza/menu/opt-loaded-fries-gyro.jpg" }
     ],
   },
   {
     category: "Loaded Hummus",
-    subtitle: "Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Maza Spicy Sauce, Pomegranate Molasses. Sauce on the side available.",
+    subtitle: "Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Sriracha, Maza Spicy Sauce, Pomegranate Molasses. Sauce on the side available.",
     items: [
-      { name: "Shredded Chicken", price: "$11.49", image: "/images/maza/menu/opt-loaded-hummus-chicken.jpg", notes: ["Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Maza Spicy Sauce, Pomegranate Molasses. Sauce on the side available."] },
+      { name: "Shredded Chicken", price: "$11.49", image: "/images/maza/menu/opt-loaded-hummus-chicken.jpg", notes: ["Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Sriracha, Maza Spicy Sauce, Pomegranate Molasses. Sauce on the side available."] },
       { name: "Shredded Steak", price: "$12.89", image: "/images/maza/menu/opt-loaded-hummus-steak.jpg" },
       { name: "Gyro", price: "$12.89" }
     ],
