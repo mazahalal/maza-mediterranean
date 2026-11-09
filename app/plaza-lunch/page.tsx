@@ -124,7 +124,7 @@ export default function PlazaLunchPage() {
             </p>
             <PhoneLink className="mt-3 inline-block text-lg font-medium text-[#D3AB5E] hover:underline" />
             <p className="mt-3 text-sm text-[#B8B8B8]">
-              Open Tuesday–Sunday 10am–10pm. Closed Mondays.
+              Open Tue/Wed/Sun 10am–8pm · Thu–Sat 10am–10pm. Closed Mondays.
             </p>
             <div className="mt-5 grid grid-cols-2 gap-3">
               <a

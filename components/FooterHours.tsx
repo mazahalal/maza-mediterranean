@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { getActiveSiteNotice } from "@/lib/site-notices";
 
-const DEFAULT_HOURS = "Mon Closed · Tue–Sun 10am–10pm";
+const DEFAULT_HOURS = "Mon Closed · Tue/Wed/Sun 10am–8pm · Thu–Sat 10am–10pm";
 
 /** Hours line that swaps in temporary closure copy while a site notice is live. */
 export default function FooterHours() {
