@@ -441,7 +441,7 @@ export const OFFERING_PAGES: OfferingPage[] = [
     title: "Loaded Fries $11.49–$12.89 | Chandler, AZ | Maza Mediterranean",
     description:
       "Maza loaded fries in Chandler — shredded steak or gyro $12.89, with up to three sauces. Halal-certified.",
-    hook: "Loaded fries at Maza run $12.89 for shredded steak or gyro. Each order takes up to three sauces from tahini, garlic sauce, sriracha mayo, Maza spicy sauce, and pomegranate molasses — and you can get the sauces on the side.",
+    hook: "Loaded fries at Maza run $12.89 for shredded steak or gyro. Each order takes up to three sauces from tahini, garlic sauce, sriracha mayo, sriracha, Maza spicy sauce, and pomegranate molasses — and you can get the sauces on the side.",
     intro:
       "Fries, meat, sauce, repeat. It is the fastest thing on the menu and the easiest share for a table waiting on a grill order.",
     priceHeading: "Loaded fries pricing",
@@ -454,7 +454,7 @@ export const OFFERING_PAGES: OfferingPage[] = [
       {
         question: "Which sauces can I choose?",
         answer:
-          "Tahini, garlic sauce, sriracha mayo, Maza spicy sauce, and pomegranate molasses — up to three per order. Sauce on the side is available on request.",
+          "Tahini, garlic sauce, sriracha mayo, sriracha, Maza spicy sauce, and pomegranate molasses — up to three per order. Sauce on the side is available on request.",
       },
       FAQ_HALAL,
       FAQ_ORDER,
