@@ -465,7 +465,9 @@
             "drink-ad-fanta-only.jpg",
             "drink-ad-gatorade.jpg",
             "drink-ad-vita-coco.jpg",
-            "drink-ad-sunberry-juices.jpg"
+            "drink-ad-sunberry-juices.jpg",
+            "drink-ad-minute-maid-lemonade.jpg",
+            "drink-ad-coke-zero.jpg"
           ],
           "ad_prices": [
             "LG $3.99",
@@ -473,8 +475,11 @@
             "$3.99",
             "$2.49",
             "$2.99",
-            "$1.49"
-          ]
+            "$1.49",
+            "$2.99",
+            "$2.49"
+          ],
+          "_ad_note": "Carousel: iced tea, mex coke, fanta, gatorade, vita coco, sunberry, MM lemonade $2.99, coke zero $2.49. Accepted Frank 2026-11-10."
         },
         "sharbat": {
           "section": "Sharbat"
