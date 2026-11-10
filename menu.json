@@ -191,7 +191,7 @@
           "name": "Tepsi Baytinijan",
           "price": "$20.00",
           "notes": [
-            "Iraqi eggplant casserole — eggplant, potato, tomato, onion + seasoned meat, served over rice"
+            "Iraqi eggplant casserole \u2014 eggplant, potato, tomato, onion + seasoned meat, served over rice"
           ]
         },
         {
@@ -231,12 +231,12 @@
         {
           "name": "Crispy Chicken Sandwich",
           "price": "$11.85",
-          "note": "Kids Meal — Comes with Fries"
+          "note": "Kids Meal \u2014 Comes with Fries"
         },
         {
           "name": "All Beef Burger",
           "price": "$11.85",
-          "note": "Kids Meal — Comes with Fries"
+          "note": "Kids Meal \u2014 Comes with Fries"
         }
       ]
     },
@@ -344,9 +344,19 @@
           "note": "355ml glass"
         },
         {
+          "name": "Minute Maid Lemonade",
+          "price": "$2.99",
+          "note": "20oz bottle"
+        },
+        {
+          "name": "Coke Zero Sugar",
+          "price": "$2.49",
+          "note": "16.9oz bottle"
+        },
+        {
           "name": "Gatorade",
           "price": "$2.49",
-          "note": "12oz · Fierce Fruit Punch + Berry, Glacier Freeze, Fierce Blue Cherry"
+          "note": "12oz \u00b7 Fierce Fruit Punch + Berry, Glacier Freeze, Fierce Blue Cherry"
         },
         {
           "name": "Vita Coco Coconut Water",
@@ -356,18 +366,18 @@
         {
           "name": "SunBerry Farms Organic Juice Drink",
           "price": "$1.49",
-          "note": "6.75oz box · Grape, Apple, Fruit Punch"
+          "note": "6.75oz box \u00b7 Grape, Apple, Fruit Punch"
         }
       ]
     },
     {
       "name": "Sharbat",
-      "subtitle": "House-made · no refill",
+      "subtitle": "House-made \u00b7 no refill",
       "items": [
         {
           "name": "Daily Selection",
           "price": "SM $1.99 | LG $3.99",
-          "note": "SM 12oz · LG 24oz"
+          "note": "SM 12oz \u00b7 LG 24oz"
         }
       ]
     }
@@ -387,7 +397,7 @@
       "section": "Wraps",
       "name": "Arayes Lahm or Dajaj",
       "price": "$15.55",
-      "reason": "temporary stock gap — urgent hide site+TV; restore when back",
+      "reason": "temporary stock gap \u2014 urgent hide site+TV; restore when back",
       "notes": [
         "Flat grilled sandwich with cheese. Choose beef + lamb or chicken. Served with salad."
       ]
@@ -396,7 +406,7 @@
       "section": "Plates",
       "name": "Grilled Chicken Teriyaki Plate",
       "price": "$28.99",
-      "reason": "temporary stock gap — urgent hide site+TV; restore when back",
+      "reason": "temporary stock gap \u2014 urgent hide site+TV; restore when back",
       "notes": [
         "2 Grilled Teriyaki Chicken Cutlets, 1 Pita, rice, salad, baba ghanoush & hummus + tahini"
       ]
@@ -405,13 +415,13 @@
       "section": "Sides",
       "name": "Kibbeh (3pc)",
       "price": "$11.99",
-      "reason": "temporary stock gap — urgent hide site+TV; restore when back"
+      "reason": "temporary stock gap \u2014 urgent hide site+TV; restore when back"
     },
     {
       "name": "Sambusah (2pc)",
       "price": "$9.49",
       "_from_section": "Sides",
-      "_hide_reason": "temporary stock gap — urgent hide site+TV; restore when back"
+      "_hide_reason": "temporary stock gap \u2014 urgent hide site+TV; restore when back"
     }
   ]
 }
