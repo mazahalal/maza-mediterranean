@@ -128,6 +128,8 @@ export const menuData: MenuCategory[] = [
       { name: "Mexican Coke", price: "$3.99", note: "355ml glass" },
       { name: "Mexican Fanta Grape", price: "$3.99", note: "355ml glass" },
       { name: "Mexican Fanta Strawberry", price: "$3.99", note: "355ml glass" },
+      { name: "Minute Maid Lemonade", price: "$2.99", note: "20oz bottle" },
+      { name: "Coke Zero Sugar", price: "$2.49", note: "16.9oz bottle" },
       { name: "Gatorade", price: "$2.49", note: "12oz · Fierce Fruit Punch + Berry, Glacier Freeze, Fierce Blue Cherry" },
       { name: "Vita Coco Coconut Water", price: "$2.99", note: "11.1oz" },
       { name: "SunBerry Farms Organic Juice Drink", price: "$1.49", note: "6.75oz box · Grape, Apple, Fruit Punch" }
