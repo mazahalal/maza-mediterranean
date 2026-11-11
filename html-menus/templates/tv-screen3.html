@@ -316,8 +316,9 @@
     min-height: 0;
     /* FIXED px only — never vh. Fully Kiosk CSS vh is ~half board
        so clamp(150px, 22vh, 220px) collapses to ~150px on TV while
-       desktop previews hit the 220 cap (looked fine in Discord). */
-    height: 280px;
+       desktop previews hit the 220 cap (looked fine in Discord).
+       280px ate the 4th sides line on each column — shave Y a bit. */
+    height: 240px;
   }
   .s3-row2 .r2-col .col-photo .product-frame,
   .s3-row2 .r2-col .col-photo .s3-combo-fig {
