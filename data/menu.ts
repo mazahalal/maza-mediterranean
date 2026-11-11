@@ -99,6 +99,7 @@ export const menuData: MenuCategory[] = [
     items: [
       { name: "Dolma", price: "$5.99" },
       { name: "Falafel (2pc)", price: "$3.99" },
+      { name: "Kibbeh (3pc)", price: "$11.99", image: "/images/maza/menu/opt-kibbeh.jpg" },
       { name: "Fries", price: "$3.49", image: "/images/maza/menu/opt-side-fries-vertical.jpg" },
       { name: "Hummus with tahini and pita", price: "$5.99", image: "/images/maza/menu/opt-hummus-pita.jpg" },
       { name: "Pita", price: "$1.25" },
