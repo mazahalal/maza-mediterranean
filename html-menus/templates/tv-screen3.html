@@ -620,10 +620,12 @@
     display: block;
     background: #000;
   }
-  /* TEMP full-bleed product shot — looser crop asset; slight center bias */
+  /* TEMP full-bleed: zoom out a hair + shift subject down in frame */
   .sharbat-card .sharbat-photo.fit-cover img {
     object-fit: cover;
-    object-position: center 48%;
+    object-position: center 28%;
+    transform: scale(0.92) translateY(6%);
+    transform-origin: center center;
   }
   .sharbat-card .sharbat-overlay {
     position: absolute;
@@ -634,14 +636,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3px;
-    padding: 28px 10px 8px;
-    background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,.55) 28%, rgba(0,0,0,.88) 100%);
+    gap: 2px;
+    padding: 18px 8px 6px;
+    background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,.5) 30%, rgba(0,0,0,.86) 100%);
     pointer-events: none;
   }
   .sharbat-card .sharbat-ar {
     font-family: 'Noto Naskh Arabic Local', 'Noto Naskh Arabic', 'Noto Sans Arabic', serif;
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 700;
     color: var(--gold-light);
     letter-spacing: 0;
@@ -652,21 +654,21 @@
     text-shadow: 0 1px 6px rgba(0,0,0,.9);
   }
   .sharbat-card .band-title {
-    font-size: 16px;
-    letter-spacing: .14em;
+    font-size: 13px;
+    letter-spacing: .12em;
     margin: 0;
     line-height: 1;
     color: var(--gold);
     text-shadow: 0 1px 6px rgba(0,0,0,.9);
   }
   .sharbat-card .band-title .rule {
-    width: 14px;
-    margin: 0 5px 2px;
+    width: 12px;
+    margin: 0 4px 2px;
   }
   .sharbat-card .sharbat-kicker {
-    font-size: 9px;
+    font-size: 8px;
     font-weight: 600;
-    letter-spacing: .16em;
+    letter-spacing: .14em;
     text-transform: uppercase;
     color: rgba(245,230,200,.9);
     margin: 0;
@@ -678,9 +680,9 @@
     justify-content: center;
     gap: 0;
     width: 100%;
-    max-width: 210px;
+    max-width: 168px;
     flex-shrink: 0;
-    margin-top: 2px;
+    margin-top: 1px;
   }
   .sharbat-sizes .size-tile {
     flex: 1;
@@ -689,37 +691,37 @@
     align-items: center;
     justify-content: center;
     gap: 0;
-    padding: 2px 4px 3px;
+    padding: 1px 3px 2px;
     background: rgba(0,0,0,.55);
     border: 1px solid rgba(211,171,94,.7);
   }
   .sharbat-sizes .size-tile:first-child {
-    border-radius: 5px 0 0 5px;
+    border-radius: 4px 0 0 4px;
     border-right: none;
   }
   .sharbat-sizes .size-tile:last-child {
-    border-radius: 0 5px 5px 0;
+    border-radius: 0 4px 4px 0;
   }
   .sharbat-sizes .sz-label {
     font-family: var(--font-body);
-    font-size: 8px;
+    font-size: 7px;
     font-weight: 700;
-    letter-spacing: .18em;
+    letter-spacing: .16em;
     text-transform: uppercase;
     color: var(--gold-light);
-    line-height: 1.05;
+    line-height: 1;
   }
   .sharbat-sizes .sz-oz {
-    font-size: 8px;
+    font-size: 7px;
     font-weight: 300;
     font-style: italic;
     color: rgba(245,230,200,.8);
-    letter-spacing: .04em;
-    line-height: 1.05;
+    letter-spacing: .03em;
+    line-height: 1;
   }
   .sharbat-sizes .sz-price {
     font-family: var(--font-display);
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 700;
     color: var(--gold);
     line-height: 1;
@@ -734,15 +736,15 @@
   }
   .sharbat-banner {
     width: 100%;
-    max-width: 210px;
-    padding: 2px 6px;
+    max-width: 168px;
+    padding: 1px 5px;
     border: 1px solid rgba(211,171,94,.75);
     border-radius: 3px;
     background: rgba(0,0,0,.45);
     font-family: var(--font-display);
-    font-size: 9px;
+    font-size: 7px;
     font-weight: 700;
-    letter-spacing: .1em;
+    letter-spacing: .08em;
     text-transform: uppercase;
     color: var(--gold);
     line-height: 1.05;
