@@ -47,7 +47,7 @@ export const menuData: MenuCategory[] = [
       { name: "Ribeye Tikka Plate", price: "$24.87", notes: ["2 Ribeye Tikka, 1 Pita, rice, salad, baba ghanoush & hummus + tahini"] },
       { name: "Mix Kebab", price: "$20.71", image: "/images/maza/menu/opt-mix-kebab-plate.jpg", notes: ["1 Chicken Shish Kebab and 1 Beef + Lamb Shish Kebab, 1 Pita, rice, salad, baba ghanoush & hummus + tahini"] },
       { name: "Appetizer Plate", price: "$15.51", image: "/images/maza/menu/opt-appetizer-plate.jpg", notes: ["4 Dolma, 3 Falafel, Hummus, Baba Ghanoush & Tzatziki"] },
-      { name: "Falafel", price: "$16.55", image: "/images/maza/menu/opt-PXL_20260601_224012118.jpg", notes: ["5pc Falafel, 1 Pita, salad, baba ghanoush & hummus + tahini"] },
+      { name: "Falafel", price: "$16.55", image: "/images/maza/menu/opt-PXL_20260601_224012118.jpg", notes: ["6pc Falafel, 1 Pita, salad, baba ghanoush & hummus + tahini"] },
       { name: "Maza Grill", price: "$27.99", image: "/images/maza/menu/opt-Jun_6_2026_5_29_23.jpg", notes: ["1 Chicken Tikka, 1 Beef + Lamb Shish Kebab, 1 Chicken Shish Kebab, 1 Pita, rice, salad, baba ghanoush & hummus + tahini"] },
       { name: "Shredded Chicken Plate", price: "$18.49", image: "/images/maza/menu/opt-shredded-chicken-plate-vertical.jpg", notes: ["Maza in-house shredded chicken over a bed of rice, 1 Pita, salad, baba ghanoush and hummus + tahini", "Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Sriracha, Maza Spicy Sauce, Pomegranate Molasses. Sauce on the side available."] },
       { name: "Shredded Steak Plate", price: "$19.99", image: "/images/maza/menu/opt-shredded-steak-plate.jpg", notes: ["Maza in-house shredded steak over a bed of rice, 1 Pita, salad, baba ghanoush and hummus + tahini", "Choose up to 3 sauces: Tahini, Garlic Sauce, Sriracha Mayo, Sriracha, Maza Spicy Sauce, Pomegranate Molasses. Sauce on the side available."] }
@@ -98,7 +98,7 @@ export const menuData: MenuCategory[] = [
     category: "Sides",
     items: [
       { name: "Dolma", price: "$5.99" },
-      { name: "Falafel (2pc)", price: "$3.99" },
+      { name: "Falafel (4pc)", price: "$3.99", image: "/images/maza/menu/opt-falafel-side.jpg" },
       { name: "Kibbeh (3pc)", price: "$11.99", image: "/images/maza/menu/opt-kibbeh.jpg" },
       { name: "Fries", price: "$3.49", image: "/images/maza/menu/opt-side-fries-vertical.jpg" },
       { name: "Hummus with tahini and pita", price: "$5.99", image: "/images/maza/menu/opt-hummus-pita.jpg" },
@@ -114,8 +114,7 @@ export const menuData: MenuCategory[] = [
   {
     category: "Baklava",
     items: [
-      { name: "Dubai Chocolate Style Baklava", price: "$3.99", image: "/images/maza/menu/opt-baklava.jpg" },
-      { name: "Pistachio Baklava", price: "$3.99", image: "/images/maza/menu/opt-baklava.jpg" }
+      { name: "Dubai Chocolate Style Baklava", price: "$3.99", image: "/images/maza/menu/opt-baklava.jpg" }
     ],
   },
   {

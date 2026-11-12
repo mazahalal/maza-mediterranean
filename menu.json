@@ -115,7 +115,7 @@
           "name": "Falafel",
           "price": "$16.55",
           "notes": [
-            "5pc Falafel, 1 Pita, salad, baba ghanoush & hummus + tahini"
+            "6pc Falafel, 1 Pita, salad, baba ghanoush & hummus + tahini"
           ]
         },
         {
@@ -248,7 +248,7 @@
           "price": "$5.99"
         },
         {
-          "name": "Falafel (2pc)",
+          "name": "Falafel (4pc)",
           "price": "$3.99"
         },
         {
@@ -299,10 +299,6 @@
       "items": [
         {
           "name": "Dubai Chocolate Style Baklava",
-          "price": "$3.99"
-        },
-        {
-          "name": "Pistachio Baklava",
           "price": "$3.99"
         }
       ]
@@ -420,6 +416,12 @@
       "price": "$9.49",
       "_from_section": "Sides",
       "_hide_reason": "temporary stock gap — urgent hide site+TV; restore when back"
+    },
+    {
+      "section": "Baklava",
+      "name": "Pistachio Baklava",
+      "price": "$3.99",
+      "reason": "out of stock — temporary hide site+TV; Dubai Chocolate Style only until restocked"
     }
   ]
 }

@@ -243,7 +243,7 @@
         }
       },
       "row2": {
-        "_layout_note": "falafel side 2pc text-only (no falafel photos on TV); combo bar on",
+        "_layout_note": "falafel side 4pc text; premium photo kibbeh (not fries); combo bar on",
         "burgers": {
           "section": "Burgers"
         },
@@ -320,7 +320,7 @@
               ],
               [
                 "Sides",
-                "Falafel (2pc)"
+                "Falafel (4pc)"
               ],
               [
                 "Sides",
@@ -334,10 +334,10 @@
             "photo": {
               "ref": [
                 "Sides",
-                "Fries"
+                "Kibbeh (3pc)"
               ],
-              "photo": "sides-fries.jpg",
-              "caption": "Fries"
+              "photo": "sides-kibbeh-3pc.jpg",
+              "caption": "Kibbeh"
             }
           }
         ],
@@ -379,26 +379,19 @@
           {
             "ref": [
               "Baklava",
-              "Pistachio Baklava"
-            ],
-            "caption": "Pistachio Baklava",
-            "photo": "baklava-pistachio-baklava.jpg"
-          },
-          {
-            "ref": [
-              "Baklava",
               "Dubai Chocolate Style Baklava"
             ],
-            "caption": "Dubai Chocolate Style Baklava",
-            "photo": "baklava-cashew-baklava.jpg"
+            "caption": "Baklava · Dubai Chocolate",
+            "photo": "baklava-dubai-chocolate-style-baklava.jpg"
           }
         ],
         "desserts_card": {
           "ref": [
             "Baklava",
-            "Pistachio Baklava"
+            "Dubai Chocolate Style Baklava"
           ],
-          "caption": "Pistachio Baklava"
+          "caption": "Baklava · Dubai Chocolate",
+          "photo": "baklava-dubai-chocolate-style-baklava.jpg"
         },
         "desserts": {
           "title": "Desserts",
@@ -406,10 +399,6 @@
             [
               "Baklava",
               "Dubai Chocolate Style Baklava"
-            ],
-            [
-              "Baklava",
-              "Pistachio Baklava"
             ]
           ]
         },
