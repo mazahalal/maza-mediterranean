@@ -599,11 +599,11 @@
   .sharbat-card .sharbat-photo {
     width: 100%;
     flex: 1 1 auto;
-    min-height: 110px;
-    max-height: 160px;
+    min-height: 140px;
+    max-height: 220px;
     min-width: 0;
     overflow: hidden;
-    border-radius: 0;
+    border-radius: 8px;
     border: none;
     margin: 0;
     background: transparent;
@@ -615,6 +615,11 @@
     object-position: center bottom;
     display: block;
     background: transparent;
+  }
+  /* TEMP photo-fit override (JPEG product shot vs transparent cutout) */
+  .sharbat-card .sharbat-photo.fit-cover img {
+    object-fit: cover;
+    object-position: center 35%;
   }
   .sharbat-card .sharbat-ar {
     font-family: 'Noto Naskh Arabic Local', 'Noto Naskh Arabic', 'Noto Sans Arabic', serif;
@@ -989,7 +994,8 @@
           {% endif %}
         {% endif %}
         {% if sh_photo %}
-        <div class="sharbat-photo">
+        {% set sh_fit = s.row3.sharbat_card.fit if s.row3.sharbat_card is defined and s.row3.sharbat_card.fit is defined else 'contain' %}
+        <div class="sharbat-photo {% if sh_fit == 'cover' %}fit-cover{% endif %}">
           <img src="../photos/{{ sh_photo }}" alt="Sharbat">
         </div>
         {% endif %}
