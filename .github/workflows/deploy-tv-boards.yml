@@ -45,7 +45,15 @@ jobs:
             sed -i 's|src="../photos/|src="/photos/|g' "$f"
             grep -q 'http-equiv="Cache-Control"' "$f" || sed -i 's|<meta charset="utf-8">|<meta charset="utf-8">\n<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">\n<meta http-equiv="Pragma" content="no-cache">|' "$f"
           done
-          HASH=$(sha256sum menu.json html-menus/tv-screens.json html-menus/photo-map.json | sha256sum | awk '{print $1}')
+          HASH=$( {
+            sha256sum menu.json html-menus/tv-screens.json html-menus/photo-map.json \
+              html-menus/tv-theme.css \
+              html-menus/templates/tv-screen1.html \
+              html-menus/templates/tv-screen2.html \
+              html-menus/templates/tv-screen3.html 2>/dev/null
+            find html-menus/photos -type f \( -name '*.jpg' -o -name '*.png' -o -name '*.webp' \) 2>/dev/null \
+              | sort | xargs -r sha256sum 2>/dev/null | sha256sum
+          } | sha256sum | awk '{print $1}')
           printf '{"version":"%s","builtAt":"%s","source":"github-actions"}\n' "$HASH" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > /tmp/maza-tv/version.json
           # Match maza-tv-boards/vercel.json — Fully Kiosk uses clean /screenN paths
           cat > /tmp/maza-tv/vercel.json <<'JSON'
