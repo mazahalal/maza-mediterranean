@@ -560,7 +560,7 @@
     opacity: 1;
   }
 
-  /* SHARBAT — featured card (widened; transparent cut photo) */
+  /* SHARBAT — full-bleed photo + bottom overlay (temp cup) */
   .s3-sharbat {
     flex: 0 0 400px !important;
     min-width: 0;
@@ -575,80 +575,102 @@
     margin: 0;
   }
   .sharbat-card {
+    position: relative;
     align-self: stretch;
+    flex: 1 1 auto;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
+    align-items: stretch;
+    justify-content: stretch;
     text-align: center;
     min-height: 0;
     min-width: 0;
-    padding: 6px 12px 8px;
-    gap: 4px;
+    padding: 0;
+    gap: 0;
     border-top: 2px solid var(--gold);
     border-right: 2px solid var(--gold);
     border-bottom: 2px solid var(--gold);
     border-left: none;
     border-radius: 10px;
-    background:
-      radial-gradient(ellipse 90% 55% at 50% 0%, rgba(211,171,94,.12), transparent 62%),
-      linear-gradient(180deg, #0c0a08 0%, #000 55%, #0a0806 100%);
+    background: #000;
     box-sizing: border-box;
     overflow: hidden;
   }
   .sharbat-card .sharbat-photo {
+    position: absolute;
+    inset: 0;
     width: 100%;
-    flex: 1 1 auto;
-    min-height: 140px;
-    max-height: 220px;
+    height: 100%;
+    min-height: 0;
+    max-height: none;
     min-width: 0;
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: 0;
     border: none;
     margin: 0;
-    background: transparent;
+    background: #000;
+    z-index: 0;
   }
   .sharbat-card .sharbat-photo img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    object-position: center bottom;
+    object-position: center center;
     display: block;
-    background: transparent;
+    background: #000;
   }
-  /* TEMP photo-fit override (JPEG product shot vs transparent cutout) */
+  /* TEMP full-bleed product shot */
   .sharbat-card .sharbat-photo.fit-cover img {
     object-fit: cover;
-    object-position: center 35%;
+    object-position: center 38%;
+  }
+  .sharbat-card .sharbat-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    padding: 28px 10px 8px;
+    background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,.55) 28%, rgba(0,0,0,.88) 100%);
+    pointer-events: none;
   }
   .sharbat-card .sharbat-ar {
     font-family: 'Noto Naskh Arabic Local', 'Noto Naskh Arabic', 'Noto Sans Arabic', serif;
-    font-size: 28px;
+    font-size: 16px;
     font-weight: 700;
     color: var(--gold-light);
     letter-spacing: 0;
-    line-height: 1.1;
+    line-height: 1;
     margin: 0;
     direction: rtl;
     unicode-bidi: isolate;
+    text-shadow: 0 1px 6px rgba(0,0,0,.9);
   }
   .sharbat-card .band-title {
-    font-size: 28px;
-    letter-spacing: .18em;
+    font-size: 16px;
+    letter-spacing: .14em;
     margin: 0;
-    line-height: 1.05;
+    line-height: 1;
+    color: var(--gold);
+    text-shadow: 0 1px 6px rgba(0,0,0,.9);
   }
   .sharbat-card .band-title .rule {
-    width: 28px;
-    margin: 0 8px 5px;
+    width: 14px;
+    margin: 0 5px 2px;
   }
   .sharbat-card .sharbat-kicker {
-    font-size: 13px;
+    font-size: 9px;
     font-weight: 600;
-    letter-spacing: .22em;
+    letter-spacing: .16em;
     text-transform: uppercase;
-    color: var(--gold-light);
+    color: rgba(245,230,200,.9);
     margin: 0;
+    text-shadow: 0 1px 4px rgba(0,0,0,.9);
   }
   .sharbat-sizes {
     display: flex;
@@ -656,8 +678,9 @@
     justify-content: center;
     gap: 0;
     width: 100%;
-    max-width: 240px;
+    max-width: 210px;
     flex-shrink: 0;
+    margin-top: 2px;
   }
   .sharbat-sizes .size-tile {
     flex: 1;
@@ -665,43 +688,44 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1px;
-    padding: 6px 6px 7px;
-    background: linear-gradient(180deg, rgba(211,171,94,.14) 0%, rgba(211,171,94,.04) 100%);
-    border: 1px solid rgba(211,171,94,.55);
+    gap: 0;
+    padding: 2px 4px 3px;
+    background: rgba(0,0,0,.55);
+    border: 1px solid rgba(211,171,94,.7);
   }
   .sharbat-sizes .size-tile:first-child {
-    border-radius: 7px 0 0 7px;
+    border-radius: 5px 0 0 5px;
     border-right: none;
   }
   .sharbat-sizes .size-tile:last-child {
-    border-radius: 0 7px 7px 0;
+    border-radius: 0 5px 5px 0;
   }
   .sharbat-sizes .sz-label {
     font-family: var(--font-body);
-    font-size: 10px;
+    font-size: 8px;
     font-weight: 700;
-    letter-spacing: .24em;
+    letter-spacing: .18em;
     text-transform: uppercase;
     color: var(--gold-light);
-    line-height: 1.15;
+    line-height: 1.05;
   }
   .sharbat-sizes .sz-oz {
-    font-size: 10px;
+    font-size: 8px;
     font-weight: 300;
     font-style: italic;
-    color: rgba(245,230,200,.75);
+    color: rgba(245,230,200,.8);
     letter-spacing: .04em;
-    line-height: 1.15;
+    line-height: 1.05;
   }
   .sharbat-sizes .sz-price {
     font-family: var(--font-display);
-    font-size: 28px;
+    font-size: 20px;
     font-weight: 700;
     color: var(--gold);
     line-height: 1;
     letter-spacing: .02em;
-    margin-top: 1px;
+    margin-top: 0;
+    text-shadow: 0 1px 4px rgba(0,0,0,.8);
   }
   .sharbat-sizes .size-mid {
     width: 0;
@@ -710,36 +734,23 @@
   }
   .sharbat-banner {
     width: 100%;
-    max-width: 240px;
-    padding: 5px 10px;
-    border: 1px solid var(--gold);
-    border-radius: 4px;
-    background: linear-gradient(90deg, transparent, rgba(211,171,94,.16), transparent);
+    max-width: 210px;
+    padding: 2px 6px;
+    border: 1px solid rgba(211,171,94,.75);
+    border-radius: 3px;
+    background: rgba(0,0,0,.45);
     font-family: var(--font-display);
-    font-size: 12px;
+    font-size: 9px;
     font-weight: 700;
-    letter-spacing: .12em;
+    letter-spacing: .1em;
     text-transform: uppercase;
     color: var(--gold);
-    line-height: 1.15;
+    line-height: 1.05;
     flex-shrink: 0;
   }
-  .sharbat-card .sharbat-desc {
-    font-size: 15px;
-    font-style: italic;
-    font-weight: 300;
-    color: var(--gold-light);
-    line-height: 1.3;
-    max-width: 260px;
-    margin: 0;
-  }
-  .sharbat-orn {
-    color: var(--gold);
-    font-size: 14px;
-    letter-spacing: .55em;
-    line-height: 1;
-    opacity: .9;
-  }
+  .sharbat-card .sharbat-orn { display: none; }
+  .sharbat-card .sharbat-desc { display: none; }
+  .sharbat-orn { display: none; }
 
   .s3-band { display: flex; align-items: baseline; justify-content: center; gap: 10px; }
 </style>
@@ -999,27 +1010,27 @@
           <img src="../photos/{{ sh_photo }}" alt="Sharbat">
         </div>
         {% endif %}
-        <div class="sharbat-orn">❖ ❖ ❖</div>
-        <p class="sharbat-ar">شربات</p>
-        <h2 class="band-title"><span class="rule"></span>{{ s.row3.sharbat.name }}<span class="rule"></span></h2>
-        {% if s.row3.sharbat.subtitle %}
-        <p class="sharbat-kicker">{{ s.row3.sharbat.subtitle }}</p>
-        {% endif %}
-        <div class="sharbat-sizes">
-          <div class="size-tile">
-            <span class="sz-label">SM</span>
-            <span class="sz-oz">{{ sm_oz }}</span>
-            <span class="sz-price">{{ sm_price }}</span>
+        <div class="sharbat-overlay">
+          <p class="sharbat-ar">شربات</p>
+          <h2 class="band-title"><span class="rule"></span>{{ s.row3.sharbat.name }}<span class="rule"></span></h2>
+          {% if s.row3.sharbat.subtitle %}
+          <p class="sharbat-kicker">{{ s.row3.sharbat.subtitle }}</p>
+          {% endif %}
+          <div class="sharbat-sizes">
+            <div class="size-tile">
+              <span class="sz-label">SM</span>
+              <span class="sz-oz">{{ sm_oz }}</span>
+              <span class="sz-price">{{ sm_price }}</span>
+            </div>
+            <div class="size-mid"></div>
+            <div class="size-tile">
+              <span class="sz-label">LG</span>
+              <span class="sz-oz">{{ lg_oz }}</span>
+              <span class="sz-price">{{ lg_price }}</span>
+            </div>
           </div>
-          <div class="size-mid"></div>
-          <div class="size-tile">
-            <span class="sz-label">LG</span>
-            <span class="sz-oz">{{ lg_oz }}</span>
-            <span class="sz-price">{{ lg_price }}</span>
-          </div>
+          <div class="sharbat-banner">Flavors change daily</div>
         </div>
-        <div class="sharbat-banner">Flavors change daily</div>
-        <div class="sharbat-orn">❖</div>
       </div>
     </div>
   </div>
