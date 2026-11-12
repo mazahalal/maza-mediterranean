@@ -1,5 +1,5 @@
 {
-  "_comment": "TV screen definitions. Item refs are [Section, Item] pairs resolved from menu.json at build time — prices/notes always come from menu.json, never hardcoded here. Edit groupings/cards freely; text data stays in menu.json.",
+  "_comment": "TV screen definitions. Item refs are [Section, Item] pairs resolved from menu.json at build time \u2014 prices/notes always come from menu.json, never hardcoded here. Edit groupings/cards freely; text data stays in menu.json.",
   "screens": [
     {
       "id": "screen1-wraps",
@@ -381,7 +381,7 @@
               "Baklava",
               "Dubai Chocolate Style Baklava"
             ],
-            "caption": "Baklava · Dubai Chocolate",
+            "caption": "Baklava \u00b7 Dubai Chocolate",
             "photo": "baklava-dubai-chocolate-style-baklava.jpg"
           }
         ],
@@ -390,7 +390,7 @@
             "Baklava",
             "Dubai Chocolate Style Baklava"
           ],
-          "caption": "Baklava · Dubai Chocolate",
+          "caption": "Baklava \u00b7 Dubai Chocolate",
           "photo": "baklava-dubai-chocolate-style-baklava.jpg"
         },
         "desserts": {
@@ -478,9 +478,10 @@
           "section": "Sharbat"
         },
         "sharbat_card": {
-          "photo": "sharbat-three-cups-nobg.png",
+          "photo": "sharbat-cup-temp.jpg",
           "caption": "Sharbat",
-          "_note": "transparent cut from OneDrive digital/reference/sharbat_three_cups_nobg_v1.png"
+          "_note": "TEMP: Frank Discord cup photo 2026-11-12 \u2014 restore sharbat-three-cups-nobg.png when done",
+          "fit": "cover"
         },
         "desserts_hidden": false
       }
