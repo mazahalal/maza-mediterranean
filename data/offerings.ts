@@ -338,15 +338,15 @@ export const OFFERING_PAGES: OfferingPage[] = [
     h1: "Falafel in Chandler, AZ",
     title: "Falafel | Chandler, AZ | Maza Mediterranean",
     description:
-      "Halal falafel in Chandler — plate (5pc) $16.55, wrap $9.35, and 2-piece side $3.99. Appetizer Plate $15.51 with 4 dolma + 3 falafel.",
-    hook: "Falafel is back — plate with 5pc falafel $16.55, wrap $9.35, side 2pc $3.99. The Appetizer Plate ($15.51) now lands with 4 dolma, 3 falafel, hummus, baba ghanoush, and tzatziki.",
+      "Halal falafel in Chandler — plate (6pc) $16.55, wrap $9.35, and 4-piece side $3.99. Appetizer Plate $15.51 with 4 dolma + 3 falafel.",
+    hook: "Falafel plate with 6pc $16.55, wrap $9.35, side 4pc $3.99. The Appetizer Plate ($15.51) lands with 4 dolma, 3 falafel, hummus, baba ghanoush, and tzatziki.",
     intro:
-      "Falafel is fried to order — crisp shell, soft middle. The plate is 5 pieces with pita, salad, baba ghanoush, and hummus + tahini. Grab the wrap or a 2pc side if you want less.",
+      "Falafel is fried to order — crisp shell, soft middle. The plate is 6 pieces with pita, salad, baba ghanoush, and hummus + tahini. Grab the wrap or a 4pc side if you want less.",
     priceHeading: "Falafel pricing",
     priceRows: [
-      { label: "Falafel Plate (5pc)", price: "$16.55" },
+      { label: "Falafel Plate (6pc)", price: "$16.55" },
       { label: "Falafel Wrap", price: "$9.35" },
-      { label: "Falafel (2pc) Side", price: "$3.99" },
+      { label: "Falafel (4pc) Side", price: "$3.99" },
       { label: "Appetizer Plate", price: "$15.51", note: "4 dolma, 3 falafel, hummus, baba & tzatziki" },
     ],
     faqs: [
@@ -608,22 +608,21 @@ export const OFFERING_PAGES: OfferingPage[] = [
   {
     slug: "baklava",
     h1: "Baklava in Chandler, AZ",
-    title: "Baklava $3.99 — Pistachio & Dubai Chocolate Style | Chandler, AZ | Maza",
+    title: "Baklava $3.99 — Dubai Chocolate Style | Chandler, AZ | Maza",
     description:
-      "Pistachio and Dubai chocolate style baklava, $3.99 each, at Maza Mediterranean Cuisine in Chandler, AZ. Layered phyllo, honey syrup, made in house.",
-    hook: "Maza serves two baklava, pistachio and Dubai chocolate style, and both are $3.99. They are built the same way: layer on layer of phyllo, brushed and baked, then finished with syrup — the kind of dessert that is a fifteen-bite job and worth ordering two of.",
+      "Dubai chocolate style baklava, $3.99, at Maza Mediterranean Cuisine in Chandler, AZ. Layered phyllo, chocolate-pistachio finish, made in house.",
+    hook: "Maza is serving Dubai chocolate style baklava at $3.99 — layered phyllo with the chocolate-pistachio finish, the kind of dessert that is a fifteen-bite job and worth ordering two of.",
     intro:
-      "Baklava is the standard close to a Mediterranean meal, and we keep both the pistachio and the Dubai chocolate style so nobody has to split one.",
+      "Baklava is the standard close to a Mediterranean meal. Right now the board is Dubai chocolate style only while pistachio is out.",
     priceHeading: "Baklava pricing",
     priceRows: [
       { label: "Dubai Chocolate Style Baklava", price: "$3.99" },
-      { label: "Pistachio Baklava", price: "$3.99" },
     ],
     faqs: [
       {
-        question: "Which baklava should I get?",
+        question: "Which baklava do you have?",
         answer:
-          "Pistachio is the classic nutty baklava; Dubai chocolate style is the chocolate-pistachio finish. They are both $3.99, so the honest answer is to get one of each.",
+          "Dubai chocolate style baklava is $3.99 right now. Pistachio is temporarily out — ask at the counter when it is back.",
       },
       {
         question: "Does baklava contain dairy?",
@@ -785,10 +784,10 @@ export const OFFERING_PAGES: OfferingPage[] = [
     h1: "Vegetarian & Vegan Options in Chandler, AZ",
     title: "Vegetarian & Vegan Mediterranean | Chandler, AZ | Maza",
     description:
-      "Vegetarian and vegan Mediterranean food in Chandler — Appetizer Plate $15.51, hummus, baba ghanoush, dolma, tabouleh. Halal kitchen. Falafel available (plate 5pc / wrap / 2pc side).",
-    hook: "Maza's plant-based orders center on the Appetizer Plate ($15.51) with 4 dolma, 3 falafel, hummus, baba ghanoush, and tzatziki. Hummus with tahini and pita is $5.99, baba ghanoush is $1.99 small, dolma $5.99, and tabouleh $4.99. Falafel is available — plate 5pc, wrap, or 2pc side.",
+      "Vegetarian and vegan Mediterranean food in Chandler — Appetizer Plate $15.51, hummus, baba ghanoush, dolma, tabouleh. Halal kitchen. Falafel available (plate 6pc / wrap / 4pc side).",
+    hook: "Maza's plant-based orders center on the Appetizer Plate ($15.51) with 4 dolma, 3 falafel, hummus, baba ghanoush, and tzatziki. Hummus with tahini and pita is $5.99, baba ghanoush is $1.99 small, dolma $5.99, and tabouleh $4.99. Falafel is available — plate 6pc, wrap, or 4pc side.",
     intro:
-      "The vegetarian side of a Mediterranean menu is not an afterthought here — hummus, baba ghanoush, dolma, and tabouleh are all made in house. Falafel is available — plate 5pc, wrap, or 2pc side.",
+      "The vegetarian side of a Mediterranean menu is not an afterthought here — hummus, baba ghanoush, dolma, and tabouleh are all made in house. Falafel is available — plate 6pc, wrap, or 4pc side.",
     priceHeading: "Vegetarian and vegan pricing",
     priceRows: [
       { label: "Appetizer Plate", price: "$15.51" },
@@ -800,7 +799,7 @@ export const OFFERING_PAGES: OfferingPage[] = [
       {
         question: "What is vegan at Maza?",
         answer:
-          "Hummus with tahini, baba ghanoush, dolma, tabouleh, and the salads are plant-based. Avoid the tzatziki and any yogurt-based sauce if you are vegan. Falafel is available — plate 5pc, wrap, or 2pc side.",
+          "Hummus with tahini, baba ghanoush, dolma, tabouleh, and the salads are plant-based. Avoid the tzatziki and any yogurt-based sauce if you are vegan. Falafel is available — plate 6pc, wrap, or 4pc side.",
       },
       {
         question: "Is the falafel plate a full meal?",
@@ -928,7 +927,7 @@ export const OFFERING_PAGES: OfferingPage[] = [
     title: "Lunch Specials in Chandler, AZ | Maza Mediterranean Cuisine",
     description:
       "Mediterranean lunch in Chandler — wraps from $9.35, chicken tikka plate $19.67, Maza Salad $13.99, and the $10 Plaza Lunch Club for plaza employees.",
-    hook: "Maza wraps start at $10.91 for beef gyro, and the chicken tikka plate is $19.67 — a full lunch with two skewers, rice, salad, baba ghanoush, and hummus + tahini. Employees in the plaza and nearby businesses can also join the Plaza Lunch Club: any wrap or burger for $10. Falafel is available — plate 5pc, wrap, or 2pc side.",
+    hook: "Maza wraps start at $10.91 for beef gyro, and the chicken tikka plate is $19.67 — a full lunch with two skewers, rice, salad, baba ghanoush, and hummus + tahini. Employees in the plaza and nearby businesses can also join the Plaza Lunch Club: any wrap or burger for $10. Falafel is available — plate 6pc, wrap, or 4pc side.",
     intro:
       "Lunch at Maza is the same kitchen as dinner, cooked to order rather than held warm. If you are on a break, wraps are the fast order; plates take slightly longer but are a bigger meal.",
     priceHeading: "Lunch pricing",
@@ -949,7 +948,7 @@ export const OFFERING_PAGES: OfferingPage[] = [
       {
         question: "What is the fastest lunch order?",
         answer:
-          "A wrap — beef gyro $10.91 or chicken tikka $11.43. Plates are cooked to order with two skewers and take a few minutes longer. Falafel is available — plate 5pc, wrap, or 2pc side.",
+          "A wrap — beef gyro $10.91 or chicken tikka $11.43. Plates are cooked to order with two skewers and take a few minutes longer. Falafel is available — plate 6pc, wrap, or 4pc side.",
       },
       FAQ_HOURS,
       FAQ_ORDER,

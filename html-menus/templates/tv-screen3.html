@@ -930,9 +930,9 @@
         {% else %}
         {% set baklava = dcard.ref %}
         {% set baklava_photo = dcard.photo if dcard.photo is defined else baklava.photo %}
-        {% set baklava_name = "Baklava · Pistachio / Dubai Chocolate" %}
+        {% set baklava_name = "Baklava · Dubai Chocolate" %}
         {% if s.row3.desserts_cards is defined and s.row3.desserts_cards|length == 1 %}
-          {% set baklava_name = dcard.caption if dcard.caption is defined else "Baklava · Pistachio" %}
+          {% set baklava_name = dcard.caption if dcard.caption is defined else "Baklava · Dubai Chocolate" %}
         {% endif %}
         {% set baklava_price = baklava.price if baklava.price is string and baklava.price.startswith('$') else ('$' ~ baklava.price|replace('$','')) %}
         {% if s.row3.desserts_cards is defined and s.row3.desserts_cards|length > 1 %}
