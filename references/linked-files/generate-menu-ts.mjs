@@ -87,6 +87,7 @@ const images = {
   // --- Baklava ---
   'Dubai Chocolate Style Baklava|Baklava': '/images/maza/menu/opt-baklava.jpg',
   'Pistachio Baklava|Baklava': '/images/maza/menu/opt-baklava.jpg',
+  'Walnut Baklava|Baklava': '/images/maza/menu/opt-baklava.jpg',
 };
 
 function esc(s) {

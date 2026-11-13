@@ -1,5 +1,5 @@
 {
-  "_comment": "TV screen definitions. Item refs are [Section, Item] pairs resolved from menu.json at build time \u2014 prices/notes always come from menu.json, never hardcoded here. Edit groupings/cards freely; text data stays in menu.json.",
+  "_comment": "TV screen definitions. Item refs are [Section, Item] pairs resolved from menu.json at build time — prices/notes always come from menu.json, never hardcoded here. Edit groupings/cards freely; text data stays in menu.json.",
   "screens": [
     {
       "id": "screen1-wraps",
@@ -379,23 +379,47 @@
           {
             "ref": [
               "Baklava",
+              "Pistachio Baklava"
+            ],
+            "caption": "Baklava · Pistachio / Walnut / Dubai Chocolate",
+            "photo": "baklava-pistachio-baklava.jpg"
+          },
+          {
+            "ref": [
+              "Baklava",
+              "Walnut Baklava"
+            ],
+            "caption": "Walnut Baklava",
+            "photo": "baklava-cashew-baklava.jpg"
+          },
+          {
+            "ref": [
+              "Baklava",
               "Dubai Chocolate Style Baklava"
             ],
-            "caption": "Baklava \u00b7 Dubai Chocolate",
+            "caption": "Dubai Chocolate Style Baklava",
             "photo": "baklava-dubai-chocolate-style-baklava.jpg"
           }
         ],
         "desserts_card": {
           "ref": [
             "Baklava",
-            "Dubai Chocolate Style Baklava"
+            "Pistachio Baklava"
           ],
-          "caption": "Baklava \u00b7 Dubai Chocolate",
-          "photo": "baklava-dubai-chocolate-style-baklava.jpg"
+          "caption": "Baklava · Pistachio / Walnut / Dubai Chocolate",
+          "photo": "baklava-pistachio-baklava.jpg"
         },
         "desserts": {
           "title": "Desserts",
           "items": [
+            [
+              "Baklava",
+              "Pistachio Baklava"
+            ],
+            [
+              "Baklava",
+              "Walnut Baklava"
+            ],
             [
               "Baklava",
               "Dubai Chocolate Style Baklava"
@@ -480,7 +504,7 @@
         "sharbat_card": {
           "photo": "sharbat-cup-temp.jpg",
           "caption": "Sharbat",
-          "_note": "TEMP: Frank Discord cup photo 2026-11-12 \u2014 restore sharbat-three-cups-nobg.png when done",
+          "_note": "TEMP: Frank Discord cup photo 2026-11-12 — restore sharbat-three-cups-nobg.png when done",
           "fit": "cover"
         },
         "desserts_hidden": false
