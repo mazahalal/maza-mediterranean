@@ -76,6 +76,10 @@
         [
           "Wraps",
           "Chicken Shish Kebab Wrap"
+        ],
+        [
+          "Wraps",
+          "Ribeye Tikka Wrap"
         ]
       ],
       "banner": {
@@ -173,6 +177,10 @@
         [
           "Plates",
           "Shredded Chicken Plate"
+        ],
+        [
+          "Plates",
+          "Ribeye Tikka Plate"
         ]
       ],
       "specials": {
