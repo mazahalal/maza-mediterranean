@@ -19,10 +19,6 @@
           "price": "$12.99"
         },
         {
-          "name": "Chicken Tikka Wrap",
-          "price": "$11.43"
-        },
-        {
           "name": "Crispy Chicken Wrap",
           "price": "$14.55"
         },
@@ -74,13 +70,6 @@
           "price": "$19.67",
           "notes": [
             "2 Chicken Shish Kebab, 1 Pita, rice, salad, baba ghanoush & hummus + tahini"
-          ]
-        },
-        {
-          "name": "Chicken Tikka Plate",
-          "price": "$19.67",
-          "notes": [
-            "2 Chicken Tikka, 1 Pita, rice, salad, baba ghanoush & hummus + tahini"
           ]
         },
         {
