@@ -38,6 +38,10 @@
           "items": [
             [
               "Wraps",
+              "Chicken Tikka Wrap"
+            ],
+            [
+              "Wraps",
               "Lamb Tikka Wrap"
             ],
             [
@@ -75,11 +79,11 @@
         ],
         [
           "Wraps",
-          "Chicken Shish Kebab Wrap"
+          "Chicken Tikka Wrap"
         ],
         [
           "Wraps",
-          "Ribeye Tikka Wrap"
+          "Chicken Shish Kebab Wrap"
         ]
       ],
       "banner": {
@@ -103,6 +107,10 @@
               [
                 "Plates",
                 "Chicken Shish Kebab"
+              ],
+              [
+                "Plates",
+                "Chicken Tikka Plate"
               ],
               [
                 "Plates",
@@ -172,15 +180,15 @@
         ],
         [
           "Plates",
+          "Chicken Tikka Plate"
+        ],
+        [
+          "Plates",
           "Mix Kebab"
         ],
         [
           "Plates",
           "Shredded Chicken Plate"
-        ],
-        [
-          "Plates",
-          "Lamb Tikka Plate"
         ]
       ],
       "specials": {

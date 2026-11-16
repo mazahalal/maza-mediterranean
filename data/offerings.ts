@@ -172,6 +172,40 @@ export const OFFERING_PAGES: OfferingPage[] = [
     keywords: ["shish kebab Chandler AZ", "chicken shish kebab Chandler", "halal kebab Chandler"],
   },
   {
+    slug: "chicken-tikka",
+    h1: "Chicken Tikka Plate & Wrap in Chandler, AZ",
+    title: "Chicken Tikka Plate $19.67 | Chandler, AZ | Maza Mediterranean",
+    description:
+      "Chicken tikka in Chandler — $19.67 plate with 2 skewers, pita, rice, salad, baba ghanoush + hummus, or $11.43 as a wrap. Halal-certified.",
+    hook: "Maza's chicken tikka plate is $19.67 and comes with two skewers, pita, rice, salad, baba ghanoush, and hummus + tahini. The same chicken tikka is $11.43 wrapped with hummus, tomato, onion, lettuce, pickle, and garlic sauce.",
+    intro:
+      "Chicken tikka is the most-ordered thing on the Maza grill — marinated thigh meat, charred at the edges, still juicy in the middle. It is also the cheapest way into a full plate of food on the menu.",
+    priceHeading: "Chicken tikka pricing",
+    priceRows: [
+      { label: "Chicken Tikka Plate", price: "$19.67", note: "2 chicken tikka, pita, rice, salad, baba ghanoush & hummus + tahini" },
+      { label: "Chicken Tikka Wrap", price: "$11.43" },
+      { label: "Maza Grill", price: "$27.99", note: "Includes 1 chicken tikka + 2 other kebabs" },
+      { label: "Combo Upgrade", price: "$4.99", note: "Adds fries + drink" },
+    
+    ],
+    faqs: [
+      {
+        question: "Is chicken tikka spicy?",
+        answer:
+          "No — it is seasoned and grilled, not heat-forward. Any heat on the plate comes from the sauces you choose, and sauces are served on the side on request.",
+      },
+      FAQ_HALAL,
+      FAQ_ORDER,
+      FAQ_PARKING,
+    ],
+    menuPath: "/menu/plates",
+    menuLabel: "plates",
+    menuSection: "Plates",
+    image: "/images/maza/menu/opt-chicken-tikka-plate.jpg",
+    imageAlt: "Chicken tikka plate with rice and salad at Maza Mediterranean Cuisine Chandler AZ",
+    keywords: ["chicken tikka Chandler AZ", "chicken tikka plate Chandler", "halal chicken Chandler"],
+  },
+  {
     slug: "lamb-tikka",
     h1: "Lamb Tikka Plate & Wrap in Chandler, AZ",
     title: "Lamb Tikka Plate $20.71 | Chandler, AZ | Maza Mediterranean",
@@ -837,7 +871,7 @@ export const OFFERING_PAGES: OfferingPage[] = [
     priceHeading: "What to order in",
     priceRows: [
       { label: "Appetizer Plate", price: "$15.51", note: "4 Dolma, 3 Falafel, Hummus, Baba Ghanoush & Tzatziki" },
-      { label: "Lamb Tikka Plate", price: "$20.71", note: "Most-ordered plate" },
+      { label: "Chicken Tikka Plate", price: "$19.67", note: "Most-ordered plate" },
       { label: "Maza Grill", price: "$27.99", note: "Three kebabs, one plate" },
     ],
     faqs: [
@@ -869,7 +903,7 @@ export const OFFERING_PAGES: OfferingPage[] = [
     priceHeading: "Popular orders to go",
     priceRows: [
       { label: "Beef Gyro Wrap", price: "$10.91", note: "Great traveller" },
-      { label: "Lamb Tikka Plate", price: "$20.71", note: "Full plate, boxed" },
+      { label: "Chicken Tikka Plate", price: "$19.67", note: "Full plate, boxed" },
       { label: "Family Meal", price: "$87.49", note: "Weekend special 12 shish — call ahead" },
     ],
     faqs: [
@@ -894,15 +928,15 @@ export const OFFERING_PAGES: OfferingPage[] = [
     h1: "Lunch Specials in Chandler, AZ",
     title: "Lunch Specials in Chandler, AZ | Maza Mediterranean Cuisine",
     description:
-      "Mediterranean lunch in Chandler — wraps from $9.35, lamb tikka plate $20.71, Maza Salad $13.99, and the $10 Plaza Lunch Club for plaza employees.",
-    hook: "Maza wraps start at $10.91 for beef gyro, and the lamb tikka plate is $20.71 — a full lunch with two skewers, rice, salad, baba ghanoush, and hummus + tahini. Employees in the plaza and nearby businesses can also join the Plaza Lunch Club: any wrap or burger for $10. Falafel is available — plate 6pc, wrap, or 4pc side.",
+      "Mediterranean lunch in Chandler — wraps from $9.35, chicken tikka plate $19.67, Maza Salad $13.99, and the $10 Plaza Lunch Club for plaza employees.",
+    hook: "Maza wraps start at $10.91 for beef gyro, and the chicken tikka plate is $19.67 — a full lunch with two skewers, rice, salad, baba ghanoush, and hummus + tahini. Employees in the plaza and nearby businesses can also join the Plaza Lunch Club: any wrap or burger for $10. Falafel is available — plate 6pc, wrap, or 4pc side.",
     intro:
       "Lunch at Maza is the same kitchen as dinner, cooked to order rather than held warm. If you are on a break, wraps are the fast order; plates take slightly longer but are a bigger meal.",
     priceHeading: "Lunch pricing",
     priceRows: [
       { label: "Appetizer Plate", price: "$15.51", note: "Vegetarian plate " },
       { label: "Beef Gyro Wrap", price: "$10.91" },
-      { label: "Lamb Tikka Plate", price: "$20.71", note: "Full plate lunch" },
+      { label: "Chicken Tikka Plate", price: "$19.67", note: "Full plate lunch" },
       { label: "Maza Salad", price: "$13.99", note: "Choose chicken or steak" },
       { label: "Combo Upgrade", price: "$4.99", note: "Adds fries + drink" },
     
@@ -916,7 +950,7 @@ export const OFFERING_PAGES: OfferingPage[] = [
       {
         question: "What is the fastest lunch order?",
         answer:
-          "A wrap — beef gyro $10.91 or beef + lamb shish kebab wrap $12.99. Plates are cooked to order with two skewers and take a few minutes longer. Falafel is available — plate 6pc, wrap, or 4pc side.",
+          "A wrap — beef gyro $10.91 or chicken tikka $11.43. Plates are cooked to order with two skewers and take a few minutes longer. Falafel is available — plate 6pc, wrap, or 4pc side.",
       },
       FAQ_HOURS,
       FAQ_ORDER,
