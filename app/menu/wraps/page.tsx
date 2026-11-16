@@ -10,7 +10,7 @@ import { linkForMenuItem } from "@/lib/menu-item-links";
 export const metadata = {
   alternates: { canonical: "https://mazahalalfood.com/menu/wraps" },
   title: "Wraps | Maza Mediterranean Cuisine",
-  description: "Fresh wraps — beef + lamb gyro, shawarma, shish kebab, chicken tikka. Made in-house daily. Chandler Mediterranean food done right.",
+  description: "Fresh wraps — beef + lamb gyro, shawarma, shish kebab, ribeye tikka. Made in-house daily. Chandler Mediterranean food done right.",
 }
 
 // Flash promos date-gate MenuItemPrice; ISR so static HTML cannot stick after endsAt.
@@ -21,7 +21,7 @@ const wraps = menuData.find(c => c.category === "Wraps")
 const wrapsJsonLd = buildMenuJsonLd(wraps ? [wraps] : [], {
   url: `${SITE}/menu/wraps`,
   name: "Maza Mediterranean Cuisine | Wraps Menu",
-  description: "Fresh wraps: beef + lamb gyro, shawarma, shish kebab, chicken tikka. Made in house daily. Halal-certified Mediterranean food in Chandler, AZ.",
+  description: "Fresh wraps: beef + lamb gyro, shawarma, shish kebab, ribeye tikka. Made in house daily. Halal-certified Mediterranean food in Chandler, AZ.",
 });
 
 export default function WrapsPage() {
