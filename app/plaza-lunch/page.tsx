@@ -37,6 +37,7 @@ const WRAPS = [
   "Beef + Lamb Gyro",
   "Beef + Lamb Shish Kebab Wrap",
   "Chicken Shish Kebab Wrap",
+  "Chicken Tikka Wrap",
   "Crispy Chicken Wrap",
   "Lamb Tikka Wrap",
   "Ribeye Tikka Wrap",
