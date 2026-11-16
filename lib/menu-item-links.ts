@@ -19,7 +19,7 @@ export const MENU_ITEM_LINKS: Record<string, MenuItemLink> = {
   "Beef + Lamb Gyro": { href: "/gyro", label: "Beef Gyro" },
   "Beef + Lamb Shish Kebab Wrap": { href: "/shish-kebab", label: "Shish Kebab" },
   "Chicken Shish Kebab Wrap": { href: "/shish-kebab", label: "Shish Kebab" },
-  "Chicken Tikka Wrap": { href: "/chicken-tikka", label: "Chicken Tikka" },
+
   "Lamb Tikka Wrap": { href: "/lamb-tikka", label: "Lamb Tikka" },
   "Ribeye Tikka Wrap": { href: "/ribeye-tikka", label: "Ribeye Tikka" },
   "Falafel Wrap": { href: "/falafel", label: "Falafel" },
@@ -29,7 +29,7 @@ export const MENU_ITEM_LINKS: Record<string, MenuItemLink> = {
   "Chicken Shish Kebab Plate": { href: "/shish-kebab", label: "Shish Kebab" },
   "Beef + Lamb Shish Kebab Plate": { href: "/shish-kebab", label: "Shish Kebab" },
   "Mix Kebab Plate": { href: "/mix-kebab", label: "Mix Kebab" },
-  "Chicken Tikka Plate": { href: "/chicken-tikka", label: "Chicken Tikka" },
+
   "Lamb Tikka Plate": { href: "/lamb-tikka", label: "Lamb Tikka" },
   "Ribeye Tikka Plate": { href: "/ribeye-tikka", label: "Ribeye Tikka" },
   "Falafel Plate": { href: "/falafel", label: "Falafel" },
@@ -104,7 +104,6 @@ export const RELATED_BY_ROUTE: Record<string, RelatedChip[]> = {
   "menu/plates": [
     { href: "/ribeye-tikka", label: "Ribeye Tikka" },
     { href: "/lamb-tikka", label: "Lamb Tikka" },
-    { href: "/chicken-tikka", label: "Chicken Tikka" },
     { href: "/shish-kebab", label: "Shish Kebab" },
     { href: "/mix-kebab", label: "Mix Kebab" },
     { href: "/maza-grill", label: "Maza Grill" },
@@ -113,7 +112,6 @@ export const RELATED_BY_ROUTE: Record<string, RelatedChip[]> = {
   "menu/wraps": [
     { href: "/gyro", label: "Beef Gyro" },
     { href: "/shish-kebab", label: "Shish Kebab" },
-    { href: "/chicken-tikka", label: "Chicken Tikka" },
     { href: "/lamb-tikka", label: "Lamb Tikka" },
     { href: "/ribeye-tikka", label: "Ribeye Tikka" },
     { href: "/arayes", label: "Arayes" },
@@ -147,7 +145,6 @@ export const RELATED_BY_ROUTE: Record<string, RelatedChip[]> = {
     { href: "/menu/plates", label: "Plates" },
     { href: "/menu/wraps", label: "Wraps" },
     { href: "/shish-kebab", label: "Shish Kebab" },
-    { href: "/chicken-tikka", label: "Chicken Tikka" },
     { href: "/maza-grill", label: "Maza Grill" },
     { href: "/loaded-hummus", label: "Loaded Hummus" },
     { href: "/loaded-fries", label: "Loaded Fries" },

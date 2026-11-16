@@ -72,15 +72,9 @@ function resolveOffering(page: OfferingPage): Resolved {
           { label: "Hummus & Baba Ghanoush", href: "/hummus-and-baba-ghanoush" },
           { label: "Plates menu", href: "/menu/plates" },
         ];
-      case "chicken-tikka":
-        return [
-          { label: "Lamb Tikka", href: "/lamb-tikka" },
-          { label: "Maza Grill", href: "/maza-grill" },
-          { label: "Hummus & Baba Ghanoush", href: "/hummus-and-baba-ghanoush" },
-        ];
       case "lamb-tikka":
         return [
-          { label: "Chicken Tikka", href: "/chicken-tikka" },
+          { label: "Ribeye Tikka", href: "/ribeye-tikka" },
           { label: "Family Meal", href: "/family-meal" },
           { label: "Hummus & Baba Ghanoush", href: "/hummus-and-baba-ghanoush" },
         ];
@@ -99,7 +93,6 @@ function resolveOffering(page: OfferingPage): Resolved {
       case "maza-grill":
         return [
           { label: "Mix Kebab", href: "/mix-kebab" },
-          { label: "Chicken Tikka", href: "/chicken-tikka" },
           { label: "Shish Kebab", href: "/shish-kebab" },
           { label: "Ribeye Tikka", href: "/ribeye-tikka" },
         ];

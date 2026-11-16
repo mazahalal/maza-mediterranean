@@ -75,7 +75,7 @@ export const NEIGHBORHOOD_PAGES: NeighborhoodPage[] = [
     priceHeading: "Popular in Chandler",
     priceRows: [
       { label: "Beef Gyro Wrap", price: "$10.91" },
-      { label: "Chicken Tikka Plate", price: "$19.67", note: "2 kebabs, rice, salad, baba ghanoush & hummus + tahini" },
+      { label: "Lamb Tikka Plate", price: "$20.71", note: "2 kebabs, rice, salad, baba ghanoush & hummus + tahini" },
       { label: "Mix Kebab Plate", price: "$20.71" },
       { label: "Pistachio Baklava", price: "$3.99" },
       { label: "Walnut Baklava", price: "$3.99" },
@@ -145,7 +145,7 @@ export const NEIGHBORHOOD_PAGES: NeighborhoodPage[] = [
       { label: "Beef + Lamb Gyro", price: "$10.91" },
       { label: "Beef Gyro Wrap", price: "$10.91" },
       { label: "Loaded Fries — Shredded Chicken", price: "$11.49" },
-      { label: "Chicken Tikka Plate", price: "$19.67" },
+      { label: "Lamb Tikka Plate", price: "$20.71" },
     ],
     faqs: [
       {
@@ -308,7 +308,7 @@ export const NEIGHBORHOOD_PAGES: NeighborhoodPage[] = [
     priceHeading: "What Ocotillo orders",
     priceRows: [
       { label: "Beef Gyro Wrap", price: "$10.91" },
-      { label: "Chicken Tikka Wrap", price: "$11.43" },
+      { label: "Beef + Lamb Shish Kebab Wrap", price: "$12.99" },
       { label: "Mix Kebab Plate", price: "$20.71" },
       { label: "Tepsi Baytinijan", price: "$20.00", note: "Iraqi eggplant casserole served over rice" },
     ],

@@ -17,7 +17,6 @@ const dishes: GalleryImage[] = [
   { src: "/images/maza/menu/opt-crispy-chicken-wrap.jpg", alt: "Crispy Chicken wrap" },
   { src: "/images/maza/menu/opt-beef-shish-plate.jpg", alt: "Beef + Lamb Shish Kebab plate" },
   { src: "/images/maza/menu/opt-chicken-shish-plate.jpg", alt: "Chicken Shish Kebab plate" },
-  { src: "/images/maza/menu/opt-chicken-tikka-plate.jpg", alt: "Chicken Tikka plate" },
   { src: "/images/maza/menu/opt-lamb-tikka-plate.jpg", alt: "Lamb Tikka plate" },
   { src: "/images/maza/menu/opt-mix-kebab-plate.jpg", alt: "Mix Kebab plate" },
   { src: "/images/maza/menu/opt-PXL_20260601_224012118.jpg", alt: "Falafel plate with tabbouleh" },
