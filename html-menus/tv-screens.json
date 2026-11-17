@@ -1,5 +1,5 @@
 {
-  "_comment": "TV screen definitions. Item refs are [Section, Item] pairs resolved from menu.json at build time \u2014 prices/notes always come from menu.json, never hardcoded here. Edit groupings/cards freely; text data stays in menu.json.",
+  "_comment": "TV screen definitions. Item refs are [Section, Item] pairs resolved from menu.json at build time — prices/notes always come from menu.json, never hardcoded here. Edit groupings/cards freely; text data stays in menu.json.",
   "screens": [
     {
       "id": "screen1-wraps",
@@ -381,7 +381,7 @@
               "Baklava",
               "Pistachio Baklava"
             ],
-            "caption": "Baklava \u00b7 Pistachio / Walnut / Dubai Chocolate",
+            "caption": "Baklava · Pistachio / Walnut / Dubai Chocolate",
             "photo": "baklava-pistachio-baklava.jpg"
           },
           {
@@ -406,7 +406,7 @@
             "Baklava",
             "Pistachio Baklava"
           ],
-          "caption": "Baklava \u00b7 Pistachio / Walnut / Dubai Chocolate",
+          "caption": "Baklava · Pistachio / Walnut / Dubai Chocolate",
           "photo": "baklava-pistachio-baklava.jpg"
         },
         "desserts": {
@@ -450,14 +450,6 @@
                 ],
                 [
                   "Drinks",
-                  "Mexican Fanta Grape"
-                ],
-                [
-                  "Drinks",
-                  "Mexican Fanta Strawberry"
-                ],
-                [
-                  "Drinks",
                   "Coke Zero Sugar"
                 ],
                 [
@@ -480,7 +472,6 @@
             "drink-ad-karkadeh.jpg",
             "drink-ad-iced-tea.jpg",
             "drink-ad-mexican-coke.jpg",
-            "drink-ad-fanta-only.jpg",
             "drink-ad-gatorade.jpg",
             "drink-ad-vita-coco.jpg",
             "drink-ad-sunberry-juices.jpg",
@@ -491,14 +482,13 @@
             "SM $1.99\nLG $3.99",
             "LG $3.99",
             "$3.99",
-            "$3.99",
             "$2.49",
             "$2.99",
             "$1.49",
             "$2.99",
             "$2.49"
           ],
-          "_ad_note": "Carousel: iced tea, mex coke, fanta, gatorade, vita coco, sunberry, MM lemonade $2.99, coke zero $2.49. Accepted Frank 2026-11-10."
+          "_ad_note": "Carousel: iced tea, mex coke, gatorade, vita coco, sunberry, MM lemonade $2.99, coke zero $2.49. Accepted Frank 2026-11-10."
         },
         "sharbat": {
           "section": "Sharbat"
@@ -506,7 +496,7 @@
         "sharbat_card": {
           "photo": "sharbat-cup-temp.jpg",
           "caption": "Sharbat",
-          "_note": "TEMP: Frank Discord cup photo 2026-11-12 \u2014 restore sharbat-three-cups-nobg.png when done",
+          "_note": "TEMP: Frank Discord cup photo 2026-11-12 — restore sharbat-three-cups-nobg.png when done",
           "fit": "cover"
         },
         "desserts_hidden": false
