@@ -36,7 +36,7 @@ const montserrat = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL("https://mazahalalfood.com"),
   title: "Maza Mediterranean Cuisine | Chandler, AZ",
-  description: "Big portions. Real ingredients. Honest prices. Family-owned Mediterranean restaurant in Chandler, AZ. Open Tue/Wed/Sun 10am–8pm, Thu–Sat 10am–10pm. Closed Mondays.",
+  description: "Big portions. Real ingredients. Honest prices. Family-owned Mediterranean restaurant in Chandler, AZ. Open Tue–Thu 11am–8pm, Fri–Sat 10am–11pm, Sun 10am–8pm. Closed Mondays.",
   icons: {
     icon: "/maza_ornate_logo.webp",
   },
@@ -81,15 +81,21 @@ export default function RootLayout({
               openingHoursSpecification: [
                 {
                   "@type": "OpeningHoursSpecification",
-                  dayOfWeek: ["Tuesday", "Wednesday", "Sunday"],
-                  opens: "10:00",
+                  dayOfWeek: ["Tuesday", "Wednesday", "Thursday"],
+                  opens: "11:00",
                   closes: "20:00",
                 },
                 {
                   "@type": "OpeningHoursSpecification",
-                  dayOfWeek: ["Thursday", "Friday", "Saturday"],
+                  dayOfWeek: ["Friday", "Saturday"],
                   opens: "10:00",
-                  closes: "22:00",
+                  closes: "23:00",
+                },
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: ["Sunday"],
+                  opens: "10:00",
+                  closes: "20:00",
                 },
               ],
               url: "https://mazahalalfood.com",
@@ -130,7 +136,7 @@ export default function RootLayout({
                 "East Valley dining",
               ],
               description:
-                "Big portions. Real ingredients. Honest prices. Family-owned Mediterranean restaurant in Chandler, AZ. Open Tue/Wed/Sun 10am–8pm, Thu–Sat 10am–10pm. Closed Mondays.",
+                "Big portions. Real ingredients. Honest prices. Family-owned Mediterranean restaurant in Chandler, AZ. Open Tue–Thu 11am–8pm, Fri–Sat 10am–11pm, Sun 10am–8pm. Closed Mondays.",
               potentialAction: {
                 "@type": "ReserveAction",
                 "target": "https://mazahalalfood.com/contact",
@@ -153,7 +159,7 @@ export default function RootLayout({
                   name: "What are your hours?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "We are open Tuesday, Wednesday, and Sunday 10am–8pm, and Thursday through Saturday 10am–10pm. Closed Mondays."
+                    text: "We are open Tuesday through Thursday 11am–8pm, Friday and Saturday 10am–11pm, and Sunday 10am–8pm. Closed Mondays."
                   }
                 },
                 {

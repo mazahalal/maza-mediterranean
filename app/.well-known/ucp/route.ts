@@ -130,9 +130,11 @@ export async function GET() {
         addressCountry: "US",
       },
       hours: {
-        tuesday_sunday: "10:00-22:00",
+        tue_wed_thu: "11:00-20:00",
+        fri_sat: "10:00-23:00",
+        sun: "10:00-20:00",
         closed: ["Monday"],
-        note: "Tuesday through Sunday, 10:00am to 10:00pm. Closed Mondays.",
+        note: "Tue–Thu 11:00am–8:00pm; Fri–Sat 10:00am–11:00pm; Sun 10:00am–8:00pm. Closed Mondays.",
       },
       sameAs: MAZA_SAME_AS,
     },
