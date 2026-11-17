@@ -38,7 +38,7 @@ BRAND = {
     "tagline": "Mediterranean Cuisine",
     "address": "3491 W Frye Rd, Suite 2, Chandler AZ 85226",
     "phone": "(480) 534-6550",
-    "hours": "Tue/Wed/Sun 10am–8pm · Thu–Sat 10am–10pm · Closed Mondays",
+    "hours": "Tue–Thu 11am–8pm · Fri–Sat 10am–11pm · Sun 10am–8pm · Closed Mondays",
 }
 
 # Sections rendered in the compact (2-col, text-focused) layout
