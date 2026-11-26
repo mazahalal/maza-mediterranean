@@ -33,12 +33,14 @@ Primary UI/schema:
 - `components/SeoLandingPage.tsx` — SEO landing footer line
 - `app/plaza-lunch/page.tsx` — plaza page copy
 
-SEO copy surfaces (keep in sync on any real hours change):
+SEO / agent identity surfaces (keep in sync on any real hours change):
 
 - `data/neighborhoods.ts`
 - `data/offerings.ts`
+- `public/llms.txt` — answer-engine facts (missed in #184; fixed set C)
+- `app/api/specs/route.ts` + `app/.well-known/ucp/route.ts` — machine hours
 
-There is **no** single runtime config file. Hours are duplicated strings. Any intentional change is a multi-file PR; use `git grep` for `11am`, `10am`, `OpeningHours`, `opens:`.
+There is **no** single runtime config file. Hours are duplicated strings. Any intentional change is a multi-file PR; use `git grep` for `11am`, `10am`, `OpeningHours`, `opens:`, and `llms.txt`.
 
 ## Deploy source of truth
 
